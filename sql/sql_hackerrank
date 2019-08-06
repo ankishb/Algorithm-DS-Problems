@@ -1,0 +1,441 @@
+
+############################################
+1. Query the list of CITY names ending with vowels (a, e, i, o, u) from STATION. Your result cannot contain duplicates.
+
+SELECT DISTINCT CITY FROM STATION WHERE RIGHT(CITY,1) IN ('a','i','e','o','u');
+
+
+SELECT DISTINCT CITY FROM STATION WHERE LOWER(SUBSTR(CITY,LENGTH(CITY),1)) IN ('a','e','i','o','u');
+
+
+# '$' indicate last character, '^' represent first character
+SELECT DISTINCT CITY FROM STATION
+WHERE CITY REGEXP '[aeiou]$'; 
+
+
+select distinct city from STATION
+where lower(substr(city,length(city),1)) in ('a','e','i','o','u');
+
+############################################
+2. Query the list of CITY names from STATION which have vowels (i.e., a, e, i, o, and u) as both their first and last characters. Your result cannot contain duplicates.
+
+
+
+#1. Method using basics of substring
+select distinct city from station
+where lower(substr(city,1,1)) in ('a','e','i','o','u')
+and lower(substr(city,length(city),1)) in ('a','e','i','o','u');
+
+# 2.Method using regexp
+select distinct city from station
+where city regexp '^[aeiou].*[aeiou]$'
+
+# 3.  Method using left and right
+select distinct city from station 
+where left(city,1) in ('a','e','i','o','u') 
+and right(city, 1) in ('a','e','i','o','u')
+
+
+
+
+
+
+
+
+
+Query the list of CITY names from STATION that do not start with vowels. Your result cannot contain duplicates.
+
+select distinct city from station
+where city regexp '^[^aeiou]'
+
+
+select distinct city from station
+where left(city,1) not in ('a','e','i','o','u');
+
+
+
+
+
+
+select distinct city from station
+where left(city,1) not in ('a','e','i','o','u')
+and right(city,1) not in ('a','e','i','o','u');
+
+SELECT DISTINCT CITY FROM STATION 
+WHERE city regexp '^[^aeiou].*' and city regexp '[^aeiou]$';
+
+
+
+
+
+
+
+
+-- Query the Name of any student in STUDENTS who scored higher than Marks. Order your output by the last three characters of each name. If two or more students both have names ending in the same last three characters (i.e.: Bobby, Robby, etc.), secondary sort them by ascending ID.
+
+
+select name from students
+where marks > 75
+order by right(name,3), id;
+
+
+
+
+
+-- Write a query that prints a list of employee names (i.e.: the name attribute) for employees in Employee having a salary $2000 greater than per month who have been employees for less than 10 months. Sort your result by ascending employee_id.
+select name from employee
+where salary > 2000 and months < 10
+order by employee_id;
+
+
+
+
+
+
+-- Query the average population of all cities in CITY where District is California. 
+select AVG(population) from city
+where district = 'California';
+-- group by district
+;
+
+
+
+
+
+
+
+
+
+-- Query the following two values from the STATION table:
+--     1. The sum of all values in LAT_N rounded to a scale of decimal places.
+--     2. The sum of all values in LONG_W rounded to a scale of decimal places.
+select ROUND(SUM(LAT_N),2), ROUND(SUM(LONG_W),2) from STATION
+
+
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- Given the table schemas below, write a query to print the company_code, founder name, total number of lead managers, total number of senior managers, total number of managers, and total number of employees. Order your output by ascending company_code.
+-- Company: The company_code is the code of the company and founder is the founder of the company.
+-- Lead_Manager: The lead_manager_code is the code of the lead manager, and the company_code is the code of the working company.
+-- Senior_Manager: The senior_manager_code is the code of the senior manager, the lead_manager_code is the code of its lead manager, and the company_code is the code of the working company.
+-- Manager: The manager_code is the code of the manager, the senior_manager_code is the code of its senior manager, the lead_manager_code is the code of its lead manager, and the company_code is the code of the working company.
+-- Employee: The employee_code is the code of the employee, the manager_code is the code of its manager, the senior_manager_code is the code of its senior manager, the lead_manager_code is the code of its lead manager, and the company_code is the code of the working company. 
+select 
+    c.company_code, 
+    c.founder, 
+    COUNT(lm.lead_manager_code), 
+    COUNT(sm.senior_manager_code),
+    COUNT(m.manager_code),
+    COUNT(e.employee_code)
+from Company c
+LEFT JOIN Lead_Manager lm
+on c.company_code = lm.company_code
+    LEFT JOIN Senior_Manager sm
+    on lm.company_code          = sm.company_code
+    and lm.lead_manager_code    = sm.lead_manager_code
+        LEFT JOIN Manager m
+        on sm.company_code          = m.company_code
+        and sm.senior_manager_code  = m.senior_manager_code
+        and sm.lead_manager_code    = m.lead_manager_code
+            LEFT JOIN Employee e
+            on m.company_code           = e.company_code
+            and m.senior_manager_code   = e.senior_manager_code
+            and m.lead_manager_code     = e.lead_manager_code
+            and m.manager_code          = e.manager_code
+group by c.company_code, c.founder
+order by c.company_code
+;
+
+-- select 
+--     sm.company_code,
+--     sm.senior_manager_code ,
+--     m.manager_code
+-- from Senior_Manager as sm
+--     LEFT JOIN Manager as m
+--     on sm.company_code = m.company_code
+    -- and sm.senior_manager_code = m.senior_manager_code
+    -- and sm.lead_manager_code = m.lead_manager_code
+
+-- ;
+
+
+-- SELECT  c.company_code,
+--         c.founder,
+--         count(lm.lead_manager_code),
+--         count(sm.senior_manager_code),
+--         count(m.manager_code),
+--         count(e.employee_code)
+-- FROM company c 
+--      join lead_manager lm
+--     on c.company_code = lm.company_code
+--         join senior_manager  sm
+--         on lm.company_code = sm.company_code
+--             join manager m
+--             on sm.company_code = m.company_code
+--                 join employee e
+--                 on m.company_code = e.company_code
+-- GROUP BY c.company_code, c.founder
+-- ORDER BY c.company_code;
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+Enter your query here.
+Please append a semicolon ";" at the end of the query and enter your query in a single line to avoid error.
+*/
+
+select concat(Name,'(',Substring(Occupation,1,1),')') as Name
+from occupations
+Order by Name
+select concat('There are total of',' ',count(occupation),' ',lower(occupation),'s.') as total
+from occupations
+group by occupation
+order by total
+
+-- select count(occupation), lower(occupation)
+-- from occupations
+-- group by occupation
+-- order by occupation
+;
+
+
+
+
+-- -- select Name, '(', left(Occupation,1),')'
+-- -- from OCCUPATIONS
+-- select concat(Name,'(',Substring(Occupation,1,1),')') as Name
+-- from OCCUPATIONS
+-- order by Name
+-- select concat('There are total',' ',count(occupation),' ',lower(occupation),'s.') as total
+-- from OCCUPATIONS
+-- group by Occupation
+-- order by total
+-- ;
+
+select concat(Name,'(',Substring(Occupation,1,1),')') as Name
+from occupations
+Order by Name
+select concat('There are total',' ',count(occupation),' ',lower(occupation),'s.') as total
+from occupations
+group by occupation
+order by total
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+select if(grade > 7, name, null), grade, marks 
+from students, grades 
+where marks between min_mark and max_mark 
+order by grade desc, name
+
+
+
+
+let me reframe that above query for you:
+
+SELECT (CASE g.grade>=8 WHEN TRUE THEN s.name ELSE null END),g.grade,s.marks FROM students s INNER JOIN grades g ON s.marks BETWEEN min_mark AND max_mark ORDER BY g.grade DESC,s.name,s.marks;
+
+In MySql, CASE statement acts like a "if" condition, so if the expression after CASE statement matches the boolean value after WHEN clause, it executes the result after THEN clause; otherwise it will execute result after ELSE clause.
+
+
+
+
+-- You are given two tables: Students and Grades. Students contains three columns ID, Name and Marks.
+-- Ketty gives Eve a task to generate a report containing three columns: Name, Grade and Mark. Ketty doesn't want the NAMES of those students who received a grade lower than 8. The report must be in descending order by grade -- i.e. higher grades are entered first. If there is more than one student with the same grade (8-10) assigned to them, order those particular students by their name alphabetically. Finally, if the grade is lower than 8, use "NULL" as their name and list them by their grades in descending order. If there is more than one student with the same grade (1-7) assigned to them, order those particular students by their marks in ascending order.
+
+
+select if(grade > 7, name, null), grade, marks 
+from students, grades 
+where marks between min_mark and max_mark 
+order by grade desc,
+    CASE Name WHEN NULL THEN Marks 
+       ELSE Name
+      END asc
+;
+
+
+
+
+
+
+
+
+
+-- Given the CITY and COUNTRY tables, query the names of all the continents (COUNTRY.Continent) and their respective average city populations (CITY.Population) rounded down to the nearest integer.
+
+-- Note: CITY.CountryCode and COUNTRY.Code are matching key columns.
+-- select d1.continent, floor(avg(d2.population))
+select d1.continent, round(avg(d2.population) - 0.5)
+from country as d1
+inner join city as d2
+on d2.countrycode = d1.code
+group by d1.continent
+
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- Write a query to print the respective hacker_id and name of hackers who achieved full scores for more than one challenge. Order your output in descending order by the total number of challenges in which the hacker earned a full score. If more than one hacker received full scores in same number of challenges, then sort them by ascending hacker_id.
+
+--     Hackers: The hacker_id is the id of the hacker, and name is the name of the hacker.
+--     Difficulty: The difficult_level is the level of difficulty of the challenge, and score is the score of the challenge for the difficulty level.
+--     Challenges: The challenge_id is the id of the challenge, the hacker_id is the id of the hacker who created the challenge, and difficulty_level is the level of difficulty of the challenge.
+--     Submissions: The submission_id is the id of the submission, hacker_id is the id of the hacker who made the submission, challenge_id is the id of the challenge that the submission belongs to, and score is the score of the submission.
+select h.hacker_id, h.name, count(c.challenge_id) as total_chl
+-- , c.difficulty_level, d.score as total_score, s.score
+from hackers as h
+left join challenges as c
+on h.hacker_id = c.hacker_id
+    left join difficulty as d
+    on c.difficulty_level = d.difficulty_level
+        left join submissions as s
+        on h.hacker_id = s.hacker_id
+        and c.challenge_id = s.challenge_id
+        
+group by h.hacker_id, h.name
+where d.score = s.score and total_chl>1
+order by total_chl desc, h.hacker_id asc
+;
+
+
+
+
+select h.hacker_id, h.name
+	from submissions s
+	inner join challenges c
+	on s.challenge_id = c.challenge_id
+	inner join difficulty d
+	on c.difficulty_level = d.difficulty_level 
+	inner join hackers h
+	on s.hacker_id = h.hacker_id
+	where s.score = d.score and c.difficulty_level = d.difficulty_level
+	group by h.hacker_id, h.name
+	having count(s.hacker_id) > 1
+	order by count(s.hacker_id) desc, s.hacker_id asc
+
+
+SELECT h.hacker_id, h.name
+    FROM submissions s
+    JOIN challenges c
+        ON s.challenge_id = c.challenge_id
+    JOIN difficulty d
+        ON c.difficulty_level = d.difficulty_level 
+    JOIN hackers h
+        ON s.hacker_id = h.hacker_id
+    WHERE s.score = d.score 
+        AND c.difficulty_level = d.difficulty_level
+    GROUP BY h.hacker_id
+        HAVING COUNT(s.hacker_id) > 1
+    ORDER BY COUNT(s.hacker_id) DESC, s.hacker_id ASC
+
+
+
+
+
+
+
+
+
+select w.id, w.code, wp.age, w.coins_needed, w.power
+from wands w
+right join wands_property wp
+on w.code = wp.code
+where wp.is_evil = 0
+order by w.power desc, wp.age desc
+
+;
+
+
+
+
+
+
+select 
+	wands.id, 
+	min_prices.age, 
+	wands.coins_needed, 
+	wands.power
+from wands
+inner join (
+	select 
+		wands.code, 
+		wands.power, 
+		min(wands_property.age) as age, 
+		min(wands.coins_needed) as min_price
+    from wands
+    inner join wands_property
+    on wands.code = wands_property.code
+    where wands_property.is_evil = 0
+    group by wands.code, wands.power
+) min_prices
+on 
+	wands.code = min_prices.code
+   	and wands.power = min_prices.power
+   	and wands.coins_needed = min_prices.min_price
+order by 
+	wands.power desc, min_prices.age desc
+
+
+
+
+
+
+
+

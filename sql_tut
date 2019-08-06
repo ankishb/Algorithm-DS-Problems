@@ -1,0 +1,156 @@
+
+CREATE TABLE student (
+	student_id INT PRIMARY KEY,
+	name VARCHAR(20),
+	major VARCHAR(20)
+);
+
+
+CREATE TABLE student (
+	student_id INT,
+	name VARCHAR(20) NOT NULL,
+	major VARCHAR(20) UNIQUE,
+	PRIMARY KEY(student_id)
+);
+DESCRIBE student;
+DROP TABLE student;
+
+ALTER TABLE student ADD gpa DECIMAL(3,2); --> total 3 digit, where 2 are decimals
+
+ALTER TABLE student DROP COLUMN gpa
+
+
+SELECT * FROM student;
+
+INSERT INTO student VALUES(1, 'Jack', 'Biology');
+INSERT INTO student VALUES(2, 'Kate', 'Sociology');
+
+INSERT INTO student(student_id, name) VALUES(3, 'Claire');
+
+CREATE TABLE student (
+	student_id INT AUTO_INCREMENT,
+	name VARCHAR(20),
+	major VARCHAR(20) DEFAULT 'undecided',
+	PRIMARY KEY(student_id)
+);
+INSERT INTO student(name) VALUES('Claire');
+INSERT INTO student(name, major) VALUES('Claire', 'Biology');
+
+
+
+
+## Update and delete
+SELECT * FROM student
+
+UPDATE student
+SET major = 'Bio'
+WHERE major = 'Biology';
+
+
+UPDATE student
+SET major = 'BioChemistry'
+WHERE major = 'Biology' OR major = 'Chemistry';
+
+UPDATE student
+SET name='Tom', major = 'BioChemistry'
+WHERE student_id = 1;
+
+
+## Affect all rows of the table
+UPDATE student
+SET major = 'BioChemistry';
+
+
+SELECT * FROM student
+
+DELETE FROM student
+WHERE student_id = 5;
+
+DELETE FROM student
+WHERE name='Tom' AND major='Bio';
+
+
+
+## Queries
+SELECT student.name, student.major
+FROM student
+ORDER BY name; ## Default ius ascending order
+ORDER BY student_id ASC;
+ORDER BY student_id DEC;
+ORDER BY major, student_id;
+
+
+SELECT student.name, student.major
+FROM student
+ORDER BY student_id DESC
+LIMIT 2;
+
+
+SELECT *
+FROM student
+WHERE major = 'Chemistry' OR major <> 'BIOLOGY';
+
+## <> --> not equal sign
+
+WHERE major IN ('Chemistry','BIOLOGY') AND student_id < 4;
+
+
+
+VARCHAR : Length of string
+Keys:
+	Primary key
+		surrogate key (simple no 1,2,3..)
+		natural key (uuid as key)
+	Foreign Key : which tells the connection with another 
+	Composite key
+
+
+Nested Queries:
+	We need employess names, which have buy things from seller with price more than 10,000 Rs. We have 2 table, one for employee(employees detail) and another with sales data.
+
+1. Select all the emp_id from sales data using following query
+
+SELECT sales.emp_id
+From sales
+WHERE sales.sales>10000
+
+
+
+2. Now we got emp_id, use this to find their name from employees table. **Use IN keyword, where Another query will be inside ()**
+
+SELECT employees.first_name, employees.last_name
+FROM employees
+WHERE employees.emp_id IN(
+	SELECT sales.emp_id
+	From sales
+	WHERE sales.sales>10000
+)
+
+
+Q. Find the employee with highest salary
+SELECT * 
+From employees
+WHERE salary = (
+	SELECT Max(salary) 
+	FROM employees
+)
+
+Q. Find the highest salary
+SELECT Max(salary) 
+FROM employees;
+
+
+Q. Find the 2nd highest salary
+SELECT * 
+From employees
+WHERE salary Not IN (
+	SELECT MAX(salary)
+	From employees
+);
+
+
+Q. Select range of employees
+SELECT *
+FROM employees
+WHERE emp_id BETWEEN 2003 AND 2013
+

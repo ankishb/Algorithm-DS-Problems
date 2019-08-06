@@ -1,0 +1,113 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define loop(i, start, end) for(int i=start; i<end; i++)
+
+// To get all the operation done on s1 and s2 to make equal can be compute using following procedure:
+// 1. If elements comes from diagnal position,
+// 	1. If s1[position] == s2[position], "no operation"
+// 	2. Else "replaced operation"
+// 2. Else Move left, "deleted character"
+
+
+void solve(){
+	int n1, n2;
+	cin>>n1>>n2;
+	cin.ignore(1);
+	string s1, s2;
+	cin>>s1>>s2;
+
+	int T[n1+1][n2+1];
+// 	memset(T, 0, (n1+1)*(n2+1)*sizeof(T[0][0]));
+	memset(T, 0, sizeof(T));
+
+	int i=0, j=0;
+	for(j=1; j<=n2; j++){
+		T[i][j] = j;
+	}
+	j=0;
+	for(i=1; i<=n1; i++){
+		T[i][j] = i;
+	}
+	
+	for(int i=1; i<=n1; i++){
+		for(int j=1; j<=n2; j++){
+			// if the character are equal, then minimum edit will equal to the edit the string s1 and s2 with length i-1 and j-1
+			if(s1[i-1] == s2[j-1]){
+				T[i][j] = T[i-1][j-1];
+			}
+			else{
+				T[i][j] = 1 + min(min(T[i-1][j], T[i][j-1]), T[i-1][j-1]);
+			}
+		}
+	}
+	// int ans = INT_MIN;
+	// for(int i=0; i<=n1; i++){
+	// 	for(int j=0; j<=n2; j++){
+	// 	    cout<<T[i][j]<<" ";
+	// 		if(T[i][j] > ans && i>0 && j>0){
+	// 			ans = T[i][j];
+	// 		}
+	// 	}
+	// 	cout<<endl;
+	// }
+	cout<<T[n1][n2]<<endl;
+}
+
+int main()
+ {
+	int test;
+	cin>>test;
+	while(test--){
+	    solve();
+	}
+	return 0;
+}
+
+
+
+// another Light-weight Solution
+
+int Solution::minDistance(string A, string B) {
+    // Do not write main() function.
+    // Do not read input, instead use the arguments to the function.
+    // Do not print the output, instead return values as specified
+    // Still have a doubt. Checkout www.interviewbit.com/pages/sample_codes/ for more details
+    int lengthA = A.length();
+    int lengthB = B.length();
+    
+    if (lengthA == 0 || lengthB == 0)
+    {
+        return max(lengthA, lengthB);
+    }
+    
+    vector<int> cache(lengthB + 1);
+    for (int i = 0; i <= lengthB; i++)
+    {
+        cache[i] = i;
+    }
+    
+    int lastImpNo;
+    for (int i = 1; i <= lengthA; i++)
+    {
+        lastImpNo = cache[0];
+        cache[0] = i;
+        for (int j = 1; j <= lengthB; j++)
+        {
+            int oldVal = cache[j];
+            
+            if (A[i - 1] == B[j - 1])
+            {
+                cache[j] = lastImpNo;
+            }
+            else
+            {
+                cache[j] = min(min(lastImpNo, cache[j - 1]), cache[j]) + 1;
+            }
+            
+            lastImpNo = oldVal;
+        }
+    }
+    
+    return cache[lengthB];
+}
+
