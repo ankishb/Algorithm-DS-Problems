@@ -1,4 +1,40 @@
 
+
+
+
+// previous geeksforgeeks question
+void postorder_transversal(node *root){
+	stack<node*> s;
+	if(root == NULL){
+		cout<<"NULL";
+	}
+	else{
+		s.push(root);
+		root = root->left;
+		while(!s.empty()){
+			int top = s.top();
+			if(root != NULL){
+				s.push(root);
+				root = root->left;
+			}
+			else{
+				cout<<top->data<<" ";
+				s.pop();
+				top = s.top();
+				if(top->right != NULL){
+					s.top(top->right);
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+// very good solution using 1 as well as 2 stacks
+
 // Recursive Postorder Transversal 
 // -2 5 -3 -1 21 6 11 1 
 // Iterative-1 Postorder Transversal 
@@ -60,36 +96,6 @@ void itr1_postorder_transversal(node* root){
 }
 
 
-void itr3_postorder_transversal(node *root){
-	// Time: O(n) || Space: O(h)
-	stack<node*> s;
-	node *cur = root;
-	node *popped = NULL; // will use for special case
-	node *top;
-
-	while(cur != NULL || !s.empty()){
-		if(cur == NULL){
-			top = s.top();
-			if(top->right == NULL){
-				cout<<top->data<<" ";
-				s.pop();
-				while(!s.empty() && top == (s.top())->right){
-					top == s.top();
-					cout<<top->data<<" ";
-					s.pop();
-				}
-			}
-			else{
-				cur = cur->right;
-			}
-		}
-		else{
-			s.push(cur);
-			cur = top->right;
-		}
-	}
-}
-
 
 void itr2_postorder_transversal(node *root){
 	// Time: O(n) || Space: O(h)
@@ -139,6 +145,38 @@ void itr2_postorder_transversal(node *root){
 	}
 }
 
+
+void itr3_postorder_transversal(node *root){
+	// Time: O(n) || Space: O(h)
+	stack<node*> s;
+	node *cur = root;
+	node *popped = NULL; // will use for special case
+	node *top;
+
+	while(cur != NULL || !s.empty()){
+		if(cur == NULL){
+			top = s.top();
+			if(top->right == NULL){
+				cout<<top->data<<" ";
+				s.pop();
+				while(!s.empty() && top == (s.top())->right){
+					top == s.top();
+					cout<<top->data<<" ";
+					s.pop();
+				}
+			}
+			else{
+				cur = cur->right;
+			}
+		}
+		else{
+			s.push(cur);
+			cur = top->right;
+		}
+	}
+}
+
+
 int main()
 {
 	node* root = NULL;
@@ -154,11 +192,11 @@ int main()
 	cout<<"\nRecursive Postorder Transversal \n";
 	rec_postorder_transversal(root);
 	
-	cout<<"\nIterative-1 Postorder Transversal \n";
-	itr1_postorder_transversal(root);
-	
 	cout<<"\nIterative-2 Postorder Transversal \n";
 	itr2_postorder_transversal(root);
+
+	cout<<"\nIterative-3 Postorder Transversal \n";
+	itr3_postorder_transversal(root);
 
 	return 0;
 }

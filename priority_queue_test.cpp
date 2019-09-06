@@ -218,7 +218,6 @@ class Person {
   
 public: 
     int age; 
-  
     float height; 
   
     // this is used to initialize the variables of the class 

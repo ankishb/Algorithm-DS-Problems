@@ -1,4 +1,66 @@
 
+vector<int> Solution::slidingMaximum(const vector<int> &A, int k) {
+    int n = A.size();
+    vector<int> ans;
+    if(n == 0) return ans;
+
+    deque<int> dq;
+    for(int i=0; i<k; i++){
+        while(!dq.empty() && A[dq.back()] <= A[i]){
+            dq.pop_back();
+        }
+        dq.push_back(i);
+    }
+    ans.push_back(A[dq.front()]);
+    
+    for(int i=k; i<n; i++){
+        if(!dq.empty() && i - dq.front() >= k) dq.pop_front();
+        while(!dq.empty() && A[dq.back()] <= A[i]){
+            dq.pop_back();
+        }
+        dq.push_back(i);
+        
+        ans.push_back(A[dq.front()]);
+    }
+    return ans;
+}
+
+
+
+
+
+vector<int> Solution::slidingMaximum(const vector<int> &vect, int qi) {
+// int find_min_max(vector<int> vect, int qi){
+    queue<int> q;
+    q.push(0);
+    for(int i=1; i<qi; i++){
+        if(vect[i] > vect[q.back()]){
+            q.push(i);
+        }
+    }
+    vector<int> ans;
+    int min_ans = INT_MAX;
+    for(int i=qi; i<vect.size(); i++){
+        // min_ans = min(min_ans, vect[q.back()]);
+        ans.push_back(vect[q.back()]);
+        // check if the front element still exist in current query.
+        if(i-q.front() >= qi){
+            q.pop();
+        }
+        // check if current element should be inserted in queue
+        if(q.empty()){
+            q.push(i);
+        }
+        else if(vect[i] > vect[q.back()]){
+            q.push(i);
+        }
+    }
+    ans.push_back(vect[q.back()]);
+    // min_ans = min(min_ans, vect[q.back()]);
+    return ans;
+}
+
+
 #include <bits/stdc++.h>
 using namespace std;
 

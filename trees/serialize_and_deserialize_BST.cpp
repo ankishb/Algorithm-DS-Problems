@@ -1,55 +1,75 @@
 
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
-// Approach:
-// For serialize: we just do a inorder & postorder transversal and concatenate each string with '_', and to distinguish each element, we seperated them '#'
-// For deserialize: we construct tree using both transversal strings
 
 class Codec {
 public:
-	string convert_int_to_string(int data){
-		string ans = "";
-		while(data != 0){
-			ans += (ans%10 + '0');
-			ans = ans/10;
-		}
-		return ans;
-	}
-	void inorder(TreeNode* root, string &ans){
-		if(root == NULL) return;
-		inorder(root->left);
-		ans += convert_int_to_string(root->val);
-		ans += '#';
-		inorder(root->right);
-	}
-
-	void postorder(TreeNode* root, string &ans){
-		if(root == NULL) return;
-		postorder(root->left);
-		postorder(root->right);
-		ans += convert_int_to_string(root->val);
-		ans += '#';
-	}
+    void preorder(TreeNode* root, string &s){
+        if(root == NULL){
+            s += "@#"; return;
+        }
+        s += to_string(root->val) + "#";
+        preorder(root->left, s);
+        preorder(root->right, s);
+    }
     
     // Encodes a tree to a single string.
     string serialize(TreeNode* root) {
-        string ans = "";
-        inorder(root, ans);
-        ans += "_";
-        postorder(root, ans);
-        return ans;
+        string s = "";
+        preorder(root, s);
+        // cout<<s<<endl;
+        return s;
     }
+    int string_to_int(string s){
+        int i = 0, value = 0;
+        bool neg = false;
+        if(s[i] == '-'){
+            neg = true;
+            i++;
+        }
+        while(s[i] != '\0'){
+            value = value*10 + (s[i] - '0');
+            i++;
+        }
+        return (neg == true) ? -value : value;
+    }
+    
+    int i = 0;
+    TreeNode* deserial(string data){
+        if(i >= data.length() || data[i] == '@'){
+            i++;
+            return NULL;
+        }
+        string val = "";
+        while(data[i] != '#'){
+            val += data[i];
+            i++;
+        }
+        int val_ = string_to_int(val);
+        // cout<<val<<" "<<val_<<endl;
+        TreeNode* root = new TreeNode(val_);
+        i++;
+        TreeNode* left = deserial(data);
+        i++;
+        TreeNode* right = deserial(data);
+        
+        if(root && left && root->val > left->val) root->left = left;
+        else if(root && left && root->val < left->val) root->right = left;
 
+        if(root && right && root->val > right->val) root->left = right;
+        else if(root && right && root->val < right->val) root->right = right;
+
+        // inorder(root); cout<<endl;
+        return root;
+    }
+    void inorder(TreeNode* root){
+        if(root == NULL) return;
+        inorder(root->left);
+        cout<<root->val<<" ";
+        inorder(root->right);
+    }
+    
     // Decodes your encoded data to tree.
     TreeNode* deserialize(string data) {
-        
+        return deserial(data);
     }
 };
 

@@ -48,8 +48,6 @@
 - [nested function]
 - [count-negative-numbers-in-a-column-wise-row-wise-sorted-matrix](https://www.geeksforgeeks.org/count-negative-numbers-in-a-column-wise-row-wise-sorted-matrix/)
 - [2d_vector testing]
-- [ ] [tree][sum of nodes at maximum height](https://www.geeksforgeeks.org/sum-nodes-maximum-depth-binary-tree/)
-- [tree][tree transversal without recursion](https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion/)
 - [ ] [greedy] [maximum flow problem](https://www.geeksforgeeks.org/max-flow-problem-introduction/)
 - [set STL testing](https://practice.geeksforgeeks.org/problems/inorder-traversal-and-bst/0)
 - [ ] [greedy][tree][count no of subtree with given sum](https://practice.geeksforgeeks.org/problems/count-number-of-subtrees-having-given-sum/1)
@@ -68,10 +66,6 @@
 - [ ] [all possible combination of a number with number smaller than that](https://www.geeksforgeeks.org/find-all-combinations-that-adds-upto-given-number-2/)
 - [ ][kth smallest element in BST](https://www.geeksforgeeks.org/find-k-th-smallest-element-in-bst-order-statistics-in-bst/)
 - [ ][max rectangle](https://practice.geeksforgeeks.org/problems/max-rectangle/1)
-- [x][tree][least_common_ancestor_in_trees][lowest common ancestor in binary tree](https://practice.geeksforgeeks.org/problems/lowest-common-ancestor-in-a-binary-tree/1)
-- [x][tree][least_common_ancestor_in_trees][lowest common ancestor in binary search tree](https://practice.geeksforgeeks.org/problems/lowest-common-ancestor-in-a-bst/1)
-- [ ][longest palindrome in a string](https://practice.geeksforgeeks.org/problems/longest-palindrome-in-a-string/0/?ref=self)
-- [ ][DFT]
 - [pointer_tutorials.cpp]
 - [x][tree][search a node in binary tree](https://www.geeksforgeeks.org/search-a-node-in-binary-tree/)
 - [ ][tree][kth ancestor node in binary tree](https://www.geeksforgeeks.org/kth-ancestor-node-binary-tree/)
@@ -88,9 +82,6 @@
 - [reverse_a_linked_list](https://practice.geeksforgeeks.org/problems/reverse-a-linked-list/1)
 - [ ] [why unorderd_map of struct node is not working] [detect_loop_in_linked_list](https://practice.geeksforgeeks.org/problems/detect-loop-in-linked-list/1/?ref=self)
 - [tree][print_all_paths_of_binary_tree](https://www.geeksforgeeks.org/given-a-binary-tree-print-out-all-of-its-root-to-leaf-paths-one-per-line/)
-- [x][tree][postorder_transversal_using_2_stacks]
-- [ ][tree][postorder_transversal_using_1_stacks]
-- [x][tree][preorder_transversal_iterative]
 - [ ][check if linked list is pallindrome or not](https://www.geeksforgeeks.org/function-to-check-if-a-singly-linked-list-is-palindrome/)
 - [ ][tree][binary search on unsorted array]
 - [check_if_binary_tree_is_bst](https://practice.geeksforgeeks.org/problems/check-for-bst/1)
@@ -124,7 +115,6 @@
 - [MS][Binary_representation](https://www.geeksforgeeks.org/binary-representation-of-a-given-number/)
 - [MS][print_uncommon_element_from_2_arrays](https://www.geeksforgeeks.org/print-uncommon-elements-two-sorted-arrays/)
 - [tree][left_right_view_of_tree](https://practice.geeksforgeeks.org/problems/left-view-of-binary-tree/1) (https://practice.geeksforgeeks.org/problems/right-view-of-binary-tree/1/?ref=self)
-- [longest_common_subsequence](https://practice.geeksforgeeks.org/problems/longest-common-subsequence/0)
 - [very-imp][minimum_cost_to_make_2_strings_identical](https://practice.geeksforgeeks.org/problems/minimum-cost-to-make-two-strings-identical/0)
 - [math][power_ab_in_logb_time](https://practice.geeksforgeeks.org/problems/abset-2/0)
 - [string][count_the_reversals](https://practice.geeksforgeeks.org/problems/count-the-reversals/0)
@@ -133,8 +123,6 @@
 - [graph][disjoint_set_data_structure]
 - [graph][detect_cycle_using_dfs]
 - [graph][detect_cycle_using_disjointSet]
-- [greedy][job_sequencing_problem](https://www.geeksforgeeks.org/job-sequencing-problem/)
-- [greedy][disjoint_set][job_sequencing_problem_using_disjoint_set](https://www.geeksforgeeks.org/job-sequencing-using-disjoint-set-union/)
 - [Sigtop error][greedy][IPC Trainer][lecture arrangement to reduce sadness level](https://www.codechef.com/JULY17/problems/IPCTRAIN)
 - [tree][inorder_successor_in_BST](https://practice.geeksforgeeks.org/problems/inorder-successor-in-bst/1)
 - [string][split_string_by_white_spaces]
@@ -171,7 +159,6 @@
 
 ## interview Bit:
 - [count element occurance](https://www.interviewbit.com/problems/count-element-occurence/)
-- [ ][very weird][matrix_median_with_no_extra_space](https://www.interviewbit.com/problems/matrix-median/)
 - [implament power function](https://www.interviewbit.com/problems/implement-power-function/)
 - [spiral transveral of matrix](https://www.interviewbit.com/problems/prettyprint/)
 - [find insert position in sorted array](https://www.interviewbit.com/problems/sorted-insert-position/)(https://www.interviewbit.com/help_requests/29770/)
@@ -184,27 +171,17 @@
 - [ ] [pretty json](https://www.interviewbit.com/problems/pretty-json/) (http://qa.geeksforgeeks.org/3734/qa.geeksforgeeks.org/3734/print-the-pretty-json-strings-facebook-microsoft.html)
 - [intersetction_of_two_sorted_arary]
 - [count_no_of_cont_subsequence_with_sum_in_range](https://www.interviewbit.com/problems/numrange/)
-- [ ] [nearest smallest element](https://www.interviewbit.com/problems/nearest-smaller-element/)
-- [sliding_window_maximum](https://www.interviewbit.com/problems/sliding-window-maximum/)
-- [ ][redundant_braces](https://www.interviewbit.com/problems/redundant-braces/)
 - [simplifying_directory_path](https://www.interviewbit.com/problems/simplify-directory-path/)
 - [rain_water_trapping](https://www.interviewbit.com/problems/rain-water-trapped/)
 - [kth_smallest_element_in_unsorted_array_in_constant_space](https://www.interviewbit.com/problems/kth-smallest-element-in-the-array/)
 - [next_greater_element](https://www.interviewbit.com/problems/nextgreater/)
-- [anagram_pairs_of_string_array](https://www.interviewbit.com/problems/anagrams/)
 - [colorful_number](https://www.interviewbit.com/problems/colorful-number/)
 - [2 sum] [sum_of_pairs](https://www.interviewbit.com/problems/2-sum/)
-- [pairs_with_given_difference](https://www.interviewbit.com/problems/diffk-ii/)
 - [linked list][intersection_of_two_nodes](https://www.interviewbit.com/problems/intersection-of-linked-lists/)
 - [largest_continuous_seq_with_zero_sum](https://www.interviewbit.com/problems/largest-continuous-sequence-zero-sum/)
-- [backtracking][subsets](https://www.interviewbit.com/problems/subset/)
 - [letter_phone](https://www.interviewbit.com/problems/letter-phone/)
-- [combinations_of_k_digit](https://www.interviewbit.com/problems/combinations/)
-- [combinational_sum](https://www.interviewbit.com/problems/combination-sum/)
-- [gray_code_sequence](https://www.interviewbit.com/problems/gray-code/)
 - [generate_all_parenthesis](https://www.interviewbit.com/problems/generate-all-parentheses-ii/) (https://leetcode.com/problems/generate-parentheses/)
 - [most-imp][string][backtrack][pallindromic_partitioning](https://www.interviewbit.com/problems/palindrome-partitioning/) (https://www.geeksforgeeks.org/given-a-string-print-all-possible-palindromic-partition/)
-- [combinational_sum_2](https://www.interviewbit.com/problems/combination-sum-ii/)
 - [fraction_again](https://www.interviewbit.com/problems/fraction/)
 - [points_on_same_straight_line](https://www.interviewbit.com/problems/points-on-the-straight-line/)
 - [design][min_stack](https://www.interviewbit.com/problems/min-stack/) (https://practice.geeksforgeeks.org/problems/special-stack/1)
@@ -225,7 +202,6 @@
 - [Tree][BST_iterator](https://www.interviewbit.com/problems/bst-iterator/) [ref solution](http://qa.geeksforgeeks.org/3996/qa.geeksforgeeks.org/3996/implement-an-iterator-over-a-binary-search-tree-bst.html)
 - [3_sum_zero]()
 - [ ][sorted_permutation_rank](https://www.interviewbit.com/problems/sorted-permutation-rank/)
-- [ ][dp][minimum_edit_distance](https://www.geeksforgeeks.org/edit-distance-dp-5/) (https://www.interviewbit.com/problems/edit-distance/)
 - [dp][minimum_cost_path](https://www.interviewbit.com/problems/min-sum-path-in-matrix/)
 - [dp][jump_game_array](https://www.interviewbit.com/problems/jump-game-array/)
 - [dp][count_minimum_number_of_jumps](https://practice.geeksforgeeks.org/problems/minimum-number-of-jumps/0)
@@ -239,7 +215,6 @@
 - [ ][dp][longest_increasing_subsequence_nlogn](https://www.interviewbit.com/problems/longest-increasing-subsequence/)
 - [ ][dp][count_sub_matrix_with_sum_0](https://www.interviewbit.com/problems/sub-matrices-with-sum-zero/)
 - [count_sub_array_with_sum_0]
-- [kadane's algorithm][maximum_sum_continuous_subarray]
 - [maximum_sum_submatrix]
 - [dp][kingdome_war](https://www.interviewbit.com/problems/kingdom-war/)
 - [dp][minimum_sum_path_in_rectangle](https://www.interviewbit.com/problems/min-sum-path-in-triangle/)
@@ -276,7 +251,6 @@
 - [ ][Tree][huffman-decoding](https://www.hackerrank.com/challenges/tree-huffman-decoding/problem?h_l=interview&h_r%5B%5D=next-challenge&h_r%5B%5D=next-challenge&h_v%5B%5D=zen&h_v%5B%5D=zen&isFullScreen=false&playlist_slugs%5B%5D%5B%5D%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D%5B%5D%5B%5D=trees&h_r=next-challenge&h_v=zen)
 - [MS][consecutive_1s_in_binary_represntation](https://www.hackerrank.com/challenges/30-binary-numbers/problem)
 - [ ][heap][queries_on_heap](https://www.hackerrank.com/challenges/qheap1/problem)
-- [heap][hard][find_median_of_running_stream_of_integers](https://www.hackerrank.com/challenges/find-the-running-median/forum)
 - [heap][hard][minimum_average_waiting_time](https://www.hackerrank.com/challenges/minimum-average-waiting-time/problem?h_r=next-challenge&h_v=zen)
 - [stack][balanced_brackets](https://www.hackerrank.com/challenges/balanced-brackets/problem)
 - [stack][easy][equal_stack](https://www.hackerrank.com/challenges/equal-stacks/problem?h_r=next-challenge&h_v=zen)
@@ -284,30 +258,19 @@
 - [ ][dp][queue][hard][down_to_zero_11](https://www.hackerrank.com/challenges/down-to-zero-ii/forum)
 - [greedy][easy][luck_balance](https://www.hackerrank.com/challenges/luck-balance/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=greedy-algorithms)
 - [greedy][medium][greedy_florist](https://www.hackerrank.com/challenges/greedy-florist/)
-- [ ][data-structure-design][climbing_the_leaderboard](https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem)
-- [ ][dp][backtrack][summing_pieces](https://www.hackerrank.com/challenges/summing-pieces/problem)
-- [ ][count_connected_cell_in_a_grid](https://www.hackerrank.com/challenges/connected-cell-in-a-grid/problem)
-- [ ][gridland_metro](https://www.hackerrank.com/challenges/gridland-metro/problem)
-- [ ][hackerland_radio_transmitters](https://www.hackerrank.com/challenges/hackerland-radio-transmitters/problem)
-- [ ][minimum_loss_on_buy_and_cell_house](https://www.hackerrank.com/challenges/minimum-loss/forum)
-- [ ][count_luck](https://www.hackerrank.com/challenges/count-luck/problem)
-
-
-
-
-
-
-
-
-
-
-
-
-
-## GEEKS-SERIES
 - [game_of_digits](https://practice.geeksforgeeks.org/contest-problem/the-game-of-digits0649/0/)
 - [ ][next_in_series](https://practice.geeksforgeeks.org/problems/next-in-series/0/?track=sp-mathematics&batchId=152)
-
+- [tree][sum_of_binary_tree](https://practice.geeksforgeeks.org/problems/sum-of-binary-tree/1)
+- [tree][ ](https://www.geeksforgeeks.org/sum-parent-nodes-child-node-x/)
+- [tree][sum_of_all_left_leaf_nodes](https://practice.geeksforgeeks.org/problems/sum-of-left-leaf-nodes/1)
+- [tree][ ][print_all_root_to_leaf_paths](https://www.geeksforgeeks.org/given-a-binary-tree-print-all-root-to-leaf-paths/)
+- [tree][sum_of_nodes_of_longest_path_from_root_to_leaf](https://practice.geeksforgeeks.org/problems/sum-of-the-longest-bloodline-of-a-tree/1)
+- [tree][sum_of_leaf_nodes](https://practice.geeksforgeeks.org/problems/sum-of-leaf-nodes/1/?ref=self)
+- [tree][find_closest_neighbour_in_bst](https://www.geeksforgeeks.org/find-closest-element-binary-search-tree/)
+- [tree][nodes_at_odd_level](https://practice.geeksforgeeks.org/problems/nodes-at-odd-levels/1/?ref=self)
+- [tree][delete_leaf_nodes_with_value_k](https://www.geeksforgeeks.org/delete-leaf-nodes-with-value-k/)
+- [tree][print_all_nodes_with_no_siblings](https://www.geeksforgeeks.org/print-nodes-dont-sibling-binary-tree/)
+- [tree][ ][find_max_path_sum_in_binary_tree](https://www.geeksforgeeks.org/find-maximum-path-sum-in-a-binary-tree/)
 
 
 
@@ -337,36 +300,6 @@
 
 
 
-
-
-
-
-
-
-
-## Tree:
-- [sum_of_binary_tree](https://practice.geeksforgeeks.org/problems/sum-of-binary-tree/1)
-- [ ](https://www.geeksforgeeks.org/sum-parent-nodes-child-node-x/)
-- [sum_of_all_left_leaf_nodes](https://practice.geeksforgeeks.org/problems/sum-of-left-leaf-nodes/1)
-- [ ][print_all_root_to_leaf_paths](https://www.geeksforgeeks.org/given-a-binary-tree-print-all-root-to-leaf-paths/)
-- [sum_of_nodes_of_longest_path_from_root_to_leaf](https://practice.geeksforgeeks.org/problems/sum-of-the-longest-bloodline-of-a-tree/1)
-- [sum_of_leaf_nodes](https://practice.geeksforgeeks.org/problems/sum-of-leaf-nodes/1/?ref=self)
-- [find_closest_neighbour_in_bst](https://www.geeksforgeeks.org/find-closest-element-binary-search-tree/)
-- [nodes_at_odd_level](https://practice.geeksforgeeks.org/problems/nodes-at-odd-levels/1/?ref=self)
-- [delete_leaf_nodes_with_value_k](https://www.geeksforgeeks.org/delete-leaf-nodes-with-value-k/)
-- [print_all_nodes_with_no_siblings](https://www.geeksforgeeks.org/print-nodes-dont-sibling-binary-tree/)
-- [ ][find_max_path_sum_in_binary_tree](https://www.geeksforgeeks.org/find-maximum-path-sum-in-a-binary-tree/)
-
-
-
-
-
-
-
-
-
-
-
 ## contribution on 1-7-19
 - [tree][medium][construct_binary_tree_from_inorder_transversal](https://www.geeksforgeeks.org/construct-binary-tree-from-inorder-traversal/)
 - [tree][medium][binary_tree_pruning][https://leetcode.com/problems/binary-tree-pruning/]
@@ -379,18 +312,9 @@
 - [tree][Insufficient_node_in_binary_tree](https://leetcode.com/problems/insufficient-nodes-in-root-to-leaf-paths/)
 - [matrix][minimum_path_sum](https://leetcode.com/problems/minimum-path-sum/submissions/)
 - [matrix][count_friend_circle](https://leetcode.com/problems/friend-circles/)
-- [string][length of longest substring with consecutive characters](https://www.geeksforgeeks.org/length-of-the-longest-substring-with-consecutive-characters/)
-- [string][length of longest substring with non repeating character](https://practice.geeksforgeeks.org/problems/length-of-the-longest-substring/0)
 - [heap][top_k_frequent_elements](https://leetcode.com/problems/top-k-frequent-elements/)
 - [heap][k_closest_points_to_origin](https://leetcode.com/problems/k-closest-points-to-origin/)
 - [imp][heap][find_k_pairs_with_smallest_sum](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/)
-
-
-
-
-
-
-
 
 ## contribution on 2-7-19 :
 - [string][custom_sort_string](https://leetcode.com/problems/custom-sort-string/)
@@ -401,20 +325,11 @@
 - [tree][paths_in_zigzag_labelled_tree](https://leetcode.com/problems/path-in-zigzag-labelled-binary-tree/)
 - [hard][string][parsing_a_boolean_expression](https://leetcode.com/problems/parsing-a-boolean-expression/)
 
-
-
-
-
 ## contribution on 3-7-19 :
 - [greedy][mishka_and_last_exam](https://codeforces.com/problemset/problem/1093/C)
 - [greedy][score_after_flipping_matrix](https://leetcode.com/problems/score-after-flipping-matrix/)
 - [greedy][car_pooling](https://leetcode.com/problems/car-pooling/)
 - [greedy][queue_reconstruct_by_height](https://leetcode.com/problems/queue-reconstruction-by-height/)
-
-
-
-
-
 
 ## contribution on 4-7-19
 - [dp][house_robber](https://leetcode.com/problems/house-robber/)
@@ -423,30 +338,11 @@
 - [array][range-query][](https://www.geeksforgeeks.org/find-whether-subarray-form-mountain-not/)(https://practice.geeksforgeeks.org/problems/mountain-subarray-problem/1)
 - [dp][series_of_stock_buy_and_sell_question_dp]
 - [design][design_circular_queue_2](https://leetcode.com/problems/design-circular-deque/)
-- [queue][greedy][task_scheduler](https://leetcode.com/problems/task-scheduler/)
 - [queue][moving_average_from_data](https://www.leetfree.com/problems/moving-average-from-data-stream.html)
 
-
-
-
-
-
-
-
-
 ## contribution on 5-7-19
-- [greedy][maximum_product_subarray](https://www.geeksforgeeks.org/maximum-product-subarray/)
-- [imp][array][maximum_product_of_three_number](https://leetcode.com/problems/maximum-product-of-three-numbers/)
 - [array][find_pivot_index_where_sum_on_left_and_right_is_equal](https://leetcode.com/problems/find-pivot-index/)
 - [design][design_ds_for_all_operation_in_costant_time](https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed/)(https://www.geeksforgeeks.org/design-a-data-structure-that-supports-insert-delete-search-and-getrandom-in-constant-time/)
-
-
-
-
-
-
-
-
 
 ## contribution on 6-7-19
 - [tree][check_if_tree_is_balanced_or_not](https://www.geeksforgeeks.org/how-to-determine-if-a-binary-tree-is-balanced/)
@@ -468,12 +364,6 @@
 - [ ][medium][balanced-tree][self_balancing_tree](https://www.hackerrank.com/challenges/self-balancing-tree/problem)
 - [easy][array][min_diff_between_max_min_of_k_size_subset](https://www.geeksforgeeks.org/k-numbers-difference-maximum-minimum-k-number-minimized/)
 
-
-
-
-
-
-
 ## contribution 7-7-17
 - [easy][linked-list][middle_of_linked_list](https://leetcode.com/problems/middle-of-the-linked-list/)
 - [easy][linked-list][pallindromic_linked_list](https://leetcode.com/problems/palindrome-linked-list/)
@@ -487,12 +377,6 @@
 - [design][design_linked_list](https://leetcode.com/problems/design-linked-list/)
 - [medium][tree][delete_node_in_bst](https://leetcode.com/problems/delete-node-in-a-bst/)
 
-
-
-
-
-
-
 ## contribution on 8-7-19
 - [easy][range-query][range_sum_query_immutable](https://leetcode.com/problems/range-sum-query-immutable/submissions/)
 - [medium][range-query][range_sum_query_muttable](https://leetcode.com/problems/range-sum-query-mutable/submissions/)
@@ -501,24 +385,10 @@
 - [imp][stack][medium][exclusive_time_in_cpu_execution](https://leetcode.com/problems/exclusive-time-of-functions/submissions/)
 - [range-query][segment_tree]()
 
-
-
-
-
-
-
-
-
-
 ## contribution on 11-7-19
 - [medium][tree][sum_root_to_leaf_numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/)
 - [easy][array][minimum_energy_to_cross_streat](https://practice.geeksforgeeks.org/problems/minimum-energy/0)
 - [medium][array][minimum_swaps_required_to_groups_all_1s](https://www.geeksforgeeks.org/minimum-swaps-required-group-1s-together/)
-
-
-
-
-
 
 ## Contribution on 14-7-19
 - [imp][tree][medium][deepest_node_in_binary_tree](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)
@@ -526,21 +396,13 @@
 - [imp][medium][continuous_array](https://leetcode.com/problems/contiguous-array/)
 - [easy][count_prime_no](https://leetcode.com/problems/count-primes/)
 - [easy][imp][happy_number](https://leetcode.com/problems/happy-number/)
-- [medium][imp][ugly_number_2](https://leetcode.com/problems/ugly-number-ii/)
-
-
-
-
-
-
+- [medium][math][ugly_number_2](https://leetcode.com/problems/ugly-number-ii/)
+- [medium][math][super_ugly_number](https://leetcode.com/problems/super-ugly-number/)
 
 ## Contribution on 15-7-19
 - [easy][leetcode_contest_103](https://leetcode.com/problems/smallest-range-i/)
 - [imp][range_Addition](https://zhuhan0.blogspot.com/2017/10/leetcode-370-range-addition.html)
 - [imp][intersection_of_two_array_2](https://leetcode.com/problems/intersection-of-two-arrays-ii/) (https://leetcode.com/problems/intersection-of-two-arrays/)
-
-
-
 
 ## Contribution on 18-7-19
 - [x][easy][smallest_range_1_2](https://leetcode.com/problems/smallest-range-i/)
@@ -555,34 +417,14 @@
 - [employees_free_time](https://www.cnblogs.com/grandyang/p/8552586.html)
 - [hard][graph,disjoint-set][minimize_malware_spread](https://leetcode.com/problems/minimize-malware-spread/)
 
-
-
-
-
-
-
 ## contribution on 18-7-19
 - [x][easy][lemonade_changes](https://leetcode.com/problems/lemonade-change/)
-
-
-
-
-
-
-
-
 
 ## contribution on 21-7-19
 - [medium][minimum_cost_tree_from_leaf_values](https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/)
 - [medium][graph][all_path_from_source_to_target](https://leetcode.com/problems/all-paths-from-source-to-target/)
 - [easy][assign_cookies](https://leetcode.com/problems/assign-cookies/)
 - [medium][graph][kth_symbol_in_grammar](https://leetcode.com/problems/k-th-symbol-in-grammar)
-
-
-
-
-
-
 
 ## contribution 22-7-19
 - [imp][medium][decode_string](https://leetcode.com/problems/decode-string/)
@@ -592,27 +434,14 @@
 - [medium][backtrack][letter_phone_combination](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
 - [medium][kth_largest_element_in_array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
 
-
-
-
-
-
-
 ## contribution on 23-7-19
 - [string][hash][group_anagram](https://leetcode.com/problems/group-anagrams/)
 - [matrix,graph][number_of_island](https://leetcode.com/problems/number-of-islands/) (https://www.geeksforgeeks.org/islands-in-a-graph-using-bfs/
 - [easy][matrix][island_perimeter](https://leetcode.com/problems/island-perimeter/)
 - [imp][hard][dp,string][regular_exp_matching](https://leetcode.com/problems/regular-expression-matching)
-- [medium][dp,string][count_all_pallindromic_substring](https://leetcode.com/problems/palindromic-substrings/)
 - [imp][hard][dp][wildcard_matching](https://leetcode.com/problems/wildcard-matching/)
 - [imp][graph][topological_sort]
 - [imp][graph][course_schedule_12](https://leetcode.com/problems/course-schedule-ii/)
-
-
-
-
-
-
 
 ## contribution on 26-7-19
 - [medium][imp,tree][flatten_binary_tree_to_linked_list](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)
@@ -623,9 +452,6 @@
 - [medium][stack][leetcode_contest_112](https://leetcode.com/problems/validate-stack-sequences/)
 - [medium][math,array][leetcode_contest_112](https://leetcode.com/problems/minimum-increment-to-make-array-unique/)
 - [ ][medium][DFS,disjoint][leetcode_contest_112](https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/)
-
-
-
 
 ## Contribution on 27-7-19
 - [medium][array][leetcode_contest_113](https://leetcode.com/problems/reveal-cards-in-increasing-order/)
@@ -644,7 +470,6 @@
 ## contribution on 29-7-19
 - [medium][math,string][valid_tic_tac_toe](https://leetcode.com/problems/valid-tic-tac-toe-state/)
 - [valid_sudoku](https://leetcode.com/problems/valid-sudoku/)
-- [](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
 - [graph][deep_clone_a_graph](https://leetcode.com/problems/clone-graph/)
 - [](https://leetcode.com/problems/maximal-square/)
 - [linked-list][deep_clone_of_list](https://leetcode.com/problems/copy-list-with-random-pointer/)
@@ -654,14 +479,6 @@
 - [hard][graph][shortest_path_dijkstra](https://www.hackerrank.com/challenges/dijkstrashortreach/problem)
 - [hard][graph][prims_algorithm_mst](https://www.hackerrank.com/challenges/primsmstsub/problem)
 - [medium][graph][shortest_path_using_bfs](https://www.hackerrank.com/challenges/dijkstrashortreach/problem)
-- [ ][medium][graph][minimum_penalty_path](https://www.hackerrank.com/challenges/beautiful-path/)
-
-
-
-
-
-
-
 
 ## Contribution on 30-7-19
 - [medium][graph,disjointSet][connect_cities_with_libraries](https://www.hackerrank.com/challenges/torque-and-development/problem)
@@ -676,64 +493,31 @@
 - [ ] [lru cache](https://www.interviewbit.com/problems/lru-cache/)
 - [ ][](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/#/description)
 
-
-
-
 ## contribution on 31-7-19
-- [ ][hard][graph][maximum_cost_queries](https://www.hackerrank.com/challenges/maximum-cost-queries/problem)
-- [ ][hard][graph][merging_communities](https://www.hackerrank.com/challenges/merging-communities/problem)
 - [medium][array][minimum_swaps_to_sort_array](https://www.hackerrank.com/challenges/minimum-swaps-2/)
 - [medium][linked-list][odd_even_linked_list](https://leetcode.com/problems/odd-even-linked-list/)
 - [medium][linked-list][linked_list_components](https://leetcode.com/problems/linked-list-components/)
 - [medium][linked-list][erase_element_and_duplicates_from_list](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)
 - [easy][linked-list][reverse_a_doubly_linked_list](https://www.hackerrank.com/challenges/reverse-a-doubly-linked-list/)
 
-
-
-
-
-
-
-
 ## contribution on 1-8-19
 - [medium][sampling][random_pick_index](https://leetcode.com/problems/random-pick-index/)
 - [medium][sampling][random_pick_with_weights](https://leetcode.com/problems/random-pick-with-weight/)
 - [medium][search][minimum_loss](https://www.hackerrank.com/challenges/minimum-loss/problem)
-- [ ][binary_search_on_values_in_increasing_order]
-- [search_element_in_rotated_array](https://www.interviewbit.com/problems/rotated-sorted-array-search/)
 - [medium][stack][largest_rectangle_in_histogram](https://www.interviewbit.com/problems/largest-rectangle-in-histogram/)
 - [medium][stack][simple_text_editor](https://www.hackerrank.com/challenges/simple-text-editor/problem)
 - [easy][tree][top_view_of_tree](https://www.hackerrank.com/challenges/tree-top-view/problem)
-
-
-
-
-
-
-
-
-
 
 ## contribution on 2-8-19
 - [medium][tree][right_side_view](https://leetcode.com/problems/binary-tree-right-side-view/)
 - [x][linked-list][sort_list_in_nlogn_time_with_constant_space](https://leetcode.com/problems/sort-list/)
 - [x][linked-list][merge_sort_on_linked_list](https://leetcode.com/problems/merge-two-sorted-lists/)(https://www.hackerrank.com/challenges/merge-two-sorted-linked-lists/problem)
 - [x][linked-list][merge_k_sorted_list_2_method](https://leetcode.com/problems/merge-k-sorted-lists/)
-- [hard][Array,dp][maximal_rectangle]https://leetcode.com/problems/maximal-rectangle/
-
-
-
-
-
-
 
 
 ## contribution on 3-8-19
 - [ ][hard][divide-conquer][binary-index-tree][count_of_smaller_after_self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/discuss/76607/C%2B%2B-O(nlogn)-Time-O(n)-Space-MergeSort-Solution-with-Detail-Explanation)
 - [ ][tree][minimum_height_tree](https://leetcode.com/problems/minimum-height-trees/)
-
-- [ ][tree][vertical_order_transversal](https://practice.geeksforgeeks.org/problems/print-a-binary-tree-in-vertical-order/1)
-
 - [ ][](https://leetcode.com/problems/partition-equal-subset-sum/)
 - [ ][segment_tree](https://www.geeksforgeeks.org/segment-tree-set-1-sum-of-given-range/)(https://cp-algorithms.com/data_structures/segment_tree.html)
 - [ ][tree][boundary_order_transversal](https://www.leetfree.com/problems/boundary-of-binary-tree.html)(https://www.geeksforgeeks.org/boundary-traversal-of-binary-tree/)
@@ -741,11 +525,8 @@
 - [ ][tree][medium][find_smallest_subtree_with_deep_level](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)
 
 - [design][LRU_design](https://www.interviewbit.com/problems/lru-cache/?ref=bookmark)
-
 - [partition_label](https://leetcode.com/problems/partition-labels/)
-
 - [ ][alien_dictionary](https://zhuhan0.blogspot.com/2017/06/leetcode-269-alien-dictionary.html)
-
 - [add_bold_tag_in_string](https://www.cnblogs.com/grandyang/p/7043394.html)
 
 
@@ -756,7 +537,6 @@
 - [medium][string][next_lexiographical_string](https://www.hackerrank.com/challenges/bigger-is-greater/problem)
 - [medium][sort,string][counting_sort_special](https://www.hackerrank.com/challenges/countingsort4/problem)
 - [medium][string][count_all_possible_anagramic_substring](https://www.hackerrank.com/challenges/sherlock-and-anagrams/problem)
-- [ ][medium][greedy][install_transmitter_inhackerland](https://www.hackerrank.com/challenges/pylons/problem)
 - [medium][algorithm][gaming_array](https://www.hackerrank.com/challenges/an-interesting-game-1/problem)
 - [ ][medium][string][password_cracker](https://www.hackerrank.com/challenges/password-cracker/problem)
 - [ ][medium][knight_on_chessboard](https://www.hackerrank.com/challenges/knightl-on-chessboard/problem)
@@ -764,14 +544,221 @@
 - [medium][array][flipping_the_matrix](https://www.hackerrank.com/challenges/flipping-the-matrix/problem)
 - [medium][dp,array][maximize_profit_stock_price](https://www.hackerrank.com/challenges/stockmax/problem)
 
+## contribution on 12-8-19
+- [ ][medium][recursion][power_sum]()
+- [hard][array][range_max](https://www.hackerrank.com/challenges/crush/problem)
+- [hard][greedy][truck_tour_problem](https://www.hackerrank.com/challenges/truck-tour/problem)
+- [medium][BST,DP][generate_all_possible_BST](https://leetcode.com/problems/unique-binary-search-trees-ii/)
+- [ ] [tree][sum of nodes at maximum height](https://www.geeksforgeeks.org/sum-nodes-maximum-depth-binary-tree/)
+- [easy][pointer][two_sum_2_in_sorted_array](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
+- [easy][array][best_time_to_buy_ans_sell_stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+- [easy][binary-search][search_insert_position](https://leetcode.com/problems/search-insert-position/)
+- [imp][medium][array][majority_element_1_2]()
+- [ ][binary_search_on_values_in_increasing_order]
+- [imp][binary-search][search_element_in_rotated_array](https://www.interviewbit.com/problems/rotated-sorted-array-search/)(https://leetcode.com/problems/search-in-rotated-sorted-array/)
+
+## Contribution on 13-8-19
+- [easy][binary-search][first_bad_version](https://leetcode.com/problems/first-bad-version/)
+- [imp][medium][binary-search][koko_eating_bananas](https://leetcode.com/problems/koko-eating-bananas)
+- [most-imp][medium][binary-search][find_first_and_last_position_of_element](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
+- [most-imp][medium][binary-search][find_k_closest_point](https://leetcode.com/problems/find-k-closest-elements/)
+- [medium][dp,array][triangle](https://leetcode.com/problems/triangle/)
+- [medium][tree][vertical_order_transversal](https://www.interviewbit.com/problems/vertical-order-traversal-of-binary-tree/)
+- [imp][medium][tree][populating_next_right_pointers]
+- [medium][linked-list][swap_list_nodes_in_pair](https://www.interviewbit.com/problems/swap-list-nodes-in-pairs/)
+
+## Contribution on 14-8-19
+- [hashing][pairs_with_given_difference](https://www.interviewbit.com/problems/diffk-ii/)
+- [hashing][anagram_pairs_of_string_array](https://www.interviewbit.com/problems/anagrams/)
+- [Stacks And Queues][sliding_window_maximum](https://www.interviewbit.com/problems/sliding-window-maximum/)
+- [hard][queues][queries_with_fixed_length](https://www.hackerrank.com/challenges/queries-with-fixed-length/problem)
+- [medium][Stacks And Queues][redundant_braces](https://www.interviewbit.com/problems/redundant-braces/)
+- [heap][hard][find_median_of_running_stream_of_integers](https://www.hackerrank.com/challenges/find-the-running-median/forum)
+
+## Contribution on 15-8-19
+- [string][length_of_longest_substring_with_consecutive_characters](https://www.geeksforgeeks.org/length-of-the-longest-substring-with-consecutive-characters/)
+- [hashing][length_of_longest_substring_with_non_repeating_character](https://www.interviewbit.com/problems/longest-substring-without-repeat/)(https://practice.geeksforgeeks.org/problems/length-of-the-longest-substring/0)
+- [backtracking][combinations_of_k_digit](https://www.interviewbit.com/problems/combinations/)
+- [backtracking][combinational_sum](https://www.interviewbit.com/problems/combination-sum/)
+- [hard][dp,string][longest_valid_parentheses](https://www.interviewbit.com/problems/longest-valid-parentheses/)(https://leetcode.com/problems/longest-valid-parentheses/)
+- [dp][decode_ways_1_2](https://leetcode.com/problems/decode-ways/)(https://leetcode.com/problems/decode-ways-ii/)(https://www.interviewbit.com/problems/ways-to-decode/)
+- [dp][minimum_edit_distance](https://leetcode.com/problems/edit-distance/)(https://www.interviewbit.com/problems/edit-distance/)
+- [hard][dp,matrix][unique_path_count](https://leetcode.com/problems/unique-paths/)
+- [ ][hard][dp][unique_path_count_2](https://leetcode.com/problems/unique-paths-ii/)
+- [ ][nearest smallest element](https://www.interviewbit.com/problems/nearest-smaller-element/)
+- [ ][backtracking][combinational_sum_2](https://www.interviewbit.com/problems/combination-sum-ii/)
+
+## Contribution on 16-8-19
+- [Backtracking][gray_code_sequence](https://www.interviewbit.com/problems/gray-code/)
+- [ ][very weird][matrix_median_with_no_extra_space](https://www.interviewbit.com/problems/matrix-median/)
+- [hard][dp][maximal_rectangle](https://leetcode.com/problems/maximal-rectangle/)(https://www.interviewbit.com/problems/max-rectangle-in-binary-matrix/)
+- [easy][dp][climbing_stairs](https://leetcode.com/problems/climbing-stairs/)
+- [data-structure-design][climbing_the_leaderboard](https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem)
+- [imp][easy][missing_number](https://leetcode.com/problems/missing-number/)
+- [backtracking][permutations](https://www.interviewbit.com/problems/permutations/)
+
+
+
+## Contribution on 17-8-19
+- [imp][bit-manipulation][reverse_bits](https://leetcode.com/problems/reverse-bits/)
+- [imp][bit-manipulation][sum_of_two_integer_without_operator](https://leetcode.com/problems/sum-of-two-integers/)
+- [imp][bit-manipulation][power_of_two_three_four](https://leetcode.com/problems/power-of-two/)
+- [bit-manipulation][letter_case_permuatations](https://leetcode.com/problems/letter-case-permutation/)
+- [bit-manipulation, dp][counting_bits](https://leetcode.com/problems/counting-bits/)
+
+
+
+
+## Contribution on 19-8-17
+- [medium][graph][bfs_shortest_path](https://www.hackerrank.com/challenges/bfsshortreach/problem)
+- [medium][graph][kruskal_mst](https://www.hackerrank.com/challenges/kruskalmstrsub/problem)
+- [medium][graph][components_in_graph](https://www.hackerrank.com/challenges/components-in-graph/problem)
+- [hard][graph][merging_communities](https://www.hackerrank.com/challenges/merging-communities/problem)
+
+
+
+
+## Contribution on 20-8-19
+- [medium][tree][preorder_transversal_iteratively](https://leetcode.com/problems/binary-tree-preorder-traversal/)
+- [medium][tree][inorder_transversal_iteratively](https://leetcode.com/problems/binary-tree-inorder-traversal/)
+- [medium][tree][least_common_ancestor_in_binary_tree](https://practice.geeksforgeeks.org/problems/lowest-common-ancestor-in-a-binary-tree/1)
+- [medium][tree][least_common_ancestor_in_bst](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)(https://practice.geeksforgeeks.org/problems/lowest-common-ancestor-in-a-bst/1)
+
+
+## Contribution on 22-8-19
+- [medium][dp][coin_change](https://www.hackerrank.com/challenges/coin-change/problem[ ])
+- [medium][array][max_sub_array_and_sub_seq](https://www.hackerrank.com/challenges/maxsubarray/problem)
+- [medium][backtrack][word_search](https://leetcode.com/problems/word-search/submissions/)
+- [ ][medium][graph][cut_the_tree](https://www.hackerrank.com/challenges/cut-the-tree/problem)
+
+- [easy][greedy][mark_and_toys](https://www.hackerrank.com/challenges/mark-and-toys/problem)
+- [ ][medium][greedy][install_transmitter_inhackerland](https://www.hackerrank.com/challenges/pylons/problem)
+- [easy][greedy][jim_and_orders](https://www.hackerrank.com/challenges/jim-and-the-orders/problem)
+- [easy][greedy][permuting_two_array](https://www.hackerrank.com/challenges/two-arrays/problem)
+- [easy][greedy][largest_permutation](https://www.hackerrank.com/challenges/largest-permutation/problem)
+- [queue][greedy][task_scheduler](https://leetcode.com/problems/task-scheduler/)
+- [][search][](https://www.hackerrank.com/challenges/bike-racers/problem)
+- [medium][search][](https://www.hackerrank.com/challenges/grid-challenge/problem)
+
+- [flipkart-2018][count_derangement](https://www.geeksforgeeks.org/count-derangements-permutation-such-that-no-element-appears-in-its-original-position/)
+- [BNY-Mellon-2018][huffman_decoding](https://github.com/kaushal02/interview-coding-problems/blob/master/huffmanDecode.cpp)
+- [flipkart-2018][travelling_is_fun](https://www.hackerrank.com/contests/hack-it-to-win-it-paypal/challenges/q4-traveling-is-fun/submissions/code/1315786440)
+- [hackerrank][elevator_travel](https://www.hackerrank.com/contests/goldman-sachs-womens-codesprint/challenges/elevator-travel/)
+
+
+## Contribution on 23-8-19
+- [medium][array][subarray_sum_equals_k](https://leetcode.com/problems/subarray-sum-equals-k/)
+- [greedy][maximum_product_subarray](https://leetcode.com/problems/maximum-product-subarray/)
+- [imp][array][maximum_product_of_three_number](https://leetcode.com/problems/maximum-product-of-three-numbers/)
+- [medium][array][subarray_product_less_than_k](https://leetcode.com/problems/subarray-product-less-than-k/)
+- [medium][array][product_of_array_except_self](https://leetcode.com/problems/product-of-array-except-self/)
+- [medium][array][count_subarray_with_even_sum](http://marcodiiga.github.io/number-of-even-sum-subarrays)
+
+
+## Contribution on 24-8-19
+- [medium][tree][serialize_and_deserialize_BST](https://leetcode.com/problems/serialize-and-deserialize-bst/)
+- [medium][tree][serialize_and_deserialize_binary_tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
+- [medium][tree][find_duplicate_subtree](https://leetcode.com/problems/find-duplicate-subtrees/)
+
+- [medium][string,dp][longest_pallindrome_in_string.cpp](https://leetcode.com/problems/longest-palindromic-substring/)
+- [ ][TLE] [longest_pallindromic_subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/)
+- [ ][manachers_algorithm_linear_time](https://www.geeksforgeeks.org/manachers-algorithm-linear-time-longest-palindromic-substring-part-2/)
+- [medium][dp,string][count_all_pallindromic_substring](https://leetcode.com/problems/palindromic-substrings/)
+- [medium][string,dp][longest_common_subsequence](https://leetcode.com/problems/longest-common-subsequence/)(https://practice.geeksforgeeks.org/problems/longest-common-subsequence/0)
+- [medium][dp][maximum_sum_continuous_subarray](https://leetcode.com/problems/maximum-subarray/)
+- [medium][dp][longest_turbulent_subarray](https://leetcode.com/problems/longest-turbulent-subarray/)
+- [medium][dp][delete_operation_for_two_strings](https://leetcode.com/problems/delete-operation-for-two-strings/)
+- [medium][graph][cheapest_flights_within_k_stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
+- [easy][bit-manipulation][find_the_difference](https://leetcode.com/problems/find-the-difference/)
+- [medium][graph][graph_coloring_problem]
+
+
+## Contribution on 26-8-19
+- [imp][easy][dp][min_cost_climbing_stairs](https://leetcode.com/problems/min-cost-climbing-stairs/)
+- [medium][trie][replace_words](https://leetcode.com/problems/replace-words/)
+- [medium][trie][trie_implementation](https://leetcode.com/problems/implement-trie-prefix-tree/)
+- [medium][linked-list][add_two_numbers](https://leetcode.com/problems/add-two-numbers/)
+- [medium][linked-list][add_two_numbers_2](https://leetcode.com/problems/add-two-numbers-ii/)
+- [medium][linked-list][swap_pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)
+
+
+## Contribution on 31-8-19
+- [medium][tree][zigzag_level_order_tranversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)
+
+
+## Contribution on 2-9-19
+- [easy][string][unique_morse_code](https://leetcode.com/problems/unique-morse-code-words/)
+- [easy][string,stack][remove_parentheses](https://leetcode.com/problems/remove-outermost-parentheses/)
+- [medium][string][vowel_spell_checker](https://leetcode.com/problems/vowel-spellchecker/)
+- [easy][imp][array][n_repeated_element_search](https://leetcode.com/problems/n-repeated-element-in-size-2n-array/)
+
+## Contribution on 3-9-19
+- [easy][bfs][employee_importance](https://leetcode.com/problems/employee-importance/)
+- [easy][bit-manipulation][binary_number_with_alternating_bits](https://leetcode.com/problems/binary-number-with-alternating-bits/)
+- [easy][bit-manipulation][number_complement](https://leetcode.com/problems/number-complement/)
+- [easy][bit-manipulation][binary_watch](https://leetcode.com/problems/binary-watch/)
+
+- [medium][][](https://leetcode.com/problems/multiply-strings/)
+- [backtracking][subsets](https://www.interviewbit.com/problems/subset/)
+// https://leetcode.com/problems/maximum-subarray/discuss/20200/Share-my-solutions-both-greedy-and-divide-and-conquer
+// https://leetcode.com/problems/cheapest-flights-within-k-stops/discuss/128217/Three-C%2B%2B-solutions-BFS-DFS-and-BF
+// 
+// https://leetcode.com/problems/divisor-game/
+// https://leetcode.com/problems/first-missing-positive/
+// https://leetcode.com/problems/single-number-ii/discuss/43294/Challenge-me-thx
+// https://leetcode.com/problems/first-missing-positive/
+
+https://leetcode.com/articles/sum-of-distances-in-tree/#
+https://www.hackerrank.com/contests/test-contest-27/challenges/paintwall/problem
+https://www.geeksforgeeks.org/painting-fence-algorithm/
+https://www.geeksforgeeks.org/painters-partition-problem/
+https://www.geeksforgeeks.org/m-coloring-problem-backtracking-5/
+
+- [ ](https://leetcode.com/problems/maximum-length-of-pair-chain/)
+- [](https://leetcode.com/problems/task-scheduler/)
+- [](https://leetcode.com/problems/most-profit-assigning-work/)
+
+- [medium][array][rotate_image](https://leetcode.com/problems/rotate-image/)
+- [greedy][job_sequencing_problem](https://www.geeksforgeeks.org/job-sequencing-problem/)
+- [greedy][disjoint_set][job_sequencing_problem_using_disjoint_set](https://www.geeksforgeeks.org/job-sequencing-using-disjoint-set-union/)
+
+- [ ][hard][graph][maximum_cost_queries](https://www.hackerrank.com/challenges/maximum-cost-queries/problem)
+- [ ][medium][graph][minimum_penalty_path](https://www.hackerrank.com/challenges/beautiful-path/)
+
+- [ ][next permutation](https://www.interviewbit.com/problems/next-permutation/)
+
+- [ ][dp][backtrack][summing_pieces](https://www.hackerrank.com/challenges/summing-pieces/problem)
+- [ ][count_connected_cell_in_a_grid](https://www.hackerrank.com/challenges/connected-cell-in-a-grid/problem)
+- [ ][gridland_metro](https://www.hackerrank.com/challenges/gridland-metro/problem)
+- [ ][hackerland_radio_transmitters](https://www.hackerrank.com/challenges/hackerland-radio-transmitters/problem)
+- [ ][minimum_loss_on_buy_and_cell_house](https://www.hackerrank.com/challenges/minimum-loss/forum)
+- [ ][count_luck](https://www.hackerrank.com/challenges/count-luck/problem)
 
 
 
 
 
 
-## contribution on 6-8-19
-- [medium][recursion][power_sum]()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -801,8 +788,6 @@
 - [ ][imp][dp][can_i_win](https://leetcode.com/problems/can-i-win/)
 - [imp](https://leetcode.com/problems/queue-reconstruction-by-height/discuss/302592/Python-From-O(N2)-Search-available-slot-to-O(NlogN)-Segment-Tree-Optimization)
 - [ ][counting_inversion](https://www.geeksforgeeks.org/counting-inversions/)
-- [ ][TLE] [longest_pallindromic_subsequence](https://www.geeksforgeeks.org/longest-palindromic-subsequence-dp-12/)
-- [ ][manachers_algorithm_linear_time](https://www.geeksforgeeks.org/manachers-algorithm-linear-time-longest-palindromic-substring-part-2/)
 - [ ][ncr_using_dp]
 
 - [ ][smallest_window_in_String_contain_another_strings_character]()(https://practice.geeksforgeeks.org/problems/smallest-window-in-a-string-containing-all-the-characters-of-another-string/0)
@@ -814,10 +799,8 @@
 - [ ][tree][hard][binary_tree_cameras](https://leetcode.com/problems/binary-tree-cameras/)
 
 - [ ][print_all_ancestors_of_given_node](https://practice.geeksforgeeks.org/problems/ancestors-in-binary-tree/1)
-- [ ][serialize_and_deserialize_BST](https://leetcode.com/problems/serialize-and-deserialize-bst/)
 - [ ][partition_problem](https://www.geeksforgeeks.org/partition-problem-dp-18/)
 - [ ][](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/)
-- [](https://leetcode.com/problems/subarray-sum-equals-k/)
 - [](https://leetcode.com/problems/subarray-product-less-than-k/)
 - [ ][string][Longest Substring with At Most K Distinct Characters]
 - [ ][string][Longest Substring with At Most Two Distinct Characters]
@@ -835,8 +818,6 @@
 - [greedy][ ](https://www.hackerrank.com/challenges/pylons/forum)
 
 - [ ][hard][smallest_range_free_time](https://leetcode.com/problems/smallest-range/)
-- [next permutation](https://www.interviewbit.com/problems/next-permutation/)
-- [ ][medium][min_height_tree]()
 - [skyline_problem](https://leetcode.com/problems/the-skyline-problem/)
 - [perfect_rectangle](https://leetcode.com/problems/perfect-rectangle/)
 - [falling_square](https://leetcode.com/problems/falling-squares/)
@@ -881,10 +862,28 @@ https://leetcode.com/problems/minimum-area-rectangle/
 
 
 
+
 ## Important Stuff
+
+#### Custom comparators
+```c++
+struct myData{
+    string key, value;
+};
+
+struct compare{
+    bool operator()(const myData &lhs, const myData &rhs) const{
+        return lhs.key < rhs.key;
+    }
+};
+set<myData, compare> mySet;
+mySet.insert(myData{"Hii"})
+```
+
+
 1. Modulo Operator for output 
     **((a-b)%m = (a%m - b%m + m)%m)**
-```c++
+```
 consider this: (14-1)%7. If you just do ((14%7 - 1%7)%7), you will get -1(considering implementation in C/C++). That's why add divisor before final division. (14%7 - 1%7 + 7)%7 = 6 which is the expected answer. And when the result of first two modular divions is non-negative adding divisor won't affect the result which is easy to prove. Hope you get the logic. 
 ```
 
@@ -898,8 +897,8 @@ struct TreeNode {
  * };
  ```
 
-3. Break and Convert a string into integer and string
-```c++
+#### Break and Convert a string into integer and string
+```
 Input: logs = ["0:start:0","1:start:2","1:end:5","0:end:6"]
 struct Log {
     int id;
@@ -937,7 +936,7 @@ Rectangle (int x, int y) : width(x), height(y) { }
 ```
 
 6. String to int (STL):
-```
+```c++
 Way 2. Use C++ standard library std::stringstream.
 
 #include <sstream>
@@ -967,3 +966,21 @@ int main ()
   return 0;
 }
 ```
+
+5. Easy method to return vector
+```
+    return vector<int> ({1,2});
+or
+    return {1,2};
+
+```
+
+## Inline Function
+- No control tranfer
+- copy the function in the place where it is called at compile time.
+
+
+
+## bit manipulation
+- `n & (n-1)` drops lowest set bit
+- to count all set bit: use `while (n) { n &= (n - 1); count++; }`

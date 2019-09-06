@@ -2,33 +2,47 @@
 Approach:
 Ist look at the Naive:
 1. there are two case at ith day, either do nothing or sell the stock.
-	1. For do nothing, max profit at ith day will be profit at (i-1)th day
-	2. For selling stock at ith day, if look at all previous day (j<i) such that we buy stock at jth day and sell at ith day. Note that maximum profit, we get then is maxProfit(j) + price[j] - profit[i] - transaction fee
+    1. For do nothing, max profit at ith day will be profit at (i-1)th day
+    2. For selling stock at ith day, if look at all previous day (j<i) such that we buy stock at jth day and sell at ith day. Note that maximum profit, we get then is maxProfit(j) + price[j] - profit[i] - transaction fee
 */
 
 class Solution {
 public:
-    int maxProfit(vector<int>& prices, int fee) {
+    int maxProfit(vector<int>& price, int fee) {
+        int n = price.size();
+        if(n < 2) return 0;
+        vector<int> buy(n,0), sell(n,0);
+        buy[0] = -price[0];
+        // either we don't buy  or we buy after prev selling
+        // either we don't sell or we sell on prev buying
+        for(int i=1; i<n; i++){
+            buy[i]  = max(buy[i-1], sell[i-1]-price[i]);
+            sell[i] = max(sell[i-1], buy[i-1]+price[i]-fee);
+        }
+        // for(auto b : buy) cout<<b<<" "; cout<<endl;
+        // for(auto s : sell)cout<<s<<" "; cout<<endl;
+        
+        return sell[n-1];
+    }
+    
+    int maxProfit1(vector<int>& prices, int fee) {
         int n = prices.size();
         vector<int> profit(n+1, 0);
         for(int i=2; i<=n; i++){
-        	for(int j=1; j<i; j++){
-                // cout<<j-1<<" "<<i-1<<" "<<profit[i-1]<<" "<<profit[j-1] + prices[i-1] - prices[j-1] - fee<<endl;
-        		profit[i] = max(profit[i-1], profit[i]);
+            for(int j=1; j<i; j++){
+                cout<<j-1<<" "<<i-1<<" "<<profit[i-1]<<" "<<profit[j-1] + prices[i-1] - prices[j-1] - fee<<endl;
+                profit[i] = max(profit[i-1], profit[i]);
                 profit[i] = max(profit[i], profit[j-1] + prices[i-1] - prices[j-1] - fee);
-        	}
+            }
         }
 
         // cout<<endl;
         for(auto itr : profit){
-        	cout<<itr<<" ";
+            cout<<itr<<" ";
         }
         return profit[n];
     }
 };
-
-
-
 
 
 

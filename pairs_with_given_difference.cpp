@@ -3,6 +3,18 @@
 using namespace std;
 #define loop(i, start, end) for(int i=start; i<end; i++)
 
+int Solution::diffPossible(const vector<int> &A, int k) {
+    unordered_map<int, int> myMap;
+    int n = A.size();
+    if(n < 2) return 0;
+    for(int i=0; i<n; i++){
+        if(myMap.find(A[i] + k) != myMap.end()) return 1;
+        if(myMap.find(A[i] - k) != myMap.end()) return 1;
+        myMap[A[i]] = i;
+    }
+    return 0;
+}
+
 int check_if_pair_exist(vector<int> &A, int B){
     unordered_map<int, int> my_map;
     int sum1, sum2;

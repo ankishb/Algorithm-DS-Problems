@@ -1,0 +1,199 @@
+
+SELECT * FROM sql_invoicing.payments;
+
+Alter Table sql_invoicing.payments
+Add Random char(10)
+;
+
+Update sql_invoicing.payments as t
+Set t.Random = '1000'
+where t.payment_method = 1 And t.client_id = 5
+;
+
+Alter Table sql_invoicing.payments
+Drop Random
+;
+
+Create TABLE dept_temp(
+	dept_id INT NOT NULL,
+    dept_name VARCHAR(20),
+    PRIMARY KEY(dept_id)
+);
+Create TABLE emp_temp(
+	id INT NOT NULL,
+    name VARCHAR(20),
+    gender VARCHAR(20),
+    dept_id INT,
+    PRIMARY KEY(id),
+    FOREIGN KEY(dept_id) REFERENCES dept_temp(dept_id)
+);
+
+INSERT INTO dept_temp 
+VALUES
+	(1,'IT'),
+    (2,'Payroll'),
+    (3,'HR'),
+    (4,'Admin')
+;
+Insert Into emp_temp
+Values 
+	(1, 'jphn', 'male', 3),
+    (2, 'mike', 'male', 2),
+    (3, 'pam', 'female', 1),
+    (4, 'todd', 'male', 4),
+    (5, 'sara', 'female', 1)
+;
+    
+Select * from dept_temp;
+select * from emp_temp;
+
+select dept_name, count_emp
+from (
+	select d.dept_name, count(e.name) as count_emp
+	from dept_temp d
+	join emp_temp e
+	on d.dept_id = e.dept_id
+		group by d.dept_name
+	) t
+    where count_emp = 1
+;
+
+-- view are saved in database, so use it only, if you need to access it again
+create view new_table
+as
+select d.dept_name, count(e.name) as count_emp
+from dept_temp d
+join emp_temp e
+on d.dept_id = e.dept_id
+	group by d.dept_name
+;
+select dept_name, count_emp
+from new_table
+where count_emp = 1
+;
+
+-- In the above example, we have used it once, it is not good. Instead use temp_table
+select d.dept_name, count(e.name) as count_emp
+into temp_table
+from dept_temp d
+join emp_temp e
+on d.dept_id = e.dept_id
+	group by d.dept_name
+;
+select dept_name, count_emp
+from temp_table
+where count_emp = 1
+;
+DROP TABLE temp_table;
+
+/*
+-- CTE is best option, it create a new table for a single use, on the immediate followed query
+With cte_table(dept_name, count_emp)
+as
+(
+	select d.dept_name, count(e.name) as count_emp
+	into temp_table
+	from dept_temp d
+	join emp_temp e
+	on d.dept_id = e.dept_id
+		group by d.dept_name
+
+);
+select dept_name, count_emp
+from cte_table
+where count_emp = 1
+;
+*/
+
+Create Table product_sale(
+	sales_agent VARCHAR(20),
+    sale_country VARCHAR(20),
+    Sales_amount INT
+);
+INSERT INTO product_sale
+VALUE
+	('tom', 'uk', 200),
+    ('john', 'us', 180),
+    ('john', 'uk', 260),
+    ('david', 'india', 450),
+    ('tom', 'india', 350),
+    ('david', 'us', 200),
+    ('tom', 'us', 130),
+    ('john', 'india', 540),
+    ('john', 'uk', 120),
+    ('david', 'uk', 220),
+    ('john', 'uk', 420),
+    ('david', 'us', 320)
+;
+select * from product_sale;
+
+-- display unique name and country and their sales status
+select sales_agent, sale_country, sum(Sales_amount) as total_sales
+from product_sale
+group by sales_agent, sale_country
+order by sales_agent, sale_country
+;
+
+select sales_agent, india, us, uk
+from product_sale 
+PIVOT
+(
+	sum(sales_amount)
+    for sale_country
+    IN ([india], [us], [uk])
+)
+As pivot_table
+;
+
+DELIMITER //
+Create PROCEDURE sp_sale
+BEGIN
+	select sale_country, AVG(Sales_amount) as avg_sales
+    from product_sale
+    group by sale_country
+    order by sale_country
+END 
+DELIMITER;
+	
+DELIMITER //
+CREATE PROCEDURE GetOfficeByCountry(IN countryName VARCHAR(255))
+ BEGIN
+ SELECT * 
+ FROM offices
+ WHERE country = countryName;
+ END //
+DELIMITER ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+select t1.id, t1.SomeNumt, SUM(t2.SomeNumt) as sum
+from @t t1
+inner join @t t2 on t1.id >= t2.id
+group by t1.id, t1.SomeNumt
+order by t1.id
+
+SQL Fiddle example
+
+Output
+
+| ID | SOMENUMT | SUM |
+-----------------------
+|  1 |       10 |  10 |
+|  2 |       12 |  22 |
+|  3 |        3 |  25 |
+|  4 |       15 |  40 |
+|  5 |       23 |  63 |

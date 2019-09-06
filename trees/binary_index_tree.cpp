@@ -1,3 +1,47 @@
+
+
+
+class binaryIndexTree{
+public:
+    vector<long> bit;
+    int n;
+    binaryIndexTree(int n_){
+        n = n_;
+        bit.resize(n_+1, 0);
+    }
+
+    void update(int i, int j, int value){
+        for(int ii=i; ii<=j; i++){
+            int idx = i+1;
+            while(idx < n+1){
+                cout<<idx<<" ";
+                bit[idx] += value;
+                idx = idx + (idx & -idx);
+            }
+            cout<<endl;
+        }
+    }
+
+    long findMax(){
+        long maxEl = INT_MIN;
+        for(auto v : bit){
+            maxEl = max(maxEl, v);
+        }
+        return maxEl;
+    }
+};
+
+long arrayManipulation(int n, vector<vector<int>> queries) {
+    binaryIndexTree bIdxTree(n);
+    for(auto q : queries){
+        cout<<q[0]<<" "<<q[1]<<" "<<q[2]<<endl;
+        bIdxTree.update(q[0], q[1], q[2]);
+    }
+    return bIdxTree.findMax();
+}
+
+
+
 Binary Indexed Tree Solution:
 
 class NumArray {

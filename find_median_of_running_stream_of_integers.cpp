@@ -1,4 +1,71 @@
+// leetcode
+/*
+Idea is to maintain maxHeap and minHeap such that, 
+    maxHeap maintains lower half of array and minHeap maintains upper half
+    1. if el is lower than root of maxHeap, push in it, else push in minheap
+    2. if diff of heap size vary by more than 1, we need to balance it.
+Note: make sure that, we keep the smaller element in maxHeap out of ist 2 ele.
+*/
+class MedianFinder {
+public:
+    priority_queue<int> maxHeap;
+    priority_queue<int, vector<int>, greater<int>> minHeap;
+    int minSize, maxSize;
+    /** initialize your data structure here. */
+    MedianFinder() {
+        minSize = 0;
+        maxSize = 0;
+    }
+    
+    void addNum(int num) {
+        if(maxHeap.empty()) maxHeap.push(num);
+        else if(minHeap.empty()){
+            if(maxHeap.top() > num){
+                minHeap.push(maxHeap.top());
+                maxHeap.pop();
+                maxHeap.push(num);
+            }
+            else minHeap.push(num);
+        }
+        else{
+            if(num < maxHeap.top()) maxHeap.push(num);
+            else minHeap.push(num);
+            
+            // balance it
+            minSize = minHeap.size();
+            maxSize = maxHeap.size();
+            if(abs(minSize - maxSize) > 1){
+                if(minHeap.size() > maxHeap.size()){
+                    maxHeap.push(minHeap.top());
+                    minHeap.pop();
+                }
+                else{
+                    minHeap.push(maxHeap.top());
+                    maxHeap.pop();
+                }
+            }
+        }
+    }
+    
+    double findMedian() {
+        minSize = minHeap.size();
+        maxSize = maxHeap.size();
+        if(minSize > maxSize) return (double)minHeap.top();
+        else if(minSize < maxSize) return (double)maxHeap.top();
+        else return ((double)maxHeap.top() + (double)minHeap.top())/2;
+    }
+};
 
+/**
+ * Your MedianFinder object will be instantiated and called as such:
+ * MedianFinder* obj = new MedianFinder();
+ * obj->addNum(num);
+ * double param_2 = obj->findMedian();
+ */
+
+
+
+// hackerrank
 #include <bits/stdc++.h>
 using namespace std;
 

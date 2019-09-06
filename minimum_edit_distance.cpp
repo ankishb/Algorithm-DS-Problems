@@ -1,3 +1,43 @@
+/*
+1. If s1[i] == s2[j], edit-dist = dp[i-1][j-1]
+2. else either we replace chacter or we delete it.
+    Now to check minimum steps, we check:
+    1. min steps if we delete s1[i]: dp[i-1][j]
+    2. min steps if we delete s2[j]: dp[i][j-1]
+    3. min steps if we replace it  : dp[i-1][j-1]
+*/
+class Solution {
+public:
+    int minDistance(string word1, string word2) {
+        int n = word1.length(), m = word2.length();
+        if(n == 0 && m == 0) return 0;
+        if(n == 0) return m;
+        if(m == 0) return n;
+        vector<vector<int>> dp(n+1, vector<int>(m+1,0));
+        for(int i=0; i<=n; i++) dp[i][0] = i;
+        for(int j=0; j<=m; j++) dp[0][j] = j;
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=m; j++){
+                if(word1[i-1] == word2[j-1]){
+                    dp[i][j] = dp[i-1][j-1];
+                }
+                else{
+                    dp[i][j] = min({dp[i-1][j],dp[i][j-1],dp[i-1][j-1]});
+                    dp[i][j] += 1;
+                }
+            }
+        }
+        // for(auto v : dp){
+        //     for(auto el : v) cout<<el<<" "; cout<<endl;
+        // }
+        return dp[n][m];
+    }
+};
+
+
+
+
+
 #include <bits/stdc++.h>
 using namespace std;
 #define loop(i, start, end) for(int i=start; i<end; i++)

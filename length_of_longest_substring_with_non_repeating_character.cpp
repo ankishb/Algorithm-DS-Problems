@@ -1,3 +1,33 @@
+/*
+1. Iterate forwaord and collect non-repeating substring
+2. If we encounter some character which is already in map, we go back and 
+    deleting character from front, till we remove that character
+*/
+int Solution::lengthOfLongestSubstring(string s) {
+    int n = s.length();
+    if(n == 0) return 0;
+    int i = 0, j = 0, idx, maxLen = INT_MIN;
+    unordered_map<char, int> myMap;
+    while(j < n){
+        if(myMap.find(s[j]) == myMap.end()){
+            myMap[s[j]] = j;
+            maxLen = max(maxLen, (int)myMap.size());
+        }
+        else{
+            idx = myMap[s[j]];
+            while(i <=  idx){
+                myMap.erase(s[i]);
+                i++;
+            }
+            myMap[s[j]] = j;
+        }
+        j++;
+    }
+    return maxLen;
+}
+
+
+
 // Given a string, find the length of the longest substring without repeating characters. For example, the longest substrings without repeating characters for “ABDEFGABEF” are “BDEFGA” and “DEFGAB”, with length 6.
 
 #include <bits/stdc++.h>

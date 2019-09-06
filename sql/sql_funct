@@ -1,0 +1,13 @@
+
+UCASE, LCASE
+
+select UCASE(name) from table_name;
+
+select name
+from table_name
+where lcase(name) = 'ankish'
+
+select name
+from table_name
+where lcase(name) like '%bansal'
+

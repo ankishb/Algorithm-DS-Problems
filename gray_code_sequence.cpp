@@ -1,18 +1,31 @@
 
+// new solution
+vector<int> Solution::grayCode(int n) {
+    if(n == 0) return {};
+    vector<int> ans({0,1});
+    if(n == 1) return ans;
+    for(int i=2; i<=n; i++){
+        int no = pow(2,i-1);
+        int size = ans.size();
+        for(int j=size-1; j>=0; j--){
+            ans.push_back(no|ans[j]);
+        }
+    }
+    return ans;
+}
+
+
+
+
+// old solution
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> get_gay_code_seq(int n, vector<int> &ans){
+vector<int> get_gay_code_seq(int n){
 	int total_cases = pow(2, n);
-	if(n==0){
-		return ans;
-	}
-
-	ans.push_back(0);
-	ans.push_back(1);
-	if(n == 1){
-		return ans;
-	}
+	if(n==0) return ans;
+	vector<int> ans({0,1});
+	if(n == 1) return ans;
 
 	int digit;
 	for(int bits_len=2; bits_len<=n; bits_len++){

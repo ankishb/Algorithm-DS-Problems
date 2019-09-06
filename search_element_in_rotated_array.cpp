@@ -1,3 +1,32 @@
+class Solution {
+public:
+    int search(vector<int>& A, int t) {
+        int n = A.size();
+        if(n == 0) return -1;
+        if(n == 1) return (A[0] == t) ? 0 : -1;
+        // search pivot
+        int l = 0, r = n-1, pivot, mid;
+        while(l < r){
+            mid = l + (r - l)/2;
+            if(A[mid] > A[r]) l = mid+1;
+            else r = mid;
+        }
+        pivot = l;
+        int rot = l, _mid;
+        l = 0, r = n-1;
+        while(l <= r){
+            mid = l + (r - l)/2;
+            _mid = (mid+rot)%n;
+            if(A[_mid] == t) return _mid;
+            else if(A[_mid] > t) r = mid-1;
+            else l = mid+1;
+        }
+        
+        return -1;
+    }
+};
+
+
 
 #include <bits/stdc++.h>
 using namespace std;
