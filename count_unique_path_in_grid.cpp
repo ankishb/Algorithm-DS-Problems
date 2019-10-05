@@ -1,3 +1,56 @@
+https://www.interviewbit.com/problems/unique-paths-in-a-grid/
+int Solution::uniquePathsWithObstacles(vector<vector<int> > &A) {
+    int n1 = A.size();
+    int n2 = A[0].size();
+    int T[n1][n2];
+    memset(T, 0, sizeof(T));
+    
+    for(int i=0; i<n1; i++){
+        for(int j=0; j<n2; j++){
+            if(i==0 && j==0 && A[i][j] != 1) T[i][j]=1;
+            else if(i==0){
+                if(A[i][j]!=1 && T[i][j-1]!=0){
+                    T[i][j] = 1;   
+                }
+            }
+            else if(j==0){
+                if(A[i][j]!=1 && T[i-1][j]!=0){
+                    T[i][j] = 1;   
+                }
+            }
+            else if(A[i][j] != 1){
+                if(A[i-1][j] == 1 && A[i][j-1]){
+                    continue;
+                }
+                else if(A[i-1][j] == 1){
+                    T[i][j] = T[i][j-1];
+                }
+                else if(A[i][j-1] == 1){
+                    T[i][j] = T[i-1][j];
+                }
+                else{
+                    T[i][j] = T[i-1][j] + T[i][j-1];
+                }
+            }
+            
+        }
+    }
+    // for(int i=0; i<n1; i++){
+    //     for(int j=0; j<n2; j++){
+    //         cout<<T[i][j]<<" ";
+    //     }
+    //     cout<<endl;
+    // }
+    return T[n1-1][n2-1];
+}
+
+
+
+
+
+
+
+
 // https://www.interviewbit.com/problems/grid-unique-paths/
 
 #include <bits/stdc++.h>

@@ -36,6 +36,7 @@ public:
         s = pow(2,s);
         s = 2*s -1;
         seg = vector<int>(s,0);
+        // segpopulate(given-array, tree, low, high, cur-pos){
         segpopulate(nums,seg,0,nums.size()-1,0);
     }
     

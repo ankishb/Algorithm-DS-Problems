@@ -5,7 +5,7 @@ public:
     bool is_word;
     
     TrieNode(bool flag = false){
-         memset(child, 0, sizeof(child));
+        memset(child, 0, sizeof(child));
         is_word = flag;
     }
 };
@@ -64,7 +64,3 @@ public:
  * bool param_2 = obj->search(word);
  * bool param_3 = obj->startsWith(prefix);
  */
-
-
-
-

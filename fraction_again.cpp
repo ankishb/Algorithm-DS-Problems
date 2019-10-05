@@ -1,3 +1,80 @@
+#include <bits/stdc++.h>
+string Solution::fractionToDecimal(int num_, int den_) {
+// string get_fraction(int num, int den){
+    map<int, int> my_map;
+    int rem;
+    long long num = num_;
+    long long den = den_;
+    long long int temp;
+    if(den == 0){
+        return "";
+    }
+    
+    if( num == -2147483648 && den == -1){
+        return "2147483648";
+    }
+
+    int sign;
+    if(num<0 && den<0){
+        sign = 1;
+    }
+    else if(num<0 || den<0){
+        sign = -1;
+    }
+    
+    if(num==0){
+        sign = 1;
+    }
+
+    // cout<<sign<<"--"<<endl;
+    num = abs(num); 
+    den = abs(den); 
+
+    temp = num/den;
+    rem = num%den;
+    // cout<<temp<<"--"<<endl;
+    string ans = "";
+    if(sign == -1){
+        ans = ans+"-";
+    }
+    ans = ans + to_string(temp);
+    if(rem == 0){
+        return ans;
+    }
+    
+    ans += ".";
+    string ans2 = "";
+    bool break_flag = false;
+    int cur_dec = 0;
+    int decimal = 0;
+    my_map[rem] = ans2.length();
+    while(rem != 0 && break_flag==false){
+        rem = rem*10;
+        cur_dec = rem/den;
+        ans2 = ans2 + to_string(cur_dec);
+        rem = rem%den;
+        if(my_map.find(rem) != my_map.end()){
+            break_flag = true;
+            break;
+        }
+        // decimal = decimal*10 + cur_dec;
+        my_map[rem] = ans2.length();
+    }
+    
+    if(break_flag){
+        ans = ans + "(" + ans2 + ")";
+    }
+    else{
+        ans = ans + ans2;
+    }
+    return ans;
+}
+
+
+
+
+
+
 
 #include <bits/stdc++.h>
 using namespace std;

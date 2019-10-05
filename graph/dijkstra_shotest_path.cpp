@@ -1,3 +1,91 @@
+
+//super new
+vector<int> shortestReach(int n, vector<vector<int>> edges, int s) {
+    int u, v, w;
+    vector<pair<int,int>> adj[n+1];
+    for(auto e : edges){
+        adj[e[0]].push_back({e[1], e[2]});
+        adj[e[1]].push_back({e[0], e[2]});
+    }
+    priority_queue<pair<int,int>, vector<pair<int,int>>, 
+    greater<pair<int,int>>> pq; // {dist, v}
+    unordered_map<int,int> map; // store result
+    for(int i=1; i<=n; i++){
+        map[i] = -1;
+    }
+    pq.push({0, s});
+    vector<bool> vis(n+1);
+    while(!pq.empty()){
+        pair<int,int> p = pq.top();
+        w = p.first;
+        u = p.second;
+        pq.pop();
+        if(vis[u] == true) continue;
+        vis[u] = true;
+        map[u] = w;
+        
+        for(auto itr : adj[u]){
+            if(vis[itr.first] == false){
+                pq.push({w+itr.second, itr.first});
+            }
+        }
+    }
+    vector<int> ans;
+    for(int i=1; i<=n; i++){
+        if(i == s) continue;
+        ans.push_back(map[i]);
+    }
+    return ans;
+}
+
+
+// new try
+vector<int> shortestReach(int n, vector<vector<int>> edges, int s) {
+    int u, v, w;
+    vector<pair<int,int>> adj[n+1];
+    for(auto e : edges){
+        adj[e[0]].push_back({e[1], e[2]});
+        adj[e[1]].push_back({e[0], e[2]});
+    }
+    priority_queue<pair<int,int>, vector<pair<int,int>>, 
+    greater<pair<int,int>>> pq; // {dist, v}
+    unordered_map<int,int> dist; // store result
+    for(int i=1; i<=n; i++){
+        dist[i] = INT_MAX;
+    }
+    pq.push({0, s});
+    dist[s] = 0;
+    vector<bool> vis(n+1);
+    while(!pq.empty()){
+        pair<int,int> p = pq.top();
+        u = p.second;
+        pq.pop();
+        if(vis[u] == true) continue;
+        vis[u] = true;
+        
+        
+        for(auto itr : adj[u]){
+            v = itr.first;
+            w = itr.second;
+            if(!vis[v] && dist[v] > dist[u]+w){
+                dist[v] = dist[u] + w;
+                pq.push({dist[v], v});
+            }
+        }
+    }
+    vector<int> ans;
+    int wts;
+    for(int i=1; i<=n; i++){
+        if(i == s) continue;
+        if(dist[i] == INT_MAX) wts = -1;
+        else wts = dist[i];
+        ans.push_back(wts);
+    }
+    return ans;
+}
+
+
+// old one
 // Complete the shortestReach function below.
 vector<int> shortestReach(int n, vector<vector<int>> edges, int s) {
     vector<int> dist(n+1, INT_MAX);

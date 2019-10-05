@@ -1,5 +1,27 @@
 
-// optimal
+// new try and best optimal
+/*
+1. We iterate over array, while holding current jump size
+2. When we jump, we check if we can have more enegy than current(holding)
+3. We fail, if we have 0 or neg enegy at any step and we don't make to the end
+*/
+class Solution {
+public:
+    bool canJump(vector<int>& nums) {
+        int n = nums.size();
+        if(n == 0) return true;
+        int energy = nums[0];
+        for(int i=1; i<n; i++){
+            energy--;
+            if(energy < 0) return false;
+            energy = max(energy, nums[i]);
+        }
+        return (energy >= 0) ? true : false;
+    }
+};
+
+
+// old one optimal
 int Solution::canJump(vector<int> &A) {
     if(A.size() == 0 || A.size() == 1) return 1;
     

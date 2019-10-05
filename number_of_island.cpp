@@ -1,4 +1,52 @@
 
+// new and classy approach
+class Solution {
+public:    
+    void dfs(vector<vector<char>> &grid, int i, int j, int n, int m){
+        grid[i][j] = 0;
+        if(i-1 >= 0 && grid[i-1][j] == '1') dfs(grid, i-1, j, n, m);
+        if(i+1 < n  && grid[i+1][j] == '1') dfs(grid, i+1, j, n, m);
+        if(j-1 >= 0 && grid[i][j-1] == '1') dfs(grid, i, j-1, n, m);
+        if(j+1 < m  && grid[i][j+1] == '1') dfs(grid, i, j+1, n, m);
+    }
+    
+    void bfs(vector<vector<char>> &grid, int si, int sj, int n, int m){
+        queue<pair<int, int>> q;
+        q.push({si, sj});
+        
+        while(!q.empty()){
+            pair<int, int> p = q.front();
+            q.pop();
+            int i = p.first, j = p.second;
+            if(grid[i][j] == 0) continue;
+            grid[i][j] = 0;    
+            if(i-1 >= 0 && grid[i-1][j] == '1') q.push({i-1, j});
+            if(i+1 < n  && grid[i+1][j] == '1') q.push({i+1, j});
+            if(j-1 >= 0 && grid[i][j-1] == '1') q.push({i, j-1});
+            if(j+1 < m  && grid[i][j+1] == '1') q.push({i, j+1});
+        }
+    }
+    
+    int numIslands(vector<vector<char>>& grid) {
+        int count = 0;
+        int n = grid.size();
+        if(n==0) return count;
+        int m = grid[0].size();
+        
+        for(int i=0; i<n; i++){
+            for(int j=0; j<m; j++){
+                if(grid[i][j] == '1'){
+                    count++;
+                    bfs(grid, i, j, n, m);
+                }
+            }
+        }
+        return count;
+    }
+};
+
+
+// old approach
 class Solution {
 public:
     void visit_adj(vector<vector<char>>& grid, int i, int j){

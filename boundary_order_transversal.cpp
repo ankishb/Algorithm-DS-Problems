@@ -1,3 +1,4 @@
+/*
 [LeetCode] Boundary of Binary Tree Boundary of Binary Tree
 
 Given a binary tree, return the values ​​of its boundary in anti-clockwise direction starting from root. Boundary includes left boundary, leaves, and right boundary in order without duplicate nodes.
@@ -15,7 +16,7 @@ Example 1
     \
      2
     / \
-   3 4
+   3   4
 
  Ouput:
  [1, 3, 4, 2]
@@ -45,8 +46,8 @@ Example 2
  The leaves are node 4,7,8,9,10.
  The right boundary are node 1,3,6,10. (10 is the right-most node).
  So order them in anti-clockwise without duplicate nodes we have [1,2,4,7,8,9,10,6,3].
-
-This question gives us a binary tree, let us output the boundaries of the tree in a counterclockwise order, in order of left, leaf, and right. The examples given in the title also give us a clear idea of ​​what counts as nodes on the boundary. Then the most straightforward method is to find the left boundary node, the leaf node, and the right boundary node in order. So how to ask, the operation of the tree must be the most concise recursion, so we can write three recursive functions to find the left boundary node, the leaf node, and the right boundary node. First of all, we have to deal with the root node first. When the root node has no left and right child nodes, it is also a leaf node. Then we add it to the result res at the beginning, then calculate the leaf node again. Will join again, this is not right. So we judge that if the root node has at least one child node, we will add it to the result res in advance. Then look at the function of the left boundary node, if the current node does not exist, or there is no child node, we return directly. Otherwise, the current node value is added to the result res, and then if the left child node exists, the recursive function is called, and if the left child node does not exist, the recursive function is called for the right child node. The function for finding the right boundary node is reversed. If the right child node exists, it will call the recursive function. Otherwise, if the right child node does not exist, the recursive function will be called for the left child node. The recursive function is added to the result res after the node value, because we need to output in a counterclockwise order. Finally, look at the function of the leaf node. There is nothing to say, that is, if there is no child node, the result res is added, and then the recursion can be called for the left and right child nodes respectively. See the code as follows:
+*/
+// This question gives us a binary tree, let us output the boundaries of the tree in a counterclockwise order, in order of left, leaf, and right. The examples given in the title also give us a clear idea of ​​what counts as nodes on the boundary. Then the most straightforward method is to find the left boundary node, the leaf node, and the right boundary node in order. So how to ask, the operation of the tree must be the most concise recursion, so we can write three recursive functions to find the left boundary node, the leaf node, and the right boundary node. First of all, we have to deal with the root node first. When the root node has no left and right child nodes, it is also a leaf node. Then we add it to the result res at the beginning, then calculate the leaf node again. Will join again, this is not right. So we judge that if the root node has at least one child node, we will add it to the result res in advance. Then look at the function of the left boundary node, if the current node does not exist, or there is no child node, we return directly. Otherwise, the current node value is added to the result res, and then if the left child node exists, the recursive function is called, and if the left child node does not exist, the recursive function is called for the right child node. The function for finding the right boundary node is reversed. If the right child node exists, it will call the recursive function. Otherwise, if the right child node does not exist, the recursive function will be called for the left child node. The recursive function is added to the result res after the node value, because we need to output in a counterclockwise order. Finally, look at the function of the leaf node. There is nothing to say, that is, if there is no child node, the result res is added, and then the recursion can be called for the left and right child nodes respectively. See the code as follows:
 
 Solution one:
 
@@ -83,9 +84,9 @@ Solution one:
       } 
   }; 
 
-The following method combines the above three different recursions into a recursion, and uses the bool-type variable to mark whether the current boundary node is the left boundary node or the right boundary node, and the leaf node is added to the result res. Features. If the left boundary is marked as true, then the node value is added to the result res. The following is the call to the recursive function for the left and right nodes. According to the above solution, we know that if the left boundary node is sought, the left child node is called first, and when the left child node does not exist, the right child node is adjusted. For the right boundary node, the right is called first. Child node, the left child node is called when the right child node does not exist. In summary, when the recursive function is called on the left child node, the left boundary identifier is set to leftbd && node->left, and the recursive left boundary identifier for the right child node is set to leftbd && !node->left. The left child node will be called first. The right boundary node is just the opposite. The right border of the call to the left child node is identified as rightbd && !node->right, and the right border of the right child node is called rightbd && node->right, which guarantees The existence of the right child node will be called first, see the code below:
+// The following method combines the above three different recursions into a recursion, and uses the bool-type variable to mark whether the current boundary node is the left boundary node or the right boundary node, and the leaf node is added to the result res. Features. If the left boundary is marked as true, then the node value is added to the result res. The following is the call to the recursive function for the left and right nodes. According to the above solution, we know that if the left boundary node is sought, the left child node is called first, and when the left child node does not exist, the right child node is adjusted. For the right boundary node, the right is called first. Child node, the left child node is called when the right child node does not exist. In summary, when the recursive function is called on the left child node, the left boundary identifier is set to leftbd && node->left, and the recursive left boundary identifier for the right child node is set to leftbd && !node->left. The left child node will be called first. The right boundary node is just the opposite. The right border of the call to the left child node is identified as rightbd && !node->right, and the right border of the right child node is called rightbd && node->right, which guarantees The existence of the right child node will be called first, see the code below:
 
-Solution 2:
+// Solution 2:
 
   Class Solution { 
   Public : 
@@ -109,9 +110,9 @@ Solution 2:
       } 
   }; 
 
-The following solution is actually an iterative form of solution one. The overall idea is basically the same, but there is no recursive writing, but the iterative writing of while is used. Note that it is difficult to write directly when iterating the right boundary node. In the counterclockwise order, we can save it in reverse, and then adjust the order. See the code below:
+// The following solution is actually an iterative form of solution one. The overall idea is basically the same, but there is no recursive writing, but the iterative writing of while is used. Note that it is difficult to write directly when iterating the right boundary node. In the counterclockwise order, we can save it in reverse, and then adjust the order. See the code below:
 
-Solution three:
+// Solution three:
 
   Class Solution { 
   Public : 

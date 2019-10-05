@@ -1,3 +1,49 @@
+
+// new and good one
+RandomListNode* cleaner(RandomListNode* head){
+    if(head == NULL) return NULL;
+    RandomListNode *head_save = head;
+    unordered_map<RandomListNode*, RandomListNode*> map;
+    while(head){
+        map[head] = new RandomListNode(head->label);
+        head = head->next;
+    }
+    head = head_save;
+    while(head != NULL){
+        map[head]->next = map[head->next];
+        map[head]->random = map[head->random];
+        
+        head = head->next;
+    }
+    return map[head_save];
+}
+RandomListNode* good_solution(RandomListNode* head){
+    if(head == NULL) return NULL;
+    RandomListNode *head_save = head;
+    unordered_map<RandomListNode*, RandomListNode*> map;
+    while(head != NULL){
+        if(map.find(head) == map.end()){
+            map[head] = new RandomListNode(head->label);
+        }
+        if(head->next && map.find(head->next) == map.end()){
+            map[head->next] = new RandomListNode(head->next->label);
+        }
+        if(head->random && map.find(head->random) == map.end()){
+            map[head->random] = new RandomListNode(head->random->label);
+        }
+        if(head->next) map[head]->next = map[head->next];
+        if(head->random) map[head]->random = map[head->random];
+        
+        head = head->next;
+    }
+    return map[head_save];
+}
+RandomListNode* Solution::copyRandomList(RandomListNode* head){
+    // return good_solution(head);
+    return cleaner(head);
+}
+
+
 /*
 // Definition for a Node.
 class Node {
@@ -44,9 +90,3 @@ public:
     }
     
 };
-
-
-
-
-
-

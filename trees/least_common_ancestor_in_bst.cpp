@@ -1,6 +1,7 @@
 
 // optimal1: same as binary tree (search naively)
 // optimal2: search using BST property
+// best: Avoid naivesness of optimal2 solution, by completely taking advantage of BST property
 class Solution {
 public:
     TreeNode* optimal1(TreeNode* root, TreeNode* p, TreeNode* q) {
@@ -24,7 +25,26 @@ public:
     }
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
         // return optimal1(root, p, q);
-        return optimal2(root, p, q);
+        // return optimal2(root, p, q);
+        return new_try(root, p, q);
+    }
+    
+    TreeNode* new_try(TreeNode* root, TreeNode* p, TreeNode* q){
+        if(root == NULL) return NULL;
+        int rv = root->val, pv = p->val, qv = q->val;
+        if(rv == pv || rv == qv) return root;
+        else if(rv < pv && rv < qv){
+            return new_try(root->right, p, q);
+        }
+        else if(rv > pv && rv > qv){
+            return new_try(root->left, p, q);
+        }
+        else if((rv > pv && rv < qv) || rv < pv && rv > qv){
+            return root;
+        }
+        else{
+            return NULL;
+        }
     }
 };
 
