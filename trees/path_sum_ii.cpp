@@ -1,3 +1,35 @@
+
+// new try
+class Solution {
+public:
+    vector<vector<int>> store;
+    vector<int> cur;
+    bool is_leaf(TreeNode* root){
+        return (root->left == NULL && root->right == NULL);
+    }
+    
+    void helper(TreeNode* root, int sum, int cur_sum){
+        if(root == NULL) return;
+        cur_sum += root->val;
+        cur.push_back(root->val);
+        if(is_leaf(root) && (sum == cur_sum)){
+            store.push_back(cur);
+        }
+        
+        helper(root->left, sum, cur_sum);
+        helper(root->right, sum, cur_sum);
+        cur_sum -= root->val;
+        cur.pop_back();
+    }
+    
+    vector<vector<int>> pathSum(TreeNode* root, int sum) {
+        helper(root, sum, 0);
+        return store;
+    }
+};
+
+
+// old one
 /**
  * Definition for a binary tree node.
  * struct TreeNode {

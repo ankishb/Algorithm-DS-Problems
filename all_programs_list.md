@@ -1,11 +1,10 @@
 
 # program list
 - [x][greedy][weighted_job_scheduling](https://www.geeksforgeeks.org/weighted-job-scheduling/)
-2. [usuage_of_structure_with_vector] this is an example to create a vector containing multiple data-types in a cell. 
-3. [cutting a rod to maximize reward])(https://www.geeksforgeeks.org/cutting-a-rod-dp-13/)
+- [x][usuage_of_structure_with_vector]
+- [cutting a rod to maximize reward])(https://www.geeksforgeeks.org/cutting-a-rod-dp-13/)
 5. [maximum-sum-increasing-subsequence](https://www.geeksforgeeks.org/maximum-sum-increasing-subsequence-dp-14/)
 6. [maximum sum problem](https://practice.geeksforgeeks.org/problems/maximum-sum-problem/0)
-7. [majority element](https://www.interviewbit.com/problems/majority-element/)(https://practice.geeksforgeeks.org/problems/majority-element/0)
 8. [kth smallest element](https://practice.geeksforgeeks.org/problems/kth-smallest-element/0)
 9. [minimum jump required](https://www.geeksforgeeks.org/number-of-jumps-for-a-thief-to-cross-walls/)
 10. [count bits](https://practice.geeksforgeeks.org/problems/set-bits/0/?ref=self)
@@ -15,11 +14,11 @@
 13. [col_name_from_col_number_in_ms_excel](https://practice.geeksforgeeks.org/problems/column-name-from-a-given-column-number/0/?ref=self)
 14. [Please do it, count no ofoccurance of digit in a range](https://www.geeksforgeeks.org/number-of-occurrences-of-2-as-a-digit-in-numbers-from-0-to-n/)
 15. [tree][count no of unique binary tree](https://practice.geeksforgeeks.org/problems/unique-bsts/0)
-16. [rotate bit of a number (circular)](https://www.geeksforgeeks.org/rotate-bits-of-an-integer/)(https://practice.geeksforgeeks.org/problems/rotate-bits/0)
-17. [Triplet Sum](https://www.geeksforgeeks.org/unique-triplets-sum-given-value/)(https://practice.geeksforgeeks.org/problems/triplet-sum-in-array/0/?ref=self)
-- [chocolate distribution](https://www.geeksforgeeks.org/chocolate-distribution-problem/)
-- [candies distributions](https://practice.geeksforgeeks.org/problems/left-out-candies/0)
-- [zig-zag fashioned array](https://practice.geeksforgeeks.org/problems/convert-array-into-zig-zag-fashion/0)
+- [x][bit-manipulation][rotate_bit_of_a_number](https://practice.geeksforgeeks.org/problems/rotate-bits/0)
+- [x][array][pythagorean_triplets](https://www.geeksforgeeks.org/unique-triplets-sum-given-value/)(https://practice.geeksforgeeks.org/problems/triplet-sum-in-array/0/?ref=self)
+- [x][chocolate distribution](https://www.geeksforgeeks.org/chocolate-distribution-problem/)
+- [x][array][candies_distributions](https://practice.geeksforgeeks.org/problems/left-out-candies/0)
+- [x][array][zigzag_fashion_arrangement](https://practice.geeksforgeeks.org/problems/convert-array-into-zig-zag-fashion/0)
 - [ ] [decimnal equivalent of binary linked list](https://practice.geeksforgeeks.org/problems/decimal-equivalent-of-binary-linked-list/1/?ref=self)
 
 -  [kth element of two sorted arrays](https://practice.geeksforgeeks.org/problems/k-th-element-of-two-sorted-array/0/?ref=self)
@@ -60,7 +59,7 @@
 - [ ][key-pair sum match](https://practice.geeksforgeeks.org/problems/key-pair/0)
 - [ ][triplet sum](https://practice.geeksforgeeks.org/problems/triplet-sum-in-array/0/?ref=self#ExpectOP)
 - [ ][occurance of 2 as digit](https://practice.geeksforgeeks.org/problems/occurences-of-2-as-a-digit/1) (https://math.stackexchange.com/questions/47477/number-of-occurrences-of-the-digit-1-in-the-numbers-from-0-to-n) (https://www.geeksforgeeks.org/number-of-occurrences-of-2-as-a-digit-in-numbers-from-0-to-n/)
-- [ ][kth smallest element with linear time](https://practice.geeksforgeeks.org/problems/kth-smallest-element/0) (https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array-set-2-expected-linear-time/) (https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array-set-3-worst-case-linear-time/)
+- [ ][kth smallest element with linear time][kth_smallest_element_in_unsorted_array_in_constant_space](https://practice.geeksforgeeks.org/problems/kth-smallest-element/0) (https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array-set-2-expected-linear-time/) (https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array-set-3-worst-case-linear-time/)
 - [ ] [all possible combination of a number with number smaller than that](https://www.geeksforgeeks.org/find-all-combinations-that-adds-upto-given-number-2/)
 - [ ][kth smallest element in BST](https://www.geeksforgeeks.org/find-k-th-smallest-element-in-bst-order-statistics-in-bst/)
 - [ ][max rectangle](https://practice.geeksforgeeks.org/problems/max-rectangle/1)
@@ -148,7 +147,7 @@
 - [colorful_number](https://www.interviewbit.com/problems/colorful-number/)
 - [2 sum] [sum_of_pairs](https://www.interviewbit.com/problems/2-sum/)
 - [x][linked list][intersection_of_two_nodes](https://www.interviewbit.com/problems/intersection-of-linked-lists/)
-- [largest_continuous_seq_with_zero_sum](https://www.interviewbit.com/problems/largest-continuous-sequence-zero-sum/)
+- [x][array,hash][largest_continuous_seq_with_zero_sum](https://www.interviewbit.com/problems/largest-continuous-sequence-zero-sum/)
 - [letter_phone](https://www.interviewbit.com/problems/letter-phone/)
 - [generate_all_parenthesis](https://www.interviewbit.com/problems/generate-all-parentheses-ii/) (https://leetcode.com/problems/generate-parentheses/)
 - [most-imp][string][backtrack][pallindromic_partitioning](https://www.interviewbit.com/problems/palindrome-partitioning/) (https://www.geeksforgeeks.or
@@ -163,7 +162,7 @@ g/given-a-string-print-all-possible-palindromic-partition/)
 - [x][Tree][balanced_height_tree](https://www.interviewbit.com/problems/balanced-binary-tree/)(https://leetcode.com/problems/balanced-binary-tree/)
 - [Tree][identical_binary_tree](https://www.interviewbit.com/problems/identical-binary-trees/)
 - [Tree][mirror_tree](https://www.interviewbit.com/problems/symmetric-binary-tree/)
-- [Tree][path_sum](https://www.interviewbit.com/problems/path-sum/) [little different](https://practice.geeksforgeeks.org/problems/root-to-leaf-paths-sum/1)
+- [x][Tree][path_sum](https://www.interviewbit.com/problems/path-sum/) [little different](https://practice.geeksforgeeks.org/problems/root-to-leaf-paths-sum/1)
 - [ ] [level order transversal](https://www.interviewbit.com/problems/level-order/)
 - [x][Tree][sorted_array_to_BST_series](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)(https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/)
 
@@ -263,10 +262,10 @@ g/given-a-string-print-all-possible-palindromic-partition/)
 - [tree][medium][find_largest_value_in_each_row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/)
 - [tree][find_bottom_left_most_tree_value](https://leetcode.com/problems/find-bottom-left-tree-value/)
 - [tree][flip_equivalent_binary_tree](https://leetcode.com/problems/flip-equivalent-binary-trees/)
-- [tree][path_sum_ii](https://leetcode.com/problems/path-sum-ii/)
+- [x][tree][path_sum_ii](https://leetcode.com/problems/path-sum-ii/)
 - [tree][max_diff_between_nodes_and_ancestor](https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/)
 - [tree][Insufficient_node_in_binary_tree](https://leetcode.com/problems/insufficient-nodes-in-root-to-leaf-paths/)
-- [matrix][minimum_path_sum](https://leetcode.com/problems/minimum-path-sum/submissions/)
+- [matrix][minimum_path_sum](https://leetcode.com/problems/minimum-path-sum/)
 - [matrix][count_friend_circle](https://leetcode.com/problems/friend-circles/)
 - [heap][top_k_frequent_elements](https://leetcode.com/problems/top-k-frequent-elements/)
 - [heap][k_closest_points_to_origin](https://leetcode.com/problems/k-closest-points-to-origin/)
@@ -506,12 +505,14 @@ g/given-a-string-print-all-possible-palindromic-partition/)
 - [hard][greedy][truck_tour_problem](https://www.hackerrank.com/challenges/truck-tour/problem)
 - [medium][BST,DP][generate_all_possible_BST](https://leetcode.com/problems/unique-binary-search-trees-ii/)
 - [ ] [tree][sum of nodes at maximum height](https://www.geeksforgeeks.org/sum-nodes-maximum-depth-binary-tree/)
-- [easy][pointer][two_sum_2_in_sorted_array](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
+- [x][easy][array,hash][two_sum_2_in_sorted_array](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
 - [easy][array][best_time_to_buy_ans_sell_stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 - [easy][binary-search][search_insert_position](https://leetcode.com/problems/search-insert-position/)
-- [imp][medium][array][majority_element_1_2]()
+- [x][imp][medium][array][majority_element_1_2](https://leetcode.com/problems/majority-element-ii/)(https://www.interviewbit.com/problems/majority-element/)
 - [ ][binary_search_on_values_in_increasing_order]
 - [imp][binary-search][search_element_in_rotated_array](https://www.interviewbit.com/problems/rotated-sorted-array-search/)(https://leetcode.com/problems/search-in-rotated-sorted-array/)
+- [x][tree][minimum_depth_of_tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)(https://www.interviewbit.com/problems/min-depth-of-binary-tree/)
+- [imp][dp,tree][maximum_path_sum_in_binary_tree](https://www.interviewbit.com/problems/max-sum-path-in-binary-tree/)
 
 ## Contribution on 13-8-19
 - [easy][binary-search][first_bad_version](https://leetcode.com/problems/first-bad-version/)
@@ -711,6 +712,13 @@ g/given-a-string-print-all-possible-palindromic-partition/)
 - [ ][string][text_encription](https://www.hackerrank.com/challenges/encryption/problem)
 - [x][greedy][minimum_number_of_shots_to_burst_ballons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)
 
+## Contribution on 7-10-19
+- [x][bit-manipulation][swap_all_odd_and_even_bits](https://practice.geeksforgeeks.org/problems/swap-all-odd-and-even-bits/0/?ref=self)
+- [x][array][array_partition_1](https://leetcode.com/problems/array-partition-i/)
+- [ ][array][partiton_array_to_maximize_sum](https://leetcode.com/problems/partition-array-for-maximum-sum/)
+- [x][backtrack][path_with_maximum_gold](https://leetcode.com/problems/path-with-maximum-gold/)
+- [x][dp][count_vowel_permutation](https://leetcode.com/problems/count-vowels-permutation/)
+- [ ][dp][queen_attack](https://www.interviewbit.com/problems/queen-attack/)
 
 - [medium][][](https://leetcode.com/problems/multiply-strings/)
 - [backtracking][subsets](https://www.interviewbit.com/problems/subset/)
@@ -1129,4 +1137,28 @@ bool operator<(const custom_pq &p1, const custom_pq &p2){
 }
 
 priority_queue<custom_pq> pq;
+```
+
+```c++
+struct custom_pq{
+    int d, x, y;
+    custom_pq(int d_, int x_, int y_):
+    d(d_), x(x_), y(y_){}
+};
+
+struct custom_sort{
+    bool operator()(const custom_pq &p1, const custom_pq &p2){
+        return (p1.d > p2.d);
+    }
+};
+
+priority_queue<custom_pq, vector<custom_pq>, custom_sort> pq;
+```
+
+## type define
+```
+#define ll long long int
+#define mod 1000000007
+
+typedef long long int ll;
 ```

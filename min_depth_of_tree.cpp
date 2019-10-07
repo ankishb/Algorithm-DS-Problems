@@ -1,6 +1,26 @@
 
-// my solution
+// new try
+class Solution {
+public:
+    void get_depth(TreeNode* root, int d, int &depth) {
+        if(root == NULL) return;
+        if(root->left == NULL && root->right == NULL){
+            depth = min(depth, d);
+        }
+        get_depth(root->left, d+1, depth);
+        get_depth(root->right, d+1, depth);
+    }
+    
+    int minDepth(TreeNode* root){
+        int depth=INT_MAX;
+        if(root == NULL) return 0;
+        get_depth(root, 1, depth);
+        return (depth == INT_MAX) ? 1 : depth;
+    }
+};
 
+
+// old and complicated, my solution
 int get_height(TreeNode *root){
     if(root==NULL){
         return 0;
