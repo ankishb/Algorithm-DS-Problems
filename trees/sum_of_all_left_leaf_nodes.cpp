@@ -1,10 +1,25 @@
-// Given a Binary Tree, find sum of all left leaves in it. For example, sum of all left leaves in below Binary Tree is 7+2=9
 
-// 1
-// 6
-// 4 2 L 4 5 R 2 7 L 2 2 R 5 2 L 5 3 R
-// 9
+// new try
+/*
+Tranverse in preorder manner and send flag as "L" and "R". 
+Collect value of all "L" at leaf node
+*/
+int get_ans(Node* root, char flag){
+    if(root == NULL) return 0;
+    if(!root->left && !root->right){
+        return (flag=='L') ? root->data : 0;
+    }
+    int l = get_ans(root->left, 'L');
+    int r = get_ans(root->right, 'R');
+    return l+r;
+}
 
+int leftLeafSum(Node* root){
+    return get_ans(root, 'a');
+}
+
+
+// old one
 #include<bits/stdc++.h>
 #include<stdio.h>
 #include<stdlib.h>

@@ -1,4 +1,46 @@
 
+// new try
+/*
+1. tranverse through each character and collect all the path between slashes
+    - If "/.", don't do anything
+    - If "/..", we go on path (if we are at home, them we stay there) <----------- edge case
+    - If path name, push in container
+
+Note: i use deque, sto save some time, otherwise, we prepare a string from stack, 
+    where each string should be reversed to collect all in order. And finally, we
+    reverse the entire string to get answer.
+*/
+string Solution::simplifyPath(string s) {
+    int n = s.length(), i = 0;
+    if(n == 0) return "";
+    string sub = "";
+    deque<string> store;
+    while(i < n){
+        if(s[i] == '/'){
+            sub = "/"; 
+            i++;
+        }
+        while(i < n && s[i] != '/'){
+            sub += s[i]; i++;
+        }
+        // cout<<sub<<" ";
+        if(sub == "/." || sub == "/") continue;
+        if(sub == "/.."){
+            if(!store.empty()) store.pop_back();
+        }
+        else store.push_back(sub);
+    }
+    sub = "";
+    while(!store.empty()){
+        sub += store.front();
+        store.pop_front();
+    }
+    return (sub == "") ? "/" : sub;
+}
+
+
+
+// old try
 #include <bits/stdc++.h>
 using namespace std;
 

@@ -1,4 +1,4 @@
-// https://www.interviewbit.com/problems/distribute-candy/
+
 
 int Solution::candy(vector<int> &ratings) {
     vector<int> val(ratings.size(), 1);

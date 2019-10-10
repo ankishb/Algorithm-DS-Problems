@@ -1,3 +1,37 @@
+void Solution::nextPermutation(vector<int> &A) {
+    // Do not write main() function.
+    // Do not read input, instead use the arguments to the function.
+    // Do not print the output, instead return values as specified
+    // Still have a doubt. Checkout www.interviewbit.com/pages/sample_codes/ for more details
+    vector<int>::iterator it;
+    bool break_loop = false;
+    int el;
+
+    for(int i=A.size()-2; i>=0; i--){
+        if(A[i] < A[i+1]){
+            cout<<"\n enetered here";
+            el = A[i];
+            sort(A.begin()+i, A.end());
+
+            it = find(A.begin()+i, A.end(), el);
+            int pos = it-A.begin();
+            // cout<<endl<<el<<" "<<*it<<" "<<pos<<" "<<A[pos]<<endl;
+            // swapping with next biggest element;
+            pos++;
+            for(int j=pos; j>=i+1; j--){
+                swap(A[j], A[j-1]);
+            }
+            break_loop = true;
+            break;
+        }
+    }
+    if(break_loop == false){
+        sort(A.begin(), A.end());
+    }
+}
+
+
+
 
 class Solution {
 public:

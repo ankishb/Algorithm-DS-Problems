@@ -1,4 +1,69 @@
 
+
+string Solution::longestPalindrome(string s){
+    int n = s.length();
+    if(n < 1) return "";
+    int max_len = 1, idx = 0;
+    vector<vector<bool>> dp(n, vector<bool>(n,false));
+    for(int k=0; k<n; k++){
+        for(int i=0; i<n-k; i++){
+            int j = i+k;
+            if(k == 0) dp[i][i] = true;
+            else if(k == 1 && s[i] == s[j]){
+                dp[i][j] = true;
+                if(k+1 > max_len){
+                    max_len = k+1; 
+                    idx = i;
+                }
+            }
+            else{
+                if(s[i] == s[j] && dp[i+1][j-1]){
+                    dp[i][j] = true;
+                    if(k+1 > max_len){
+                        max_len = k+1; 
+                        idx = i;
+                    }
+                }
+            }
+        }
+    }
+    return s.substr(idx, max_len);
+}
+
+/* 
+substring can be odd or even length.
+1. At each index, find two substring for both case(odd and even)
+2. Also track maximum length substring
+*/
+string expandAroundCenter(string s, int c1, int c2) {
+    int l = c1, r = c2;
+    int n = s.length();
+    while (l >= 0 && r <= n-1 && s[l] == s[r]) {
+        l--;
+        r++;
+    }
+    return s.substr(l+1, r-l-1);
+}
+
+string longestPalindrome(string s) {
+    int n = s.length();
+    if (n == 0) return "";
+    string longest = s.substr(0, 1);  // a single char itself is a palindrome
+    for (int i = 0; i < n-1; i++) {
+        string p1 = expandAroundCenter(s, i, i);
+        if (p1.length() > longest.length())
+            longest = p1;
+
+        string p2 = expandAroundCenter(s, i, i+1);
+        if (p2.length() > longest.length())
+            longest = p2;
+    }
+    return longest;
+}
+
+
+
+
 class Solution {
 public:
     string longestPalindrome(string s) {

@@ -1,6 +1,24 @@
 
-#include <bits/stdc++.h>
-using namespace std;
+/* Clever trick(efficient)
+1. tranverse over all charactrer in string
+2. Do following at each step
+	1. If found character(not space), count len
+	2. If found spaces, increment itr.
+*/
+int Solution::lengthOfLastWord(const string s) {
+    int n = s.length(), len = 0, i = 0;
+    while(i < n){
+        len = 0;
+        while(i < n && s[i] != ' '){
+            len++; i++;
+        }
+        while(i < n && s[i] == ' ') i++;
+    }
+    return len;
+}
+
+
+
 
 void inefficient_length_of_last_word(string A){
 	int index = 0;
@@ -48,31 +66,4 @@ void length_of_last_word(string A){
 		}
 	}
 	cout<<count<<endl;
-}
-
-void amazing_subarrays(string A){
-	long long ans=0;
-	for(int i=0; i<A.length(); i++){
-		if(A[i]=='a'||A[i]=='e'||A[i]=='i'||A[i]=='o'||A[i]=='u'||A[i]=='A'||A[i]=='E'||A[i]=='I'||A[i]=='O'||A[i]=='U'){
-			ans = ans + (A.length() - i);
-		}
-	}
-	// ans = count*fact(A.length()-1);
-	ans = ans%10003;
-	cout<<ans<<endl;
-}
-
-int main()
-{
-	int test;
-	cin>>test;
-	cin.ignore(1);
-	while(test--){
-		string str;
-		// cin>>str;
-		getline(cin, str);
-		// amazing_subarrays(str);
-		length_of_last_word(str);
-	}
-	return 0;
 }

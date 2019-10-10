@@ -18,7 +18,7 @@
 - [x][array][pythagorean_triplets](https://www.geeksforgeeks.org/unique-triplets-sum-given-value/)(https://practice.geeksforgeeks.org/problems/triplet-sum-in-array/0/?ref=self)
 - [x][chocolate distribution](https://www.geeksforgeeks.org/chocolate-distribution-problem/)
 - [x][array][candies_distributions](https://practice.geeksforgeeks.org/problems/left-out-candies/0)
-- [x][array][zigzag_fashion_arrangement](https://practice.geeksforgeeks.org/problems/convert-array-into-zig-zag-fashion/0)
+- [x][array][zigzag_fashion_arrangement](https://www.interviewbit.com/problems/wave-array/)(https://practice.geeksforgeeks.org/problems/convert-array-into-zig-zag-fashion/0)
 - [ ] [decimnal equivalent of binary linked list](https://practice.geeksforgeeks.org/problems/decimal-equivalent-of-binary-linked-list/1/?ref=self)
 
 -  [kth element of two sorted arrays](https://practice.geeksforgeeks.org/problems/k-th-element-of-two-sorted-array/0/?ref=self)
@@ -72,7 +72,6 @@
 - [ ] [nearest multiplier of 10](https://practice.geeksforgeeks.org/problems/nearest-multiple-of-10/0)
 - [evaluate prefix and postfix expression]
 - [infix_to_postfix]
-- [ ] [fraction](https://practice.geeksforgeeks.org/problems/a-simple-fraction/0) (https://www.geeksforgeeks.org/find-recurring-sequence-fraction/)
 - [add_two_fractional_number](https://practice.geeksforgeeks.org/problems/add-two-fractions/1)
 - [ ] [swap_k_nodes_from_begining_with_end](https://www.geeksforgeeks.org/swap-kth-node-from-beginning-with-kth-node-from-end-in-a-linked-list/)
 - [reverse_a_linked_list](https://practice.geeksforgeeks.org/problems/reverse-a-linked-list/1)
@@ -133,14 +132,15 @@
 - [find_insert_position_in_sorted_array](https://www.interviewbit.com/problems/sorted-insert-position/)(https://www.interviewbit.com/help_requests/29770/)
 - [ ] [allocates books](https://www.interviewbit.com/problems/270/)
 - [count and say](https://www.interviewbit.com/problems/count-and-say/)(https://practice.geeksforgeeks.org/problems/decode-the-pattern/0)
-- [amazing subarray (&& length of last word)](https://www.interviewbit.com/problems/amazing-subarrays/) (https://www.interviewbit.com/problems/length-of-last-word/)
+- [x][amazing_subarray](https://www.interviewbit.com/problems/amazing-subarrays/) 
+- [x][string][length_of_last_word](https://www.interviewbit.com/problems/length-of-last-word/)
 - [x][string][pallindrome_string](https://www.interviewbit.com/problems/palindrome-string/)
 - [x][string][zig_zag_fashion_arrangement_of_string](https://www.interviewbit.com/problems/zigzag-string/?ref=similar_problems)
-- [ ][find prefix is same as suffix in pattern matching (KMP)](https://www.geeksforgeeks.org/minimum-characters-added-front-make-string-palindrome/)(https://www.interviewbit.com/problems/minimum-characters-required-to-make-a-string-palindromic/)
+- [x][string][find_length_of_prefix_is_same_as_suffix(KMP)](https://www.geeksforgeeks.org/minimum-characters-added-front-make-string-palindrome/)(https://www.interviewbit.com/problems/minimum-characters-required-to-make-a-string-palindromic/)
 - [ ] [pretty json](https://www.interviewbit.com/problems/pretty-json/) (http://qa.geeksforgeeks.org/3734/qa.geeksforgeeks.org/3734/print-the-pretty-json-strings-facebook-microsoft.html)
 - [intersetction_of_two_sorted_arary]
 - [count_no_of_cont_subsequence_with_sum_in_range](https://www.interviewbit.com/problems/numrange/)
-- [simplifying_directory_path](https://www.interviewbit.com/problems/simplify-directory-path/)
+- [x][stack,deque][simplifying_directory_path](https://www.interviewbit.com/problems/simplify-directory-path/)
 - [x][stack,array][rain_water_trapping](https://www.interviewbit.com/problems/rain-water-trapped/)
 - [kth_smallest_element_in_unsorted_array_in_constant_space](https://www.interviewbit.com/problems/kth-smallest-element-in-the-array/)
 - [next_greater_element](https://www.interviewbit.com/problems/nextgreater/)
@@ -150,9 +150,8 @@
 - [x][array,hash][largest_continuous_seq_with_zero_sum](https://www.interviewbit.com/problems/largest-continuous-sequence-zero-sum/)
 - [letter_phone](https://www.interviewbit.com/problems/letter-phone/)
 - [generate_all_parenthesis](https://www.interviewbit.com/problems/generate-all-parentheses-ii/) (https://leetcode.com/problems/generate-parentheses/)
-- [most-imp][string][backtrack][pallindromic_partitioning](https://www.interviewbit.com/problems/palindrome-partitioning/) (https://www.geeksforgeeks.or
-g/given-a-string-print-all-possible-palindromic-partition/)
-- [fraction_again](https://www.interviewbit.com/problems/fraction/)
+- [most-imp][string][backtrack][pallindromic_partitioning](https://www.interviewbit.com/problems/palindrome-partitioning/) (https://www.geeksforgeeks.org/given-a-string-print-all-possible-palindromic-partition/)
+- [x][math,hashing][fraction_again](https://www.interviewbit.com/problems/fraction/)
 - [points_on_same_straight_line](https://www.interviewbit.com/problems/points-on-the-straight-line/)
 - [x][design][min_stack](https://www.interviewbit.com/problems/min-stack/) (https://practice.geeksforgeeks.org/problems/special-stack/1)
 - [magician_and_chocolate](https://www.interviewbit.com/problems/magician-and-chocolates/)
@@ -173,7 +172,7 @@ g/given-a-string-print-all-possible-palindromic-partition/)
 - [Tree][find_pair_of_nodes_with_given_sum_in_bst](https://www.interviewbit.com/problems/2sum-binary-tree/)
 - [Tree][BST_iterator](https://www.interviewbit.com/problems/bst-iterator/) [ref solution](http://qa.geeksforgeeks.org/3996/qa.geeksforgeeks.org/3996/implement-an-iterator-over-a-binary-search-tree-bst.html)
 - [3_sum_zero]()
-- [ ][sorted_permutation_rank](https://www.interviewbit.com/problems/sorted-permutation-rank/)
+- [x][array,string][sorted_permutation_rank](https://www.interviewbit.com/problems/sorted-permutation-rank/)
 - [x][dp][minimum_cost_path](https://www.interviewbit.com/problems/min-sum-path-in-matrix/)
 - [x][dp][jump_game_array](https://www.interviewbit.com/problems/jump-game-array/)(https://leetcode.com/problems/jump-game/)
 - [dp][count_minimum_number_of_jumps](https://practice.geeksforgeeks.org/problems/minimum-number-of-jumps/0)
@@ -193,40 +192,9 @@ g/given-a-string-print-all-possible-palindromic-partition/)
 - [x][greedy][count_minimum_flips_to_turns_all_bulbs](https://www.geeksforgeeks.org/count-minimum-right-flips-to-set-all-values-in-an-array/)
 - [x][greedy][highest_product of triplet](https://www.interviewbit.com/problems/highest-product/)
 - [imp][gredy][seats][minimum_cost_to_arrange_seat_in_adjacent_order](https://www.interviewbit.com/problems/seats/)
-- [greedy][distribute_candies]()
-- [greedy][assign_mice_to_holes](https://www.interviewbit.com/problems/assign-mice-to-holes/)
-- [tree][sum_root_to_leaf_numbers](https://www.interviewbit.com/problems/sum-root-to-leaf-numbers/)
-- [tree][find_all_root_to_leaf_paths_with_given_sum](https://www.interviewbit.com/problems/root-to-leaf-paths-with-sum/)
-
-
-
-## HackerRank
-1. [The Indian Job](https://www.hackerrank.com/challenges/the-indian-job/problem)
-- [making anagram](https://www.hackerrank.com/challenges/making-anagrams/problem)
-- [ ][Tree][huffman-decoding](https://www.hackerrank.com/challenges/tree-huffman-decoding/problem?h_l=interview&h_r%5B%5D=next-challenge&h_r%5B%5D=next-challenge&h_v%5B%5D=zen&h_v%5B%5D=zen&isFullScreen=false&playlist_slugs%5B%5D%5B%5D%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D%5B%5D%5B%5D=trees&h_r=next-challenge&h_v=zen)
-- [MS][consecutive_1s_in_binary_represntation](https://www.hackerrank.com/challenges/30-binary-numbers/problem)
-- [ ][heap][queries_on_heap](https://www.hackerrank.com/challenges/qheap1/problem)
-- [ ][hard][heap][minimum_average_waiting_time](https://www.hackerrank.com/challenges/minimum-average-waiting-time/problem?h_r=next-challenge&h_v=zen)
-- [x][stack][balanced_brackets](https://www.hackerrank.com/challenges/balanced-brackets/problem)
-- [stack][easy][equal_stack](https://www.hackerrank.com/challenges/equal-stacks/problem?h_r=next-challenge&h_v=zen)
-- [ ][queue][queries_with_fixed_length](https://www.hackerrank.com/challenges/queries-with-fixed-length/problem)
-- [ ][dp][queue][hard][down_to_zero_11](https://www.hackerrank.com/challenges/down-to-zero-ii/forum)
-- [greedy][easy][luck_balance](https://www.hackerrank.com/challenges/luck-balance/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=greedy-algorithms)
-- [x][medium][greedy][greedy_florist](https://www.hackerrank.com/challenges/greedy-florist/)
-- [game_of_digits](https://practice.geeksforgeeks.org/contest-problem/the-game-of-digits0649/0/)
-- [ ][next_in_series](https://practice.geeksforgeeks.org/problems/next-in-series/0/?track=sp-mathematics&batchId=152)
-- [tree][sum_of_binary_tree](https://practice.geeksforgeeks.org/problems/sum-of-binary-tree/1)
-- [tree][ ](https://www.geeksforgeeks.org/sum-parent-nodes-child-node-x/)
-- [tree][sum_of_all_left_leaf_nodes](https://practice.geeksforgeeks.org/problems/sum-of-left-leaf-nodes/1)
-- [tree][ ][print_all_root_to_leaf_paths](https://www.geeksforgeeks.org/given-a-binary-tree-print-all-root-to-leaf-paths/)
-- [tree][sum_of_nodes_of_longest_path_from_root_to_leaf](https://practice.geeksforgeeks.org/problems/sum-of-the-longest-bloodline-of-a-tree/1)
-- [tree][sum_of_leaf_nodes](https://practice.geeksforgeeks.org/problems/sum-of-leaf-nodes/1/?ref=self)
-- [tree][find_closest_neighbour_in_bst](https://www.geeksforgeeks.org/find-closest-element-binary-search-tree/)
-- [tree][nodes_at_odd_level](https://practice.geeksforgeeks.org/problems/nodes-at-odd-levels/1/?ref=self)
-- [tree][delete_leaf_nodes_with_value_k](https://www.geeksforgeeks.org/delete-leaf-nodes-with-value-k/)
-- [tree][print_all_nodes_with_no_siblings](https://www.geeksforgeeks.org/print-nodes-dont-sibling-binary-tree/)
-- [tree][ ][find_max_path_sum_in_binary_tree](https://www.geeksforgeeks.org/find-maximum-path-sum-in-a-binary-tree/)
-
+- [greedy][distribute_candies](https://www.interviewbit.com/problems/distribute-candy/)
+- [x][greedy][assign_mice_to_holes](https://www.interviewbit.com/problems/assign-mice-to-holes/)
+- [x][tree][find_all_root_to_leaf_paths_with_given_sum](https://www.interviewbit.com/problems/root-to-leaf-paths-with-sum/)(https://www.interviewbit.com/problems/sum-root-to-leaf-numbers/)
 
 
 
@@ -253,7 +221,31 @@ g/given-a-string-print-all-possible-palindromic-partition/)
 - [april_lunchtime_attendance](https://www.codechef.com/LTIME71B/problems/ATTND)
 
 
-
+## Contribution in month of june
+- [The Indian Job](https://www.hackerrank.com/challenges/the-indian-job/problem)
+- [making anagram](https://www.hackerrank.com/challenges/making-anagrams/problem)
+- [ ][Tree][huffman-decoding](https://www.hackerrank.com/challenges/tree-huffman-decoding/problem?h_l=interview&h_r%5B%5D=next-challenge&h_r%5B%5D=next-challenge&h_v%5B%5D=zen&h_v%5B%5D=zen&isFullScreen=false&playlist_slugs%5B%5D%5B%5D%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D%5B%5D%5B%5D=trees&h_r=next-challenge&h_v=zen)
+- [MS][consecutive_1s_in_binary_represntation](https://www.hackerrank.com/challenges/30-binary-numbers/problem)
+- [ ][heap][queries_on_heap](https://www.hackerrank.com/challenges/qheap1/problem)
+- [ ][hard][heap][minimum_average_waiting_time](https://www.hackerrank.com/challenges/minimum-average-waiting-time/problem?h_r=next-challenge&h_v=zen)
+- [x][stack][balanced_brackets](https://www.hackerrank.com/challenges/balanced-brackets/problem)
+- [stack][easy][equal_stack](https://www.hackerrank.com/challenges/equal-stacks/problem?h_r=next-challenge&h_v=zen)
+- [ ][queue][queries_with_fixed_length](https://www.hackerrank.com/challenges/queries-with-fixed-length/problem)
+- [ ][dp][queue][hard][down_to_zero_11](https://www.hackerrank.com/challenges/down-to-zero-ii/forum)
+- [greedy][easy][luck_balance](https://www.hackerrank.com/challenges/luck-balance/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=greedy-algorithms)
+- [x][medium][greedy][greedy_florist](https://www.hackerrank.com/challenges/greedy-florist/)
+- [game_of_digits](https://practice.geeksforgeeks.org/contest-problem/the-game-of-digits0649/0/)
+- [ ][next_in_series](https://practice.geeksforgeeks.org/problems/next-in-series/0/?track=sp-mathematics&batchId=152)
+- [tree][sum_of_binary_tree](https://practice.geeksforgeeks.org/problems/sum-of-binary-tree/1)
+- [tree][ ](https://www.geeksforgeeks.org/sum-parent-nodes-child-node-x/)
+- [x][tree][sum_of_all_left_leaf_nodes](https://practice.geeksforgeeks.org/problems/sum-of-left-leaf-nodes/1)
+- [tree][sum_of_nodes_of_longest_path_from_root_to_leaf](https://practice.geeksforgeeks.org/problems/sum-of-the-longest-bloodline-of-a-tree/1)
+- [tree][sum_of_leaf_nodes](https://practice.geeksforgeeks.org/problems/sum-of-leaf-nodes/1/?ref=self)
+- [tree][find_closest_neighbour_in_bst](https://www.geeksforgeeks.org/find-closest-element-binary-search-tree/)
+- [tree][nodes_at_odd_level](https://practice.geeksforgeeks.org/problems/nodes-at-odd-levels/1/?ref=self)
+- [tree][delete_leaf_nodes_with_value_k](https://www.geeksforgeeks.org/delete-leaf-nodes-with-value-k/)
+- [tree][print_all_nodes_with_no_siblings](https://www.geeksforgeeks.org/print-nodes-dont-sibling-binary-tree/)
+- [tree][ ][find_max_path_sum_in_binary_tree](https://www.geeksforgeeks.org/find-maximum-path-sum-in-a-binary-tree/)
 
 ## contribution on 1-7-19
 - [tree][medium][construct_binary_tree_from_inorder_transversal](https://www.geeksforgeeks.org/construct-binary-tree-from-inorder-traversal/)
@@ -341,7 +333,7 @@ g/given-a-string-print-all-possible-palindromic-partition/)
 - [range-query][segment_tree]()
 
 ## contribution on 11-7-19
-- [medium][tree][sum_root_to_leaf_numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/)
+- [x][medium][tree][sum_root_to_leaf_numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/)
 - [x][easy][greedy][minimum_energy_to_cross_streat](https://practice.geeksforgeeks.org/problems/minimum-energy/0)
 - [medium][array][minimum_swaps_required_to_groups_all_1s](https://www.geeksforgeeks.org/minimum-swaps-required-group-1s-together/)
 
@@ -395,8 +387,8 @@ g/given-a-string-print-all-possible-palindromic-partition/)
 - [easy][matrix][island_perimeter](https://leetcode.com/problems/island-perimeter/)
 - [imp][hard][dp,string][regular_exp_matching](https://leetcode.com/problems/regular-expression-matching)
 - [imp][hard][dp][wildcard_matching](https://leetcode.com/problems/wildcard-matching/)
-- [imp][graph][topological_sort]
-- [imp][graph][course_schedule_12](https://leetcode.com/problems/course-schedule-ii/)
+- [x][imp][graph][topological_sort](https://practice.geeksforgeeks.org/problems/topological-sort/1)
+- [x][imp][graph][course_schedule_12](https://leetcode.com/problems/course-schedule/)(https://leetcode.com/problems/course-schedule-ii/)
 
 ## contribution on 26-7-19
 - [medium][imp,tree][flatten_binary_tree_to_linked_list](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)
@@ -527,14 +519,14 @@ g/given-a-string-print-all-possible-palindromic-partition/)
 ## Contribution on 14-8-19
 - [hashing][pairs_with_given_difference](https://www.interviewbit.com/problems/diffk-ii/)
 - [hashing][anagram_pairs_of_string_array](https://www.interviewbit.com/problems/anagrams/)
-- [Stacks And Queues][sliding_window_maximum](https://www.interviewbit.com/problems/sliding-window-maximum/)
-- [hard][queues][queries_with_fixed_length](https://www.hackerrank.com/challenges/queries-with-fixed-length/problem)
-- [medium][Stacks And Queues][redundant_braces](https://www.interviewbit.com/problems/redundant-braces/)
+- [x][Queues][sliding_window_maximum](https://www.interviewbit.com/problems/sliding-window-maximum/)
+- [x][hard][queues][queries_with_fixed_length](https://www.hackerrank.com/challenges/queries-with-fixed-length/)
+- [x][medium][Stacks And Queues][redundant_braces](https://www.interviewbit.com/problems/redundant-braces/)
 - [heap][hard][find_median_of_running_stream_of_integers](https://www.hackerrank.com/challenges/find-the-running-median/forum)(https://leetcode.com/problems/find-median-from-data-stream/submissions/)
 
 ## Contribution on 15-8-19
 - [string][length_of_longest_substring_with_consecutive_characters](https://www.geeksforgeeks.org/length-of-the-longest-substring-with-consecutive-characters/)
-- [hashing][length_of_longest_substring_with_non_repeating_character](https://www.interviewbit.com/problems/longest-substring-without-repeat/)(https://practice.geeksforgeeks.org/problems/length-of-the-longest-substring/0)
+- [x][hashing][length_of_longest_substring_with_non_repeating_character](https://www.interviewbit.com/problems/longest-substring-without-repeat/)
 - [backtracking][combinations_of_k_digit](https://www.interviewbit.com/problems/combinations/)
 - [backtracking][combinational_sum](https://www.interviewbit.com/problems/combination-sum/)
 - [hard][dp,string][longest_valid_parentheses](https://www.interviewbit.com/problems/longest-valid-parentheses/)(https://leetcode.com/problems/longest-valid-parentheses/)
@@ -622,7 +614,7 @@ g/given-a-string-print-all-possible-palindromic-partition/)
 - [medium][tree][serialize_and_deserialize_binary_tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
 - [medium][tree][find_duplicate_subtree](https://leetcode.com/problems/find-duplicate-subtrees/)
 
-- [medium][string,dp][longest_pallindrome_in_string.cpp](https://leetcode.com/problems/longest-palindromic-substring/)
+- [x][medium][string,dp][longest_pallindrome_in_string](https://leetcode.com/problems/longest-palindromic-substring/)(https://www.interviewbit.com/problems/longest-palindromic-substring/)
 - [ ][TLE] [longest_pallindromic_subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/)
 - [ ][manachers_algorithm_linear_time](https://www.geeksforgeeks.org/manachers-algorithm-linear-time-longest-palindromic-substring-part-2/)
 - [medium][dp,string][count_all_pallindromic_substring](https://leetcode.com/problems/palindromic-substrings/)
@@ -693,7 +685,7 @@ g/given-a-string-print-all-possible-palindromic-partition/)
 ## Contribution on 25-9-19
 - [x][array][relative_sorting](https://leetcode.com/problems/relative-sort-array/)
 - [x][array][flatten_2d_vector](http://buttercola.blogspot.com/2015/08/leetcode-flatten-2d-vector.html)
-- [x][array][first_missing_positive](https://leetcode.com/problems/first-missing-positive/)
+- [x][imp][array][first_missing_positive](https://leetcode.com/problems/first-missing-positive/)
 - [x][imp][bit-manipulation][single_number_1_2](https://www.interviewbit.com/problems/single-number/)(https://www.interviewbit.com/problems/single-number-ii/)(https://leetcode.com/problems/single-number-ii/)
 - [x][imp][bit-manipulation][pairwise_hamming_distance](https://www.interviewbit.com/problems/sum-of-pairwise-hamming-distance/)(https://www.interviewbit.com/problems/different-bits-sum-pairwise/)
 
@@ -719,7 +711,31 @@ g/given-a-string-print-all-possible-palindromic-partition/)
 - [x][backtrack][path_with_maximum_gold](https://leetcode.com/problems/path-with-maximum-gold/)
 - [x][dp][count_vowel_permutation](https://leetcode.com/problems/count-vowels-permutation/)
 - [ ][dp][queen_attack](https://www.interviewbit.com/problems/queen-attack/)
+- [ ][dp][word_break](https://www.interviewbit.com/problems/word-break/)
 
+
+## Contribution on 8-10-19
+- [x][easy][string][urlify_of_string](https://practice.geeksforgeeks.org/problems/urlify-a-given-string/0)
+- [x][medium][array][count_inversions](https://www.interviewbit.com/problems/inversions/) (https://www.geeksforgeeks.org/counting-inversions/)
+- [ ][string][](https://practice.geeksforgeeks.org/problems/smallest-distant-window/0)
+- [x][array][hotel_booking_possible](https://www.interviewbit.com/problems/hotel-bookings-possible/)
+
+## Contribution on 9-10-19
+- [x][array][min_steps_in_infinite_grid](https://www.interviewbit.com/problems/min-steps-in-infinite-grid/)
+- [x][imp][array][maximum_absolute_distance](https://www.interviewbit.com/problems/maximum-absolute-difference/)
+- [ ][graph,tree][redundant_connection](https://leetcode.com/problems/redundant-connection/)
+- [x][imp][string,backtrack][valid_ip_address](https://www.interviewbit.com/problems/valid-ip-addresses/)
+- [x][linked-list][partiton_list](https://www.interviewbit.com/problems/partition-list/)
+- [x][graph][journey_to_the_moon](https://www.hackerrank.com/challenges/journey-to-the-moon/)
+
+# Contribution on 10-10-19
+- [ ][v.imp][array][count_subarray_with_sum_in_given_range](https://www.interviewbit.com/problems/count-of-range-sum/)
+- [x][v-imp][array][max_distance](https://www.interviewbit.com/problems/max-distance/)
+- [input_using_string_stream]
+- [][math][largest_prime_factor](https://practice.geeksforgeeks.org/problems/largest-prime-factor/0)
+
+
+- [ ][hard][](https://www.geeksforgeeks.org/find-the-maximum-subarray-xor-in-a-given-array/)
 - [medium][][](https://leetcode.com/problems/multiply-strings/)
 - [backtracking][subsets](https://www.interviewbit.com/problems/subset/)
 // https://leetcode.com/problems/maximum-subarray/discuss/20200/Share-my-solutions-both-greedy-and-divide-and-conquer
@@ -801,18 +817,15 @@ https://www.geeksforgeeks.org/m-coloring-problem-backtracking-5/
 - [ ][queue][greedy][reorganize_string](https://leetcode.com/problems/reorganize-string/)
 - [ ][dp][minimum_cost_for_tickets](https://leetcode.com/problems/minimum-cost-for-tickets/)
 - [array][](https://leetcode.com/problems/set-matrix-zeroes/)
-- [ ][imp][array][inversion](https://www.geeksforgeeks.org/counting-inversions/)
 - [imp][article](https://leetcode.com/problems/count-of-smaller-numbers-after-self/discuss/76657/3-ways-(Segment-Tree-Binary-Indexed-Tree-Binary-Search-Tree-clean-python-code)
 - [imp][](https://leetcode.com/problems/count-of-smaller-numbers-after-self/discuss/76607/C%2B%2B-O(nlogn)-Time-O(n)-Space-MergeSort-Solution-with-Detail-Explanation)
 - [ ][imp][dp][can_i_win](https://leetcode.com/problems/can-i-win/)
 - [imp](https://leetcode.com/problems/queue-reconstruction-by-height/discuss/302592/Python-From-O(N2)-Search-available-slot-to-O(NlogN)-Segment-Tree-Optimization)
-- [ ][counting_inversion](https://www.geeksforgeeks.org/counting-inversions/)
 - [ ][ncr_using_dp]
 
 - [ ][smallest_window_in_String_contain_another_strings_character]()(https://practice.geeksforgeeks.org/problems/smallest-window-in-a-string-containing-all-the-characters-of-another-string/0)
 - [ ] [optimize code] [4 sum] [find_sequence_of_4_with_given_sum](https://www.interviewbit.com/problems/4-sum/) (https://practice.geeksforgeeks.org/problems/find-all-four-sum-numbers/0)
 - [ ][permutation_of_given_string](https://practice.geeksforgeeks.org/problems/permutations-of-a-given-string/0)
-- [ ][inversions](https://www.interviewbit.com/problems/inversions/)(https://www.geeksforgeeks.org/counting-inversions/)
 
 - [ ][tree][hard][sum_of_distance_in_tree](https://leetcode.com/problems/sum-of-distances-in-tree/)
 - [ ][tree][hard][binary_tree_cameras](https://leetcode.com/problems/binary-tree-cameras/)
@@ -1161,4 +1174,13 @@ priority_queue<custom_pq, vector<custom_pq>, custom_sort> pq;
 #define mod 1000000007
 
 typedef long long int ll;
+```
+
+## Return dynamic array
+- use `static` keyword
+```
+int* topoSort(int V, vector<int> adj[]){
+    static int ans[max_size];
+    return ans;
+}
 ```
