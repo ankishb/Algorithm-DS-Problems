@@ -505,6 +505,7 @@
 - [imp][binary-search][search_element_in_rotated_array](https://www.interviewbit.com/problems/rotated-sorted-array-search/)(https://leetcode.com/problems/search-in-rotated-sorted-array/)
 - [x][tree][minimum_depth_of_tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)(https://www.interviewbit.com/problems/min-depth-of-binary-tree/)
 - [imp][dp,tree][maximum_path_sum_in_binary_tree](https://www.interviewbit.com/problems/max-sum-path-in-binary-tree/)
+- [x][tree][maximum_depth_in_m_ary_tree](https://leetcode.com/problems/maximum-depth-of-n-ary-tree/)
 
 ## Contribution on 13-8-19
 - [easy][binary-search][first_bad_version](https://leetcode.com/problems/first-bad-version/)
@@ -531,7 +532,7 @@
 - [backtracking][combinational_sum](https://www.interviewbit.com/problems/combination-sum/)
 - [hard][dp,string][longest_valid_parentheses](https://www.interviewbit.com/problems/longest-valid-parentheses/)(https://leetcode.com/problems/longest-valid-parentheses/)
 - [dp][decode_ways_1_2](https://leetcode.com/problems/decode-ways/)(https://leetcode.com/problems/decode-ways-ii/)(https://www.interviewbit.com/problems/ways-to-decode/)
-- [dp][minimum_edit_distance](https://leetcode.com/problems/edit-distance/)(https://www.interviewbit.com/problems/edit-distance/)
+- [x][dp][minimum_edit_distance](https://leetcode.com/problems/edit-distance/)(https://www.interviewbit.com/problems/edit-distance/)
 
 
 (https://www.interviewbit.com/problems/grid-unique-paths/) (https://practice.geeksforgeeks.org/problems/count-all-possible-paths-from-top-left-to-bottom-right/0)
@@ -575,23 +576,23 @@
 ## Contribution on 20-8-19
 - [medium][tree][preorder_transversal_iteratively](https://leetcode.com/problems/binary-tree-preorder-traversal/)
 - [medium][tree][inorder_transversal_iteratively](https://leetcode.com/problems/binary-tree-inorder-traversal/)
-- [medium][tree][least_common_ancestor_in_binary_tree](https://practice.geeksforgeeks.org/problems/lowest-common-ancestor-in-a-binary-tree/1)
-- [x][medium][tree][least_common_ancestor_in_bst](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
+- [medium][tree][lowest_common_ancestor_in_binary_tree](https://practice.geeksforgeeks.org/problems/lowest-common-ancestor-in-a-binary-tree/1)
+- [x][medium][tree][lowest_common_ancestor_in_bst](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
 
 
 ## Contribution on 22-8-19
-- [medium][dp][coin_change](https://www.hackerrank.com/challenges/coin-change/problem[ ])
+- [x][medium][dp][coin_change](https://www.hackerrank.com/challenges/coin-change/problem)
 - [medium][array][max_sub_array_and_sub_seq](https://www.hackerrank.com/challenges/maxsubarray/problem)
 - [medium][backtrack][word_search](https://leetcode.com/problems/word-search/submissions/)
 - [ ][medium][graph][cut_the_tree](https://www.hackerrank.com/challenges/cut-the-tree/problem)
+- [ ][medium][greedy][install_transmitter_inhackerland](https://www.hackerrank.com/challenges/pylons/problem)
+- [ ][search][](https://www.hackerrank.com/challenges/bike-racers/problem)
 
 - [x][easy][greedy][mark_and_toys](https://www.hackerrank.com/challenges/mark-and-toys/problem)
-- [ ][medium][greedy][install_transmitter_inhackerland](https://www.hackerrank.com/challenges/pylons/problem)
 - [easy][greedy][jim_and_orders](https://www.hackerrank.com/challenges/jim-and-the-orders/problem)
 - [easy][greedy][permuting_two_array](https://www.hackerrank.com/challenges/two-arrays/problem)
 - [easy][greedy][largest_permutation](https://www.hackerrank.com/challenges/largest-permutation/problem)
 - [queue][greedy][task_scheduler](https://leetcode.com/problems/task-scheduler/)
-- [][search][](https://www.hackerrank.com/challenges/bike-racers/problem)
 - [x][easy][greedy][grid_challenge](https://www.hackerrank.com/challenges/grid-challenge/problem)
 
 - [flipkart-2018][count_derangement](https://www.geeksforgeeks.org/count-derangements-permutation-such-that-no-element-appears-in-its-original-position/)
@@ -601,7 +602,7 @@
 
 
 ## Contribution on 23-8-19
-- [medium][array][subarray_sum_equals_k](https://leetcode.com/problems/subarray-sum-equals-k/)
+- [x][medium][array][subarray_sum_equals_k](https://leetcode.com/problems/subarray-sum-equals-k/)
 - [x][greedy][maximum_product_subarray](https://leetcode.com/problems/maximum-product-subarray/)
 - [imp][array][maximum_product_of_three_number](https://leetcode.com/problems/maximum-product-of-three-numbers/)
 - [medium][array][subarray_product_less_than_k](https://leetcode.com/problems/subarray-product-less-than-k/)
@@ -623,7 +624,7 @@
 - [medium][dp][longest_turbulent_subarray](https://leetcode.com/problems/longest-turbulent-subarray/)
 - [medium][dp][delete_operation_for_two_strings](https://leetcode.com/problems/delete-operation-for-two-strings/)
 - [medium][graph][cheapest_flights_within_k_stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
-- [easy][bit-manipulation][find_the_difference](https://leetcode.com/problems/find-the-difference/)
+- [x][easy][bit-manipulation][find_the_difference](https://leetcode.com/problems/find-the-difference/)
 - [medium][graph][graph_coloring_problem]
 
 
@@ -734,6 +735,10 @@
 - [input_using_string_stream]
 - [][math][largest_prime_factor](https://practice.geeksforgeeks.org/problems/largest-prime-factor/0)
 
+## Contribution on 11-10-19
+- [x][math][count_distinct_coprime_factor_in_given_range](https://www.geeksforgeeks.org/all-possible-co-prime-distinct-element-pairs-within-a-range-l-r/)
+- [][string][roll_the_character_of_string](https://practice.geeksforgeeks.org/problems/roll-the-characters-of-a-string/0)
+- [x][v-imp][array][count_subarray_sum_divisible_by_k](https://practice.geeksforgeeks.org/problems/sub-array-sum-divisible-by-k/0)
 
 - [ ][hard][](https://www.geeksforgeeks.org/find-the-maximum-subarray-xor-in-a-given-array/)
 - [medium][][](https://leetcode.com/problems/multiply-strings/)
@@ -754,7 +759,7 @@ https://www.geeksforgeeks.org/m-coloring-problem-backtracking-5/
 - [](https://leetcode.com/problems/most-profit-assigning-work/)
 
 - [medium][array][rotate_image](https://leetcode.com/problems/rotate-image/)
-- [greedy][job_sequencing_problem](https://www.geeksforgeeks.org/job-sequencing-problem/)
+- [x][greedy][job_sequencing_problem](https://www.geeksforgeeks.org/job-sequencing-problem/)
 - [greedy][disjoint_set][job_sequencing_problem_using_disjoint_set](https://www.geeksforgeeks.org/job-sequencing-using-disjoint-set-union/)
 
 - [ ][hard][graph][maximum_cost_queries](https://www.hackerrank.com/challenges/maximum-cost-queries/problem)

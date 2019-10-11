@@ -1,4 +1,30 @@
 
+// super new try
+/*
+1. If root is matched with either one of them, we get ans
+2. If root is less than one of them and greater for other, we get ans
+3. If both in left subtree or right subtree, we move towards it
+*/
+class Solution {
+public:
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        if(root == NULL) return root;
+        int rv = root->val, pv = p->val, qv = q->val;
+        if(rv == pv || rv == qv) return root;
+        if((rv > pv && rv < qv) || (rv > qv && rv < pv)){
+            return root;
+        }
+        else if(rv > pv && rv > qv){
+            return lowestCommonAncestor(root->left, p, q);
+        }
+        else if(rv < pv && rv < qv){
+            return lowestCommonAncestor(root->right, p, q);
+        }
+        else return NULL;
+    }
+};
+
+
 // optimal1: same as binary tree (search naively)
 // optimal2: search using BST property
 // best: Avoid naivesness of optimal2 solution, by completely taking advantage of BST property

@@ -1,9 +1,31 @@
 
-/*
-Solution 2. From solution 1, we know the key to solve this problem is SUM[i, j]. So if we know SUM[0, i - 1] and SUM[0, j], then we can easily get SUM[i, j]. To achieve this, we just need to go through the array, calculate the current sum and save number of all seen PreSum to a HashMap. Time complexity O(n), Space complexity O(n).
+/* Optimal strategy:
+    sum[i-j] = sum[0-j] - sum[0-i]
+    sum[0-i] = sum[0-j] - sum
+
+1. We process sum[0-j] along the process
+2. Store the sum[0-j] in the map as well, which becomes sum[0-i] for next iterations
+3. we check, if (k-sum[0-j]) is present,
+    if yes, include the count for that value in ans
+
 */
+
 class Solution {
 public:
+    int new_try(vector<int> nums, int k){
+        int sum = 0, count = 0, n = nums.size();
+        unordered_map<int,int> map;
+        map[0] = 1;
+        for(int i=0; i<n; i++){
+            sum += nums[i];
+            if(map.find(sum-k) != map.end()){
+                count += map[sum-k];
+            }
+            map[sum]++;
+        }
+        return count;
+    }
+    
     int brute_force(vector<int> nums, int k){
         int sum = 0, count = 0;
         for(int i=0; i<nums.size(); i++){
@@ -18,7 +40,8 @@ public:
     
     int subarraySum(vector<int>& nums, int k) {
         // return brute_force(nums, k);
-        return optimized(nums, k);
+        // return optimized(nums, k);
+        return new_try(nums, k);
     }
     
     int optimized(vector<int> nums, int k){

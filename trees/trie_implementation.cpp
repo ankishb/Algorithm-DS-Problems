@@ -1,4 +1,67 @@
 
+/* why this one is not working (could not understood error)
+class trie_node{
+public:
+    bool is_leaf;
+    unordered_map<char, trie_node*> child;
+    trie_node(){
+        is_leaf = false;
+    }
+};
+
+class Trie {
+public:
+    trie_node *root;
+    // Initialize your data structure here. 
+    Trie() {}
+    
+    // Inserts a word into the trie. 
+    void insert(string word) {
+        if(root == NULL){
+            root = new trie_node();
+        }
+        trie_node *temp = root;
+        for(auto ch : word){
+            // cout<<(temp->child[ch] == NULL)<<" ";
+            // if(temp->child.find(ch) == temp->child.end()){
+            if(temp->child[ch] == NULL){
+                temp->child[ch] = new trie_node();
+            }
+            temp = temp->child[ch];
+        }
+        temp->is_leaf = true;
+    }
+    
+    // Returns if the word is in the trie.
+    bool search(string word) {
+        if(root == NULL) return false;
+        trie_node *temp = root;
+        for(auto ch : word){
+            if(temp->child.find(ch) == temp->child.end()){
+                return false;
+            }
+            temp = temp->child[ch];
+        }
+        if(temp->is_leaf) return true;
+        return false;
+    }
+    
+    // Returns if there is any word in the trie that starts with the given prefix. 
+    bool startsWith(string prefix) {
+        if(root == NULL) return false;
+        trie_node *temp = root;
+        for(auto ch : prefix){
+            if(temp->child.find(ch) == temp->child.end()){
+                return false;
+            }
+            temp = temp->child[ch];
+        }
+        return true;
+    }
+};
+*/
+
+
 class TrieNode{
 public:
     TrieNode *child[26];

@@ -1,3 +1,49 @@
+
+// new try
+class custom_pq{
+public:
+    int d, p;
+    custom_pq(int dead, int pro): d(dead), p(pro){}
+};
+
+bool operator<(const custom_pq &p1, const custom_pq &p2){
+    return (p1.p < p2.p);
+}
+
+int Solution::solve(vector<int> &d, vector<int> &p){
+    int n = d.size(), max_d = 0; // d: deadline, p: profit
+    priority_queue<custom_pq> pq;
+    for(int i=0; i<n; i++){
+        max_d = max(max_d, d[i]);
+        pq.push(custom_pq(d[i], p[i]));
+    }
+    vector<int> allot(max_d+1, 0);
+    while(!pq.empty()){
+        custom_pq top = pq.top();
+        // cout<<top.d<<" "<<top.p<<endl;
+        pq.pop();
+        int j = top.d;
+        while(j >= 1){
+            if(allot[j] == 0){
+                allot[j] = top.p;
+                break;
+            }
+            j--;
+        }
+    }
+    int max_profit = 0;
+    for(auto a : allot){
+        // cout<<a<<" ";
+        max_profit += a;
+    }
+    // cout<<endl;
+    return max_profit;
+}
+
+
+
+
+// oldest one
 // Given a set of N jobs where each job i has a deadline and profit associated to it. Each job takes 1 unit of time to complete and only one job can be scheduled at a time. We earn the profit if and only if the job is completed by its deadline. The task is to find the maximum profit and the number of jobs done.
 
 #include <bits/stdc++.h>

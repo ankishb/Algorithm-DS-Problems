@@ -1,3 +1,50 @@
+
+// new try
+/* There are 3 operation to take care:
+1. Insert  : It involves adding a character(not much imp for us)
+2. Delete  : We can either delete from s1 or s2. So check which gives min
+3. Replace : Replace one chacter with another, if don't match
+
+So in concise:
+1. If current character i & j match, check for min-op for one less char
+2. If don't match, we do following
+    1. either replace
+    2. or delete ith char from s1
+    3. or delete jth char from s2
+
+Note that, cur sol has memory complexity: O(n1*n2), 
+    but it can be done in O(n2). As it  point we need
+    three points(2 point from above row: up, left diag),
+    which can be saved easily
+
+*/
+class Solution {
+public:
+    int minDistance(string w1, string w2) {
+        int n1 = w1.size(), n2 = w2.size();
+        if(n1 == 0 && n2 == 0) return 0;
+        if(n1 == 0 || n2 == 0) return (n1==0)?n2:n1;
+        vector<vector<int>> dp(n1+1, vector<int>(n2+1));
+        for(int i=0; i<=n1; i++) dp[i][0] = i;
+        for(int j=0; j<=n2; j++) dp[0][j] = j;
+        
+        int wi, wj;
+        for(int i=1; i<=n1; i++){
+            for(int j=1; j<=n2; j++){
+                wi = i-1;
+                wj = j-1;
+                if(w1[wi] == w2[wj]) dp[i][j] = dp[i-1][j-1];
+                else{
+                    dp[i][j] = min({dp[i-1][j],dp[i-1][j-1],dp[i][j-1]});
+                    dp[i][j] += 1;
+                }
+            }
+        }
+        return dp[n1][n2];
+    }
+};
+
+// old one
 /*
 1. If s1[i] == s2[j], edit-dist = dp[i-1][j-1]
 2. else either we replace chacter or we delete it.
