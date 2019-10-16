@@ -1,3 +1,32 @@
+
+// new try
+/*
+1. At each move, we collect energy on current step
+2. we walk forward and check if someother element 
+	can improve(fill more) energy, that can take us 
+	more futher, if yes, we collect it 
+*/
+int get_minimum_count(vector<int> A){
+    if(A[0] == 0) return -1;
+    int i = 0, count = 1, j, n = A.size();
+    while(i < n){
+        j = i+1;
+        if(i+A[i] >= n-1) return count;
+        for(int k=i+1; k<=i+A[i]; k++){
+            if(k+A[k] >= j+A[j]) j = k;
+        }
+        // cout<<i<<" "<<j<<" "<<count<<endl;
+        count++;
+        i = j;
+        if(i < n && A[i] == 0) return -1;
+    }
+    return count;
+}
+
+
+
+
+// old one
 #include <bits/stdc++.h>
 using namespace std;
 #define loop(i, start, end) for(int i=start; i<end; i++)
@@ -11,11 +40,6 @@ void solve(){
 	}
 
 	vector<int> path_cost(n, 0);
-	// cout<<"\n check path cost init: \n";
-	// for(auto itr : path_cost){
-	// 	cout<<itr<<" ";
-	// }
-	cout<<endl;
 
 	vector<int> path(n, 0);
 	for(int i=1; i<A.size(); i++){

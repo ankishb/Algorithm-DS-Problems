@@ -1,3 +1,32 @@
+// newest try
+class Solution {
+public:
+    vector<int> cur;
+    vector<vector<int>> store;
+    
+    void helper(vector<int> A, int idx, int target){
+        int n = A.size();
+        if(idx >= n || target < 0) return;
+        if(target == 0){
+            store.push_back(cur);
+            return ;
+        }
+        for(int i=idx; i<n; i++){
+            // if(target-A[i] < 0) continue;
+            cur.push_back(A[i]);
+            helper(A, i, target-A[i]);
+            cur.pop_back();
+        }
+    }
+    vector<vector<int>> combinationSum(vector<int>& A, int target) {
+        if(A.size() == 0) return {{}};
+        sort(A.begin(), A.end());
+        helper(A, 0, target);
+        return store;
+    }
+};
+
+
 
 // new program
 void helper(vector<int> A, int sum, int curSum, int idx,
@@ -206,7 +235,6 @@ vector<vector<int> > Solution::combinationSum(vector<int> &A, int B) {
 
 // class Solution {
 // public:
-
 //     void doWork(vector<int> &candidates, int index, vector<int> &current, int currentSum, int target, vector<vector<int> > &ans) {
 //         if (currentSum > target) {
 //             return;

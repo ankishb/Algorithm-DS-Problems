@@ -1,4 +1,26 @@
 
+// newest
+void solve(){
+    int n;
+    cin>>n;
+    vector<int> A(n);
+    for(int i=0; i<n; i++){
+        cin>>A[i];
+    }
+    int sum = 0, energy = 0;
+    for(int i=0; i<n; i++){
+        sum += A[i];
+        if(sum <= 0){
+            energy += (-sum) + 1;
+            sum = 1;
+        }
+    }
+    if(energy == 0) energy = 1;
+    cout<<energy<<endl;
+}
+
+
+
 #include <bits/stdc++.h>
 using namespace std;
 

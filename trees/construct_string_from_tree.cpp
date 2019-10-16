@@ -1,13 +1,33 @@
 
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
+/*
+We need a valid definition of binary tree. 
+If there is right node, then we represent left node with "NULL", if not present
+So we need to represent this case with "()" for valid representation
+*/
+class Solution {
+public:
+    string tree2str(TreeNode* t) {
+        if(t == NULL) return "";
+        if(!t->left && !t->right){
+            return to_string(t->val);
+        }
+        
+        string left = tree2str(t->left);
+        string right = tree2str(t->right);
+        if(t->right){
+            right = "(" + right + ")"; 
+        }
+        left = "(" + left + ")";
+        
+
+        return to_string(t->val)+left+right;
+    }
+};
+
+
+
+
+
 class Solution {
 public:
     string get_str(TreeNode* root){

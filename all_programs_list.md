@@ -106,8 +106,8 @@
 - [math][chinese_theorm]
 - [x_total_shapes](https://practice.geeksforgeeks.org/problems/x-total-shapes/0)
 - [graph][disjoint_set_data_structure]
-- [graph][detect_cycle_using_dfs]
-- [graph][detect_cycle_using_disjointSet]
+- [graph][detect_cycle_using_dfs](https://practice.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1)
+- [graph][detect_cycle_using_disjointSet](https://practice.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1)
 - [Sigtop error][greedy][IPC Trainer][lecture arrangement to reduce sadness level](https://www.codechef.com/JULY17/problems/IPCTRAIN)
 - [tree][inorder_successor_in_BST](https://practice.geeksforgeeks.org/problems/inorder-successor-in-bst/1)
 - [string][split_string_by_white_spaces]
@@ -175,7 +175,7 @@
 - [x][array,string][sorted_permutation_rank](https://www.interviewbit.com/problems/sorted-permutation-rank/)
 - [x][dp][minimum_cost_path](https://www.interviewbit.com/problems/min-sum-path-in-matrix/)
 - [x][dp][jump_game_array](https://www.interviewbit.com/problems/jump-game-array/)(https://leetcode.com/problems/jump-game/)
-- [dp][count_minimum_number_of_jumps](https://practice.geeksforgeeks.org/problems/minimum-number-of-jumps/0)
+- [x][dp][count_minimum_number_of_jumps](https://practice.geeksforgeeks.org/problems/minimum-number-of-jumps/0)
 - [dp][coins_in_a_line](https://www.interviewbit.com/problems/coins-in-a-line/) (https://practice.geeksforgeeks.org/problems/pots-of-gold-game/1)
 - [x][dp][tree][count_unique_binary_search_tree](https://www.interviewbit.com/problems/unique-binary-search-trees-ii/)
 - [ ][dp][count_nos_without_consecutive_1s_in_binary_rep]()
@@ -392,7 +392,7 @@
 
 ## contribution on 26-7-19
 - [medium][imp,tree][flatten_binary_tree_to_linked_list](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)
-- [easy][tree,string][construct_string_from_tree](https://leetcode.com/problems/construct-string-from-binary-tree/)
+- [x][easy][tree,string][construct_string_from_tree](https://leetcode.com/problems/construct-string-from-binary-tree/)
 - [medium][tree][check_if_subtree_matches](https://leetcode.com/problems/subtree-of-another-tree/)
 - [easy][tree][subtree_of_another_tree](https://leetcode.com/problems/subtree-of-another-tree/)
 - [medium][greedy][leetcode_contest_112](https://leetcode.com/problems/bag-of-tokens/)
@@ -464,7 +464,7 @@
 
 ## contribution on 3-8-19
 - [ ][hard][divide-conquer][binary-index-tree][count_of_smaller_after_self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/discuss/76607/C%2B%2B-O(nlogn)-Time-O(n)-Space-MergeSort-Solution-with-Detail-Explanation)
-- [ ][tree][minimum_height_tree](https://leetcode.com/problems/minimum-height-trees/)
+- [ ][graph][minimum_height_tree](https://leetcode.com/problems/minimum-height-trees/)
 - [ ][](https://leetcode.com/problems/partition-equal-subset-sum/)
 - [ ][segment_tree](https://www.geeksforgeeks.org/segment-tree-set-1-sum-of-given-range/)(https://cp-algorithms.com/data_structures/segment_tree.html)
 - [ ][tree][boundary_order_transversal](https://www.leetfree.com/problems/boundary-of-binary-tree.html)(https://www.geeksforgeeks.org/boundary-traversal-of-binary-tree/)
@@ -485,14 +485,14 @@
 - [medium][sort,string][counting_sort_special](https://www.hackerrank.com/challenges/countingsort4/problem)
 - [x][medium][string][count_all_possible_anagramic_substring](https://www.hackerrank.com/challenges/sherlock-and-anagrams/problem)
 - [medium][algorithm][gaming_array](https://www.hackerrank.com/challenges/an-interesting-game-1/problem)
-- [ ][medium][string][password_cracker](https://www.hackerrank.com/challenges/password-cracker/problem)
+- [x][medium][string][password_cracker](https://www.hackerrank.com/challenges/password-cracker/problem)
 - [x][medium][graph,bfs][knight_on_chessboard](https://www.hackerrank.com/challenges/knightl-on-chessboard/problem)
 - [ ][medium][array][](https://www.hackerrank.com/challenges/larrys-array/problem)
 - [x][medium][array][flipping_the_matrix](https://www.hackerrank.com/challenges/flipping-the-matrix/problem)
 - [medium][dp,array][maximize_profit_stock_price](https://www.hackerrank.com/challenges/stockmax/problem)
 
 ## contribution on 12-8-19
-- [ ][medium][recursion][power_sum]()
+- [ ][medium][backtrack][power_sum]()
 - [hard][array][range_max](https://www.hackerrank.com/challenges/crush/problem)
 - [hard][greedy][truck_tour_problem](https://www.hackerrank.com/challenges/truck-tour/problem)
 - [medium][BST,DP][generate_all_possible_BST](https://leetcode.com/problems/unique-binary-search-trees-ii/)
@@ -528,29 +528,26 @@
 ## Contribution on 15-8-19
 - [string][length_of_longest_substring_with_consecutive_characters](https://www.geeksforgeeks.org/length-of-the-longest-substring-with-consecutive-characters/)
 - [x][hashing][length_of_longest_substring_with_non_repeating_character](https://www.interviewbit.com/problems/longest-substring-without-repeat/)
-- [backtracking][combinations_of_k_digit](https://www.interviewbit.com/problems/combinations/)
-- [backtracking][combinational_sum](https://www.interviewbit.com/problems/combination-sum/)
+- [backtrack][combinations_of_k_digit](https://www.interviewbit.com/problems/combinations/)
+- [backtrack][combinational_sum](https://www.interviewbit.com/problems/combination-sum/)
 - [hard][dp,string][longest_valid_parentheses](https://www.interviewbit.com/problems/longest-valid-parentheses/)(https://leetcode.com/problems/longest-valid-parentheses/)
 - [dp][decode_ways_1_2](https://leetcode.com/problems/decode-ways/)(https://leetcode.com/problems/decode-ways-ii/)(https://www.interviewbit.com/problems/ways-to-decode/)
 - [x][dp][minimum_edit_distance](https://leetcode.com/problems/edit-distance/)(https://www.interviewbit.com/problems/edit-distance/)
-
-
-(https://www.interviewbit.com/problems/grid-unique-paths/) (https://practice.geeksforgeeks.org/problems/count-all-possible-paths-from-top-left-to-bottom-right/0)
-
-
-- [hard][dp,matrix][unique_path_count](https://leetcode.com/problems/unique-paths/)
-- [ ][hard][dp][unique_path_count_2](https://leetcode.com/problems/unique-paths-ii/)
+- [x][hard][dp,matrix][unique_path_count](https://leetcode.com/problems/unique-paths/)
+- [x][hard][dp][unique_path_count_2](https://leetcode.com/problems/unique-paths-ii/)
 - [ ][nearest smallest element](https://www.interviewbit.com/problems/nearest-smaller-element/)
-- [ ][backtracking][combinational_sum_2](https://www.interviewbit.com/problems/combination-sum-ii/)
+- [x][backtrack][combinational_sum_2](https://www.interviewbit.com/problems/combination-sum-ii/)
+- [x][backtrack][combinations_sum_1_2](https://leetcode.com/problems/combination-sum/)(https://leetcode.com/problems/combination-sum-ii/)
 
 ## Contribution on 16-8-19
 - [Backtracking][gray_code_sequence](https://www.interviewbit.com/problems/gray-code/)
 - [ ][very weird][matrix_median_with_no_extra_space](https://www.interviewbit.com/problems/matrix-median/)
 - [hard][dp][maximal_rectangle](https://leetcode.com/problems/maximal-rectangle/)(https://www.interviewbit.com/problems/max-rectangle-in-binary-matrix/)
-- [easy][dp][climbing_stairs](https://leetcode.com/problems/climbing-stairs/)
+- [x][easy][dp][climbing_stairs](https://leetcode.com/problems/climbing-stairs/)
 - [data-structure-design][climbing_the_leaderboard](https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem)
 - [imp][easy][missing_number](https://leetcode.com/problems/missing-number/)
-- [backtracking][permutations](https://www.interviewbit.com/problems/permutations/)
+- [x][backtrack][permutations](https://www.interviewbit.com/problems/permutations/)
+- [x][backtrack][permutations_1_2](https://leetcode.com/problems/permutations/)(https://leetcode.com/problems/permutations-ii/)
 
 
 
@@ -558,7 +555,7 @@
 - [x][imp][bit-manipulation][reverse_bits](https://leetcode.com/problems/reverse-bits/)
 - [imp][bit-manipulation][sum_of_two_integer_without_operator](https://leetcode.com/problems/sum-of-two-integers/)
 - [imp][bit-manipulation][power_of_two_three_four](https://leetcode.com/problems/power-of-two/)
-- [bit-manipulation][letter_case_permuatations](https://leetcode.com/problems/letter-case-permutation/)
+- [x][bit-manipulation,string][letter_case_permuatations](https://leetcode.com/problems/letter-case-permutation/)
 - [bit-manipulation, dp][counting_bits](https://leetcode.com/problems/counting-bits/)
 
 
@@ -740,9 +737,29 @@
 - [][string][roll_the_character_of_string](https://practice.geeksforgeeks.org/problems/roll-the-characters-of-a-string/0)
 - [x][v-imp][array][count_subarray_sum_divisible_by_k](https://practice.geeksforgeeks.org/problems/sub-array-sum-divisible-by-k/0)
 
+## Contribution on 12-10-19
+- [x][imp][dp][path_in_the_grid](https://practice.geeksforgeeks.org/problems/path-in-matrix/0)
+
+
+## Contribution on 15-10-19
+- [hard][honeywell][graph,tree][undirected_graph_to_string_while_root_is_unknown]
+- [string][find_sequence_in_string](https://www.hackerrank.com/challenges/hackerrank-in-a-string/problem)
+- [hard][imp][dp][collect_all_coins_in_minimum_steps](https://www.geeksforgeeks.org/collect-coins-minimum-number-steps/)
+- [x][array][remove_duplicate_from_array](https://www.interviewbit.com/problems/remove-duplicates-from-sorted-array/)
+- [x][imp][pallindromic_partition_1](https://leetcode.com/problems/palindrome-partitioning/)
+- [x][array][minimize_the_absolute_difference](https://www.interviewbit.com/problems/minimize-the-absolute-difference/)
+
+
+## Contribution on 16-10-19
+- [x][dp][count_ways_to_reach](https://practice.geeksforgeeks.org/problems/count-ways-to-reach-the-nth-stair/0)
+- [x][bit-manipulation][maximum_xor_in_given_range](https://www.hackerrank.com/challenges/maximizing-xor/problem)
+- [x][backtrack][beautiful_arrangement](https://leetcode.com/problems/beautiful-arrangement/)
+- [x][graph,dfs][find_path_in_grid](https://practice.geeksforgeeks.org/problems/find-whether-path-exist/0)
+
+
+## undone
 - [ ][hard][](https://www.geeksforgeeks.org/find-the-maximum-subarray-xor-in-a-given-array/)
 - [medium][][](https://leetcode.com/problems/multiply-strings/)
-- [backtracking][subsets](https://www.interviewbit.com/problems/subset/)
 // https://leetcode.com/problems/maximum-subarray/discuss/20200/Share-my-solutions-both-greedy-and-divide-and-conquer
 // https://leetcode.com/problems/cheapest-flights-within-k-stops/discuss/128217/Three-C%2B%2B-solutions-BFS-DFS-and-BF
 // 

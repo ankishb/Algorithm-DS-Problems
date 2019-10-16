@@ -1,4 +1,4 @@
-https://www.interviewbit.com/problems/unique-paths-in-a-grid/
+// https://www.interviewbit.com/problems/unique-paths-in-a-grid/
 int Solution::uniquePathsWithObstacles(vector<vector<int> > &A) {
     int n1 = A.size();
     int n2 = A[0].size();

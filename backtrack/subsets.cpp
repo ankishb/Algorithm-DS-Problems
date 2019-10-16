@@ -1,4 +1,5 @@
 
+// old  one
 void helper(vector<int> A, int idx, vector<int> &temp, 
     set<vector<int>> &store){
     // store.insert(temp);

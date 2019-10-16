@@ -1,3 +1,46 @@
+
+// newest(but have some bug)
+class disjoint_set{
+public:
+    vector<int> parent;
+    disjoint_set(int n){
+        for(int i=0; i<n; i++){
+            parent.push_back(i);
+        }
+    }
+    int find(int x){
+        if(x != parent[x]){
+            parent[x] = find(parent[x]);
+        }
+        return parent[x];
+    }
+    bool merge(int x, int y){
+        int px = find(x);
+        int py = find(y);
+        if(px == py) return false;
+        parent[px] = py;
+        return true;
+    }
+};
+bool isCyclic(int V, vector<int> adj[]){
+    disjoint_set set(V);
+    for(int u=0; u<V; u++){
+        for(auto v : adj[u]){
+            if(!set.merge(u, v)) return true;
+        }
+    }
+    // for(int i=0; i<V; i++){
+    //     cout<<i<<" --> "<<set.parent[i]<<endl;
+    // }
+    return false;
+}
+
+
+
+
+
+
+// oldest
 // https://www.geeksforgeeks.org/union-find/
 
 #include <bits/stdc++.h>
@@ -106,17 +149,8 @@ public:
 // 1. First init a parent array, filled with -1
 // 2. Now tranverse through all edges.
 // 3. If there parent is same, then we found a cycle, else we we join them using union operation.
-int isCycle(Graph* graph, string s){
-	// if(s == "naive"){
-		// naiveFindUnion obj_(graph);
-	// }
-	// else if(s == "optimal"){
-		findUnion obj_(graph);
-	// }
-	// else{
-	// 	cout<<"Please check your method...\n";
-	// 	return 0;
-	// }
+int isCycle(Graph* graph){
+	findUnion obj_(graph);
 
 	for(int i=0; i<graph->E; i++){
 		int x_parent = obj_.find(graph->edge[i].src);
@@ -150,10 +184,10 @@ int main()
 	}
 
 	// cout<<"naive implementation: ";
-	// cout<<isCycle(graph, "naive")<<endl;
+	// cout<<isCycle(graph)<<endl;
 	
 	cout<<"optimal implementation(Rank/Path compression): ";
-	cout<<isCycle(graph, "optimal")<<endl;
+	cout<<isCycle(graph)<<endl;
 	
 	return 0;	
 }
