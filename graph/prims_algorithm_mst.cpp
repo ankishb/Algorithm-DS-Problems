@@ -1,3 +1,88 @@
+
+// with adjacency matrix(simple c/c++ without contains)
+#include <iostream>
+using namespace std;
+#include <cstring>
+#define inf 1E9
+
+int T[10][10];
+
+struct queue{
+    int w, v;
+};
+
+int get_prims_mst_weight(int nv, int src){
+    queue q[nv*nv+1];
+    int qi = 0;
+    int dist[nv+1];
+    bool visit[nv+1];
+    for(int i=0; i<=nv; i++){
+        dist[i] = inf;
+        visit[i] = false;
+    }
+    // memset(dist, inf, sizeof(dist));
+    // memset(visit, false, sizeof(visit));
+    dist[src] = 0;
+    q[qi].w = 0, q[qi].v = 0;
+    qi++;
+    
+    while(qi > 0){
+        int min_idx = 0;
+        for(int i=1; i<qi; i++){
+            if(q[i].w < q[min_idx].w){
+                min_idx = i;
+            }
+        }
+        int u = q[min_idx].v;
+        int w = q[min_idx].w;
+        // remove q[min_idx] & q[qi]
+        q[min_idx].w = q[qi].w;
+        q[min_idx].v = q[qi].v;
+        qi--;
+        if(visit[u] == true) continue;
+        visit[u] = true;
+        dist[u] = w;
+        cout<<u<<" :: "<<w<<endl;
+        
+        // explore neighbour of u
+        for(int v=0; v<nv; v++){
+            if(T[u][v] == 0) continue;
+            // if(visit[v] == true) continue;
+            if(!visit[v] && dist[v] > T[u][v]){
+            cout<<u<<" "<<v<<" "<<T[u][v]<<" "<<dist[v]<<" "<<qi<<endl;
+                q[qi].w = T[u][v], q[qi].v = v;
+                qi++;
+            }
+        }
+    }
+    cout<<endl;
+    int total_w = 0;
+    for(int i=1; i<=nv; i++){
+        cout<<dist[i]<<" ";
+        // total_w += dist[i];
+    }
+    cout<<endl;
+    return total_w;
+}
+
+int main()
+{
+    int test;
+    cin>>test;
+    while(test--){
+        int V;
+        cin>>V;
+        for(int i=0; i<V; i++){
+            for(int j=0; j<V; j++){
+                cin>>T[i][j];
+            }
+        }
+        cout<<get_prims_mst_weight(V, 0)<<endl;
+    }
+    return 0;
+}
+
+
 // new try
 int prims(int n, vector<vector<int>> edges, int start) {
     vector<pair<int,int>> adj[n+1];

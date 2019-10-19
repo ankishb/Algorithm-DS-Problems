@@ -39,9 +39,9 @@
 - [reverse words in string facebook](https://www.interviewbit.com/problems/reverse-the-string/)
 - [page faults in lru](https://practice.geeksforgeeks.org/problems/page-faults-in-lru/0)
 - [ ] [not optimal] [row with max 1's](https://practice.geeksforgeeks.org/problems/row-with-max-1s/0)
-- [search in a sorted matrix](https://practice.geeksforgeeks.org/problems/search-in-a-matrix/0)
 - [ ] [count number of 0s in sorted array](https://practice.geeksforgeeks.org/problems/count-zeros-in-a-sorted-matrix/1)
-- [Largest square in binary matrix](https://practice.geeksforgeeks.org/problems/largest-square-formed-in-a-matrix/0)
+- [x][array,matrix][largest_square_in_binary_matrix](https://practice.geeksforgeeks.org/problems/largest-square-formed-in-a-matrix/0)
+- [x][array,matrix][search_element_in_sorted_matrix](https://practice.geeksforgeeks.org/problems/search-in-a-matrix/0)
 - [nested function]
 - [count-negative-numbers-in-a-column-wise-row-wise-sorted-matrix](https://www.geeksforgeeks.org/count-negative-numbers-in-a-column-wise-row-wise-sorted-matrix/)
 - [2d_vector testing]
@@ -106,9 +106,9 @@
 - [math][chinese_theorm]
 - [x_total_shapes](https://practice.geeksforgeeks.org/problems/x-total-shapes/0)
 - [graph][disjoint_set_data_structure]
-- [graph][detect_cycle_using_dfs](https://practice.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1)
-- [graph][detect_cycle_using_disjointSet](https://practice.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1)
-- [Sigtop error][greedy][IPC Trainer][lecture arrangement to reduce sadness level](https://www.codechef.com/JULY17/problems/IPCTRAIN)
+- [x][graph][detect_cycle_in_directed_graph(dfs)](https://practice.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1)
+- [graph][detect_cycle_in_directed_graph(disjointSet)](https://practice.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1)
+- [ ][Sigtop error][greedy][IPC Trainer][lecture arrangement to reduce sadness level](https://www.codechef.com/JULY17/problems/IPCTRAIN)
 - [tree][inorder_successor_in_BST](https://practice.geeksforgeeks.org/problems/inorder-successor-in-bst/1)
 - [string][split_string_by_white_spaces]
 - [string][multiply_two_very_large_number](https://practice.geeksforgeeks.org/problems/multiply-two-strings/1)
@@ -755,6 +755,21 @@
 - [x][bit-manipulation][maximum_xor_in_given_range](https://www.hackerrank.com/challenges/maximizing-xor/problem)
 - [x][backtrack][beautiful_arrangement](https://leetcode.com/problems/beautiful-arrangement/)
 - [x][graph,dfs][find_path_in_grid](https://practice.geeksforgeeks.org/problems/find-whether-path-exist/0)
+
+
+## Contribution on 17-10-19
+- [x][string][minimum_adjacent_swap_to_make_pallindrome](https://www.codechef.com/problems/ENCD12)(https://www.geeksforgeeks.org/minimum-number-of-adjacent-swaps-to-convert-a-string-into-its-given-anagram/)
+- [x][backtrack,dfs][rat_in_a_maze](https://practice.geeksforgeeks.org/problems/rat-in-a-maze-problem/1)
+- [x][check_if_valid_pangram](https://www.hackerrank.com/challenges/pangrams/problem)
+
+## Contribution on 18-10-19
+- [x][array,two-pointer][max_cont_series_of_1s_with_k_0s](https://www.interviewbit.com/problems/max-continuous-series-of-1s/)
+- [x][array,two-pointer][container_with_most_water](https://www.interviewbit.com/problems/container-with-most-water/)
+- [x][array][sort_by_color](https://www.interviewbit.com/problems/sort-by-color/)
+
+## Contribution on 19-10-19
+- [x][graph][check_bipartite_graph(2-color-problem)](https://practice.geeksforgeeks.org/problems/bipartite-graph/1)
+- [ ][graph][detect_cycle_in_undirected_graph](https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1/?ref=self)(https://www.geeksforgeeks.org/detect-cycle-undirected-graph/) (https://www.geeksforgeeks.org/detect-cycle-in-an-undirected-graph-using-bfs/)
 
 
 ## undone

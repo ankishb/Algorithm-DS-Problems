@@ -1,3 +1,28 @@
+
+// new try
+void solve(){
+    int n, m;
+    cin>>n>>m;
+    int T[n][m];
+    int ans = 0;
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
+            cin>>T[i][j];
+            if(T[i][j] == 1) ans = 1;
+        }
+    }
+    for(int i=1; i<n; i++){
+        for(int j=1; j<m; j++){
+            if(T[i][j] == 0) continue;
+            T[i][j] = 1+min({T[i-1][j], T[i][j-1], T[i-1][j-1]});
+            ans = max(ans, T[i][j]);
+        }
+    }
+    cout<<ans<<endl;
+}
+
+
+// old one
 #include <bits/stdc++.h>
 using namespace std;
 #define loop(i, start, end) for(int i=start; i<end; i++)

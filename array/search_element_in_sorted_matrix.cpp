@@ -1,5 +1,42 @@
-// Given a matrix mat[] of size n x m, where every row and column is sorted in increasing order, and a number x is given. The task is to find whether element x is present in the matrix or not.
 
+// new try
+#include <bits/stdc++.h>
+using namespace std;
+int T[30][30];
+
+bool is_present(int n, int m, int k){
+    int i = 0, j = m-1;
+    while(i <= n-1 && j >= 0){
+        if(T[i][j] == k) return true;
+        else if(k < T[i][j]) j--;
+        else if(k > T[i][j]) i++;
+        else return false;
+    }
+    return false;
+}
+
+int main()
+ {
+	int test;
+	cin>>test;
+	while(test--){
+	    int n, m;
+	    cin>>n>>m;
+	    for(int i=0; i<n; i++){
+	        for(int j=0; j<m; j++){
+	            cin>>T[i][j];
+	        }
+	    }
+	    int target;
+	    cin>>target;
+	    cout<<is_present(n, m, target)<<endl;
+	}
+	return 0;
+}
+
+
+
+// old one
 // Expected Time Complexity : O(m + n)
 
 #include <bits/stdc++.h>

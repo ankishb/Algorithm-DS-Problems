@@ -1,3 +1,35 @@
+
+// new and finest(generalize to all cases)
+void dfs(vector<int> adj[], int V, int u, vector<int> &visit, bool &cycle){
+    if(cycle) return;
+    visit[u] = 1; //visiting
+    for(auto v : adj[u]){
+        if(visit[v] == 1){
+            cycle = true;
+            break;
+        }
+        if(visit[v] == 2) continue;
+        dfs(adj, V, v, visit, cycle);
+        if(cycle) break;
+    }
+    visit[u] = 2;
+}
+bool isCyclic(int V, vector<int> adj[]){
+    vector<int> visit(V, 0);
+    bool cycle = false;
+    for(int i=0; i<V; i++){
+        cycle = false;
+        dfs(adj, V, i, visit, cycle);
+        if(cycle == true) return true;
+    }
+    return false;
+}
+
+
+
+
+
+// old and ugly(not generalizes)
 /*
 the reason why this algorithm doesn't work for directed graphs is that in a directed graph 2 different paths to the same vertex don't make a cycle. For example: A-->B, B-->C, A-->C - don't make a cycle whereas in undirected ones: A--B, B--C, C--A does.
 
