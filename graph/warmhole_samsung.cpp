@@ -5,6 +5,13 @@ int nw,sx,sy,dx,dy;//Source and destination co-ordinates
 int dist[1001][1001];
 bool set[1001][1001];
 
+/*
+1. Find min_dist coordinate, which is not visited yet
+2. Explore its neighbour (and increase their dist by 1)
+3. Check if any warmhole present here(update dist of that coordinate)
+4. Repeat till we visit each cell
+*/
+
 class Wormhole{
 public:
     int x1,y1,x2,y2,cost;

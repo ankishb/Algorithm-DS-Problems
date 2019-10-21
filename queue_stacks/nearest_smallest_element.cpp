@@ -1,4 +1,29 @@
 
+// new try
+/*
+As we can see, if element is > than top of stack, we fill it
+otherwise, we remove all the previous element(which are > than current) in stack,
+*/
+vector<int> Solution::prevSmaller(vector<int> &A) {
+    int n = A.size();
+    if(n == 0) return {};
+    stack<int> s;
+    s.push(A[0]);
+    vector<int> ans(n, -1);
+    for(int i=1; i<n; i++){
+        while(!s.empty() && s.top() >= A[i]){
+            s.pop();
+        }
+        if(s.empty()) ans[i] = -1;
+        else ans[i] = s.top();
+        
+        s.push(A[i]);
+    }
+    return ans;
+}
+
+
+// old one
 #include <bits/stdc++.h>
 using namespace std;
 

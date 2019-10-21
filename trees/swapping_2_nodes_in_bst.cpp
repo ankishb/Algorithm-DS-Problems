@@ -1,25 +1,9 @@
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
+
 // Approach:
 // 1. Use Inorder transversal
 // 2. We find the node, where its value is not in increasing order
 // 3. Now swap those 2 nodes
-// void recover(TreeNode* root, int &prev, vector<TreeNode*> &store){
-//     if(root == NULL) return;
-//     recover(root->left, prev, store);
-//     if(root->val <= prev){
-//         store.push_back()
-//     }
-//     recover(root->right, prev, store);
-    
-// }
+
 void swap( int* a, int* b ) 
 { 
     int t = *a; 
@@ -60,16 +44,6 @@ public:
 
 
 
-
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
 
 /*
 There can be 2 cases:

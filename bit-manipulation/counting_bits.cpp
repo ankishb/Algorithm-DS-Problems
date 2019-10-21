@@ -1,3 +1,25 @@
+
+// new one ( O(N) )
+class Solution {
+public:
+    vector<int> countBits(int n) {
+        if(n == 0) return {0};
+        int size = 1 + log2(n);
+        
+        vector<int> dp(n+1, 0);
+        dp[1] = 1;
+        for(int i=1; i<size; i++){
+            int len = pow(2,i);
+            for(int j=0; j<len; j++){
+                dp[len+j] = dp[j]+1;   
+                if(len+j == n) return dp;
+            }
+        }
+        return dp;
+    }
+};
+
+// old try
 class Solution {
 public:
     vector<int> countBits1(int n) {

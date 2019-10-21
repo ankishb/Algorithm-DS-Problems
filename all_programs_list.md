@@ -267,7 +267,7 @@
 - [string][custom_sort_string](https://leetcode.com/problems/custom-sort-string/)
 - [string][reverse_words_in_string_in_constant_space](https://codebysteven.wordpress.com/2016/03/15/leetcode-151186-reverse-words-in-a-string-ii/)
 - [imp][dp][predict_the_winner](https://leetcode.com/problems/predict-the-winner/)
-- [hard][swapping_2_nodes_in_bst][correct_bst](https://practice.geeksforgeeks.org/problems/fixed-two-nodes-of-a-bst/1) (https://leetcode.com/problems/recover-binary-search-tree/submissions/)
+- [hard][swapping_2_nodes_in_bst](https://practice.geeksforgeeks.org/problems/fixed-two-nodes-of-a-bst/1) (https://leetcode.com/problems/recover-binary-search-tree/submissions/)
 - [dp][filling_book_shelves](https://leetcode.com/problems/filling-bookcase-shelves/)
 - [tree][paths_in_zigzag_labelled_tree](https://leetcode.com/problems/path-in-zigzag-labelled-binary-tree/)
 - [hard][string][parsing_a_boolean_expression](https://leetcode.com/problems/parsing-a-boolean-expression/)
@@ -535,7 +535,7 @@
 - [x][dp][minimum_edit_distance](https://leetcode.com/problems/edit-distance/)(https://www.interviewbit.com/problems/edit-distance/)
 - [x][hard][dp,matrix][unique_path_count](https://leetcode.com/problems/unique-paths/)
 - [x][hard][dp][unique_path_count_2](https://leetcode.com/problems/unique-paths-ii/)
-- [ ][nearest smallest element](https://www.interviewbit.com/problems/nearest-smaller-element/)
+- [x][stack][nearest smallest element](https://www.interviewbit.com/problems/nearest-smaller-element/)
 - [x][backtrack][combinational_sum_2](https://www.interviewbit.com/problems/combination-sum-ii/)
 - [x][backtrack][combinations_sum_1_2](https://leetcode.com/problems/combination-sum/)(https://leetcode.com/problems/combination-sum-ii/)
 
@@ -556,7 +556,7 @@
 - [imp][bit-manipulation][sum_of_two_integer_without_operator](https://leetcode.com/problems/sum-of-two-integers/)
 - [imp][bit-manipulation][power_of_two_three_four](https://leetcode.com/problems/power-of-two/)
 - [x][bit-manipulation,string][letter_case_permuatations](https://leetcode.com/problems/letter-case-permutation/)
-- [bit-manipulation, dp][counting_bits](https://leetcode.com/problems/counting-bits/)
+- [x][bit-manipulation, dp][counting_bits](https://leetcode.com/problems/counting-bits/)
 
 
 
@@ -770,6 +770,11 @@
 ## Contribution on 19-10-19
 - [x][graph][check_bipartite_graph(2-color-problem)](https://practice.geeksforgeeks.org/problems/bipartite-graph/1)
 - [ ][graph][detect_cycle_in_undirected_graph](https://practice.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1/?ref=self)(https://www.geeksforgeeks.org/detect-cycle-undirected-graph/) (https://www.geeksforgeeks.org/detect-cycle-in-an-undirected-graph-using-bfs/)
+- [x][graph][dijkstra_algo_using_adjacency_matrix_in_c](https://practice.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1)
+
+## Contribution on 20-10-19
+- [ ][bfs,dfs,graph][word_boggle](https://practice.geeksforgeeks.org/problems/word-boggle/0)
+
 
 
 ## undone
@@ -1221,3 +1226,27 @@ int* topoSort(int V, vector<int> adj[]){
     return ans;
 }
 ```
+
+## find in multimap
+```
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    multimap<int,int> map;
+    map.insert({1,204});
+    map.insert({1,202});
+    map.insert({1,201});
+    map.insert({2,200});
+    map.insert({2,290});
+
+    typedef std::multimap<int, int>::iterator MMAPIterator;
+ 
+    // It returns a pair representing the range of elements with key equal to 'c'
+    std::pair<MMAPIterator, MMAPIterator> result = map.equal_range(1);
+ 
+    for (MMAPIterator it = result.first; it != result.second; it++)
+        std::cout << it->second << std::endl;
+ }
+ ```
