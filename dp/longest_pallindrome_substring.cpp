@@ -1,5 +1,36 @@
 
+// new try
+class Solution {
+public:
+    string longestPalindrome(string s) {
+        int n = s.length(), len = 1, idx = 0;
+        if(n == 0) return "";
+        vector<vector<bool>> dp(n, vector<bool>(n,false));
+        for(int i=0; i<n; i++) dp[i][i] = 1;
+        for(int k=2; k<=n; k++){
+            for(int i=0; i<n-k+1; i++){
+                int j = i+k-1;
+                if(k == 2 && s[i] == s[j]){
+                    dp[i][j] = true;
+                    if(len < k){
+                        len = k;
+                        idx = i;
+                    }
+                }
+                else if(k > 2 && s[i] == s[j] && dp[i+1][j-1]){
+                    dp[i][j] = true;
+                    if(len < k){
+                        len = k;
+                        idx = i;
+                    }
+                }
+            }
+        }
+        return (len==1)?s.substr(0,1):s.substr(idx, len);
+    }
+};
 
+// old one
 string Solution::longestPalindrome(string s){
     int n = s.length();
     if(n < 1) return "";

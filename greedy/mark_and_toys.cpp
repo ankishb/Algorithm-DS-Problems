@@ -1,4 +1,4 @@
-// Complete the maximumToys function below.
+
 int maximumToys(vector<int> prices, int k) {
     int n = prices.size(); if(n == 0) return 0;
     sort(prices.begin(), prices.end());

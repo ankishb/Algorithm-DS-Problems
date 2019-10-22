@@ -1,3 +1,45 @@
+
+// new one (iterative approach)
+class Solution {
+public:
+    vector<string> letterCombinations(string s) {
+        unordered_map<char, string> map({
+                {'2', "abc"},
+                {'3', "def"},
+                {'4', "ghi"},
+                {'5', "jkl"},
+                {'6', "mno"},
+                {'7', "pqrs"},
+                {'8', "tuv"},
+                {'9', "wxyz"}
+        });
+        int n = s.length();
+        vector<string> store, cur;
+        for(int i=0; i<n; i++){
+                string map_s = map[s[i]];
+                int map_n = map_s.length();
+                int store_n = store.size();
+                for(int l=0; l<map_n; l++){
+                        if(store_n == 0){
+                                string temp = string(1, map_s[l]);
+                                cur.push_back(temp);
+                                continue;
+                        }
+                        for(int k=0; k<store_n; k++){
+                                cur.push_back(store[k]+map_s[l]);
+                        }
+                }
+                // store.clear();
+                store = cur;
+                cur.clear();
+        }
+        sort(store.begin(), store.end());
+        return store;
+    }
+};
+
+
+
 class Solution {
 public:   
     string get_string(vector<char> cur){

@@ -1,4 +1,18 @@
 
+// c++ (inbuilt-function)
+
+void get_permutation(vector<int> A){
+    vector<vector<int>> store;
+    do{
+        store.push_back(A);
+        // for(auto el : A) cout<<el<<" "; cout<<endl;
+    }
+    while(next_permutation(A.begin(), A.end()));
+    return store;
+}
+
+
+
 // permuatation-1
 class Solution {
 public:

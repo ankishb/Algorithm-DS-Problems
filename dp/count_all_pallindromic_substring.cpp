@@ -1,9 +1,32 @@
 
+// new try
+class Solution {
+public:
+    int countSubstrings(string s) {
+        int n = s.length(), count = n;
+        if(n == 0) return 0;
+        vector<vector<bool>> dp(n, vector<bool>(n,false));
+        for(int i=0; i<n; i++) dp[i][i] = 1;
+        for(int k=2; k<=n; k++){
+            for(int i=0; i<n-k+1; i++){
+                int j = i+k-1;
+                if(k == 2 && s[i] == s[j]){
+                    dp[i][j] = true;
+                    count++;
+                }
+                else if(k > 2 && s[i] == s[j] && dp[i+1][j-1]){
+                    dp[i][j] = true;
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+};
 
 
 
-
-
+// old one
 class Solution {
 public:
     int countSubstrings(string s) {
@@ -32,13 +55,14 @@ public:
 
 
 
-// another elegant solution
-/*
-The idea is count the number of different palindromic substrings from their respective middle.
 
-In the following code, when we consider the substring s[i-j, ..., i+j], i is the middle index of the substring; When we consider the substring s[i-1-j, ..., i+j], (i-1, i) is the middle index of the substring.
+/* an elegant solution
+The idea is count the no of different palindromic substrings from their respective middle.
 
-C++ version:
+1. When substring can of even len: 
+    consider substring s[i-j, ..., i+j], where i is the middle
+1. When substring can of odd len: 
+    consider substring s[i-1-j, ..., i+j], where both (i-1, i) are middle indices
 */
     int countSubstrings(string s) {
         int res = 0, n = s.length();

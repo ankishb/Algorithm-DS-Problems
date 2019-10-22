@@ -24,13 +24,10 @@
 -  [kth element of two sorted arrays](https://practice.geeksforgeeks.org/problems/k-th-element-of-two-sorted-array/0/?ref=self)
 - [ ] [ball coloring](https://practice.geeksforgeeks.org/problems/ball-coloring/0/?ref=self)
 - [ ] [greedy] [fitting shelves problem]()
-- [ ] [greedy][array][maximize_toys_in_given_anount](https://www.geeksforgeeks.org/maximise-the-number-of-toys-that-can-be-purchased-with-amount-k/)
-- [ ] [greedy] [maximize size of consecutive number](https://practice.geeksforgeeks.org/problems/maximum-size-of-consecutives/0)
 - [generate_all_subarray](https://www.geeksforgeeks.org/subarraysubstring-vs-subsequence-and-programs-to-generate-them/)
 - [ ] [greedy] [water connection problem](https://practice.geeksforgeeks.org/problems/water-connection-problem/0)
 - [ ] [find squares and rectangles on a chess board](https://practice.geeksforgeeks.org/problems/rectangles-in-nn-board/0/?ref=self)(https://practice.geeksforgeeks.org/problems/squares-in-nn-chessboard/0)
 - [reverse words in strings](https://practice.geeksforgeeks.org/problems/reverse-words-in-a-given-string/0)
-- [ ] [longest pallindrome in a string](https://practice.geeksforgeeks.org/problems/longest-palindrome-in-a-string/0/?ref=self)
 - [ ] [greedy] [huffman_coding](https://www.geeksforgeeks.org/huffman-coding-greedy-algo-3/)
 - [minimum_cost_of_ropes](https://practice.geeksforgeeks.org/problems/minimum-cost-of-ropes/0)
 - [](https://practice.geeksforgeeks.org/problems/largest-number-possible/0/?ref=self)
@@ -55,20 +52,10 @@
 - [count trailing zeros in factorial]
 
 
-- [ ] [DP] [longest arithmatic progression](https://www.geeksforgeeks.org/longest-arithmetic-progression-dp-35/)(https://practice.geeksforgeeks.org/problems/longest-arithmetic-progression/0)(https://www.youtube.com/watch?v=hw8pXjHcV2s)
-- [ ][key-pair sum match](https://practice.geeksforgeeks.org/problems/key-pair/0)
-- [ ][triplet sum](https://practice.geeksforgeeks.org/problems/triplet-sum-in-array/0/?ref=self#ExpectOP)
-- [ ][occurance of 2 as digit](https://practice.geeksforgeeks.org/problems/occurences-of-2-as-a-digit/1) (https://math.stackexchange.com/questions/47477/number-of-occurrences-of-the-digit-1-in-the-numbers-from-0-to-n) (https://www.geeksforgeeks.org/number-of-occurrences-of-2-as-a-digit-in-numbers-from-0-to-n/)
-- [ ][kth smallest element with linear time][kth_smallest_element_in_unsorted_array_in_constant_space](https://practice.geeksforgeeks.org/problems/kth-smallest-element/0) (https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array-set-2-expected-linear-time/) (https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array-set-3-worst-case-linear-time/)
-- [ ] [all possible combination of a number with number smaller than that](https://www.geeksforgeeks.org/find-all-combinations-that-adds-upto-given-number-2/)
-- [ ][kth smallest element in BST](https://www.geeksforgeeks.org/find-k-th-smallest-element-in-bst-order-statistics-in-bst/)
-- [ ][max rectangle](https://practice.geeksforgeeks.org/problems/max-rectangle/1)
-- [pointer_tutorials.cpp]
-- [tree][search a node in binary tree](https://www.geeksforgeeks.org/search-a-node-in-binary-tree/)
-- [ ][tree][kth ancestor node in binary tree](https://www.geeksforgeeks.org/kth-ancestor-node-binary-tree/)
+
+
 1. https://www.geeksforgeeks.org/combinational-sum/ 
 2. https://www.geeksforgeeks.org/find-all-combinations-that-adds-upto-given-number-2/
-- [ ] [interleaved strings](https://practice.geeksforgeeks.org/problems/interleaved-strings/1/?ref=self)
 - [ ] [nearest multiplier of 10](https://practice.geeksforgeeks.org/problems/nearest-multiple-of-10/0)
 - [evaluate prefix and postfix expression]
 - [infix_to_postfix]
@@ -92,7 +79,7 @@
 - [ ] [](https://www.geeksforgeeks.org/swap-kth-node-from-beginning-with-kth-node-from-end-in-a-linked-list/)
 - [count_distinct_element_in_window](https://practice.geeksforgeeks.org/problems/count-distinct-elements-in-every-window/1)
 - [split_a_sentence_into_words](https://www.geeksforgeeks.org/split-a-sentence-into-words-in-cpp/)
-- [letter_tiles_possiblities](https://leetcode.com/problems/letter-tile-possibilities/submissions/)
+- [letter_tiles_possiblities](https://leetcode.com/problems/letter-tile-possibilities/)
 
 
 ## New Session Geeks
@@ -102,6 +89,7 @@
 - [tree][left_right_view_of_tree](https://practice.geeksforgeeks.org/problems/left-view-of-binary-tree/1) (https://practice.geeksforgeeks.org/problems/right-view-of-binary-tree/1/?ref=self)
 - [very-imp][minimum_cost_to_make_2_strings_identical](https://practice.geeksforgeeks.org/problems/minimum-cost-to-make-two-strings-identical/0)
 - [math][power_ab_in_logb_time](https://practice.geeksforgeeks.org/problems/abset-2/0)
+- [math][check_if_no_is_power_of_another_number](https://practice.geeksforgeeks.org/problems/check-if-a-number-is-power-of-another-number/0/?ref=self)
 - [string][count_the_reversals](https://practice.geeksforgeeks.org/problems/count-the-reversals/0)
 - [math][chinese_theorm]
 - [x_total_shapes](https://practice.geeksforgeeks.org/problems/x-total-shapes/0)
@@ -110,7 +98,7 @@
 - [graph][detect_cycle_in_directed_graph(disjointSet)](https://practice.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1)
 - [ ][Sigtop error][greedy][IPC Trainer][lecture arrangement to reduce sadness level](https://www.codechef.com/JULY17/problems/IPCTRAIN)
 - [tree][inorder_successor_in_BST](https://practice.geeksforgeeks.org/problems/inorder-successor-in-bst/1)
-- [string][split_string_by_white_spaces]
+- [x][string][split_string_by_white_spaces]
 - [string][multiply_two_very_large_number](https://practice.geeksforgeeks.org/problems/multiply-two-strings/1)
 - [string][sum_of_very_large_numbers](https://practice.geeksforgeeks.org/problems/sum-of-numbers-or-number/0)
 
@@ -160,9 +148,8 @@
 - [Tree][next_greatest_number_in_bst](https://www.interviewbit.com/problems/next-greater-number-bst/)
 - [x][Tree][balanced_height_tree](https://www.interviewbit.com/problems/balanced-binary-tree/)(https://leetcode.com/problems/balanced-binary-tree/)
 - [Tree][identical_binary_tree](https://www.interviewbit.com/problems/identical-binary-trees/)
-- [Tree][mirror_tree](https://www.interviewbit.com/problems/symmetric-binary-tree/)
+- [x][Tree][mirror_tree](https://www.interviewbit.com/problems/symmetric-binary-tree/) (https://practice.geeksforgeeks.org/problems/mirror-tree/1)
 - [x][Tree][path_sum](https://www.interviewbit.com/problems/path-sum/) [little different](https://practice.geeksforgeeks.org/problems/root-to-leaf-paths-sum/1)
-- [ ] [level order transversal](https://www.interviewbit.com/problems/level-order/)
 - [x][Tree][sorted_array_to_BST_series](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)(https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/)
 
 
@@ -378,8 +365,8 @@
 - [x][medium][hash][brick_wall](https://leetcode.com/problems/brick-wall/)
 - [medium][tree][populating_next_right_pointers](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/)
 - [imp][math][medium][increasing_triplet_subsequence](https://leetcode.com/problems/increasing-triplet-subsequence/)
-- [medium][backtrack][letter_phone_combination](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
-- [medium][kth_largest_element_in_array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+- [x][medium][backtrack][letter_phone_combination](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
+- [x][medium][kth_largest_element_in_array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
 
 ## contribution on 23-7-19
 - [x][string][group_anagram](https://leetcode.com/problems/group-anagrams/)
@@ -612,10 +599,10 @@
 - [medium][tree][serialize_and_deserialize_binary_tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
 - [medium][tree][find_duplicate_subtree](https://leetcode.com/problems/find-duplicate-subtrees/)
 
-- [x][medium][string,dp][longest_pallindrome_in_string](https://leetcode.com/problems/longest-palindromic-substring/)(https://www.interviewbit.com/problems/longest-palindromic-substring/)
+- [x][medium][dp,string][longest_pallindrome_substring](https://leetcode.com/problems/longest-palindromic-substring/)(https://www.interviewbit.com/problems/longest-palindromic-substring/)
 - [ ][TLE] [longest_pallindromic_subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/)
 - [ ][manachers_algorithm_linear_time](https://www.geeksforgeeks.org/manachers-algorithm-linear-time-longest-palindromic-substring-part-2/)
-- [medium][dp,string][count_all_pallindromic_substring](https://leetcode.com/problems/palindromic-substrings/)
+- [x][medium][dp,string][count_all_pallindromic_substring](https://leetcode.com/problems/palindromic-substrings/)
 - [medium][string,dp][longest_common_subsequence](https://leetcode.com/problems/longest-common-subsequence/)(https://practice.geeksforgeeks.org/problems/longest-common-subsequence/0)
 - [medium][dp][maximum_sum_continuous_subarray](https://leetcode.com/problems/maximum-subarray/)
 - [medium][dp][longest_turbulent_subarray](https://leetcode.com/problems/longest-turbulent-subarray/)
@@ -774,6 +761,34 @@
 
 ## Contribution on 20-10-19
 - [ ][bfs,dfs,graph][word_boggle](https://practice.geeksforgeeks.org/problems/word-boggle/0)
+
+## Contribution on 21-10-19
+- [imp][array][maximize_size_of_consecutive_number](https://practice.geeksforgeeks.org/problems/maximum-size-of-consecutives/0)
+- [tree][preorder_to_postorder](https://practice.geeksforgeeks.org/problems/preorder-to-postorder/0)
+- [ ][imp][array][](https://www.geeksforgeeks.org/number-of-ways-to-choose-elements-from-the-array-such-that-their-average-is-k/)
+- [ ][imp][hard][dp][cherry_pickup]()
+
+
+## Contribution on 22-10-19
+- [dp,backtrack][interleaved_strings](https://practice.geeksforgeeks.org/problems/interleaved-strings/1/?ref=self)
+- [x][easy][array][boolean_matrix](https://practice.geeksforgeeks.org/problems/boolean-matrix-problem/0)
+- [ ][bit-manipulation][bleak_number](https://practice.geeksforgeeks.org/problems/bleak-numbers/0)
+- [x][math][lcm_and_gcd](https://practice.geeksforgeeks.org/problems/lcm-and-gcd/0)
+- [dp][count_palindromic_subsequence](https://www.interviewbit.com/problems/count-palindromic-subsequences/)
+
+
+- [ ] [DP] [longest arithmatic progression](https://www.geeksforgeeks.org/longest-arithmetic-progression-dp-35/)(https://practice.geeksforgeeks.org/problems/longest-arithmetic-progression/0)(https://www.youtube.com/watch?v=hw8pXjHcV2s)
+- [ ][key-pair sum match](https://practice.geeksforgeeks.org/problems/key-pair/0)
+- [ ][triplet sum](https://practice.geeksforgeeks.org/problems/triplet-sum-in-array/0/?ref=self#ExpectOP)
+- [ ][occurance of 2 as digit](https://practice.geeksforgeeks.org/problems/occurences-of-2-as-a-digit/1) (https://math.stackexchange.com/questions/47477/number-of-occurrences-of-the-digit-1-in-the-numbers-from-0-to-n) (https://www.geeksforgeeks.org/number-of-occurrences-of-2-as-a-digit-in-numbers-from-0-to-n/)
+- [ ][kth smallest element with linear time][kth_smallest_element_in_unsorted_array_in_constant_space](https://practice.geeksforgeeks.org/problems/kth-smallest-element/0) (https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array-set-2-expected-linear-time/) (https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array-set-3-worst-case-linear-time/)
+- [ ] [all possible combination of a number with number smaller than that](https://www.geeksforgeeks.org/find-all-combinations-that-adds-upto-given-number-2/)
+- [ ][kth smallest element in BST](https://www.geeksforgeeks.org/find-k-th-smallest-element-in-bst-order-statistics-in-bst/)
+- [ ][max rectangle](https://practice.geeksforgeeks.org/problems/max-rectangle/1)
+- [pointer_tutorials.cpp]
+- [tree][search a node in binary tree](https://www.geeksforgeeks.org/search-a-node-in-binary-tree/)
+- [ ][tree][kth ancestor node in binary tree](https://www.geeksforgeeks.org/kth-ancestor-node-binary-tree/)
+
 
 
 
@@ -1250,3 +1265,18 @@ int main()
         std::cout << it->second << std::endl;
  }
  ```
+
+## char to string
+- `string s(1, ch);`
+- `string s; s.push_back(ch);`
+- `s = c;`
+- `string s; s += c;`
+
+## stringstream
+```
+    istringstream ss(s);
+    string word;
+    while(ss >> word){
+        cout<<word<<"\t";
+    }
+```

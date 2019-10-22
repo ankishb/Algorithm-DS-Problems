@@ -1,3 +1,19 @@
+
+Node* call_helper(Node* node){
+    if(node == NULL) return NULL;
+    Node* left = call_helper(node->left);
+    Node* right = call_helper(node->right);
+    
+    node->left = right;
+    node->right = left;
+    return node;
+}
+
+void mirror(Node* node){
+    node = call_helper(node);
+}
+
+
 // https://www.geeksforgeeks.org/check-if-two-trees-are-mirror/
 
 #include <bits/stdc++.h>
