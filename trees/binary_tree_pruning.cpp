@@ -1,12 +1,22 @@
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
+
+// new try
+class Solution {
+public:
+    TreeNode* pruneTree(TreeNode* root) {
+        if(root == NULL) return NULL;
+        
+        root->left = pruneTree(root->left);
+        root->right = pruneTree(root->right);
+        
+        if(!root->left && !root->right){
+            if(root->val == 0) return NULL;
+        }
+        return root;
+    }
+};
+
+
+// old one
 // Approach:
 // 1. use postorder tranversal
 // 2. Remove the leaf node, if it is 0

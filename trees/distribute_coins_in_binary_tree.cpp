@@ -1,12 +1,25 @@
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
+
+class Solution {
+public:
+    int helper(TreeNode* root, int &count){
+        if(root == NULL) return  0;
+        int left = helper(root->left, count);
+        int right = helper(root->right, count);
+        int value = left + right + root->val - 1;
+        count += abs(value);
+        return value;
+    }
+    
+    int distributeCoins(TreeNode* root) {
+        int count = 0;
+        int t = helper(root, count);
+        return count;
+    }
+};
+
+
+
+
 // Approach:
 // 1. Use post transversal
 // 2. From each node, we return the (cur_coins - 1) and moves will be moves + abs(cur_coins - 1)

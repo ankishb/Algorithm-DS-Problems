@@ -1,3 +1,36 @@
+
+// new try
+class Solution {
+public:
+    vector<vector<int>> kClosest(vector<vector<int>>& A, int K) {
+        priority_queue<pair<float, int>> pq;
+        float d;
+        int n = A.size();
+        for(int i=0; i<n; i++){
+            d = (A[i][0]*A[i][0]) + (A[i][1]*A[i][1]);
+            d = sqrt(d);
+            if(pq.size() >= K){
+                if(pq.top().first >= d){
+                    pq.pop();
+                    pq.push({d, i});
+                }
+            }
+            else{
+                pq.push({d, i});
+            }
+        }
+        vector<vector<int>> ans;
+        while(!pq.empty()){
+            ans.push_back(A[pq.top().second]);
+            pq.pop();
+        }
+        return ans;
+    }
+};
+
+
+
+// old one
 // my solution using priority queue
 class custom_pq{
 public:

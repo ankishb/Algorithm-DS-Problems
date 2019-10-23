@@ -236,8 +236,8 @@
 
 ## contribution on 1-7-19
 - [tree][medium][construct_binary_tree_from_inorder_transversal](https://www.geeksforgeeks.org/construct-binary-tree-from-inorder-traversal/)
-- [tree][medium][binary_tree_pruning][https://leetcode.com/problems/binary-tree-pruning/]
-- [tree][medium][distribute_coins_in_binary_tree](https://leetcode.com/problems/distribute-coins-in-binary-tree/)
+- [tree][medium][binary_tree_pruning](https://leetcode.com/problems/binary-tree-pruning/)
+- [x][tree][medium][distribute_coins_in_binary_tree](https://leetcode.com/problems/distribute-coins-in-binary-tree/)
 - [tree][medium][find_largest_value_in_each_row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/)
 - [tree][find_bottom_left_most_tree_value](https://leetcode.com/problems/find-bottom-left-tree-value/)
 - [tree][flip_equivalent_binary_tree](https://leetcode.com/problems/flip-equivalent-binary-trees/)
@@ -245,9 +245,9 @@
 - [tree][max_diff_between_nodes_and_ancestor](https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/)
 - [tree][Insufficient_node_in_binary_tree](https://leetcode.com/problems/insufficient-nodes-in-root-to-leaf-paths/)
 - [matrix][minimum_path_sum](https://leetcode.com/problems/minimum-path-sum/)
-- [matrix][count_friend_circle](https://leetcode.com/problems/friend-circles/)
+- [x][graph][count_friend_circle](https://leetcode.com/problems/friend-circles/)
 - [heap][top_k_frequent_elements](https://leetcode.com/problems/top-k-frequent-elements/)
-- [heap][k_closest_points_to_origin](https://leetcode.com/problems/k-closest-points-to-origin/)
+- [x][array,heap][k_closest_points_to_origin](https://leetcode.com/problems/k-closest-points-to-origin/)
 - [imp][heap][find_k_pairs_with_smallest_sum](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/)
 
 ## contribution on 2-7-19 :
@@ -415,17 +415,7 @@
 - [x][medium][graph][shortest_path_using_bfs](https://www.hackerrank.com/challenges/dijkstrashortreach/problem)
 
 ## Contribution on 30-7-19
-- [medium][graph,disjointSet][connect_cities_with_libraries](https://www.hackerrank.com/challenges/torque-and-development/problem)
-- [ ][easy][maximum_element_from_stack](https://www.hackerrank.com/challenges/maximum-element/problem)
-- [ ][medium][queue][minimum_moves_to_reach_the_destination](https://www.hackerrank.com/challenges/castle-on-the-grid/problem)
-- [ ][heap_implementation]()
-- [ ][](https://leetcode.com/problems/find-the-shortest-superstring/)
-- [ ](https://leetcode.com/problems/distinct-subsequences-ii/)
-- [ ][inheritances_in_c++]
-- [ ][](https://www.geeksforgeeks.org/find-smallest-range-containing-elements-from-k-lists/)
-- [ ](https://leetcode.com/problems/split-array-into-consecutive-subsequences/)
-- [ ] [lru cache](https://www.interviewbit.com/problems/lru-cache/)
-- [ ][](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/#/description)
+- [x][medium][graph,disjointSet][connect_cities_with_libraries](https://www.hackerrank.com/challenges/torque-and-development/problem)
 
 ## contribution on 31-7-19
 - [medium][array][minimum_swaps_to_sort_array](https://www.hackerrank.com/challenges/minimum-swaps-2/)
@@ -777,6 +767,28 @@
 - [dp][count_palindromic_subsequence](https://www.interviewbit.com/problems/count-palindromic-subsequences/)
 
 
+## Contribution on 23-10-19
+- [medium][graph][minimum_penalty_path](https://www.hackerrank.com/challenges/beautiful-path/)
+- [graph][even_tree](https://www.hackerrank.com/challenges/even-tree/problem)
+- [x][tree][find_closest_element_in_bst](https://practice.geeksforgeeks.org/problems/find-the-closest-element-in-bst/1)
+- [x][tree][add_all_greater_values_to_very_node_in_bst](https://practice.geeksforgeeks.org/problems/add-all-greater-values-to-every-node-in-a-bst/1/?ref=self)
+- [tree,greedy][binary_tree_cameras](https://leetcode.com/problems/binary-tree-cameras/)
+
+
+- [ ][easy][maximum_element_from_stack](https://www.hackerrank.com/challenges/maximum-element/problem)
+- [ ][medium][queue][minimum_moves_to_reach_the_destination](https://www.hackerrank.com/challenges/castle-on-the-grid/problem)
+- [ ][heap_implementation]()
+- [ ][](https://leetcode.com/problems/find-the-shortest-superstring/)
+- [ ](https://leetcode.com/problems/distinct-subsequences-ii/)
+- [ ][inheritances_in_c++]
+- [ ][](https://www.geeksforgeeks.org/find-smallest-range-containing-elements-from-k-lists/)
+- [ ](https://leetcode.com/problems/split-array-into-consecutive-subsequences/)
+- [ ] [lru cache](https://www.interviewbit.com/problems/lru-cache/)
+- [ ][](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/#/description)
+
+
+
+
 - [ ] [DP] [longest arithmatic progression](https://www.geeksforgeeks.org/longest-arithmetic-progression-dp-35/)(https://practice.geeksforgeeks.org/problems/longest-arithmetic-progression/0)(https://www.youtube.com/watch?v=hw8pXjHcV2s)
 - [ ][key-pair sum match](https://practice.geeksforgeeks.org/problems/key-pair/0)
 - [ ][triplet sum](https://practice.geeksforgeeks.org/problems/triplet-sum-in-array/0/?ref=self#ExpectOP)
@@ -815,7 +827,6 @@ https://www.geeksforgeeks.org/m-coloring-problem-backtracking-5/
 - [greedy][disjoint_set][job_sequencing_problem_using_disjoint_set](https://www.geeksforgeeks.org/job-sequencing-using-disjoint-set-union/)
 
 - [ ][hard][graph][maximum_cost_queries](https://www.hackerrank.com/challenges/maximum-cost-queries/problem)
-- [ ][medium][graph][minimum_penalty_path](https://www.hackerrank.com/challenges/beautiful-path/)
 
 - [ ][next permutation](https://www.interviewbit.com/problems/next-permutation/)
 
