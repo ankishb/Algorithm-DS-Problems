@@ -1,4 +1,52 @@
 
+ /*To get the character detail, which is replaced, deleted and all that
+int get_min_cost(string s1, string s2, int c1, int c2){
+    int n1 = s1.length();
+    int n2 = s2.length();
+    vii dp(n1+1, vi(n2+1,0));
+    for(int i=0; i<=n1; i++) dp[i][0] = i;
+    for(int i=0; i<=n2; i++) dp[0][i] = i;
+    for(int i=1; i<=n1; i++){
+        for(int j=1; j<=n2; j++){
+            if(s1[i-1] == s2[j-1]){
+                dp[i][j] = dp[i-1][j-1];
+            }
+            else{
+                dp[i][j] = 1+min({dp[i-1][j], dp[i][j-1], dp[i-1][j-1]});
+            }
+        }
+    }
+    // collect cost by tranversing from back
+    
+    // 1. if s1[i] == s2[j], go left diag, no cost
+    // 2. else
+    //     1. if comes from left, delete s2[j]
+    //     2. if comes from up, delete s1[i]
+    //     3. if comes from left diag, delete both s1[i], s2[i]
+    
+    int i = n1, j = n2, cost = 0;
+    while(i > 0 && j > 0){
+        if(s1[i-1] == s2[j-1]){
+            i--; j--;
+        }
+        else if(dp[i][j] == 1+dp[i-1][j-1]){
+            cost += (c1 + c2);
+            i--; j--;
+        }
+        else if(dp[i][j] == 1+dp[i-1][j]){
+            cost += c1; // delete s1[i]
+            i--;
+        }
+        else if(dp[i][j] == 1+dp[i][j-1]){
+            cost += c2;
+            j--;
+        }
+    }
+    return cost;
+}
+*/
+
+
 // new try
 /* There are 3 operation to take care:
 1. Insert  : It involves adding a character(not much imp for us)
@@ -13,9 +61,8 @@ So in concise:
     3. or delete jth char from s2
 
 Note that, cur sol has memory complexity: O(n1*n2), 
-    but it can be done in O(n2). As it  point we need
-    three points(2 point from above row: up, left diag),
-    which can be saved easily
+    but it can be done in O(n2). As, at each cell, we need
+    only three cell(left, up, left diag) to make decision
 
 */
 class Solution {
@@ -43,6 +90,26 @@ public:
         return dp[n1][n2];
     }
 };
+
+
+int Solution::minDistance(string s1, string s2) {
+    int n1 = s1.length(), n2 = s2.length();
+    vector<vector<int>> dp(n1+1, vector<int>(n2+1, 0));
+    for(int i=0; i<=n1; i++){
+        for(int j=0; j<=n2; j++){
+            if(i == 0) dp[i][j] = j;
+            else if(j == 0) dp[i][j] = i;
+            else if(s1[i-1] == s2[j-1]){
+                dp[i][j] = dp[i-1][j-1];
+            }
+            else{
+                dp[i][j] = 1+min({dp[i-1][j], dp[i][j-1], dp[i-1][j-1]});
+            }
+        }
+    }
+    return dp[n1][n2];
+}
+
 
 // old one
 /*
@@ -83,72 +150,6 @@ public:
 
 
 
-
-
-#include <bits/stdc++.h>
-using namespace std;
-#define loop(i, start, end) for(int i=start; i<end; i++)
-
-// To get all the operation done on s1 and s2 to make equal can be compute using following procedure:
-// 1. If elements comes from diagnal position,
-// 	1. If s1[position] == s2[position], "no operation"
-// 	2. Else "replaced operation"
-// 2. Else Move left, "deleted character"
-
-
-void solve(){
-	int n1, n2;
-	cin>>n1>>n2;
-	cin.ignore(1);
-	string s1, s2;
-	cin>>s1>>s2;
-
-	int T[n1+1][n2+1];
-// 	memset(T, 0, (n1+1)*(n2+1)*sizeof(T[0][0]));
-	memset(T, 0, sizeof(T));
-
-	int i=0, j=0;
-	for(j=1; j<=n2; j++){
-		T[i][j] = j;
-	}
-	j=0;
-	for(i=1; i<=n1; i++){
-		T[i][j] = i;
-	}
-	
-	for(int i=1; i<=n1; i++){
-		for(int j=1; j<=n2; j++){
-			// if the character are equal, then minimum edit will equal to the edit the string s1 and s2 with length i-1 and j-1
-			if(s1[i-1] == s2[j-1]){
-				T[i][j] = T[i-1][j-1];
-			}
-			else{
-				T[i][j] = 1 + min(min(T[i-1][j], T[i][j-1]), T[i-1][j-1]);
-			}
-		}
-	}
-	// int ans = INT_MIN;
-	// for(int i=0; i<=n1; i++){
-	// 	for(int j=0; j<=n2; j++){
-	// 	    cout<<T[i][j]<<" ";
-	// 		if(T[i][j] > ans && i>0 && j>0){
-	// 			ans = T[i][j];
-	// 		}
-	// 	}
-	// 	cout<<endl;
-	// }
-	cout<<T[n1][n2]<<endl;
-}
-
-int main()
- {
-	int test;
-	cin>>test;
-	while(test--){
-	    solve();
-	}
-	return 0;
-}
 
 
 

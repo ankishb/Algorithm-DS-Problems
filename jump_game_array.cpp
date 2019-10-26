@@ -1,4 +1,18 @@
 
+// newest one
+int Solution::canJump(vector<int> &A) {
+    int n = A.size(), energy = A[0];
+    for(int i=1; i<n; i++){
+        if(energy == 0) return false;
+        energy--;
+        if(energy < A[i]){
+            energy = A[i];
+        }
+    }
+    return (energy >= 0);
+}
+
+
 // new try and best optimal
 /*
 1. We iterate over array, while holding current jump size

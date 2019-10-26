@@ -774,6 +774,19 @@
 - [x][tree][add_all_greater_values_to_very_node_in_bst](https://practice.geeksforgeeks.org/problems/add-all-greater-values-to-every-node-in-a-bst/1/?ref=self)
 - [tree,greedy][binary_tree_cameras](https://leetcode.com/problems/binary-tree-cameras/)
 
+## Contribution on 24-10-19
+- [math][modular_exponential_power](https://www.geeksforgeeks.org/modular-exponentiation-power-in-modular-arithmetic/)
+- [array][pallindromic_array](https://practice.geeksforgeeks.org/problems/palindromic-array/0)
+- [dp][max_sum_without_adjacent_elements](https://www.interviewbit.com/problems/max-sum-without-adjacent-elements/)
+- [imp][array,heap][kth_largest_element_in_stream](https://practice.geeksforgeeks.org/problems/kth-largest-element-in-a-stream/0/?ref=self)
+
+## Contribution on 25-10-19
+- [easy][string][min_manipulations_to_make_strings_anagram](https://practice.geeksforgeeks.org/problems/min-manipulations-to-make-strings-anagram/0)
+- [dp,string][minimum_cost_to_make_two_string_equal](https://practice.geeksforgeeks.org/problems/minimum-cost-to-make-two-strings-identical/0)
+
+## Contribution on 26-10-19
+- [imp][string][count_no_of_unique_substring_in_nlogn]()
+
 
 - [ ][easy][maximum_element_from_stack](https://www.hackerrank.com/challenges/maximum-element/problem)
 - [ ][medium][queue][minimum_moves_to_reach_the_destination](https://www.hackerrank.com/challenges/castle-on-the-grid/problem)

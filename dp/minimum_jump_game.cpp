@@ -1,4 +1,30 @@
 
+// new try
+class Solution {
+public:
+    int jump(vector<int>& A) {
+        int n = A.size();
+        if(n <= 1) return 0;
+        int min_jumps = 0, i = 0;
+        while(i < n){
+            int j = i+1;
+            int next = i+1;
+            min_jumps++;
+            if(i+A[i] >= n-1) return min_jumps;
+            while(j < n && j <= i+A[i]){
+                if(j+A[j] >= next+A[next]){
+                    next = j;
+                }
+                j++;
+            }
+            i = next;
+        }
+        
+        return min_jumps;
+    }
+};
+
+
 /*
 1. find the final-state(fs) from cur-state(ss) while having energy A[ss]
 2. Now iterate back from fs toward ss, and

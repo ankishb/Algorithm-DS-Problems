@@ -2,6 +2,74 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
+string get_postfix(string s){
+    unordered_map<char,int> map;
+    map['('] = 6;
+    map['^'] = 5;
+    map['*'] = 4;
+    map['/'] = 4;
+    map['+'] = 2;
+    map['-'] = 2;
+    int n = s.length(), i = 0;
+    stack<char> chars, ops;
+    while(i < n){
+        if((s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z')){
+            chars.push(s[i]);
+        }
+        else if(s[i] == '(') ops.push('(');
+        else if(s[i] == ')'){
+            while(!ops.empty() && ops.top() != '('){
+                chars.push(ops.top());
+                ops.pop();
+            }
+            if(!ops.empty() && ops.top() == '(') ops.pop();
+            
+        }
+        else if(!ops.empty() && ops.top() != '('){
+            if(map[s[i]] > map[ops.top()]) ops.push(s[i]);
+            else{
+                while(!ops.empty() && ops.top() != '(' 
+                && map[s[i]] <= map[ops.top()]){
+                    chars.push(ops.top());
+                    ops.pop();
+                }
+                ops.push(s[i]);
+            }
+        }
+        else ops.push(s[i]);
+        i++;
+    }
+    while(!ops.empty()){
+        chars.push(ops.top());
+        ops.pop();
+    }
+    string ans = "";
+    while(!chars.empty()){
+        ans += chars.top();
+        chars.pop();
+    }
+    reverse(ans.begin(), ans.end());
+    return ans;
+}
+
+int main()
+ {
+	int test;
+	cin>>test;
+	cin.ignore(1);
+	while(test--){
+	    string s;
+	    getline(cin,s);
+	    cout<<get_postfix(s)<<endl;
+	}
+	return 0;
+}
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
 void postfix_evaluation(){
 	string exp;
 	getline(cin, exp);

@@ -1,5 +1,27 @@
-// A thief trying to escape from a jail has to cross N walls each with varying heights. He climbs X feet every time. But, due to the slippery nature of those walls, every times he slips back by Y feet.  Now the task is to calculate the total number of jumps required to cross all walls and escape from the jail.
 
+int count_jumps(vi A, int x, int y){
+    int count = 0, cur, n = A.size();
+    for(auto a : A){
+        cur = 1;
+        a -= x;
+        /* // why this logic is not working
+        // cur += floor(a/(x-y));
+        // a = a%(x-y);
+        // if(a > 0) cur++;
+        */
+        while(a > 0){
+            cur++;
+            a -= (x-y);
+        }
+        count += cur;
+    }
+    return count;
+}
+
+
+
+
+// older one
 #include <bits/stdc++.h>
 using namespace std;
 
