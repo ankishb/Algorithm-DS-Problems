@@ -1,3 +1,21 @@
+
+// new try
+void inorder(TreeNode* root, int &k, int &ans){
+    if(root==NULL || k < 0)return ;
+
+    inorder(root->left, k, ans);
+    k--;
+    if(k == 0) ans = root->val;
+    inorder(root->right, k, ans);
+}
+int Solution::kthsmallest(TreeNode* A, int B) {
+    int ans = -1;
+    inorder(A, B, ans);
+    return ans;
+}
+
+
+// old one
 /**
  * Definition for binary tree
  * struct TreeNode {
@@ -128,4 +146,9 @@ int Solution::kthsmallest(TreeNode* root, int k) {
     inorder(root, smallest, k, it);
     return smallest;
 }
+
+
+
+
+
 

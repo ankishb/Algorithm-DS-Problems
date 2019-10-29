@@ -1,4 +1,23 @@
 
+// new try
+int helper(TreeNode* root, bool &ans){
+    if(root == NULL) return 0;
+
+    int l = helper(root->left, ans);
+    int r = helper(root->right, ans);
+    if(abs(l - r) > 1) ans = false;
+    return max(l, r)+1;
+}
+
+int Solution::isBalanced(TreeNode* root) {
+    bool ans = true;
+    int temp =  helper(root, ans);
+    return ans;
+}
+
+
+
+// old but gold
 /*
 naive_solution: O(n^2)
 optimized_sol: O(n)

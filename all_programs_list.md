@@ -153,7 +153,7 @@
 
 - [Tree][binary_tree_from_inorder_and_postorder](https://www.interviewbit.com/problems/binary-tree-from-inorder-and-postorder/)
 - [Tree][binary_tree_from_inorder_and_preorder](https://www.interviewbit.com/problems/binary-tree-from-inorder-and-postorder/)
-- [Tree][kth_smallest_element_of_bst](https://www.interviewbit.com/problems/kth-smallest-element-in-tree/)
+- [x][Tree][kth_smallest_element_of_bst](https://www.interviewbit.com/problems/kth-smallest-element-in-tree/)
 - [Tree][find_pair_of_nodes_with_given_sum_in_bst](https://www.interviewbit.com/problems/2sum-binary-tree/)
 - [Tree][BST_iterator](https://www.interviewbit.com/problems/bst-iterator/) [ref solution](http://qa.geeksforgeeks.org/3996/qa.geeksforgeeks.org/3996/implement-an-iterator-over-a-binary-search-tree-bst.html)
 - [3_sum_zero]()
@@ -437,7 +437,7 @@
 - [linked-list][merge_k_sorted_list_2_method](https://leetcode.com/problems/merge-k-sorted-lists/)
 
 
-## contribution on 3-8-19
+## contribution on 3-8-19 (very imp day)
 - [ ][hard][divide-conquer][binary-index-tree][count_of_smaller_after_self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/discuss/76607/C%2B%2B-O(nlogn)-Time-O(n)-Space-MergeSort-Solution-with-Detail-Explanation)
 - [ ][graph][minimum_height_tree](https://leetcode.com/problems/minimum-height-trees/)
 - [ ][](https://leetcode.com/problems/partition-equal-subset-sum/)
@@ -445,11 +445,6 @@
 - [ ][tree][boundary_order_transversal](https://www.leetfree.com/problems/boundary-of-binary-tree.html)(https://www.geeksforgeeks.org/boundary-traversal-of-binary-tree/)
 - [ ][design][design_circular_queue](https://leetcode.com/problems/design-circular-queue/) [to understand look into this](https://www.geeksforgeeks.org/circular-queue-set-1-introduction-array-implementation/)
 - [ ][tree][medium][find_smallest_subtree_with_deep_level](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)
-
-- [design][LRU_design](https://www.interviewbit.com/problems/lru-cache/)(https://leetcode.com/problems/lru-cache/)
-- [partition_label](https://leetcode.com/problems/partition-labels/)
-- [ ][alien_dictionary](https://zhuhan0.blogspot.com/2017/06/leetcode-269-alien-dictionary.html)
-- [add_bold_tag_in_string](https://www.cnblogs.com/grandyang/p/7043394.html)
 
 
 
@@ -799,6 +794,24 @@
 - [hard][stack][poisonous_plants](https://www.hackerrank.com/challenges/poisonous-plants/problem)
 - [medium][dp][perfect_squares](https://leetcode.com/problems/perfect-squares/)
 
+## Contribution on 29-10-19
+- [hash,graph][verify_alien_dictionary](https://leetcode.com/problems/verifying-an-alien-dictionary/)
+- [graph][alien_dictioanry]()
+- [tree][shortest_unique_prefix](https://www.interviewbit.com/problems/shortest-unique-prefix/)
+- [easy][tree][diameter_of_binary_tree](https://leetcode.com/problems/diameter-of-binary-tree/)
+- [tree][cartesian_tree](https://www.interviewbit.com/problems/inorder-traversal-of-cartesian-tree/)
+
+- [ ][kth smallest element with linear time][kth_smallest_element_in_unsorted_array_in_constant_space](https://practice.geeksforgeeks.org/problems/kth-smallest-element/0) (https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array-set-2-expected-linear-time/) (https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array-set-3-worst-case-linear-time/)
+
+
+
+- [ ][alien_dictionary](https://zhuhan0.blogspot.com/2017/06/leetcode-269-alien-dictionary.html)
+
+- [design][LRU_design](https://www.interviewbit.com/problems/lru-cache/)(https://leetcode.com/problems/lru-cache/)
+- [partition_label](https://leetcode.com/problems/partition-labels/)
+- [add_bold_tag_in_string](https://www.cnblogs.com/grandyang/p/7043394.html)
+
+
 
 
 - [ ][easy][maximum_element_from_stack](https://www.hackerrank.com/challenges/maximum-element/problem)
@@ -818,7 +831,6 @@
 - [ ][key-pair sum match](https://practice.geeksforgeeks.org/problems/key-pair/0)
 - [ ][triplet sum](https://practice.geeksforgeeks.org/problems/triplet-sum-in-array/0/?ref=self#ExpectOP)
 - [ ][occurance of 2 as digit](https://practice.geeksforgeeks.org/problems/occurences-of-2-as-a-digit/1) (https://math.stackexchange.com/questions/47477/number-of-occurrences-of-the-digit-1-in-the-numbers-from-0-to-n) (https://www.geeksforgeeks.org/number-of-occurrences-of-2-as-a-digit-in-numbers-from-0-to-n/)
-- [ ][kth smallest element with linear time][kth_smallest_element_in_unsorted_array_in_constant_space](https://practice.geeksforgeeks.org/problems/kth-smallest-element/0) (https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array-set-2-expected-linear-time/) (https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array-set-3-worst-case-linear-time/)
 - [ ] [all possible combination of a number with number smaller than that](https://www.geeksforgeeks.org/find-all-combinations-that-adds-upto-given-number-2/)
 - [ ][kth smallest element in BST](https://www.geeksforgeeks.org/find-k-th-smallest-element-in-bst-order-statistics-in-bst/)
 - [ ][max rectangle](https://practice.geeksforgeeks.org/problems/max-rectangle/1)
@@ -833,9 +845,6 @@
 - [ ][hard][](https://www.geeksforgeeks.org/find-the-maximum-subarray-xor-in-a-given-array/)
 - [medium][][](https://leetcode.com/problems/multiply-strings/)
 // https://leetcode.com/problems/maximum-subarray/discuss/20200/Share-my-solutions-both-greedy-and-divide-and-conquer
-// https://leetcode.com/problems/cheapest-flights-within-k-stops/discuss/128217/Three-C%2B%2B-solutions-BFS-DFS-and-BF
-// 
-// https://leetcode.com/problems/divisor-game/
 
 https://leetcode.com/articles/sum-of-distances-in-tree/#
 https://www.hackerrank.com/contests/test-contest-27/challenges/paintwall/problem

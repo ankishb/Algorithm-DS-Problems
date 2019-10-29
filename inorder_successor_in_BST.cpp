@@ -1,5 +1,4 @@
-/* The below function should return the node which is 
-inorder successor of given node x. */
+
 void find_successor(Node* root, int data, vector<int> &ans, bool found, bool break_){
     if(break_) return ;
     if(root==NULL) return ;
