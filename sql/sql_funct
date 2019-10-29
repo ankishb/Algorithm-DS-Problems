@@ -11,3 +11,7 @@ select name
 from table_name
 where lcase(name) like '%bansal'
 
+
+# date time built in functions
+
+select

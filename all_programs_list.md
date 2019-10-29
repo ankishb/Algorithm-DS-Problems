@@ -11,7 +11,6 @@
 11 [making a meal](https://www.codechef.com/problems/CFMM)
 11. [count bit difference](https://practice.geeksforgeeks.org/problems/bit-difference/0/?ref=self)
 12. [swap two nibbles in a byte](https://practice.geeksforgeeks.org/problems/swap-two-nibbles-in-a-byte/0/?ref=self)
-13. [col_name_from_col_number_in_ms_excel](https://practice.geeksforgeeks.org/problems/column-name-from-a-given-column-number/0/?ref=self)
 14. [Please do it, count no ofoccurance of digit in a range](https://www.geeksforgeeks.org/number-of-occurrences-of-2-as-a-digit-in-numbers-from-0-to-n/)
 15. [tree][count no of unique binary tree](https://practice.geeksforgeeks.org/problems/unique-bsts/0)
 - [x][bit-manipulation][rotate_bit_of_a_number](https://practice.geeksforgeeks.org/problems/rotate-bits/0)
@@ -37,7 +36,6 @@
 - [page faults in lru](https://practice.geeksforgeeks.org/problems/page-faults-in-lru/0)
 - [ ] [not optimal] [row with max 1's](https://practice.geeksforgeeks.org/problems/row-with-max-1s/0)
 - [ ] [count number of 0s in sorted array](https://practice.geeksforgeeks.org/problems/count-zeros-in-a-sorted-matrix/1)
-- [x][array,matrix][largest_square_in_binary_matrix](https://practice.geeksforgeeks.org/problems/largest-square-formed-in-a-matrix/0)
 - [x][array,matrix][search_element_in_sorted_matrix](https://practice.geeksforgeeks.org/problems/search-in-a-matrix/0)
 - [nested function]
 - [count-negative-numbers-in-a-column-wise-row-wise-sorted-matrix](https://www.geeksforgeeks.org/count-negative-numbers-in-a-column-wise-row-wise-sorted-matrix/)
@@ -403,9 +401,9 @@
 
 ## contribution on 29-7-19
 - [medium][math,string][valid_tic_tac_toe](https://leetcode.com/problems/valid-tic-tac-toe-state/)
-- [valid_sudoku](https://leetcode.com/problems/valid-sudoku/)
+- [x][array][valid_sudoku](https://leetcode.com/problems/valid-sudoku/)
 - [graph][deep_clone_a_graph](https://leetcode.com/problems/clone-graph/)
-- [](https://leetcode.com/problems/maximal-square/)
+- [x][array,matrix][largest_square_in_binary_matrix](https://practice.geeksforgeeks.org/problems/largest-square-formed-in-a-matrix/0) (https://leetcode.com/problems/maximal-square/)
 - [x][linked-list][deep_clone_of_list](https://www.interviewbit.com/problems/copy-list/)(https://leetcode.com/problems/copy-list-with-random-pointer/)
 - [](https://www.geeksforgeeks.org/longest-path-directed-acyclic-graph-set-2/)
 - [](https://www.geeksforgeeks.org/shortest-path-for-directed-acyclic-graphs/)
@@ -448,7 +446,7 @@
 - [ ][design][design_circular_queue](https://leetcode.com/problems/design-circular-queue/) [to understand look into this](https://www.geeksforgeeks.org/circular-queue-set-1-introduction-array-implementation/)
 - [ ][tree][medium][find_smallest_subtree_with_deep_level](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)
 
-- [design][LRU_design](https://www.interviewbit.com/problems/lru-cache/?ref=bookmark)
+- [design][LRU_design](https://www.interviewbit.com/problems/lru-cache/)(https://leetcode.com/problems/lru-cache/)
 - [partition_label](https://leetcode.com/problems/partition-labels/)
 - [ ][alien_dictionary](https://zhuhan0.blogspot.com/2017/06/leetcode-269-alien-dictionary.html)
 - [add_bold_tag_in_string](https://www.cnblogs.com/grandyang/p/7043394.html)
@@ -470,8 +468,8 @@
 
 ## contribution on 12-8-19
 - [ ][medium][backtrack][power_sum]()
-- [hard][array][range_max](https://www.hackerrank.com/challenges/crush/problem)
-- [hard][greedy][truck_tour_problem](https://www.hackerrank.com/challenges/truck-tour/problem)
+- [x][hard][array][range_max](https://www.hackerrank.com/challenges/crush/problem)
+- [x][hard][greedy][truck_tour_problem](https://www.hackerrank.com/challenges/truck-tour/problem) (https://practice.geeksforgeeks.org/problems/circular-tour/1/?ref=self)
 - [medium][BST,DP][generate_all_possible_BST](https://leetcode.com/problems/unique-binary-search-trees-ii/)
 - [ ] [tree][sum of nodes at maximum height](https://www.geeksforgeeks.org/sum-nodes-maximum-depth-binary-tree/)
 - [x][easy][array,hash][two_sum_2_in_sorted_array](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
@@ -519,7 +517,7 @@
 ## Contribution on 16-8-19
 - [Backtracking][gray_code_sequence](https://www.interviewbit.com/problems/gray-code/)
 - [ ][very weird][matrix_median_with_no_extra_space](https://www.interviewbit.com/problems/matrix-median/)
-- [hard][dp][maximal_rectangle](https://leetcode.com/problems/maximal-rectangle/)(https://www.interviewbit.com/problems/max-rectangle-in-binary-matrix/)
+- [x][hard][dp][maximal_rectangle](https://leetcode.com/problems/maximal-rectangle/)(https://www.interviewbit.com/problems/max-rectangle-in-binary-matrix/)
 - [x][easy][dp][climbing_stairs](https://leetcode.com/problems/climbing-stairs/)
 - [data-structure-design][climbing_the_leaderboard](https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem)
 - [imp][easy][missing_number](https://leetcode.com/problems/missing-number/)
@@ -594,7 +592,7 @@
 - [ ][manachers_algorithm_linear_time](https://www.geeksforgeeks.org/manachers-algorithm-linear-time-longest-palindromic-substring-part-2/)
 - [x][medium][dp,string][count_all_pallindromic_substring](https://leetcode.com/problems/palindromic-substrings/)
 - [medium][string,dp][longest_common_subsequence](https://leetcode.com/problems/longest-common-subsequence/)(https://practice.geeksforgeeks.org/problems/longest-common-subsequence/0)
-- [medium][dp][maximum_sum_continuous_subarray](https://leetcode.com/problems/maximum-subarray/)
+- [x][medium][dp][maximum_sum_continuous_subarray](https://leetcode.com/problems/maximum-subarray/)
 - [medium][dp][longest_turbulent_subarray](https://leetcode.com/problems/longest-turbulent-subarray/)
 - [medium][dp][delete_operation_for_two_strings](https://leetcode.com/problems/delete-operation-for-two-strings/)
 - [medium][graph][cheapest_flights_within_k_stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
@@ -787,6 +785,21 @@
 ## Contribution on 26-10-19
 - [imp][string][count_no_of_unique_substring_in_nlogn]()
 
+## Contribution on 27-10-19
+- [math][excel_column_number](https://www.interviewbit.com/problems/excel-column-number/)
+- [math][excel_column_title](https://www.interviewbit.com/problems/excel-column-title/) (https://practice.geeksforgeeks.org/problems/column-name-from-a-given-column-number/0/?ref=self)
+- [math][rearrange_array](https://www.interviewbit.com/problems/rearrange-array/)
+- [array,bfs][min_time_to_rot_all_oranges](https://practice.geeksforgeeks.org/problems/rotten-oranges/0)
+
+
+## Contribution on 28-10-19
+- [queue][first_non_repeating_char_in_a_stream](https://practice.geeksforgeeks.org/problems/first-non-repeating-character-in-a-stream/0/?ref=self)
+- [dp][max_diff_of_zeros_and_ones_in_binary_string](https://practice.geeksforgeeks.org/problems/maximum-difference-of-zeros-and-ones-in-binary-string/0)
+- [array][max_distinct_element_after_removing_k_elements](https://practice.geeksforgeeks.org/problems/maximum-distinct-elements-after-removing-k-elements/0/?ref=self)
+- [hard][stack][poisonous_plants](https://www.hackerrank.com/challenges/poisonous-plants/problem)
+- [medium][dp][perfect_squares](https://leetcode.com/problems/perfect-squares/)
+
+
 
 - [ ][easy][maximum_element_from_stack](https://www.hackerrank.com/challenges/maximum-element/problem)
 - [ ][medium][queue][minimum_moves_to_reach_the_destination](https://www.hackerrank.com/challenges/castle-on-the-grid/problem)
@@ -796,7 +809,6 @@
 - [ ][inheritances_in_c++]
 - [ ][](https://www.geeksforgeeks.org/find-smallest-range-containing-elements-from-k-lists/)
 - [ ](https://leetcode.com/problems/split-array-into-consecutive-subsequences/)
-- [ ] [lru cache](https://www.interviewbit.com/problems/lru-cache/)
 - [ ][](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/#/description)
 
 
@@ -936,7 +948,6 @@ https://www.geeksforgeeks.org/m-coloring-problem-backtracking-5/
 - [falling_square](https://leetcode.com/problems/falling-squares/)
 - [ ][medium][bit][winning_lottery_ticket](https://www.hackerrank.com/challenges/winning-lottery-ticket/problem)
 
-https://leetcode.com/problems/maximal-square/ 
 https://leetcode.com/problems/largest-plus-sign/
 https://leetcode.com/problems/coloring-a-border/
 https://www.geeksforgeeks.org/given-matrix-o-x-find-largest-subsquare-surrounded-x/
@@ -1303,4 +1314,15 @@ int main()
     while(ss >> word){
         cout<<word<<"\t";
     }
+```
+
+## Careful with the usuage of `set` and `unordered_set`
+```c++
+char ch[] ={'a','b','a','e','d'};
+set<char> vis;
+unordered_set<char> visi;
+
+Output:
+a b d e  :: sorted and order maintain according to first unique value
+d e a b  :: not sorted and order is maintained in reverse order
 ```

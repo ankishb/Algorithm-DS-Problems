@@ -1,4 +1,49 @@
 
+// new try
+class Solution {
+public:
+    int largestRectangle(vector<int> h) {
+        int n = h.size(), area = 0, top;
+        stack<int> st;
+        for(int i=0; i<n; i++){
+            while(!st.empty() && h[st.top()] >= h[i]){
+                top = st.top();
+                st.pop();
+                if(st.empty()) area = max(area, i*h[top]);
+                else area = max(area, (i-st.top()-1)*h[top]);
+            }
+            st.push(i);
+        }
+
+        while(!st.empty()){
+            top = st.top();
+            st.pop();
+            if(st.empty()) area = max(area, n*h[top]);
+            else area = max(area, (n-st.top()-1)*h[top]);
+        }
+        return area;
+    }
+    int maximalRectangle(vector<vector<char>>& A) {
+        int n = A.size();
+        if(n == 0) return 0;
+        int m = A[0].size(), area = 0;
+        vector<int> cur(m, 0);
+        for(int i=0; i<n; i++){
+            for(int j=0; j<m; j++){
+                if(i == 0) cur[j] = (A[i][j] == '1') ? 1 : 0;
+                else{
+                    if(A[i][j] == '0') cur[j] = 0;
+                    else cur[j] += (A[i][j] == '1') ? 1 : 0;
+                }
+            }
+            area = max(area, largestRectangle(cur));
+        }
+        return area;
+    }
+};
+
+
+
 // interviewBit
 int getMaxLenRect(vector<int> A){
     int n = A.size();

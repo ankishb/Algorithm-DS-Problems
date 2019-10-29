@@ -1,4 +1,19 @@
 
+// new try
+class Solution {
+public:
+	int maxSubArray(vector<int>& A) {
+        int n = A.size(), max_sum = A[0], cur_sum = 0;
+        for(int i=0; i<n; i++){
+            cur_sum += A[i];
+            if(max_sum < cur_sum) max_sum = cur_sum;
+            if(cur_sum < 0) cur_sum = 0;
+        }
+        return max_sum;
+    }
+};
+
+// old one
 class Solution {
 public:
     int maxSubArray(vector<int>& A) {

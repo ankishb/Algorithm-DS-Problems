@@ -1,4 +1,33 @@
 
+// super new
+/*
+1. At current element, we first check if ele is <= top in stack, If yes, we calculate area
+	- if stack is empty after popping top of stack, then area = cur_idx * h[top]
+	- else area = (distance between cur_idx-1 and top of stack(after popping on element)) * h[top]
+*/
+long largestRectangle(vector<int> h) {
+    long n = h.size(), area = 0, top;
+    stack<long> st;
+    for(long i=0; i<n; i++){
+        while(!st.empty() && h[st.top()] >= h[i]){
+            top = st.top();
+            st.pop();
+            if(st.empty()) area = max(area, i*h[top]);
+            else area = max(area, (i-st.top()-1)*h[top]);
+        }
+        st.push(i);
+    }
+
+    while(!st.empty()){
+        top = st.top();
+        st.pop();
+        if(st.empty()) area = max(area, n*h[top]);
+        else area = max(area, (n-st.top()-1)*h[top]);
+    }
+    return area;
+}
+
+
 // new one
 int Solution::largestRectangleArea(vector<int> &h) {
     int n = h.size(), max_area = 0;

@@ -24,7 +24,9 @@ public:
     }
 };
 
-And you may further reduce the memory usage down to two vectors (O(n)).
+
+
+/// And you may further reduce the memory usage down to two vectors (O(n)).
 
 class Solution {
 public:

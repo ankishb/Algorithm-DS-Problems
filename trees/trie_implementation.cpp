@@ -68,7 +68,7 @@ public:
     bool is_word;
     
     TrieNode(bool flag = false){
-        memset(child, 0, sizeof(child));
+        memset(child, NULL, sizeof(child));
         is_word = flag;
     }
 };
@@ -142,3 +142,59 @@ public:
 
 
 
+class trie_node{
+public:
+    trie_node *child[26];
+    bool is_word;
+    trie_node(){
+        is_word = false;
+        memset(child, NULL, sizeof(child));
+    }
+};
+class Trie {
+public:
+    trie_node *root;
+    /** Initialize your data structure here. */
+    Trie() {
+        root = new trie_node();
+    }
+    
+    /** Inserts a word into the trie. */
+    void insert(string word) {
+        trie_node *temp = root;
+        for(auto c : word){
+            int ch = c-'a';
+            if(temp->child[ch] == NULL){
+                temp->child[ch] = new trie_node(); 
+            }
+            temp = temp->child[ch];
+        }
+        temp->is_word = true;
+    }
+    
+    /** Returns if the word is in the trie. */
+    bool search(string word) {
+        trie_node *temp = root;
+        for(auto c : word){
+            int ch = c-'a';
+            if(temp->child[ch] == NULL){
+                return false;
+            }
+            temp = temp->child[ch];
+        }
+        return temp->is_word;
+    }
+    
+    /** Returns if there is any word in the trie that starts with the given prefix. */
+    bool startsWith(string prefix) {
+        trie_node *temp = root;
+        for(auto c : prefix){
+            int ch = c-'a';
+            if(temp->child[ch] == NULL){
+                return false;
+            }
+            temp = temp->child[ch];
+        }
+        return true;
+    }
+};

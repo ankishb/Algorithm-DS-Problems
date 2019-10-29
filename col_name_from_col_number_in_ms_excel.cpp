@@ -1,3 +1,28 @@
+
+// new try
+int Solution::titleToNumber(string s) {
+    int ans = 0, n = s.length();
+    for(int i=n-1; i>=0; i--){
+        ans += (s[i]-'A'+1)*pow(26, n-i-1);
+    }
+    return ans;
+}
+
+
+// old one
+int Solution::titleToNumber(string A) {
+    int result = A[A.length()-1]-'A'+1;
+    int j=1;
+    for(int i=A.length()-2; i>=0; i--){
+        // cout<<i<<"--";
+        int hash = A[i]-'A';
+        // cout<<hash+1<<endl;
+        result = result + pow(26, j)*(hash+1);
+        j++;
+    }
+    return result;
+}
+
 // Given a positive integer, return its corresponding column title as appear in an Excel sheet.
 // MS Excel columns has a pattern like A, B, C, … ,Z, AA, AB, AC,…. ,AZ, BA, BB, … ZZ, AAA, AAB ….. etc. In other words, column 1 is named as “A”, column 2 as “B”, column 27 as “AA”.
 

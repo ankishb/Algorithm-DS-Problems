@@ -261,7 +261,6 @@
 
 
 
-
 ## Arrays
 - [ ][ ](https://practice.geeksforgeeks.org/problems/next-smallest-palindrome/0) (https://www.youtube.com/watch?v=hZcindWcYI4)
 [Arrays][Amazon][Flipkart][Microsoft][OYO Rooms]

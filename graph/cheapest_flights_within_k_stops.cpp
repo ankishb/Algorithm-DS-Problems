@@ -1,4 +1,28 @@
 
+// new try
+class Solution {
+public:
+    int findCheapestPrice(int n, vector<vector<int>>& F, int src, int dst, int k){
+        int inf = 100000, u, v, w;
+        vector<int> dist(n, inf);
+        dist[src] = 0;
+        for(int i=0; i<=k; i++){
+            vector<int> copy(dist);
+            for(int j=0; j<F.size(); j++){
+                u = F[j][0], v = F[j][1], w = F[j][2];
+                if(copy[v] > dist[u]+w){
+                    copy[v] = dist[u]+w;
+                }
+            }
+            dist = copy;
+        }
+        if(dist[dst] == inf) dist[dst] = -1;
+        return dist[dst];
+    }
+};
+
+
+// old one
 #define iPair pair<int, int>
 class Solution {
 public:

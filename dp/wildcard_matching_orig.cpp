@@ -38,14 +38,6 @@ public:
 
 /*
 My three C++ solutions (iterative (16ms) & DP (180ms) & modified recursion (88ms))
-37
-dong.wang.1694's avatar
-dong.wang.1694
-2339
-
-Last Edit: September 13, 2018 4:35 AM
-
-13.7K VIEWS
 
 The reason that the iterative solution is much faster for this case is we only need to save (and deal with) the positions (iStar for s, jStar for p) of the last "" we met. We only need to do traceback using iStar and jStar and all the previous "" can be ignored since the last "" will cover all the traceback cases for the previous "".
 What we need to do are
