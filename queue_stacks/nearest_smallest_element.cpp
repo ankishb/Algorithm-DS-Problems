@@ -1,4 +1,21 @@
 
+// newest (using deque)
+vector<int> Solution::prevSmaller(vector<int> &A) {
+    int n = A.size();
+    vector<int> ans(n ,0);
+    deque<int> dq;
+    for(int i=0; i<n; i++){
+        while(!dq.empty() && dq.back() >= A[i]){
+            dq.pop_back();
+        }
+        ans[i] = (dq.empty()) ? -1 : dq.back();
+        dq.push_back(A[i]);
+    }
+    return ans;
+}
+
+
+
 // new try
 /*
 As we can see, if element is > than top of stack, we fill it

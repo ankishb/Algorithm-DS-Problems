@@ -1,4 +1,84 @@
+// new one
+#include <bits/stdc++.h>
+using namespace std;
+#define pii pair<int,int>
+#define vii vector<vector<int>>
+#define f first
+#define s second
+#define ll long long int 
 
+// creat a signature function here
+
+bool is_op(char ch){
+    return (ch=='+' || ch=='-' || ch=='('
+    || ch=='*' || ch=='/' || ch=='^');
+}
+bool is_digit(char ch){
+    return (ch >= '0' && ch <= '9');
+}
+
+string postfix_expression(string s){
+    int n = s.length(), i = 0;
+    unordered_map<char, int> map;
+    map['('] = 6;
+    map['^'] = 5;
+    map['*'] = 4;
+    map['/'] = 4;
+    map['+'] = 2;
+    map['-'] = 2;
+    stack<char> ops;
+    string ans = "";
+    while(i < n){
+        if(s[i] == ' '){ }
+        else if(s[i] == ')'){
+            while(!ops.empty() && ops.top() != '('){
+                ans += ops.top();
+                ops.pop();
+            }
+            if(!ops.empty() && ops.top() == '(') ops.pop();
+        }
+        else if(is_op(s[i])){
+            while(!ops.empty() && ops.top() != '(' 
+            && map[ops.top()] >= map[s[i]]){
+                ans += ops.top();
+                ops.pop();
+            }
+            ops.push(s[i]);
+        }
+        else{
+            ans += s[i];
+        }
+        i++;
+    }
+    while(!ops.empty()){
+        ans += ops.top();
+        ops.pop();
+    }
+    return ans;
+}
+
+
+int main()
+ {
+	int test;
+	cin>>test;
+	cin.ignore(1);
+	while(test--){
+	    // input and call signature function
+    	string s;
+    	getline(cin, s);
+    	cout<<postfix_expression(s)<<endl;
+	}
+	return 0;
+}
+
+
+
+
+
+
+
+// old one
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -62,88 +142,6 @@ int main()
 	    string s;
 	    getline(cin,s);
 	    cout<<get_postfix(s)<<endl;
-	}
-	return 0;
-}
-
-
-#include <bits/stdc++.h>
-using namespace std;
-
-void postfix_evaluation(){
-	string exp;
-	getline(cin, exp);
-	stack<string> s;
-	// start from left to right, operands and operators are separated with spaces
-	int i=0;
-	string temp="";
-	int a, b;
-	char op;
-	while(i<=exp.length()){
-		cout<<exp[i]<<" ";
-		// i++;
-		// either there is a space or it reach at end+1
-		if(exp[i]==' ' || i==exp.length()){
-			if(temp=="+"||temp=="-"||temp=="*"||temp=="/"){
-				// cout<<temp<<"--"<<endl;
-				a = stoi(s.top());
-				s.pop();
-				b = stoi(s.top());
-				s.pop();
-
-				// cout<<a<<" "<<b<<endl;
-				if(temp == "+") s.push(to_string(int(a+b)));
-				else if(temp == "-") s.push(to_string(int(a-b)));
-				else if(temp == "/") s.push(to_string(int(a/b)));
-				else if(temp == "*") s.push(to_string(int(a*b)));
-				else cout<<"invalid operation \n";
-				// op = '+';//temp[0];
-				// swich(op){
-				// 	case '*': s.push(a*b);
-				// 	case '/': s.push(a/b);
-				// 	case '+': s.push(a+b);
-				// 	case '-': s.push(a-b);
-				// 	default: cout<<"invalid operation"<<endl;
-				// }
-			}
-			else{
-				s.push(temp);
-			}
-			temp = "";
-			i++;
-		}
-		else{
-			temp = temp+exp[i];
-			i++;
-		}
-	}
-
-	while(!s.empty()){
-		cout<<s.top()<<endl;
-		s.pop();
-	}
-
-}
-
-void evaluate(){
-	postfix_evaluation();
-	// string operation;
-	// getline(operation);
-	// if(operation == "postfix"){
-	// 	postfix_evaluation();
-	// }
-	// else{
-	// 	postfix_evaluation();
-	// }
-}
-
-int main()
-{
-	int test;
-	cin>>test;
-	cin.ignore(1);
-	while(test--){
-		evaluate();
 	}
 	return 0;
 }

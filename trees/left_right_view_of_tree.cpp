@@ -1,4 +1,51 @@
 
+// fresh try
+unordered_set<int> uni;
+void right_view(Node* root, int level){
+    if(root == NULL) return ;
+    if(uni.count(level) == 0) cout<<root->data<<" ";
+    uni.insert(level);
+    right_view(root->right, level+1);
+    right_view(root->left, level+1);
+}
+
+unordered_set<int> uni;
+void left_view(Node* root, int level){
+    if(root == NULL) return ;
+    if(uni.count(level) == 0) cout<<root->data<<" ";
+    uni.insert(level);
+    left_view(root->left, level+1);
+    left_view(root->right, level+1);
+}
+
+void rightView(Node *root){
+   uni.clear();
+   left_view(root, 0);
+   uni.clear();
+   right_view(root, 0);
+}
+
+
+
+
+// new try
+// left view of tree (not a good one, can fail)
+void collect_left(TreeNode* root, vector<int> &ans){
+    if(root == NULL) return ;
+    ans.push_back(root->val);
+    if(root->left) collect_left(root->left, ans);
+    else if(root->right) collect_left(root->right, ans);
+}
+
+vector<int> Solution::solve(TreeNode* root) {
+    vector<int> ans;
+    collect_left(root, ans);
+    return ans;
+}
+
+
+
+
 #include <bits/stdc++.h>
 using namespace std;
 /* A binary tree node has data, pointer to left child

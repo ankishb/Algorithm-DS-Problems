@@ -1,3 +1,48 @@
+
+// fresh try
+vector<int> ans;
+bool is_leaf(TreeNode* root){
+    return (!root->left && !root->right);
+}
+void left_view(TreeNode* root){
+    if(!root && is_leaf(root)) return;
+    if(!is_leaf(root)) 
+        ans.push_back(root->val);
+    if(root->left) 
+        left_view(root->left);
+    else if(root->right) 
+        left_view(root->right);
+}
+void leaf_view(TreeNode* root){
+    if(!root) return;
+    leaf_view(root->left);
+    if(is_leaf(root)) 
+        ans.push_back(root->val);
+    leaf_view(root->right);
+}
+void right_view(TreeNode* root){
+    if(!root && is_leaf(root)) return;
+    if(root->right) 
+        right_view(root->right);
+    else if(root->left) 
+        right_view(root->left);
+    if(!is_leaf(root)) 
+        ans.push_back(root->val);
+}
+
+
+vector<int> Solution::solve(TreeNode* root){
+    if(root == NULL) return {};
+    ans.clear();
+    ans.push_back(root->val);
+    left_view(root->left);
+    leaf_view(root);
+    right_view(root->right);
+    return ans;
+}
+
+
+// old one
 // Print all the boundary nodes, in counterclockwise direction.
 
 // Approach:
@@ -64,11 +109,9 @@ void trans(Node* root){
 }
 
 bool isLeaf(Node* root){
-    if(root->left==NULL && root->right==NULL){
-        return true;
-    }
-    return false;
+    return (root->left==NULL && root->right==NULL);
 }
+
 void print_left_view(Node* root){
     if(root == NULL) return ;
     cout<<root->data<<" ";

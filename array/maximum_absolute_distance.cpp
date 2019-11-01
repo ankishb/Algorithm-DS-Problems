@@ -1,3 +1,22 @@
+
+// fresh try
+int Solution::maxArr(vector<int> &A) {
+    int n = A.size(), ans = INT_MIN;
+    int min1 = INT_MAX, max1 = INT_MIN;
+    int min2 = INT_MAX, max2 = INT_MIN;
+
+    for(int i=0; i<n; i++){
+        min1 = min(min1, A[i]+i);
+        max1 = max(max1, A[i]+i);
+        min2 = min(min2, A[i]-i);
+        max2 = max(max2, A[i]-i);
+        ans = max({ans, max1-min1, max2-min2});
+    }
+    return ans;
+}
+
+
+// old one
 int naive(vector<int> &A) {
     int n = A.size(), dist = 0;
     for(int i=0; i<n; i++){

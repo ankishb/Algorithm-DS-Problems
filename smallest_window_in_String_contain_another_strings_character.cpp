@@ -84,25 +84,3 @@ int main()
 	return 0;
 }
 
-
-
-
-
-
-
-  
-//     for (int i = 0; i < ROW; ++i) { 
-  
-//         Q.push(Person(arr[i][0], arr[i][1])); 
-  
-//         // insert an object in priority_queue by using 
-//         // the Person strucure constructor 
-//     } 
-  
-//     while (!Q.empty()) { 
-//         Person p = Q.top(); 
-//         Q.pop(); 
-//         cout << p.age << " " << p.height << "\n"; 
-//     } 
-//     return 0; 
-// } 

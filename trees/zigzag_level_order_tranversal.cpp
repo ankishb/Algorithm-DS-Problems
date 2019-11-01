@@ -1,5 +1,38 @@
 
+// new try
+vector<vector<int> > Solution::zigzagLevelOrder(TreeNode* root) {
+    if(root == NULL) return {{}};
+    queue<TreeNode*> q;
+    vector<vector<int>> store;
+    store.push_back({root->val});
+    vector<int> cur;
+    q.push(root);
+    q.push(NULL);
+    int level = 1;
+    while(!q.empty()){
+        TreeNode* front = q.front();
+        q.pop();
+        if(front->left) q.push(front->left);
+        if(front->right) q.push(front->right);
+    
+        if(front->left) cur.push_back(front->left->val);
+        if(front->right) cur.push_back(front->right->val);
+    
+        if(q.front() == NULL){
+            if(level%2 == 1) reverse(cur.begin(), cur.end());
+            if(cur.size() > 0) store.push_back(cur);
+            q.pop(); 
+            q.push(NULL);
+            level++;
+            cur.clear();
+        }
+        if(q.front() == NULL && q.size() == 1) break;
+    }
+    return store;
+}
 
+
+// old one
 class Solution {
 public:
     vector<vector<int>> store;

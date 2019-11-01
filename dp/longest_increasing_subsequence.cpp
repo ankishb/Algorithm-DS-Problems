@@ -1,22 +1,21 @@
 // new try
-int Solution::lis(const vector<int> &A) {
-    int n = A.size();
-    if(n <= 1) return n;
-    vector<int> len(n, 1);
-    
-    for(int i=1; i<n; i++){
-        for(int j=0; j<i; j++){
-            if(A[i] > A[j]){
-                len[i] = max(len[i], len[j]+1);
+class Solution {
+public:
+    int lengthOfLIS(vector<int>& A) {
+        int n = A.size(), ans = 1;
+        if(n <= 1) return n;
+        vector<int> len(n, 1);
+        for(int i=1; i<n; i++){
+            for(int j=0; j<i; j++){
+                if(A[j] < A[i]){
+                    len[i] = max(len[i], 1+len[j]);
+                }
             }
+            ans = max(ans, len[i]);
         }
+        return ans;
     }
-    int max_len = 1;
-    for(auto l : len){
-        max_len = max(max_len, l);
-    }
-    return max_len;
-}
+};
 
 // old one
 // O(n^2)

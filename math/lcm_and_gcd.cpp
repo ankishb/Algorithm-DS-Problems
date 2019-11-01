@@ -1,4 +1,19 @@
 
+// fresh try and unforgettable
+/*
+To find gcd, we know that if we substract smaller number from larger one, 
+gcd remains same. To follow that, we just replace the subtraction sign 
+with the mod sign. It can be easily proven.
+*/
+ll gcd(ll a, ll b){
+    if(a > b) swap(a, b);
+    if(a == 0) return b;
+    return gcd(a, b-a);
+    // return gcd(a, b%a);
+}
+
+
+// old one
 #include <bits/stdc++.h>
 #define pii pair<int,int>
 #define vii vector<vector<int>>

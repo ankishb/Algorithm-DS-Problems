@@ -3,7 +3,6 @@
 - [x][greedy][weighted_job_scheduling](https://www.geeksforgeeks.org/weighted-job-scheduling/)
 - [x][usuage_of_structure_with_vector]
 - [cutting a rod to maximize reward])(https://www.geeksforgeeks.org/cutting-a-rod-dp-13/)
-5. [maximum-sum-increasing-subsequence](https://www.geeksforgeeks.org/maximum-sum-increasing-subsequence-dp-14/)
 6. [maximum sum problem](https://practice.geeksforgeeks.org/problems/maximum-sum-problem/0)
 8. [kth smallest element](https://practice.geeksforgeeks.org/problems/kth-smallest-element/0)
 9. [minimum jump required](https://www.geeksforgeeks.org/number-of-jumps-for-a-thief-to-cross-walls/)
@@ -55,8 +54,8 @@
 1. https://www.geeksforgeeks.org/combinational-sum/ 
 2. https://www.geeksforgeeks.org/find-all-combinations-that-adds-upto-given-number-2/
 - [ ] [nearest multiplier of 10](https://practice.geeksforgeeks.org/problems/nearest-multiple-of-10/0)
-- [evaluate prefix and postfix expression]
-- [infix_to_postfix]
+
+- [x][stack][infix_to_postfix](https://practice.geeksforgeeks.org/problems/infix-to-postfix/0)
 - [add_two_fractional_number](https://practice.geeksforgeeks.org/problems/add-two-fractions/1)
 - [ ] [swap_k_nodes_from_begining_with_end](https://www.geeksforgeeks.org/swap-kth-node-from-beginning-with-kth-node-from-end-in-a-linked-list/)
 - [reverse_a_linked_list](https://practice.geeksforgeeks.org/problems/reverse-a-linked-list/1)
@@ -73,7 +72,6 @@
 - [ ][tree][](http://qa.geeksforgeeks.org/2113/qa.geeksforgeeks.org/2113/longest-path-tree-with-just-one-bend-may-start-with-from-root.html)
 - [ ][ncr](https://www.geeksforgeeks.org/program-calculate-value-ncr/)
 
-- [ ] [](https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array/)
 - [ ] [](https://www.geeksforgeeks.org/swap-kth-node-from-beginning-with-kth-node-from-end-in-a-linked-list/)
 - [count_distinct_element_in_window](https://practice.geeksforgeeks.org/problems/count-distinct-elements-in-every-window/1)
 - [split_a_sentence_into_words](https://www.geeksforgeeks.org/split-a-sentence-into-words-in-cpp/)
@@ -116,7 +114,6 @@
 - [implament power function](https://www.interviewbit.com/problems/implement-power-function/)
 - [spiral transveral of matrix](https://www.interviewbit.com/problems/prettyprint/)
 - [find_insert_position_in_sorted_array](https://www.interviewbit.com/problems/sorted-insert-position/)(https://www.interviewbit.com/help_requests/29770/)
-- [ ] [allocates books](https://www.interviewbit.com/problems/270/)
 - [count and say](https://www.interviewbit.com/problems/count-and-say/)(https://practice.geeksforgeeks.org/problems/decode-the-pattern/0)
 - [x][amazing_subarray](https://www.interviewbit.com/problems/amazing-subarrays/) 
 - [x][string][length_of_last_word](https://www.interviewbit.com/problems/length-of-last-word/)
@@ -129,7 +126,7 @@
 - [x][stack,deque][simplifying_directory_path](https://www.interviewbit.com/problems/simplify-directory-path/)
 - [x][stack,array][rain_water_trapping](https://www.interviewbit.com/problems/rain-water-trapped/)
 - [kth_smallest_element_in_unsorted_array_in_constant_space](https://www.interviewbit.com/problems/kth-smallest-element-in-the-array/)
-- [next_greater_element](https://www.interviewbit.com/problems/nextgreater/)
+- [x][stack][next_greater_element](https://www.interviewbit.com/problems/nextgreater/)(https://practice.geeksforgeeks.org/problems/next-larger-element/0)
 - [colorful_number](https://www.interviewbit.com/problems/colorful-number/)
 - [2 sum] [sum_of_pairs](https://www.interviewbit.com/problems/2-sum/)
 - [x][linked list][intersection_of_two_nodes](https://www.interviewbit.com/problems/intersection-of-linked-lists/)
@@ -326,7 +323,7 @@
 - [imp][tree][medium][deepest_node_in_binary_tree](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)
 - [delete_node_and_return_forest](https://leetcode.com/problems/delete-nodes-and-return-forest/)
 - [imp][medium][continuous_array](https://leetcode.com/problems/contiguous-array/)
-- [easy][count_prime_no](https://leetcode.com/problems/count-primes/)
+- [x][math][easy][count_prime_no](https://leetcode.com/problems/count-primes/) (https://www.geeksforgeeks.org/sieve-of-eratosthenes/)
 - [easy][imp][happy_number](https://leetcode.com/problems/happy-number/)
 - [medium][math][ugly_number_2](https://leetcode.com/problems/ugly-number-ii/)
 - [medium][math][super_ugly_number](https://leetcode.com/problems/super-ugly-number/)
@@ -505,7 +502,7 @@
 - [x][dp][minimum_edit_distance](https://leetcode.com/problems/edit-distance/)(https://www.interviewbit.com/problems/edit-distance/)
 - [x][hard][dp,matrix][unique_path_count](https://leetcode.com/problems/unique-paths/)
 - [x][hard][dp][unique_path_count_2](https://leetcode.com/problems/unique-paths-ii/)
-- [x][stack][nearest smallest element](https://www.interviewbit.com/problems/nearest-smaller-element/)
+- [x][stack][nearest_smallest_element](https://www.interviewbit.com/problems/nearest-smaller-element/)
 - [x][backtrack][combinational_sum_2](https://www.interviewbit.com/problems/combination-sum-ii/)
 - [x][backtrack][combinations_sum_1_2](https://leetcode.com/problems/combination-sum/)(https://leetcode.com/problems/combination-sum-ii/)
 
@@ -583,7 +580,7 @@
 - [medium][tree][find_duplicate_subtree](https://leetcode.com/problems/find-duplicate-subtrees/)
 
 - [x][medium][dp,string][longest_pallindrome_substring](https://leetcode.com/problems/longest-palindromic-substring/)(https://www.interviewbit.com/problems/longest-palindromic-substring/)
-- [ ][TLE] [longest_pallindromic_subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/)
+- [dp][longest_pallindromic_subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/)
 - [ ][manachers_algorithm_linear_time](https://www.geeksforgeeks.org/manachers-algorithm-linear-time-longest-palindromic-substring-part-2/)
 - [x][medium][dp,string][count_all_pallindromic_substring](https://leetcode.com/problems/palindromic-substrings/)
 - [medium][string,dp][longest_common_subsequence](https://leetcode.com/problems/longest-common-subsequence/)(https://practice.geeksforgeeks.org/problems/longest-common-subsequence/0)
@@ -605,7 +602,7 @@
 
 
 ## Contribution on 31-8-19
-- [medium][tree][zigzag_level_order_tranversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)
+- [x][medium][tree][zigzag_level_order_tranversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)
 
 
 ## Contribution on 2-9-19
@@ -684,13 +681,12 @@
 
 ## Contribution on 8-10-19
 - [x][easy][string][urlify_of_string](https://practice.geeksforgeeks.org/problems/urlify-a-given-string/0)
-- [x][medium][array][count_inversions](https://www.interviewbit.com/problems/inversions/) (https://www.geeksforgeeks.org/counting-inversions/)
-- [ ][string][](https://practice.geeksforgeeks.org/problems/smallest-distant-window/0)
+- [x][medium][array][count_inversions](https://www.interviewbit.com/problems/inversions/)
 - [x][array][hotel_booking_possible](https://www.interviewbit.com/problems/hotel-bookings-possible/)
 
 ## Contribution on 9-10-19
 - [x][array][min_steps_in_infinite_grid](https://www.interviewbit.com/problems/min-steps-in-infinite-grid/)
-- [x][imp][array][maximum_absolute_distance](https://www.interviewbit.com/problems/maximum-absolute-difference/)
+- [x][imp][array][maximum_absolute_distance](https://www.interviewbit.com/problems/maximum-absolute-difference/) (https://www.geeksforgeeks.org/maximum-absolute-difference-value-index-sums/)
 - [ ][graph,tree][redundant_connection](https://leetcode.com/problems/redundant-connection/)
 - [x][imp][string,backtrack][valid_ip_address](https://www.interviewbit.com/problems/valid-ip-addresses/)
 - [x][linked-list][partiton_list](https://www.interviewbit.com/problems/partition-list/)
@@ -700,7 +696,7 @@
 - [ ][v.imp][array][count_subarray_with_sum_in_given_range](https://www.interviewbit.com/problems/count-of-range-sum/)
 - [x][v-imp][array][max_distance](https://www.interviewbit.com/problems/max-distance/)
 - [input_using_string_stream]
-- [][math][largest_prime_factor](https://practice.geeksforgeeks.org/problems/largest-prime-factor/0)
+- [x][math][largest_prime_factor](https://practice.geeksforgeeks.org/problems/largest-prime-factor/0)
 
 ## Contribution on 11-10-19
 - [x][math][count_distinct_coprime_factor_in_given_range](https://www.geeksforgeeks.org/all-possible-co-prime-distinct-element-pairs-within-a-range-l-r/)
@@ -796,16 +792,35 @@
 
 ## Contribution on 29-10-19
 - [hash,graph][verify_alien_dictionary](https://leetcode.com/problems/verifying-an-alien-dictionary/)
-- [graph][alien_dictioanry]()
+- [graph][alien_dictioanry](https://zhuhan0.blogspot.com/2017/06/leetcode-269-alien-dictionary.html)
 - [tree][shortest_unique_prefix](https://www.interviewbit.com/problems/shortest-unique-prefix/)
 - [easy][tree][diameter_of_binary_tree](https://leetcode.com/problems/diameter-of-binary-tree/)
 - [tree][cartesian_tree](https://www.interviewbit.com/problems/inorder-traversal-of-cartesian-tree/)
+- [dp][dice_throws](https://practice.geeksforgeeks.org/problems/dice-throw/0)
+
+## Contribution on 30-10-19
+- [dp][count_of_dearrangements](https://www.geeksforgeeks.org/count-derangements-permutation-such-that-no-element-appears-in-its-original-position/)
+- [string][window_string](https://www.interviewbit.com/problems/window-string/)
+- [dp][total_decode_message](https://practice.geeksforgeeks.org/problems/total-decoding-messages/0)
+
+## Contribution on 31-10-19
+- [math][integral_points_in_triangle](https://practice.geeksforgeeks.org/problems/integral-points-in-triangle/0/?ref=self)
+- [imp][dp][max_abs_diff_of_sum_of_two_continuous_subarray](https://practice.geeksforgeeks.org/problems/max-absolute-difference/0)
+- [array,bit-manipulation][min_abs_diff_of_xor_of_subarray](https://www.geeksforgeeks.org/minimum-absolute-difference-xor-values-two-subarrays/)
+- [math][euler_totient](https://practice.geeksforgeeks.org/problems/euler-totient/0)
+- [ ][string][smallest_distant_window](https://practice.geeksforgeeks.org/problems/smallest-distant-window/0)
+
+## Contribution on 1-11-19
+- [dp][minimum_number_of_coins](https://practice.geeksforgeeks.org/problems/number-of-coins/0)
+
+- [ ] [allocates books](https://www.interviewbit.com/problems/270/)
+
+
 
 - [ ][kth smallest element with linear time][kth_smallest_element_in_unsorted_array_in_constant_space](https://practice.geeksforgeeks.org/problems/kth-smallest-element/0) (https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array-set-2-expected-linear-time/) (https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array-set-3-worst-case-linear-time/)
 
 
 
-- [ ][alien_dictionary](https://zhuhan0.blogspot.com/2017/06/leetcode-269-alien-dictionary.html)
 
 - [design][LRU_design](https://www.interviewbit.com/problems/lru-cache/)(https://leetcode.com/problems/lru-cache/)
 - [partition_label](https://leetcode.com/problems/partition-labels/)
@@ -1335,3 +1350,58 @@ Output:
 a b d e  :: sorted and order maintain according to first unique value
 d e a b  :: not sorted and order is maintained in reverse order
 ```
+
+## Fixed number of digit after decimal
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+#define FIXED_FLOAT(x) std::fixed <<std::setprecision(2)<<(x)
+
+int main()
+{
+    int a, b;
+    a = 1000;
+    b = 3;
+    float c = a/(b*1.0);
+    cout<<c<<endl;;
+    // cout<<fixed<<setprecision(2)<<c<<endl;
+    cout<<FIXED_FLOAT(c)<<endl;
+    cout<<c<<endl;
+    cout<<a<<endl;
+    cout<<b<<endl;
+    cout<<1.2345<<endl;
+
+    // simple trick, convert it manually, using multiplication and division
+    float ans = (int(c*10))*1.0/10.0;
+    cout<<ans<<endl;
+
+    return 0;
+}
+```
+
+## char array to string
+```c++ 
+char a[] = {'C','O','D','E' }; 
+char b[] = "geeksforgeeks"; 
+
+string sa = a; 
+string sb = b;
+```
+
+## char array to string
+```c++
+string s = "geeksforgeeks"; 
+int n = s.length();  
+char char_array[n + 1];  
+strcpy(char_array, s.c_str()); 
+```
+2nd approach:
+```c++
+string s = "Hello World!";
+char cstr[s.size() + 1];
+copy(s.begin(), s.end(), cstr);
+cstr[s.size()] = '\0';
+cout << cstr << '\n';
+```
+
+
