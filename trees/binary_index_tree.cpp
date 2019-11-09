@@ -1,6 +1,4 @@
 
-
-
 class binaryIndexTree{
 public:
     vector<long> bit;

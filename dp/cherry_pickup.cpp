@@ -1,3 +1,37 @@
+// my working solution
+class Solution {
+public:
+    vector<vector<vector<int>>> memo;
+    int cherryPickup(vector<vector<int>>& A) {
+        int n = A.size();
+        vector<vector<int>> temp;
+        temp.resize(n, vector<int>(n, INT_MIN));
+        for(int i=0; i<n; i++){
+            memo.push_back(temp);
+        }
+        return max(0, dp(A, n, 0, 0, 0));
+    }
+    int dp(vector<vector<int>>& A, int n, int r1, int c1, int c2){
+        int r2 = r1 + c1 - c2;
+        if(r1 == n || c1 == n || r2 == n || c2 == n) return INT_MIN; // out of bound
+        if(A[r1][c1] == -1 || A[r2][c2] == -1) return INT_MIN; // blocked cell 
+        if(r1 == n-1 && c1 == n-1) return A[r1][c1]; // target position
+        if(memo[r1][c1][c2] != INT_MIN) return memo[r1][c1][c2]; // already visited
+        
+        int value = A[r1][c1];            // picked cherry by first person
+        if(c1 != c2) value += A[r2][c2];  // avoid case, when both are at same cell
+        int dd = dp(A, n, r1+1, c1, c2);  // both goes down
+        int rr = dp(A, n, r1, c1+1, c2+1);// both goes right
+        int dr = dp(A, n, r1+1, c1, c2+1);// one goes down, other goes right
+        int rd = dp(A, n, r1, c1+1, c2);  // first goes right, other goes down
+        value += max({dd, rr, dr, rd});   // find max of each of above moves
+        memo[r1][c1][c2] = value;         // fill cell in memory
+        return value;
+    }
+};
+
+
+
 
 // class Solution(object):
     def cherryPickup(self, grid):

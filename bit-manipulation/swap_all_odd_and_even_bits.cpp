@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define loop(i, start, end) for(int i=start; i<end; i++)
 
 void solve(){
     int n; cin>>n;

@@ -24,7 +24,7 @@ int main() {
         }
         int swap_c = 0;
         int i = 0, j, n = s.length();
-        while(i<n/2){
+        while(i < n/2){
             j = n-i-1;
             while(s[i] != s[j]) j--;
             while(j < n-i-1){

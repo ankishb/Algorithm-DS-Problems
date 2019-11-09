@@ -1,3 +1,34 @@
+// super fresh try
+class Solution {
+public:
+    int trap_water(vector<int> H, int low, int high){
+        // for(int i=low; i<=high; i++) cout<<H[i]<<" "; cout<<" :: ";
+        while(low <= high && H[low] == 0) low++;
+        int water = 0, prev = low;
+        for(int i=low+1; i<=high; i++){
+            if(H[i] >= H[prev]){
+                prev = i;
+            }
+            else water += (H[prev] - H[i]);
+        }
+        // cout<<water<<endl;
+        return water;
+    }
+    
+    int trap(vector<int>& H) {
+        int n = H.size(), hi = 0;
+        if(n == 0) return 0;
+        for(int i=0; i<n; i++){
+            if(H[i] > H[hi]) hi = i;
+        }
+        reverse(H.begin()+hi, H.end());
+        return trap_water(H, 0, hi-1) + trap_water(H, hi, n-1);
+    }
+};
+
+
+
+
 // new try without memory and time: O(3*n)
 /*
 1. Tranverse to find global max

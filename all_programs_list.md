@@ -124,7 +124,7 @@
 - [intersetction_of_two_sorted_arary]
 - [count_no_of_cont_subsequence_with_sum_in_range](https://www.interviewbit.com/problems/numrange/)
 - [x][stack,deque][simplifying_directory_path](https://www.interviewbit.com/problems/simplify-directory-path/)
-- [x][stack,array][rain_water_trapping](https://www.interviewbit.com/problems/rain-water-trapped/)
+- [x][stack,array][rain_water_trapping](https://www.interviewbit.com/problems/rain-water-trapped/) (https://leetcode.com/problems/trapping-rain-water/)
 - [kth_smallest_element_in_unsorted_array_in_constant_space](https://www.interviewbit.com/problems/kth-smallest-element-in-the-array/)
 - [x][stack][next_greater_element](https://www.interviewbit.com/problems/nextgreater/)(https://practice.geeksforgeeks.org/problems/next-larger-element/0)
 - [colorful_number](https://www.interviewbit.com/problems/colorful-number/)
@@ -745,7 +745,7 @@
 - [imp][array][maximize_size_of_consecutive_number](https://practice.geeksforgeeks.org/problems/maximum-size-of-consecutives/0)
 - [tree][preorder_to_postorder](https://practice.geeksforgeeks.org/problems/preorder-to-postorder/0)
 - [ ][imp][array][](https://www.geeksforgeeks.org/number-of-ways-to-choose-elements-from-the-array-such-that-their-average-is-k/)
-- [ ][imp][hard][dp][cherry_pickup]()
+- [imp][hard][dp][cherry_pickup](https://leetcode.com/problems/cherry-pickup/)
 
 
 ## Contribution on 22-10-19
@@ -812,6 +812,10 @@
 
 ## Contribution on 1-11-19
 - [dp][minimum_number_of_coins](https://practice.geeksforgeeks.org/problems/number-of-coins/0)
+
+## Contribution on 4-11-19
+- [tree][fendwick_tree]()
+
 
 - [ ] [allocates books](https://www.interviewbit.com/problems/270/)
 
