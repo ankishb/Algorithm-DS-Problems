@@ -1,3 +1,140 @@
+// new try
+#include <iostream>
+using namespace std;
+
+struct warmhole{
+    int sx, sy, dx, dy;
+    int cost;
+    void input(){
+        int x1, y1, x2, y2, c;
+        cin>>x1>>y1>>x2>>y2>>c;
+        sx = x1, sy = y1;
+        dx = x2, dy = y2;
+        cost = c;
+    }
+};
+warmhole wh[10];
+int inf = 1e7;
+int dist[181][181];
+bool visit[181][181];
+
+int check_entry(int wn, int x, int y){
+    for(int i=0; i<wn; i++){
+        if(wh[i].sx == x && wh[i].sy == y){
+            return i;
+        }
+    }
+    return -1;
+}
+int check_exit(int wn, int x, int y){
+    for(int i=0; i<wn; i++){
+        if(wh[i].dx == x && wh[i].dy == y){
+            return i;
+        }
+    }
+    return -1;
+}
+void find_min_dist(int &x, int &y){
+    int min_ = inf;
+    for(int i=0; i<181; i++){
+        for(int j=0; j<181; j++){
+            if(!visit[i][j] && dist[i][j] < min_){
+                min_ = dist[i][j];
+                x = i, y = j;
+            }
+        }
+    }
+    // cout<<min_<<" ";
+    if(min_ == inf){
+        x = -1, y = -1;
+    }
+}
+int main() {
+    int sx, sy, dx, dy;
+    cin >> sx >> sy >> dx >> dy;
+    int wn;
+    cin>>wn;
+    
+    for(int i=0; i<wn; i++){
+        wh[i].input();
+    }
+    
+    for(int i=0; i<wn; i++){
+        cout<<wh[i].sx<<" "<<wh[i].sy<<" ";
+        cout<<wh[i].dx<<" "<<wh[i].dy<<" ";
+        cout<<wh[i].cost<<endl;
+    }
+    
+    for(int i=0; i<181; i++){
+        for(int j=0; j<181; j++){
+            dist[i][j] = inf;
+            visit[i][j] = false;
+        }
+    }
+    dist[0][0] = 0;
+    // find min dist node, which is not visited yet
+    // increase its cost by 1
+    // check if it is entry or exit point for some warmhole
+    // if yes, update cost of that entry or exit point accordingly
+    
+    for(int i=0; i<181*181; i++){
+        // 1. find minimum dist
+        int x, y;
+        find_min_dist(x, y);
+        if(x == -1 && y == -1){
+            cout<<"cann't reach at destination";
+            return 0;
+        }
+        visit[x][y] = true;
+        // cout<<x<<" "<<y<<endl;
+        // 2. update dist of its neighbour
+        if(x-1>=0 && visit[x-1][y] == false){
+            if(dist[x-1][y] > dist[x][y] + 1){
+                dist[x-1][y] = dist[x][y] + 1;
+            }
+        }
+        if(x+1 < 181 && visit[x+1][y] == false){
+            if(dist[x+1][y] > dist[x][y] + 1){
+                dist[x+1][y] = dist[x][y] + 1;
+            }
+        }
+        if(y-1>=0 && visit[x][y-1] == false){
+            if(dist[x][y-1] > dist[x][y] + 1){
+                dist[x][y-1] = dist[x][y] + 1;
+            }
+        }
+        if(y+1 < 181 && visit[x][y+1] == false){
+            if(dist[x][y+1] > dist[x][y] + 1){
+                dist[x][y+1] = dist[x][y] + 1;
+            }
+        }
+        // 3. check for warmhole entry and exit point
+        int xx, yy;
+        int entry = check_entry(wn, x, y);
+        if(entry != -1){
+            xx = wh[entry].dx;
+            yy = wh[entry].dy;
+            if(dist[xx][yy] > dist[x][y] + wh[entry].cost){
+                dist[xx][yy] = dist[x][y] + wh[entry].cost;
+            }
+        }
+        int exit_ = check_exit(wn, x, y);
+        if(exit_ != -1){
+            xx = wh[exit_].sx;
+            yy = wh[exit_].sy;
+            if(dist[xx][yy] > dist[x][y] + wh[exit_].cost){
+                dist[xx][yy] = dist[x][y] + wh[exit_].cost;
+            }
+        }
+        
+    }
+    cout<<dist[dx][dy]<<endl;
+    return 0;
+}
+
+
+
+// old one
 #include<iostream>
 using namespace std;
 #define i_max 214748364

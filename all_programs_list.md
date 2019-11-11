@@ -298,7 +298,7 @@
 - [easy][linked-list][reverse_list](https://leetcode.com/problems/reverse-linked-list/)
 - [medium][linked-list][rotate_list](https://leetcode.com/problems/rotate-list/)
 - [medium][linked-list][remove_nth_node_from_end](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
-- [easy][array][merge_2_sorted_array_with_no_extra_space](https://practice.geeksforgeeks.org/problems/merge-two-sorted-arrays/0)
+- [easy][array][merge_2_sorted_array_with_no_extra_space](https://leetcode.com/problems/merge-sorted-array/) (https://practice.geeksforgeeks.org/problems/merge-two-sorted-arrays/0)
 - [medium][linked-list][reverse_list_2](https://leetcode.com/problems/reverse-linked-list-ii/)
 - [imp][easy][string][minimum_index_sum_of_two_list](https://leetcode.com/problems/minimum-index-sum-of-two-lists/)
 - [x][medium][find_merge_point_of_two_list](https://leetcode.com/problems/intersection-of-two-linked-lists/) (https://www.hackerrank.com/challenges/find-the-merge-point-of-two-joined-linked-lists/problem)
@@ -816,6 +816,8 @@
 ## Contribution on 4-11-19
 - [tree][fendwick_tree]()
 
+## Contribution on 10-11-19
+- [string][recursively_remove_all_duplicate](https://practice.geeksforgeeks.org/problems/recursively-remove-all-adjacent-duplicates/0/?ref=self)
 
 - [ ] [allocates books](https://www.interviewbit.com/problems/270/)
 
@@ -1409,3 +1411,31 @@ cout << cstr << '\n';
 ```
 
 
+## Random number generation with equal probability
+```c++
+#include <ctime>
+
+template<class T>
+T *FindMRandom(T *array, int m){
+    int m, n = array.size();
+    T *temp = new T[m];
+    srand((unsigned )time(0));
+
+    for (int i=0; i<m; ++i ){
+        m = rand() % (n-i);
+        temp[i] = array[m];
+        Swap(array[m], array[n-i-1]);
+    }
+    return temp;
+}
+/*
+It seems to me that the second element's probability is not 1/n-1. It is the probability that it is *not* chosen the first time (n-1/n) times the probability that it *is* chosen the second time (1/n-1).
+
+(n-1/n)*(1/n-1) = 1/n
+
+For the third element:
+
+(n-1/n)*(n-2/n-1)*(1/n-2) = 1/n
+
+*/
+```

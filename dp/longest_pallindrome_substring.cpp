@@ -1,4 +1,37 @@
 
+string max_len_pallindrome(string s){
+    int n = s.length();
+    int dp[n][n];
+    memset(dp, 0, sizeof(dp));
+    int idx = 0, len = 0;
+    for(int k=0; k<n; k++){
+        for(int i=0; i<n-k; i++){
+            int j = i+k;
+            if(i == j) dp[i][j] = 1;
+            else if(k == 1){
+                if(s[i] == s[j]) dp[i][j] = 2;
+                else dp[i][j] = 1;
+            }
+            else{
+                if(s[i] == s[j] && s[i+1] == s[j-1] && dp[i+1][j-1] > 0){
+                    dp[i][j] = 2 + dp[i+1][j-1];
+                }
+                // else{
+                //     dp[i][j] = max({dp[i][j], dp[i+1][j], dp[i][j-1]});
+                // }
+                
+            }
+            if(dp[i][j] > len){
+                len = dp[i][j];
+                idx = i;
+            }
+        }
+    }
+    return s.substr(idx, len);
+}
+
+
+
 // new try
 class Solution {
 public:

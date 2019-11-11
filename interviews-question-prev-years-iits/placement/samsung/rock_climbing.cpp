@@ -1,3 +1,61 @@
+// new try
+#include <iostream>
+using namespace std;
+char T[10][10];
+bool visit[10][10];
+
+void dfs(int n, int m, int x, int y, int count, int &ans){
+    if(T[x][y] == 'G'){
+        ans = min(ans, count);
+        // return ;
+    }
+    // cout<<x<<" "<<y<<endl;
+    visit[x][y] = true;
+    // go left 
+    if(y-1 >= 0 && !visit[x][y-1] && T[x][y-1] != 'S'){
+        dfs(n, m, x, y-1, count, ans);
+    }
+    // go right 
+    if(y+1 < m && !visit[x][y+1] && T[x][y+1] != 'S'){
+        dfs(n, m, x, y+1, count, ans);
+    }
+    // go up
+    int up = x-1;
+    while(up >= 0 && !visit[up][y] && T[up][y] == 'S') up--;
+    if(up >= 0 && !visit[up][y] && T[up][y] != 'S'){
+        // count = max(count, x-up);
+        dfs(n, m, up, y, max(count, x-up), ans);
+    }
+    
+    // go down
+    int down = x+1;
+    while(down < n && !visit[down][y] && T[down][y] == 'S') down++;
+    if(down < n && !visit[down][y] && T[down][y] != 'S'){
+        // count = max(count, down - x);
+        dfs(n, m, down, y, max(count, down - x), ans);
+    }
+    
+    visit[x][y] = false;
+    
+}
+
+int main() {
+    int n, m, x, y;
+    cin >> n >> m;
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
+            cin >> T[i][j];
+            visit[i][j] = false;
+        }
+    }
+    int ans = n;
+    dfs(n, m, n-1, 0, 0, ans);
+    cout << ans << endl;
+    return 0;
+}
+
+
+// old one
 /*
 4
 5 8

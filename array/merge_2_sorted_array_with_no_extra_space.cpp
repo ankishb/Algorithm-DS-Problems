@@ -1,3 +1,24 @@
+
+class Solution {
+public:
+    void merge(vector<int>& A1, int m, vector<int>& A2, int n) {
+        int idx = A1.size();
+        m--; n--; idx--;
+        while(m >= 0 && n >= 0){
+            if(A1[m] > A2[n]){
+                A1[idx--] = A1[m--];
+            }
+            else{
+                A1[idx--] = A2[n--];
+            }
+        }
+        while(n >= 0){
+            A1[idx--] = A2[n--];
+        }
+    }
+};
+
+
 // Given two sorted arrays P[] and Q[] in non-decreasing order with size X and Y. The task is to merge the two sorted arrays into one sorted array (in non-decreasing order).
 
 // Note: Expected time complexity is O((X+Y) log(X+Y)). DO NOT use extra space. 
