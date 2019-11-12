@@ -1,4 +1,33 @@
+// new try
+class Solution {
+public:
+    vector<int> cdf;
+    int total;
+    Solution(vector<int>& w) {
+        int sum = 0;
+        for(auto d : w){
+            sum += d;
+            cdf.push_back(sum);
+        }
+        total = sum;
+    }
+    
+    int pickIndex() {
+        int w = (rand()%total);
+        auto itr = upper_bound(cdf.begin(), cdf.end(), w) - cdf.begin();
+        return itr;
+    }
+};
 
+/**
+ * Your Solution object will be instantiated and called as such:
+ * Solution* obj = new Solution(w);
+ * int param_1 = obj->pickIndex();
+ */
+
+
+
+// old one
 class Solution {
 public:
     vector<int> w;

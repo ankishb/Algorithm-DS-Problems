@@ -5,6 +5,7 @@ class disjoint_set{
 public:
     vector<int> rank, parent;
     unordered_map<int, int> com_size;
+    
     disjoint_set(int no){
         rank.resize(no);
         parent.resize(no);
@@ -13,6 +14,7 @@ public:
             com_size[i] = 1;
         }
     }
+
     int find(int x){
         if(parent[x] != x){
             parent[x] = find(parent[x]);

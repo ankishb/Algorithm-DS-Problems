@@ -420,8 +420,8 @@
 - [easy][linked-list][reverse_a_doubly_linked_list](https://www.hackerrank.com/challenges/reverse-a-doubly-linked-list/)
 
 ## contribution on 1-8-19
-- [medium][sampling][random_pick_index](https://leetcode.com/problems/random-pick-index/)
-- [medium][sampling][random_pick_with_weights](https://leetcode.com/problems/random-pick-with-weight/)
+- [x][medium][array][random_pick_index](https://leetcode.com/problems/random-pick-index/)
+- [x][medium][array][random_pick_with_weights](https://leetcode.com/problems/random-pick-with-weight/)
 - [medium][search][minimum_loss](https://www.hackerrank.com/challenges/minimum-loss/problem)
 - [x][medium][stack][largest_rectangle_in_histogram](https://www.interviewbit.com/problems/largest-rectangle-in-histogram/)
 - [medium][stack][simple_text_editor](https://www.hackerrank.com/challenges/simple-text-editor/problem)
@@ -1438,4 +1438,19 @@ For the third element:
 (n-1/n)*(n-2/n-1)*(1/n-2) = 1/n
 
 */
+```
+
+## Dynamic memory allocation to 3d matrix
+```c++
+    int M = 2, N = 3, O = 4;
+    int* A = (int*)malloc(M * N * O * sizeof(int));
+    // assign values to allocated memory
+    for (int i = 0; i < M; i++)
+        for (int j = 0; j < N; j++)
+            for (int k = 0; k < O; k++)
+                *(A + i*N*O + j*O + k) = rand() % 100;
+
+    // to print, use: printf("%d ", *(A + i*N*O + j*O + k));
+    // deallocate memory
+    free(A);
 ```
