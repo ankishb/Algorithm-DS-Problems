@@ -47,7 +47,7 @@
 - [decimal to binary representation](https://www.interviewbit.com/problems/binary-representation/)
 - [find max possible digit arrangement possible for sum k](https://www.interviewbit.com/problems/numbers-of-length-n-and-value-less-than-k/)
 - [count trailing zeros in factorial]
-
+- [math][rounding_a_no_to_k_decimal_places]
 
 
 

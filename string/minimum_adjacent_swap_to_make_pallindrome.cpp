@@ -1,3 +1,86 @@
+/*
+Input:
+4
+madam
+mamad
+damma
+daamm
+
+Output:
+madam :: 0
+madam :: 3
+amdma :: 2
+madam :: 4
+*/
+
+// latest try
+#include <iostream>
+#include <string>
+#include <unordered_map>
+using namespace std;
+
+int min_swapping(string s){
+    // 1. check if pallindrome is possible
+    unordered_map<char, int> freq;
+    for(auto ch : s) freq[ch]++;
+    bool miss = false;
+    for(auto f : freq){
+        if(f.second % 2 == 0) continue;
+        if(f.second % 2 == 1){
+            if(!miss) miss = true;
+            else return -1;
+        }
+    }
+    // 2. Now find min operation
+    int n = s.length();
+    int count = 0;
+    for(int i=0; i<n/2; i++){
+        if(s[i] == s[n-i-1]) continue;
+        int j, k;
+        // let if s[i] is the middle most character for n is odd
+        // find s[j] == s[n-i-1]
+        for(j=i+1; j<=n-i-1; j++){
+            if(s[j] == s[n-i-1]) break;
+        }
+        
+        // let if s[n-i-1] is the middle most character for n is odd
+        // find s[n-i-1] == s[k]
+        for(k=n-i-2; k>=i; k--){
+            if(s[k] == s[i]) break;
+        }
+        
+        // count min of both
+        count += min(j-i, n-i-1-k);
+        if(j-i < n-i-1-k){
+            // take jth character at ith place
+            for(int l=j; l>i; l--){
+                swap(s[l], s[l-1]);
+            }
+        }
+        else{
+            // take kth character at (n-i-1)th place
+            for(int l=k; l<n-i-1; l++){
+                swap(s[l], s[l+1]);
+            }
+        }
+    }
+    cout << s << " :: ";
+    return count;
+}
+
+int main()
+{
+    int test;
+    cin >> test;
+    while(test--){
+        string s;
+        cin>>s;
+        
+        cout << min_swapping(s) << endl;
+    }
+    return 0;
+}
+
 #include <iostream>
 #include<string>
 #include<unordered_map>

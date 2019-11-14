@@ -241,3 +241,27 @@ Deliver breakthrough experiences in your apps with Cognitive Services and Bot Se
 Cognitive Services
 
 A collection of domain specific pre-trained AI models which can be customised with your data.
+
+
+
+
+
+
+
+
+
+
+
+## Most Imp
+There are some things which Bing does better than Google, like Contextual Searching and Predictions and its evolving fast as a search engine, although Google is still better, but Bing is improving each day and Microsoft is spending a lot on Bing, so the job profile is very challenging and interesting.
+
+
+Microsoft Bangalore office has 3 floors. One of which is occupied by Microsoft research Group(MSR). 2nd and 3rd floor is IDC. Currently, the Bangalore IDC office houses the entire Bing Ads team, and a small team from the Server and Tools Business division, which was actually an acquisition and a portion of Dynamics CRM.
+
+
+
+here are some teams which claim to be part of Azure BigData also in Bangalore.
+The problem there is they are mostly working as support and config changes team and have horrifying work ethics. So be very careful in joining such teams.
+
+
+Microsoft IDC Hyderabad is the biggest campus for Microsoft outside of US. This is important to mention because there is lot of ownership from India. Office for Android is shipped from Hyderabad. Some of core Azure teams, a large number of products in OFFICE, Office 365, Cortana, Bing, AI and Research team, Dynamic CRM and my team which works on Visual Studio and Visual Studio Team Services are all in Hyderabad campus. Also Bangalore office do have team working on CosmosDB and other Big data stuff.
