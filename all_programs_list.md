@@ -1004,6 +1004,7 @@ https://leetcode.com/problems/minimum-area-rectangle/
 ## Very good references (premium problem from leetcode)
 - http://buttercola.blogspot.com/2016/01/leetcode-maximum-size-subarray-sum.html
 - https://www.leetfree.com/problems/add-bold-tag-in-string.html
+- [interview prepration site](http://www.intertechtion.com/)
 
 ## Database
 1. https://www.youtube.com/playlist?list=PLyvBGMFYV3auVdxQ1-88ivNFpmUEy-U3M 
