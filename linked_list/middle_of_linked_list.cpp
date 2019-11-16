@@ -1,3 +1,21 @@
+
+int Solution::solve(ListNode* head) {
+    int len = 0;
+    ListNode* save = head;
+    while(head != NULL){
+        head = head->next;
+        len++;
+    }
+    int val;
+    len = len/2 + 1; len--;
+    head = save;
+    while(len--){
+        head = head->next;
+    }
+    return head->val;
+}
+
+
 /*
 Approach:
 We use turtle and rabit race, assign two node from first(turtle) and second(rabbit)
@@ -9,14 +27,6 @@ else if(second->next->next == NULL){
 	// list has even length
 */
 
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
 class Solution {
 public:
     ListNode* middleNode(ListNode* head) {

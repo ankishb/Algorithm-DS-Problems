@@ -1,13 +1,30 @@
-// Given a linked list, remove the n-th node from the end of list and return its head.
 
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
+// new try
+class Solution {
+public:
+    ListNode* removeNthFromEnd(ListNode* head, int n) {
+        int len = 0;
+        ListNode *copy = head, *save = head;
+        while(copy != NULL){
+            len++;
+            copy = copy->next;
+        }
+        len = len-n;
+        if(len == 0) return head->next;
+        if(len < 0) return head;
+        
+        while(len > 1 && head != NULL){
+            head = head->next;
+            len--;
+        }
+        if(head != NULL && head->next != NULL){
+            head->next = head->next->next;
+        }
+        return save;
+    }
+};
+
+// old one
 class Solution {
 public:
     // ListNode* remove_head(ListNode* head){

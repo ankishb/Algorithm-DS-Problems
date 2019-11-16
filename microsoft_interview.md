@@ -265,3 +265,16 @@ The problem there is they are mostly working as support and config changes team 
 
 
 Microsoft IDC Hyderabad is the biggest campus for Microsoft outside of US. This is important to mention because there is lot of ownership from India. Office for Android is shipped from Hyderabad. Some of core Azure teams, a large number of products in OFFICE, Office 365, Cortana, Bing, AI and Research team, Dynamic CRM and my team which works on Visual Studio and Visual Studio Team Services are all in Hyderabad campus. Also Bangalore office do have team working on CosmosDB and other Big data stuff.
+
+
+
+## Contextual Search
+- Contextual search services differ from current search engines based on traditional information retrieval that return lists of documents based on their relevance to the query. 
+- contextual search attempts to increase the precision of results based on how valuable they are to individual users.
+- Exp: what is the cost of a laptop? What adding $ sign in the end, add a context that look prices in dollars
+- what is contextual search? But adding sth like reference or abstract in the end, indicates that search for research paper. It will prioritize the result for research paper first
+
+## 
+Bing takes into account three qualities in it’s ranking calculation: a website’s topical relevance, the context, and the content quality. Topical relevance asks how related to the query is a website page, in other words ““Does it address the query?” Context analyzes specific and historical information about the user and the query, such as whether the query might be about a recent popular topic, what the user’s physical location is, the user’s search history, etc. Lastly, and most importantly, content quality investigates three important questions: “Can we trust this content?”, “Is the content useful and sufficiently detailed?”, and“Is the content well-presented and easy to find?”
+
+

@@ -293,13 +293,13 @@
 
 
 ## contribution 7-7-17
-- [easy][linked-list][middle_of_linked_list](https://leetcode.com/problems/middle-of-the-linked-list/)
+- [x][easy][linked-list][middle_of_linked_list](https://leetcode.com/problems/middle-of-the-linked-list/)
 - [easy][linked-list][pallindromic_linked_list](https://leetcode.com/problems/palindrome-linked-list/)
 - [easy][linked-list][reverse_list](https://leetcode.com/problems/reverse-linked-list/)
-- [medium][linked-list][rotate_list](https://leetcode.com/problems/rotate-list/)
-- [medium][linked-list][remove_nth_node_from_end](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
+- [x][medium][linked-list][rotate_list](https://leetcode.com/problems/rotate-list/)
+- [x][medium][linked-list][remove_nth_node_from_end](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
 - [easy][array][merge_2_sorted_array_with_no_extra_space](https://leetcode.com/problems/merge-sorted-array/) (https://practice.geeksforgeeks.org/problems/merge-two-sorted-arrays/0)
-- [medium][linked-list][reverse_list_2](https://leetcode.com/problems/reverse-linked-list-ii/)
+- [x][medium][linked-list][reverse_list_2](https://leetcode.com/problems/reverse-linked-list-ii/) (https://www.interviewbit.com/problems/reverse-link-list-ii/)
 - [imp][easy][string][minimum_index_sum_of_two_list](https://leetcode.com/problems/minimum-index-sum-of-two-lists/)
 - [x][medium][find_merge_point_of_two_list](https://leetcode.com/problems/intersection-of-two-linked-lists/) (https://www.hackerrank.com/challenges/find-the-merge-point-of-two-joined-linked-lists/problem)
 - [design][design_linked_list](https://leetcode.com/problems/design-linked-list/)
