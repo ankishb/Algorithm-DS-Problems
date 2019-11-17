@@ -490,7 +490,7 @@
 - [x][Queues][sliding_window_maximum](https://www.interviewbit.com/problems/sliding-window-maximum/)
 - [x][hard][queues][queries_with_fixed_length](https://www.hackerrank.com/challenges/queries-with-fixed-length/)
 - [x][medium][Stacks And Queues][redundant_braces](https://www.interviewbit.com/problems/redundant-braces/)
-- [heap][hard][find_median_of_running_stream_of_integers](https://www.hackerrank.com/challenges/find-the-running-median/forum)(https://leetcode.com/problems/find-median-from-data-stream/submissions/)
+- [x][array,heap][hard][find_median_of_running_stream_of_integers](https://www.hackerrank.com/challenges/find-the-running-median/forum)(https://leetcode.com/problems/find-median-from-data-stream/submissions/)
 
 ## Contribution on 15-8-19
 - [string][length_of_longest_substring_with_consecutive_characters](https://www.geeksforgeeks.org/length-of-the-longest-substring-with-consecutive-characters/)
@@ -891,31 +891,6 @@ https://www.geeksforgeeks.org/m-coloring-problem-backtracking-5/
 - [ ][hackerland_radio_transmitters](https://www.hackerrank.com/challenges/hackerland-radio-transmitters/problem)
 - [ ][minimum_loss_on_buy_and_cell_house](https://www.hackerrank.com/challenges/minimum-loss/forum)
 - [ ][count_luck](https://www.hackerrank.com/challenges/count-luck/problem)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

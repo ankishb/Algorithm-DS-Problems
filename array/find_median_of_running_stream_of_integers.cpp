@@ -1,4 +1,58 @@
 
+// new try
+
+vector<double> runningMedian(vector<int> A) {
+    vector<double> ans;
+    int n = A.size();
+    if(n == 0) return {};
+    ans.push_back(A[0]);
+    priority_queue<int> max_heap;
+    priority_queue<int, vector<int>, greater<int>> min_heap;
+    double med;
+    int top;
+    for(int i=1; i<n; i++){
+        if(i == 1){
+            if(A[0] > A[1]){
+                min_heap.push(A[0]);
+                max_heap.push(A[1]);
+            }   
+            else{
+                min_heap.push(A[1]);
+                max_heap.push(A[0]);
+            }
+        }
+        else{
+            if(A[i] >= min_heap.top()){
+                min_heap.push(A[i]);
+            }
+            else{
+                max_heap.push(A[i]);
+            }
+            if(min_heap.size() > max_heap.size()+1){
+                max_heap.push(min_heap.top());
+                min_heap.pop();
+            }
+            else if(max_heap.size() > min_heap.size()+1){
+                min_heap.push(max_heap.top());
+                max_heap.pop();
+            }
+        }
+        if(max_heap.size() == min_heap.size()){
+            med = (min_heap.top() + max_heap.top())*1.0 /2*1.0;
+        }
+        else if(max_heap.size() > min_heap.size()){
+            med = (double)max_heap.top();
+        }
+        else{
+            med = (double)min_heap.top();
+        }
+        ans.push_back(med);
+
+    }
+    return ans;
+}
+
+// old one
 /*
 - Maintain lower half and upper half in two buckets
 - To make decision about current element, we need boundary element from each bucket
@@ -199,54 +253,4 @@ vector<double> find_running_median(vector<int> A){
 		ans.push_back(median);
 	}
 	return ans;
-}
-
-
-
-// vector<double> runningMedian(vector<int> a) {
-//     vector<double> ans;
-//     double ans_;
-//     vector<int> temp;
-//     for(int i=0; i<a.size(); i++){
-//         temp.push_back(a[i]);
-//         sort(temp.begin(), temp.end());
-//         if(temp.size()%2 == 0){
-//             int l_idx = (temp.size()/2)-1;
-//             int r_idx = (temp.size()/2);
-//             ans_ = temp[l_idx] + temp[r_idx];
-//             ans_ = ans_/(2*1.0);
-//         }
-//         else{
-//             int idx = (temp.size()/2);
-//             ans_ = temp[idx]*1.0;
-//         }
-//         ans.push_back(ans_);
-//     }
-//     return ans;
-// }
-
-
-int main()
-{
-	int test;
-	cin>>test;
-	while(test--){
-		int n;
-		cin>>n;
-		int el;
-		vector<int> vect;
-		while(n--){
-			cin>>el;
-			vect.push_back(el);
-		}
-
-		vector<double> ans;
-		ans = find_running_median(vect);
-		cout<<"Median of running stream of integers\n";
-		for( auto itr : ans){
-			cout<<itr<<" ";
-		}
-		cout<<endl;
-	}
-	return 0;
 }

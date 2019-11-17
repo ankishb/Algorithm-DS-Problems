@@ -278,3 +278,22 @@ Microsoft IDC Hyderabad is the biggest campus for Microsoft outside of US. This 
 Bing takes into account three qualities in it’s ranking calculation: a website’s topical relevance, the context, and the content quality. Topical relevance asks how related to the query is a website page, in other words ““Does it address the query?” Context analyzes specific and historical information about the user and the query, such as whether the query might be about a recent popular topic, what the user’s physical location is, the user’s search history, etc. Lastly, and most importantly, content quality investigates three important questions: “Can we trust this content?”, “Is the content useful and sufficiently detailed?”, and“Is the content well-presented and easy to find?”
 
 
+## Bing team
+- structuring queries
+    for exp: search for allen,
+        person name, institute name, like that
+- another relevent queries
+    - there is also relevenet queries, website wise
+    - for exp, you search for sth, now you choose some website, below that wesite link, there will be similar queries, which youmay want to refer
+
+## Outlook team
+- this is personal information manager
+- mainly mail, calender, tasks, notes, jounouls, web browsing
+
+## office
+- presentation layout(recommend)
+- text correction and imrpove
+- search on web browser to get relevant material
+- insight feature (excel from dataset)
+- picture alignment
+- 3d model animation
