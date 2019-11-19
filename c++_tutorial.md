@@ -1792,3 +1792,53 @@ Abstract Classes in Java for more details.
 Interface vs Abstract Classes:
 An interface does not have implementation of any of its methods, it can be considered as a collection of method declarations. In C++, an interface can be simulated by making all methods as pure virtual. In Java, there is a separate keyword for interface
 ```
+
+
+## Sorting algorithms
+See also: Sorting algorithm § Comparison of algorithms
+Algorithm   Data structure  Time complexity:Best    Time complexity:Average     Time complexity:Worst   Space complexity:Worst
+Quick sort  Array   O(n log(n))     O(n log(n))     O(n2)   O(n)
+Merge sort  Array   O(n log(n))     O(n log(n))     O(n log(n))     O(n)
+Heap sort   Array   O(n)    O(n log(n))     O(n log(n))     O(1)
+Smooth sort     Array   O(n)    O(n log(n))     O(n log(n))     O(1)
+Bubble sort     Array   O(n)    O(n2)   O(n2)   O(1)
+Insertion sort  Array   O(n)    O(n2)   O(n2)   O(1)
+Selection sort  Array   O(n2)   O(n2)   O(n2)   O(1)
+Bogo sort   Array   O(n)    O(n n!)     O(∞)    O(1) 
+
+
+
+
+Quicksort is usually the fastest on average, but It has some pretty nasty worst-case behaviors. So if you have to guarantee no bad data gives you O(N^2), you should avoid it.
+
+Merge-sort uses extra memory, but is particularly suitable for external sorting (i.e. huge files that don't fit into memory).
+
+Heap-sort can sort in-place and doesn't have the worst case quadratic behavior, but on average is slower than quicksort in most cases.
+
+Where only integers in a restricted range are involved, you can use some kind of radix sort to make it very fast.
+
+In 99% of the cases, you'll be fine with the library sorts, which are usually based on quicksort.
+
+
+---
+If the data set is small, both the sorting algorithms are fast and differences are not noticeable. However, when the data sets are very large compare to the main memory that one has ( hence, the cache memory compared to the full main memory ) locality matters.
+
+Mergesort : Merge sort takes advantage of the ease of merging already sorted lists into a new sorted list. It starts by comparing every two elements (i.e., 1 with 2, then 3 with 4...) and swapping them if the first should come after the second. It then merges each of the resulting lists of two into lists of four, then merges those lists of four, and so on; until at last two lists are merged into the final sorted list
+
+Heapsort : Heapsort is a much more efficient version of selection sort. It also works by determining the largest (or smallest) element of the list, placing that at the end (or beginning) of the list, then continuing with the rest of the list, but accomplishes this task efficiently by using a data structure called a heap. Once the data list has been made into a heap, the root node is guaranteed to be the largest (or smallest) element. When it is removed and placed at the end of the list, the heap is rearranged so the largest element remaining moves to the root.
+
+1. Merger sort is stable while heap sort is not stable because operations on the heap can change the relative order of equal items.
+
+2. Heap Sort is more memory efficient and also in place. It doesn't copy the array and store it elsewhere (like merge sort) hence needs less space. It can use used in situations like what's the top 10 numbers from a list of 1 million numbers.
+
+3. Heapsort may make more comparisons than optimal. Each siftUp operation makes two comparisons per level, so the comparison bound is approximately 2n log_2 n. In practice heapsort does only slightly worse than quicksort.
+
+4. Space Complexity
+
+    Merge sort : O(n)
+
+    Heap sort : O(1) (if done iteratively)  But we would have to heapify the array first which will take O(n) time.
+
+5. Merge sort works best on linked lists.
+
+---

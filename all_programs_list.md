@@ -823,6 +823,11 @@
 
 
 
+## Random Day contribution
+- [x][array][lower_bound_algo](https://www.hackerrank.com/challenges/cpp-lower-bound/problem)
+- [x][array][count_distinct_element_in_window](https://practice.geeksforgeeks.org/problems/count-distinct-elements-in-every-window/1)
+- [x][linked-list][k_reverse_linked_list](https://www.interviewbit.com/problems/k-reverse-linked-list/)
+
 - [ ][kth smallest element with linear time][kth_smallest_element_in_unsorted_array_in_constant_space](https://practice.geeksforgeeks.org/problems/kth-smallest-element/0) (https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array-set-2-expected-linear-time/) (https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array-set-3-worst-case-linear-time/)
 
 
