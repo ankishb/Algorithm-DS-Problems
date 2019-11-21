@@ -64,6 +64,77 @@ tag: c++
     - The process of making an operator to exhibit different behaviors in different instances is known as `operator overloading`.
     - `Function overloading` is using a single function name to perform different types of tasks.
 
+---
+
+## Virtual functions in C++: Runtime Polymorphism
+In this guide, we will see what are virtual functions and why we use them. When we declare a function as virtual in a class, all the sub classes that override this function have their function implementation as virtual by default (whether they mark them virtual or not). Why we declare a function virtual? To let compiler know that the call to this function needs to be resolved at runtime (also known as late binding and dynamic linking) so that the object type is determined and the correct version of the function is called.
+
+Lets take an example to understand what happens when we don’t mark a overridden function as virtual.
+
+### Example 1: Overriding a non-virtual function
+See the problem here. Even though we have the parent class pointer pointing to the instance (object) of child class, the parent class version of the function is invoked.
+
+You may be thinking why I have created the pointer, I could have simply created the object of child class like this: Dog obj; and assigned the Dog instance to it. Well, in this example I have only one child class but when we a big project having several child classes, creating the object of child class separately is not recommended as it increases the complexity and the code become error prone. More clarity to this after this example.
+```c++
+#include<iostream>
+using namespace std;
+//Parent class or super class or base class
+class Animal{
+public:
+   void animalSound(){
+      cout<<"This is a generic Function";
+   }
+};
+//child class or sub class or derived class
+class Dog : public Animal{
+public:
+   void animalSound(){ 
+      cout<<"Woof";
+   }
+};
+int main(){
+   Animal *obj;
+   obj = new Dog();
+   obj->animalSound();
+   return 0;
+}
+
+Output:
+
+This is a generic Function
+```
+
+### Example 2: Using Virtual Function
+See in this case the output is Woof, which is what we expect. What happens in this case? Since we marked the function animalSound() as virtual, the call to the function is resolved at runtime, compiler determines the type of the object at runtime and calls the appropriate function.
+```c++
+#include<iostream>
+using namespace std;
+//Parent class or super class or base class
+class Animal{
+public:
+   virtual void animalSound(){
+      cout<<"This is a generic Function";
+   }
+};
+//child class or sub class or derived class
+class Dog : public Animal{
+public:
+   void animalSound(){ 
+      cout<<"Woof";
+   }
+};
+int main(){
+   Animal *obj;
+   obj = new Dog();
+   obj->animalSound();
+   return 0;
+}
+
+Output:
+
+Woof
+```
+
 #### Pure virtual function:
 - class with pure virtual function, called `abstract class`
 - can't create object of abstract class
@@ -230,55 +301,19 @@ It is, however, not guaranteed that a copy constructor will be called in all the
 
 > By default all members of a class are private. Since no access specifier is there for Point(), it becomes private and it is called outside the class when t1 is constructed in main. 
 
---- 
-
-
-## Difference between pre and post increment:
-
-
-You hit the nail on the head. Your understanding is correct. The difference between pre and post increment expressions is just like it sounds. Pre-incrementation means the variable is incremented before the expression is set or evaluated. Post-incrementation means the expression is set or evaluated, and then the variable is altered. It's easy to think of it as a two step process.
-
-b = x++;
-
-is really:
-
-b = x;
-x++;
-
-and
-
-b = ++x;
-
-is really:
-
-x++;
-b = x;
-
-
-
-## Operator overloading:
-In C++, We can have more than one constructor in a class with same name, as long as each has a different list of arguments.This concept is known as Constructor Overloading and is quite similar to function overloading.
-
-    Overloaded constructors essentially have the same name (name of the class) and different number of arguments.
-    A constructor is called depending upon the number and type of arguments passed.
-    While creating the object, arguments must be passed to let compiler know, which constructor needs to be called.
-
+---
 
 ## Difference between `overloading` and `overriding`
 - Overloading a method (or function) in C++ is the ability for functions of the same name to be defined as long as these methods have different signatures (different set of parameters). Method overriding is the ability of the inherited class rewriting the virtual method of the base class.
 
-1. In overloading, there is a relationship between methods available in the same class whereas in overriding, there a is relationship between a superclass method and subclass method.
-2. Overloading does not block inheritance from the superclass whereas overriding blocks inheritance from the superclass.
-3. In overloading, separate methods share the same name whereas in overriding, subclass method replaces the superclass.
-4. Overloading must have different method signatures whereas overriding must have same signature.
-
-#### Another response
-1. Overloading happens at compile-time while Overriding happens at runtime: The binding of overloaded method call to its definition has happens at compile-time however binding of overridden method call to its definition happens at runtime.
-2. The most basic difference is that overloading is being done in the same class while for overriding base and child classes are required. Overriding is all about giving a specific implementation to the inherited method of parent class.
-3. Static binding is being used for overloaded methods and dynamic binding is being used for overridden/overriding methods.
-4. Performance: Overloading gives better performance compared to overriding. The reason is that the binding of overridden methods is being done at runtime.
-5. private and final methods can be overloaded but they cannot be overridden. It means a class can have more than one private/final methods of same name but a child class cannot override the private/final methods of their base class.
-6. Argument list should be different while doing method overloading. Argument list should be same in method Overriding.
+1. Function Overloading happens in the `same class` when we declare same functions with different arguments in the same class. Function Overriding is happens in the child class when `child class overrides parent class function`.
+2. In function overloading function signature should be different for all the overloaded functions. In function overriding the signature of both the functions (overriding function and overridden function) should be same.
+3. Overloading happens at the compile time thats why it is also known as `compile time polymorphism` while overriding happens at run time which is why it is known as `run time polymorphism`.
+4. In function overloading we can have `any number of overloaded functions`. In function overriding we can have only one overriding function in the child class.
+5. `Overloading does not block inheritance` from the superclass whereas overriding blocks inheritance from the superclass.
+6. `Static binding` is being used for overloaded methods and `dynamic binding` is being used for overridden/overriding methods.
+7. Performance: `Overloading gives better performance compared to overriding`. The reason is that the binding of overridden methods is being done at runtime.
+8. `private and final methods can be overloaded but they cannot be overridden`. It means a class can have more than one private/final methods of same name but a child class cannot override the private/final methods of their base class.
 
 ---
 
@@ -286,8 +321,6 @@ In C++, We can have more than one constructor in a class with same name, as long
 1. Static binding happens at compile-time while dynamic binding happens at runtime.
 2. Binding of private, static and final methods always happen at compile time since these methods cannot be overridden. When the method overriding is actually happening and the reference of parent type is assigned to the object of child class type then such binding is resolved during runtime.
 3. The binding of overloaded methods is static and the binding of overridden methods is dynamic.
-
-
 
 ---
 
@@ -826,6 +859,126 @@ delete a;
 or 
 int *a = new int(200);
 ```
+
+---
+
+## Friend class and function:
+- A friend class is a class that can access the private and protected members of a class in which it is declared as friend. This is needed when we want to allow a particular class to access the private and protected members of a class. 
+- Similar to friend class, this function can access the private and protected members of another class. A global function can also be declared as friend as shown in the example below:
+Friend Function Example
+```c++
+#include <iostream>
+using namespace std;
+class XYZ {
+private:
+   int num=100;
+   char ch='Z';
+public:
+   friend void disp(XYZ obj);
+};
+//Global Function
+void disp(XYZ obj){
+   cout<<obj.num<<endl; 
+   cout<<obj.ch<<endl;
+}
+int main() {
+   XYZ obj;
+   disp(obj);
+   return 0;
+}
+
+Output:
+
+100
+Z
+```
+    1) Friend of the class can be member of some other class.
+    2) Friend of one class can be friend of another class or all the classes in one program, such a friend is known as GLOBAL FRIEND.
+    3) Friend can access the private or protected members of the class in which they are declared to be friend, but they can use the members for a specific object.
+    4) Friends are non-members hence do not get “this” pointer.
+    5) Friends, can be friend of more than one class, hence they can be used for message passing between the classes.
+    6) Friend can be declared anywhere (in public, protected or private section) in the class.
+
+### Application:
+For instance: when it is not possible to implement some function, without making private members accessible in them. This situation arises mostly in case of operator overloading.
+
+Or another example when you want to compare two private data members of two different classes in that case you need a common function which can make use of both the private variables of different class. In that case you create a normal function and make friend in both the classes, as to provide access of theirs private variables.
+
+---
+
+## Diamond problem in multiple inheritance:
+while using multiple inheritance, it add several copies of constructor of base class, which add ambiguity. To avoid that, we use `virtual` keyword while inheritance.
+
+```
+      A  
+     / \  
+    B   C  
+     \ /  
+      D 
+```
+
+- without virtual inheritance
+```
+    A   A  
+    |   |
+    B   C  
+     \ /  
+      D 
+```
+
+
+- Virtual inheritance means that there will be only 1 instance of the base `A` class not 2. 
+- Your type `D` would have 2 vtable pointers (you can see them in the first diagram), one for `B` and one for `C` who virtually inherit `A`.  `D`'s object size is increased because it stores 2 pointers now; however there is only one `A` now.  
+
+```c++
+#include<iostream> 
+using namespace std; 
+class Person { 
+public: 
+    Person()     { cout << "Person::Person() called" << endl;   } 
+}; 
+  
+class Faculty : virtual public Person { 
+public: 
+    Faculty():Person(x)   { 
+       cout<<"Faculty::Faculty()called"<< endl; 
+    } 
+}; 
+  
+class Student : virtual public Person { 
+public: 
+    Student():Person(x) { 
+        cout<<"Student::Student()called"<< endl; 
+    } 
+}; 
+  
+class TA : public Faculty, public Student  { 
+public: 
+    TA():Student(), Faculty(), Person()   { 
+        cout<<"TA::TA()called"<< endl; 
+    } 
+}; 
+  
+int main()  { 
+    TA ta1(); 
+} 
+
+Output:
+without virtual keyword
+    Person::Person() called
+    Faculty::Faculty() called
+    Person::Person() called
+    Student::Student() called
+    TA::TA() called
+
+with virtual keyword
+    Person::Person() called
+    Faculty::Faculty() called
+    Student::Student() called
+    TA::TA() called
+
+```
+
 
 ---
 
