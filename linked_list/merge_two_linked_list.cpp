@@ -1,3 +1,5 @@
+
+// new try
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -6,6 +8,36 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+class Solution {
+public:
+    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+        if(l1 == NULL) return l2;
+        if(l2 == NULL) return l1;
+        if(l1->val > l2->val) swap(l1, l2);
+        ListNode *save = l1;
+        ListNode *l11, *l22;
+        while(l1->next != NULL && l2 != NULL){
+            if(l1->next->val < l2->val) l1 = l1->next;
+            else{
+                l22 = l2->next; // pointer to next of l2
+                l2->next = NULL; // break link for l2
+                l11 = l1->next; // pointer to next of l1
+                l1->next = l2; // make new link
+                l2->next = l11; // connect them
+                
+                l1 = l1->next;
+                l2 = l22;
+            }
+        }
+        if(l2 != NULL){
+            l1->next = l2;
+        }
+        return save;
+    }
+};
+
+
+// old one
 class Solution {
 public:
     ListNode* helper(ListNode* h1, ListNode* h2){

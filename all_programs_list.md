@@ -430,8 +430,8 @@
 ## contribution on 2-8-19
 - [x][medium][tree][right_side_view](https://leetcode.com/problems/binary-tree-right-side-view/)
 - [linked-list][sort_list_in_nlogn_time_with_constant_space](https://leetcode.com/problems/sort-list/)
-- [linked-list][merge_sort_on_linked_list](https://leetcode.com/problems/merge-two-sorted-lists/)(https://www.hackerrank.com/challenges/merge-two-sorted-linked-lists/problem)
-- [linked-list][merge_k_sorted_list_2_method](https://leetcode.com/problems/merge-k-sorted-lists/)
+- [x][linked-list][merge_sort_on_linked_list](https://leetcode.com/problems/merge-two-sorted-lists/)(https://www.hackerrank.com/challenges/merge-two-sorted-linked-lists/problem)
+- [x][linked-list][merge_k_sorted_list_2_method](https://leetcode.com/problems/merge-k-sorted-lists/)
 
 
 ## contribution on 3-8-19 (very imp day)
@@ -829,8 +829,8 @@
 - [x][linked-list][k_reverse_linked_list](https://www.interviewbit.com/problems/k-reverse-linked-list/)
 
 - [ ][kth smallest element with linear time][kth_smallest_element_in_unsorted_array_in_constant_space](https://practice.geeksforgeeks.org/problems/kth-smallest-element/0) (https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array-set-2-expected-linear-time/) (https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array-set-3-worst-case-linear-time/)
-
-
+- [ ][array][median_of_two_array](https://www.interviewbit.com/problems/median-of-array/)
+- [array][count_negative_number_in_sorted_matrix](https://www.geeksforgeeks.org/count-negative-numbers-in-a-column-wise-row-wise-sorted-matrix/)
 
 
 - [design][LRU_design](https://www.interviewbit.com/problems/lru-cache/)(https://leetcode.com/problems/lru-cache/)

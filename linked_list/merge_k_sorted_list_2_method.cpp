@@ -1,17 +1,61 @@
 
+// new try
+class Solution {
+public:
+    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+        if(l1 == NULL) return l2;
+        if(l2 == NULL) return l1;
+        if(l1->val > l2->val) swap(l1, l2);
+        ListNode *save = l1;
+        ListNode *l11, *l22;
+        while(l1->next != NULL && l2 != NULL){
+            if(l1->next->val < l2->val) l1 = l1->next;
+            else{
+                l22 = l2->next; // pointer to next of l2
+                l2->next = NULL; // break link for l2
+                l11 = l1->next; // pointer to next of l1
+                l1->next = l2; // make new link
+                l2->next = l11; // connect them
+                
+                l1 = l1->next;
+                l2 = l22;
+            }
+        }
+        if(l2 != NULL){
+            l1->next = l2;
+        }
+        return save;
+    }
+    ListNode* mergeKLists(vector<ListNode*>& lists) {
+        int n = lists.size();
+        if(n == 0) return NULL;
+        if(n == 1) return lists.front();
+        int size = log2(n);
+        ListNode *first, *sec;
+        if(pow(2,size) != n) size++;
+        for(int i=0; i<size; i++){
+            for(int j=0; j<n; j=j+pow(2,i+1)){
+                first = lists[j];
+                if(j+pow(2,i) >= n) sec = NULL;
+                else sec = lists[j+pow(2,i)];
+                lists[j] = mergeTwoLists(first, sec);
+            }
+        }
+            
+        return lists.front();
+    }
+};
+
+
+
+
+// last one
 struct compare{
 	bool operator()(const ListNode* l1, const ListNode* l2){
 		return (l1->val > l2-val);
 	}
 }
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
+
 class Solution {
 public:
 	ListNode* mergeKListsHeap(vector<ListNode*>& lists) {

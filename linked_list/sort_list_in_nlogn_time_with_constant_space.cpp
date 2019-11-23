@@ -1,4 +1,75 @@
 
+// fresh one
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+        if(l1 == NULL) return l2;
+        if(l2 == NULL) return l1;
+        if(l1->val > l2->val) swap(l1, l2);
+        ListNode *save = l1;
+        ListNode *l11, *l22;
+        while(l1->next != NULL && l2 != NULL){
+            if(l1->next->val < l2->val) l1 = l1->next;
+            else{
+                l22 = l2->next; // pointer to next of l2
+                l2->next = NULL; // break link for l2
+                l11 = l1->next; // pointer to next of l1
+                l1->next = l2; // make new link
+                l2->next = l11; // connect them
+                
+                l1 = l1->next;
+                l2 = l22;
+            }
+        }
+        if(l2 != NULL){
+            l1->next = l2;
+        }
+        return save;
+    }
+    int get_length(ListNode* head){
+        int len = 0;
+        while(head != NULL){
+            len++;
+            head = head->next;
+        }
+        return len;
+    }
+    ListNode* merge_sort(ListNode* head, int len){
+        if(len <= 0) return NULL;
+        if(len == 1) return head;
+        int c = 0;
+        ListNode *first = head;
+        while(c++ < len/2-1){
+            head = head->next;
+        }
+        ListNode *sec = head->next;
+        head->next = NULL;
+
+        // divide further, if possible
+        first = merge_sort(first, c);
+        sec = merge_sort(sec, len-c);
+            
+        // sort those pieces
+        return mergeTwoLists(first, sec);
+    }
+    
+    ListNode* sortList(ListNode* head) {
+        int len = get_length(head);
+        if(len <= 1) return head;
+        return merge_sort(head, len);
+    }
+};
+
+
+// last try
 /*
 Approach:
 1. cut the list in two half, using toroise pointer method
