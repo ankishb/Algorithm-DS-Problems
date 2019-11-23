@@ -5,6 +5,176 @@ date: 2019-08-30
 tag: c++
 --- -->
 
+## Imp Questions:
+1. I was asked about Copy constructor and why we use Copy constructor instead of memcpy. I was also asked about virtual functions and their use. The interviewer made me write the code to explain my examples clearly. Lastly he asked about virtual memory – What is virtual memory and how it works in detail.
+2. Basics about run time and compile time polymorphism. (with examples)
+3. what is the need of run time polymorphism if we already have compile time polymorphism? (with example)
+
+## The virtual table
+By Alex on February 8th, 2008 | last modified by Alex on September 19th, 2019
+
+To implement virtual functions, C++ uses a special form of late binding known as the virtual table. The virtual table is a lookup table of functions used to resolve function calls in a dynamic/late binding manner. The virtual table sometimes goes by other names, such as “vtable”, “virtual function table”, “virtual method table”, or “dispatch table”.
+
+Because knowing how the virtual table works is not necessary to use virtual functions, this section can be considered optional reading.
+
+The virtual table is actually quite simple, though it’s a little complex to describe in words. First, every class that uses virtual functions (or is derived from a class that uses virtual functions) is given its own virtual table. This table is simply a static array that the compiler sets up at compile time. A virtual table contains one entry for each virtual function that can be called by objects of the class. Each entry in this table is simply a function pointer that points to the most-derived function accessible by that class.
+
+Second, the compiler also adds a hidden pointer to the base class, which we will call *__vptr. *__vptr is set (automatically) when a class instance is created so that it points to the virtual table for that class. Unlike the *this pointer, which is actually a function parameter used by the compiler to resolve self-references, *__vptr is a real pointer. Consequently, it makes each class object allocated bigger by the size of one pointer. It also means that *__vptr is inherited by derived classes, which is important.
+
+
+## Page Fault Handling in Operating System
+
+A page fault occurs when a program attempts to access data or code that is in its address space, but is not currently located in the system RAM. So when page fault occurs then following sequence of events happens :
+
+    The computer hardware traps to the kernel and program counter (PC) is saved on the stack. Current instruction state information is saved in CPU registers.
+    An assembly program is started to save the general registers and other volatile information to keep the OS from destroying it.
+    Operating system finds that a page fault has occurred and tries to find out which virtual page is needed. Some times hardware register contains this required information. If not, the operating system must retrieve PC, fetch instruction and find out what it was doing when the fault occurred.
+    Once virtual address caused page fault is known, system checks to see if address is valid and checks if there is no protection access problem.
+    If the virtual address is valid, the system checks to see if a page frame is free. If no frames are free, the page replacement algorithm is run to remove a page.
+    If frame selected is dirty, page is scheduled for transfer to disk, context switch takes place, fault process is suspended and another process is made to run until disk transfer is completed.
+    As soon as page frame is clean, operating system looks up disk address where needed page is, schedules disk operation to bring it in.
+    When disk interrupt indicates page has arrived, page tables are updated to reflect its position, and frame marked as being in normal state.
+    Faulting instruction is backed up to state it had when it began and PC is reset. Faulting is scheduled, operating system returns to routine that called it.
+    Assembly Routine reloads register and other state information, returns to user space to continue execution.
+
+## virtual memory
+
+Virtual memory is a memory management capability of an operating system (OS) that uses hardware and software to allow a computer to compensate for physical memory shortages by temporarily transferring data from random access memory (RAM) to disk storage. Virtual address space is increased using active memory in RAM and inactive memory in hard disk drives (HDDs) to form contiguous addresses that hold both the application and its data.
+
+While copying virtual memory into physical memory, the OS divides memory into pagefiles or swap files with a fixed number of addresses. Each page is stored on a disk and when the page is needed, the OS copies it from the disk to main memory and translates the virtual addresses into real addresses.
+
+## Preprocessor Vs Macro:
+Lines that start with # are preprocessing directives. They are directives that tell the preprocessor to do something.
+
+- #include, #if, #ifdef, #ifndef, #else, #elif, #endif, #define, #undef, #line, #error, and #pragma are all preprocessing directives. (A line containing only # is also a preprocessing directive, but it has no effect.)
+
+- #define blah 8 is a preprocessing directive, it is not a macro. blah is a macro. This #define preprocessing directive defines the macro named blah as an object-like macro replaced by the token 8.
+
+
+Preporcessor: the program that does the preprocessing (file inclusion, macro expansion, conditional compilation).
+
+Macro: a word defined by the #define preprocessor directive that evaluates to some other expression.
+
+Preprocessor directive: a special #-keyword, recognized by the preprocessor
+
+
+
+## Memory Layout of C Programs
+A typical memory representation of C program consists of following sections.
+#
+1. Text segment
+2. Initialized data segment
+3. Uninitialized data segment
+4. Stack
+5. Heap
+
+1. Text Segment:
+A text segment , also known as a code segment or simply as text, is one of the sections of a program in an object file or in memory, which contains executable instructions.
+
+2. Initialized Data Segment:
+Initialized data segment, usually called simply the Data Segment. A data segment is a portion of virtual address space of a program, which contains the global variables and static variables that are initialized by the programmer.
+
+Note that, data segment is not read-only, since the values of the variables can be altered at run time.
+#
+3. Uninitialized Data Segment:
+Data in this segment is initialized by the kernel to arithmetic 0 before the program starts executing
+
+uninitialized data starts at the end of the data segment and contains all global variables and static variables that are initialized to zero or do not have explicit initialization in source code.
+#
+4. Stack:
+The stack area traditionally adjoined the heap area and grew the opposite direction; when the stack pointer met the heap pointer, free memory was exhausted. (With modern large address spaces and virtual memory techniques they may be placed almost anywhere, but they still typically grow opposite directions.)Stack, where automatic variables are stored, along with information that is saved each time a function is called. Each time a function is called, the address of where to return to and certain information about the caller’s environment, such as some of the machine registers, are saved on the stack.5. Heap: Heap is the segment where dynamic memory allocation usually takes place.
+
+The heap area begins at the end of the BSS segment and grows to larger addresses from there.The Heap area is managed by malloc, realloc, and free, which may use the brk and sbrk system calls to adjust its size (note that the use of brk/sbrk and a single “heap area” is not required to fulfill the contract of malloc/realloc/free; they may also be implemented using mmap to reserve potentially non-contiguous regions of virtual memory into the process’ virtual address space). The Heap area is shared by all shared libraries and dynamically loaded modules in a process.
+
+
+
+#### exp:
+The following declares a variable i on the stack:
+
+int i;
+
+When I ask for an address using &i I get the actual location on the stack.
+
+When I allocate something dynamically using malloc, there are actually TWO pieces of data being stored. The dynamic memory is allocated on the heap, and the pointer itself is allocated on the stack. So in this code:
+
+int* j = malloc(sizeof(int));
+
+This is allocating space on the heap for an integer. It's also allocating space on the stack for a pointer (j). The variable j's value is set to the address returned by malloc.
+
+
+## Difference between Definition and Declaration
+Declaration of a variable is for informing to the compiler the following information: name of the variable, type of value it holds and the initial value if any it takes. i.e., declaration gives details about the properties of a variable. Whereas, Definition of a variable says where the variable gets stored. i.e., memory for the variable is allocated during the definition of the variable.
+Declaration   Definition
+A variable or a function can be declared any number of times  A variable or a function can be defined only once
+Memory will not be allocated during declaration   Memory will be allocated
+
+int f(int);
+
+The above is a function declaration. This declaration is just for informing the compiler that a function named f with return type and argument as int will be used in the function.
+  
+
+int f(int a)
+{
+  return a;
+} 
+
+The system allocates memory by seeing the above function definition. 
+
+---
+
+## C header file:
+1. stdio: standard input output
+    - fopen, fclose, buffer handles
+    - file read and file write
+    - gets, puts, getchar
+    - scanf, printf
+2. conio: console input outoput
+    - clrscr()
+    - getch()
+3. string: 
+    - string manipulation: strcpy, strcat
+    - basic string : strlen, strcmp
+    - memcpy
+4. math
+5. assert
+6. limits:
+    - size of basic types: INT_MAX
+7. time
+8. stdlib:
+    - dynamic memory allocation: malloc, calloc, free
+    - conversion to numeric (atoi)
+    - random number: rand, srand
+9. threads
+10. error
+
+## C++ header files:
+1. Utilies:
+    - bitset: all bitwise operation
+    - tuple: stoing multiple datatypes in list
+2. Dynamic Memory Management:
+    - new
+    - memory
+    - memory_resource
+3. Numeric limit:
+    - climit : INT_MIN, ...
+4. Error handling:
+    - exception
+5. String
+6. Contaier:
+    - array, list, vector, deque, ...
+7. Iterator:
+8. Algorithms
+9. Input-Output:
+    - sstream
+    - iostream
+10. Regex
+11. Threading
+    - semaphore
+    - mutux
+    - thread
+12. Filesystem
+
+---
 ## Ascii Range:
 1. Digit: `48 - 57`
 2. Alphabet:
