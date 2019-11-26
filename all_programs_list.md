@@ -161,7 +161,6 @@
 - [dp][coins_in_a_line](https://www.interviewbit.com/problems/coins-in-a-line/) (https://practice.geeksforgeeks.org/problems/pots-of-gold-game/1)
 - [x][dp][tree][count_unique_binary_search_tree](https://www.interviewbit.com/problems/unique-binary-search-trees-ii/)
 - [ ][dp][count_nos_without_consecutive_1s_in_binary_rep]()
-- [ ][dp][box_satcking](https://www.youtube.com/watch?v=9mod_xRB-O0&list=PLrmLmBdmIlpsHaNTPP_jHHDx_os9ItYXr&index=26)
 - [ ][dp][maximum_sum_increasing_subsequence]()
 - [dp][kth_manhattan_distance_neighbourhood](https://www.interviewbit.com/problems/kth-manhattan-distance-neighbourhood/)
 - [ ][dp][cutting_rod_to_minimize_cost]()
@@ -831,6 +830,9 @@
 - [ ][kth smallest element with linear time][kth_smallest_element_in_unsorted_array_in_constant_space](https://practice.geeksforgeeks.org/problems/kth-smallest-element/0) (https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array-set-2-expected-linear-time/) (https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array-set-3-worst-case-linear-time/)
 - [ ][array][median_of_two_array](https://www.interviewbit.com/problems/median-of-array/)
 - [array][count_negative_number_in_sorted_matrix](https://www.geeksforgeeks.org/count-negative-numbers-in-a-column-wise-row-wise-sorted-matrix/)
+- [string][longest_prefix_suffix(KMP)](https://practice.geeksforgeeks.org/problems/longest-prefix-suffix/0)
+- [dp][box_satcking](https://practice.geeksforgeeks.org/problems/box-stacking/1)
+- [linked-list][compare_two_linked_list](https://practice.geeksforgeeks.org/problems/compare-two-linked-lists/1)
 
 
 - [design][LRU_design](https://www.interviewbit.com/problems/lru-cache/)(https://leetcode.com/problems/lru-cache/)

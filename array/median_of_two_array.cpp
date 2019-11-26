@@ -1,3 +1,60 @@
+
+int kth_element(vector<int> A, vector<int> B, int l1, int h1, int l2, int h2, int k){
+    int n1 = A.size(), n2 = B.size();
+    if(h1 < 0) return B[k];
+    if(h2 < 0) return A[k];
+    // cout<<n1<<" "<<n2<<" "<<k<<endl;
+    while(l1 <= h1 || l2 <= h2){
+        int m1 = l1 + (h1 - l1)/2;
+        int m2 = l2 + (h2 - l2)/2;
+        // cout<<l1<<" "<<m1<<" "<<h1<<"\t";
+        // cout<<l2<<" "<<m2<<" "<<h2<<"\n";
+        
+        // check if right index of both array valid, 
+        // if not, then we can find median in other array
+        if(h1 < 0 || l1 < 0 || h1 >= n1 || l1 > h1) return B[l2+k];
+        if(h2 < 0 || l2 < 0 || h2 >= n2 || l2 > h2) return A[l1+k];
+        
+        if(k == 0) return min(A[l1], B[l2]);
+        // if((m1 - l1 + 1 + m2 - l2 + 1) == k+1){
+        //     return max(A[m1], B[m2]);   
+        // }
+        if((m1 - l1 + 1 + m2 - l2 + 1) > k+1){
+            if(A[m1] > B[m2]) h1 = m1 - 1;
+            else h2 = m2 - 1;
+        }
+        else{
+            if(A[m1] < B[m2]){
+                k -= (m1 - l1 + 1);
+                l1 = m1 + 1;
+            }
+            else{
+                k -= (m2 - l2 + 1);
+                l2 = m2 + 1;
+            }
+        }
+    }
+    return -1;
+}
+
+double Solution::findMedianSortedArrays(const vector<int> &A, const vector<int> &B) {
+    int n1 = A.size(), n2 = B.size();
+    int k = n1 + n2, kth_1, kth_2 = 0;
+    if(k%2 == 0){
+        kth_1 = kth_element(A, B, 0, n1-1, 0, n2-1, k/2-1);
+        kth_2 = kth_element(A, B, 0, n1-1, 0, n2-1, k/2);
+    }
+    else{
+        kth_1 = kth_element(A, B, 0, n1-1, 0, n2-1, k/2);
+    }
+    if(kth_2 == 0) kth_2 = kth_1;
+    // cout<<kth_1<<" "<<kth_2<<" ";
+    double ans = (kth_1 * 1.0) + (kth_2 * 1.0);
+    return ans/2.0;
+}
+
+
+
 // double nth_element1(vector<int> A, vector<int> B, int k){
 //     int n1 = A.size(), n2 = B.size();
 //     int low = min(A[0], B[0]), mid;

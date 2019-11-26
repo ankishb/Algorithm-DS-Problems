@@ -5,6 +5,312 @@ date: 2019-08-30
 tag: c++
 --- -->
 
+
+What happens when a function is called before its declaration in C?
+
+undefined reference to `fun'
+
+What happens when a function is called before its declaration in C?
+CServer Side ProgrammingProgramming
+
+If we do not use some function prototypes, and the function body is declared in some section which is present after the calling statement of that function. In such a case, the compiler thinks that the default return type is an integer. But if the function returns some other type of value, it returns an error. If the return type is also an integer, then it will work fine, sometimes this may generate some warnings.
+Example Code
+
+#include<stdio.h>
+main() {
+    printf("The returned value: %d\n", function);
+}
+char function() {
+   return 'T'; //return T as character
+}
+
+Output
+
+[Error] conflicting types for 'function'
+[Note] previous implicit declaration of 'function' was here
+
+Now if the return type is an integer, then it will work.
+Example Code
+
+#include<stdio.h>
+main() {
+   printf("The returned value: %d\n", function());
+}
+int function() {
+   return 86; //return an integer value
+}
+
+
+
+## compilation process:
+1. Pre-processing: 
+- The preprocessed output is stored in the `filename.i`
+This is the first phase through which source code is passed. This phase include:
+    - Removal of Comments
+    - Expansion of Macros
+    - Expansion of the included files.
+    - Conditional compilation
+
+2. Compiling
+- compiled output file `filename.s`
+- It convert file into assembly language. exp: `MOV R2` etc
+
+3. Assembly
+- `filename.s --> filename.o` 
+- This file contain machine level instructions.
+
+4. Linking
+- This is the final phase in which all the linking of function calls with their definitions are done. 
+- Linker knows where all these functions are implemented. 
+- Linker does some extra work also, it adds some extra code to our program which is required when the program starts and ends. 
+- For exp, there is a code which is required for setting up the environment like passing `command line arguments`. 
+
+## Accessing global varaible(defined in other file)
+
+
+1) does the above program violate static variable rules?
+
+No you are not vailoting any rules. Here foo function create copy of value of that static variable and used in other file. Its fine.
+
+2) If not why is this so, and is there any other way to access static variable except including file (#include<>) not like this How am I able to access a static variable from another file?
+
+Static variable are only mean to use in that file only.
+
+You can not use that variable making them extern in other files.
+
+Another dirty hack is to get pointer of that static variable and make that as global pointer and making that as extern in another file you can use that static variable.
+
+file1.c
+
+ #include<stdio.h>
+  static int a=25;
+  int* ptr = &a;
+
+file2.c
+
+#include<stdio.h>
+extern int *ptr;
+
+   int main()
+   {
+          printf("%d",*ptr);
+          return 0;
+   }
+
+Correct me if I'm wrong with static variable concept and if any better solutions are available?
+
+    A static variable has a lifetime extends across the entire run of the program
+
+    If you do not initialize static variable with some value then its default value would be 0.
+
+    A static variable has scope limited to its file only. You can not access it by name from a different file.
+
+    You have temp1.c and temp2.c both are getting compiled together then also you can have static variable of same name in both files — and they are separate variables.
+
+In C, how do I restrict the scope of a global variable to the file in which it's declared?
+
+By making that global variable as static.
+
+i have said static are do not mean to use it in another files. If you want to do such them why you are making that variable as static? just remove static word and access it in another file just adding extern int a
+
+still you want to access static variable in another file then Another dirty hack is to get pointer of that static variable and make that as global pointer and making that as extern in another file you can use that static variable 
+
+## In C, sizeof(void) works. which assign 1 byte memory. But in c++, it doesn't work
+
+## 
+References in C++
+
+When a variable is declared as reference, it becomes an alternative name for an existing variable. A variable can be declared as reference by putting ‘&’ in the declaration.
+filter_none
+
+edit
+
+play_arrow
+
+brightness_4
+#include<iostream> 
+using namespace std; 
+  
+int main() 
+{ 
+  int x = 10; 
+  
+  // ref is a reference to x. 
+  int& ref = x; 
+  
+  // Value of x is now changed to 20 
+  ref = 20; 
+  cout << "x = " << x << endl ; 
+  
+  // Value of x is now changed to 30 
+  x = 30; 
+  cout << "ref = " << ref << endl ; 
+  
+  return 0; 
+} 
+
+Output:
+
+ x = 20
+ref = 30
+
+Applications :
+
+
+    Modify the passed parameters in a function : If a function receives a reference to a variable, it can modify the value of the variable. For example, in the following program variables are swapped using references.
+    filter_none
+
+    edit
+
+    play_arrow
+
+    brightness_4
+    #include<iostream> 
+    using namespace std; 
+      
+    void swap (int& first, int& second) 
+    { 
+        int temp = first; 
+        first = second; 
+        second = temp; 
+    } 
+      
+    int main() 
+    { 
+        int a = 2, b = 3; 
+        swap( a, b ); 
+        cout << a << " " << b; 
+        return 0; 
+    } 
+
+    Output:
+
+     3 2 
+
+    Avoiding copy of large structures : Imagine a function that has to receive a large object. If we pass it without reference, a new copy of it is created which causes wastage of CPU time and memory. We can use references to avoid this.
+    filter_none
+
+    brightness_4
+    struct Student { 
+       string name; 
+       string address; 
+       int rollNo; 
+    } 
+      
+    // If we remove & in below function, a new 
+    // copy of the student object is created.  
+    // We use const to avoid accidental updates 
+    // in the function as the purpose of the function 
+    // is to print s only. 
+    void print(const Student &s) 
+    { 
+        cout << s.name << "  " << s.address << "  " << s.rollNo; 
+    } 
+    In For Each Loops to modify all objects : We can use references in for each loops to modify all elements
+    filter_none
+
+    edit
+
+    play_arrow
+
+    brightness_4
+    #include <bits/stdc++.h>  
+    using namespace std;  
+      
+    int main()  
+    {  
+        vector<int> vect{ 10, 20, 30, 40 };  
+      
+        // We can modify elements if we  
+        // use reference 
+        for (int &x : vect)  
+            x = x + 5; 
+      
+        // Printing elements 
+        for (int x : vect)  
+           cout << x << " ";  
+      
+        return 0;  
+    }  
+    In For Each Loops to avoid copy of objects : We can use references in for each loops to avoid copy of individual objects when objects are large.
+    filter_none
+
+    edit
+
+    play_arrow
+
+    brightness_4
+    #include <bits/stdc++.h>  
+    using namespace std;  
+      
+    int main()  
+    {  
+        vector<string> vect{"geeksforgeeks practice",  
+                         "geeksforgeeks write", 
+                         "geeksforgeeks ide"};  
+      
+        // We avoid copy of the whole string 
+        // object by using reference. 
+        for (const auto &x : vect)  
+           cout << x << endl;  
+      
+        return 0;  
+    } 
+
+
+
+References vs Pointers
+Both references and pointers can be used to change local variables of one function inside another function. Both of them can also be used to save copying of big objects when passed as arguments to functions or returned from functions, to get efficiency gain.
+Despite above similarities, there are following differences between references and pointers.
+
+A pointer can be declared as void but a reference can never be void
+For example
+
+int a = 10;
+void* aa = &a;. //it is valid
+void &ar = a; // it is not valid
+
+Thanks to Shweta Bansal for adding this point.
+
+References are less powerful than pointers
+
+1) Once a reference is created, it cannot be later made to reference another object; it cannot be reseated. This is often done with pointers.
+2) References cannot be NULL. Pointers are often made NULL to indicate that they are not pointing to any valid thing.
+3) A reference must be initialized when declared. There is no such restriction with pointers
+
+Due to the above limitations, references in C++ cannot be used for implementing data structures like Linked List, Tree, etc. In Java, references don’t have above restrictions, and can be used to implement all data structures. References being more powerful in Java, is the main reason Java doesn’t need pointers.
+
+References are safer and easier to use:
+1) Safer: Since references must be initialized, wild references like wild pointers are unlikely to exist. It is still possible to have references that don’t refer to a valid location (See questions 5 and 6 in the below exercise )
+2) Easier to use: References don’t need dereferencing operator to access the value. They can be used like normal variables. ‘&’ operator is needed only at the time of declaration. Also, members of an object reference can be accessed with dot operator (‘.’), unlike pointers where arrow operator (->) is needed to access members.
+
+Together with the above reasons, there are few places like copy constructor argument where pointer cannot be used. Reference must be used pass the argument in copy constructor. Similarly references must be used for overloading some operators like ++
+
+## Storage Class
+
+Storage Class |  Declaration |  Storage |  Default Initial Value |  Scope  | Lifetime
+--- | --- | --- | --- | --- | ---
+auto | Inside a function/block  | Memory | Unpredictable |  Within the function/block |  Within the function/block
+register | Inside a function/block |  CPU Registers |  Garbage  | Within the function/block |  Within the function/block
+extern | Outside all functions  | Memory | Zero | Entire the file and other files where the variable is declared as extern | program runtime
+Static (local) | Inside a function/block |  Memory | Zero | Within the function/block |  program runtime
+Static (global) |  Outside all functions |  Memory | Zero | Global | program runtime 
+
+Summary
+
+In this tutorial we have discussed storage classes in C, to sum up:
+
+    A storage class is used to represent additional information about a variable.
+    Storage class represents the scope and lifespan of a variable.
+    It also tells who can access a variable and from where?
+    Auto, extern, register, static are the four storage classes in 'C'.
+    auto is used for a local variable defined within a block or function
+    register is used to store the variable in CPU registers rather memory location for quick access.
+    Static is used for both global and local variables. Each one has its use case within a C program.
+    Extern is used for data sharing between C project files.
+
+
+
 ## Imp Questions:
 1. I was asked about Copy constructor and why we use Copy constructor instead of memcpy. I was also asked about virtual functions and their use. The interviewer made me write the code to explain my examples clearly. Lastly he asked about virtual memory – What is virtual memory and how it works in detail.
 2. Basics about run time and compile time polymorphism. (with examples)
@@ -2165,3 +2471,26 @@ Heapsort : Heapsort is a much more efficient version of selection sort. It also 
 5. Merge sort works best on linked lists.
 
 ---
+
+
+Basis for comparison  Quick Sort  Merge Sort
+The partition of elements in the array
+  The splitting of a array of elements is in any ratio, not necessarily divided into half.  The splitting of a array of elements is in any ratio, not necessarily divided into half.
+Worst case complexity
+  O(n2)   O(nlogn)
+Works well on
+  It works well on smaller array  It operates fine on any size of array
+Speed of execution
+  It work faster than other sorting algorithms for small data set like Selection sort etc   It has a consistent speed on any size of data
+Additional storage space requirement
+  Less(In-place)  More(not In-place)
+Efficiency
+  Inefficient for larger arrays   More efficient
+Sorting method
+  Internal  External
+Stability
+  Not Stable  Stable
+Preferred for
+  for Arrays  for Linked Lists
+Locality of reference
+  good  poor
