@@ -138,8 +138,9 @@ Ad-free custom search results
 
 Named entity recognition and classification 
 Knowledge acquisition for named entities
-Bing Video Search
 
+
+Bing Video Search
 
 Ad-free video search 
 Video topic and trend identification
@@ -148,6 +149,7 @@ Bing News Search
 
 Ad-free news search results 
 Trending topic identification
+
 Bing Image Search
 
 
@@ -175,9 +177,8 @@ Speaker verification
     Search 
 
 Learn about language services that ensure apps and services can understand the meaning of unstructured text or recognize the intent behind a speaker’s utterances. Try any service free—and quickly build Language-enabled apps and services with the following capabilities.
+
 Text Analytics
-
-
 1. Named Entity Recognition
 2. Key phrase extraction
 3. Text sentiment analysis
@@ -281,14 +282,14 @@ Bing takes into account three qualities in it’s ranking calculation: a website
 ## Bing team
 - structuring queries
     for exp: search for allen,
-        person name, institute name, like that
+        - person name, institute name, like that
 - another relevent queries
     - there is also relevenet queries, website wise
-    - for exp, you search for sth, now you choose some website, below that wesite link, there will be similar queries, which youmay want to refer
+    - for exp, you search for sth, now you choose some website, below that wesite link, there will be similar queries, which you may want to refer
 
 ## Outlook team
 - this is personal information manager
-- mainly mail, calender, tasks, notes, jounouls, web browsing
+- mainly mail, calender, tasks, notes, journouls, web browsing
 
 ## office
 - presentation layout(recommend)

@@ -135,7 +135,7 @@
 - [generate_all_parenthesis](https://www.interviewbit.com/problems/generate-all-parentheses-ii/) (https://leetcode.com/problems/generate-parentheses/)
 - [most-imp][string][backtrack][pallindromic_partitioning](https://www.interviewbit.com/problems/palindrome-partitioning/) (https://www.geeksforgeeks.org/given-a-string-print-all-possible-palindromic-partition/)
 - [x][math,hashing][fraction_again](https://www.interviewbit.com/problems/fraction/)
-- [points_on_same_straight_line](https://www.interviewbit.com/problems/points-on-the-straight-line/)
+- [x][math][points_on_same_straight_line](https://www.interviewbit.com/problems/points-on-the-straight-line/)
 - [x][design][min_stack](https://www.interviewbit.com/problems/min-stack/) (https://practice.geeksforgeeks.org/problems/special-stack/1)
 - [magician_and_chocolate](https://www.interviewbit.com/problems/magician-and-chocolates/)
 - [count_ways_to_form_max_heap](https://www.interviewbit.com/problems/ways-to-form-max-heap/)
@@ -833,6 +833,8 @@
 - [string][longest_prefix_suffix(KMP)](https://practice.geeksforgeeks.org/problems/longest-prefix-suffix/0)
 - [dp][box_satcking](https://practice.geeksforgeeks.org/problems/box-stacking/1)
 - [linked-list][compare_two_linked_list](https://practice.geeksforgeeks.org/problems/compare-two-linked-lists/1)
+- [array][fill_row_and_col_of_corresponding_cell_of_1](https://practice.geeksforgeeks.org/problems/boolean-matrix-problem/0)
+- [external_merge_sort]
 
 
 - [design][LRU_design](https://www.interviewbit.com/problems/lru-cache/)(https://leetcode.com/problems/lru-cache/)
@@ -1081,7 +1083,7 @@ Rectangle (int x, int y) : width(x), height(y) { }
 
 6. String to int (STL):
 ```c++
-Way 2. Use C++ standard library std::stringstream.
+1. Use C++ standard library std::stringstream.
 
 #include <sstream>
 #include <string>
@@ -1094,7 +1096,7 @@ if (iss.fail()) {
   // something wrong happened
 }
 
-Way 3. Use std::stoi() function from C++ standard library since C++11.
+2. Use std::stoi() function from C++ standard library since C++11.
 
 #include <iostream>
 #include <string>
@@ -1102,11 +1104,8 @@ Way 3. Use std::stoi() function from C++ standard library since C++11.
 int main ()
 {
   std::string str("123");
-
   int n = std::stoi(str);
-
   std::cout << str << " --> " << n << std::endl;
-
   return 0;
 }
 ```
@@ -1136,18 +1135,15 @@ or
 
 A simple example using std::sort
 
-struct MyStruct
-{
+struct MyStruct{
     int key;
     std::string stringValue;
 
     MyStruct(int k, const std::string& s) : key(k), stringValue(s) {}
 };
 
-struct less_than_key
-{
-    inline bool operator() (const MyStruct& struct1, const MyStruct& struct2)
-    {
+struct less_than_key{
+    inline bool operator() (const MyStruct& struct1, const MyStruct& struct2){
         return (struct1.key < struct2.key);
     }
 };
@@ -1382,7 +1378,7 @@ string sb = b;
 string s = "geeksforgeeks"; 
 int n = s.length();  
 char char_array[n + 1];  
-strcpy(char_array, s.c_str()); 
+strcpy(char_array, s.c_str());
 ```
 2nd approach:
 ```c++
@@ -1392,7 +1388,6 @@ copy(s.begin(), s.end(), cstr);
 cstr[s.size()] = '\0';
 cout << cstr << '\n';
 ```
-
 
 ## Random number generation with equal probability
 ```c++
@@ -1437,3 +1432,18 @@ For the third element:
     // deallocate memory
     free(A);
 ```
+
+## Dynamic expand array
+```c++
+int *p;
+p = new int[5];
+for(int i=0;i<5;i++)
+   *(p+i)=i;
+
+// realloc
+int* temp = new int[6];
+std::copy(p, p + 5, temp); // Suggested by comments from Nick and Bojan
+delete [] p;
+p = temp;
+```
+

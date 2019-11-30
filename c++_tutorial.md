@@ -5,7 +5,38 @@ date: 2019-08-30
 tag: c++
 --- -->
 
+## extern keyword
+1. A declaration can be done any number of times but definition only once.
+2. “extern” keyword is used to extend the visibility of variables/functions().
+3. Since functions are visible throughout the program by default. The use of extern is not needed in function declaration/definition. Its use is redundant.
+4. When extern is used with a variable, it’s only declared not defined.
+5. As an exception, when an extern variable is declared with initialization, it is taken as the definition of the variable as well.
 
+Exp:
+```c++
+extern int var; 
+int main(void) 
+{ 
+  var = 10; 
+  return 0; 
+} 
+```
+Analysis: This program throws an error in compilation. Because var is declared but not defined anywhere. Essentially, the var isn’t allocated any memory. And the program is trying to change the value to 10 of a variable that doesn’t exist at all.
+
+Exp:
+```c++
+#include "somefile.h" 
+extern int var; 
+int main(void) 
+{ 
+ var = 10; 
+ return 0; 
+}
+```
+Analysis: Supposing that somefile.h has the definition of var. This program will be compiled successfully
+
+
+##
 What happens when a function is called before its declaration in C?
 
 undefined reference to `fun'
@@ -481,6 +512,210 @@ The system allocates memory by seeing the above function definition.
 12. Filesystem
 
 ---
+
+## hash table:
+- it is a generalization of array, where index represnt the key of element and index value is value related to that key.
+
+## Good hash function:
+1. `Easy to compute`: It should be easy to compute and must not become an algorithm in itself.
+2. `Uniform distribution`: It should provide a uniform distribution across the hash table and should not result in clustering.
+3. `Less collisions`: Collisions occur when pairs of elements are mapped to the same hash value. These should be avoided.
+4. `High load factor` for a given set of keys. 
+    - load factor: no of element in hash table / hash_table_size
+
+> Note: Irrespective of how good a hash function is, collisions are bound to occur. Therefore, to maintain the performance of a hash table, it is important to manage collisions through various `collision resolution techniques`
+
+## collision resolution techniques
+1. Direct Chaining:
+    - an array of linked list 
+    1. separate chaining
+2. open addressing:
+    1. Linear probing: `(n+1) % hash_size`
+        - It increase search time
+        - it use few probes
+    2. Quadratic probing: `(n+k^2) % hash_size`, k is kth step while probing
+        - As because of `k^2` term in hash function, it take big jumps which reduce the time complexity
+        - it doesn't probe all location in the array
+    3. Double hashing
+Implementation of hash tables with separate chaining (open hashing)
+
+1. Seperate chaining:
+```c++
+// Hash function will return an integer from 0 to 19.
+
+vector <string> hashTable[20];
+    int hashTableSize=20;
+
+Insert
+
+   void insert(string s)
+    {
+                // Compute the index using Hash Function
+        int index = hashFunc(s);
+        // Insert the element in the linked list at the particular index
+        hashTable[index].push_back(s);
+    }
+
+Search
+
+   void search(string s)
+    {
+        //Compute the index by using the hash function
+        int index = hashFunc(s);
+        //Search the linked list at that specific index
+        for(int i = 0;i < hashTable[index].size();i++)
+        {
+            if(hashTable[index][i] == s)
+            {
+                cout << s << " is found!" << endl;
+                return;
+            }
+        }
+        cout << s << " is not found!" << endl;
+    }
+```
+
+2. Linear probing:
+If the slot at the hashed index is unoccupied, then the entry record is inserted in slot at the hashed index else it proceeds in some probe sequence until it finds an unoccupied slot.
+
+The probe sequence is the sequence that is followed while traversing through entries. In different probe sequences, you can have different intervals between successive entry slots or probes.
+
+```c++
+nsert
+
+void insert(string s)
+    {
+        //Compute the index using the hash function
+        int index = hashFunc(s);
+        //Search for an unused slot and if the index will exceed the hashTableSize then roll back
+        while(hashTable[index] != "")
+            index = (index + 1) % hashTableSize;
+        hashTable[index] = s;
+    }
+
+Search
+
+   void search(string s)
+    {
+        //Compute the index using the hash function
+        int index = hashFunc(s);
+         //Search for an unused slot and if the index will exceed the hashTableSize then roll back
+        while(hashTable[index] != s and hashTable[index] != "")
+            index = (index + 1) % hashTableSize;
+        //Check if the element is present in the hash table
+        if(hashTable[index] == s)
+            cout << s << " is found!" << endl;
+        else
+            cout << s << " is not found!" << endl;
+    }
+```
+
+3. Quadratic probing:
+```c++
+string hashTable[21];
+    int hashTableSize = 21;
+
+Insert
+
+   void insert(string s)
+    {
+        //Compute the index using the hash function
+        int index = hashFunc(s);
+        //Search for an unused slot and if the index will exceed the hashTableSize roll back
+        int h = 1;
+        while(hashTable[index] != "")
+        {
+            index = (index + h*h) % hashTableSize;
+                 h++;
+        }
+        hashTable[index] = s;
+    }
+
+Search
+
+void search(string s)
+    {
+        //Compute the index using the Hash Function
+        int index = hashFunc(s);
+         //Search for an unused slot and if the index will exceed the hashTableSize roll back
+       int h = 1;
+        while(hashTable[index] != s and hashTable[index] != "")
+        {
+            index = (index + h*h) % hashTableSize;
+                 h++;
+        }
+        //Is the element present in the hash table
+        if(hashTable[index] == s)
+            cout << s << " is found!" << endl;
+        else
+            cout << s << " is not found!" << endl;
+    }
+```
+
+4. Double hash:
+Double hashing is similar to linear probing and the only difference is the interval between successive probes. Here, the interval between probes is computed by using two hash functions.
+
+Let us say that the hashed index for an entry record is an index that is computed by one hashing function and the slot at that index is already occupied. You must start traversing in a specific probing sequence to look for an unoccupied slot. The probing sequence will be:
+```c++
+index = (index + 1 * indexH) % hashTableSize;
+index = (index + 2 * indexH) % hashTableSize
+
+    string hashTable[21];
+    int hashTableSize = 21;
+
+Insert
+
+  void insert(string s)
+    {
+        //Compute the index using the hash function1
+        int index = hashFunc1(s);
+        int indexH = hashFunc2(s);
+        //Search for an unused slot and if the index exceeds the hashTableSize roll back
+        while(hashTable[index] != "")
+            index = (index + indexH) % hashTableSize;
+        hashTable[index] = s;
+    }
+
+Search
+
+  void search(string s)
+    {
+        //Compute the index using the hash function
+        int index = hashFunc1(s);
+        int indexH = hashFunc2(s);
+         //Search for an unused slot and if the index exceeds the hashTableSize roll back
+        while(hashTable[index] != s and hashTable[index] != "")
+            index = (index + indexH) % hashTableSize;
+        //Is the element present in the hash table
+        if(hashTable[index] == s)
+            cout << s << " is found!" << endl;
+        else
+            cout << s << " is not found!" << endl;
+    }
+```
+
+
+## Hash Function:
+- hash function can be any function, while condering hashing mechanism for good hash table.
+
+- to handle hash function for string, we need unique representation, which is usually done with the help of prime number, there are several method to perform this, following is one of them.
+```c++
+unsigned long hashstring(unsigned char *str)
+{
+    unsigned long hash = 5381;
+    int c;
+
+    while (c = *str++)
+        hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
+
+    return hash;
+}
+```
+
+
+
+
+---
 ## Ascii Range:
 1. Digit: `48 - 57`
 2. Alphabet:
@@ -780,7 +1015,7 @@ It is, however, not guaranteed that a copy constructor will be called in all the
 ---
 
 ## Difference between `overloading` and `overriding`
-- Overloading a method (or function) in C++ is the ability for functions of the same name to be defined as long as these methods have different signatures (different set of parameters). Method overriding is the ability of the inherited class rewriting the virtual method of the base class.
+- Overloading a method (or function) in C++ is the ability for functions of the same name to be defined as long as these methods have different signatures (different set of parameters). Method `overriding is the ability of the inherited class rewriting the virtual method of the base class.`
 
 1. Function Overloading happens in the `same class` when we declare same functions with different arguments in the same class. Function Overriding is happens in the child class when `child class overrides parent class function`.
 2. In function overloading function signature should be different for all the overloaded functions. In function overriding the signature of both the functions (overriding function and overridden function) should be same.
@@ -857,14 +1092,18 @@ if (!result.second)
 
 Algorithm | Best | Average | Worst 
 --- | --- | --- | --- 
-| Selection Sort | Ω(n^2)       | θ(n^2)      |  O(n^2)
-| Bubble Sort    | Ω(n)         | θ(n^2)      |  O(n^2)
-| Insertion Sort | Ω(n)         | θ(n^2)      |  O(n^2)
-| Heap Sort      | Ω(n log(n))  | θ(n log(n)) |  O(n log(n))
-| Quick Sort     | Ω(n log(n))  | θ(n log(n)) |  O(n^2)
-| Merge Sort     | Ω(n log(n))  | θ(n log(n)) |  O(n log(n))
-| Bucket Sort    | Ω(n+k)       | θ(n+k)      |  O(n^2)
-| Radix Sort     | Ω(nk)        | θ(nk)       |  O(nk)
+ Selection Sort | Ω(n^2)       | θ(n^2)      |  O(n^2)
+ Bubble Sort    | Ω(n)         | θ(n^2)      |  O(n^2)
+ Insertion Sort | Ω(n)         | θ(n^2)      |  O(n^2)
+ Heap Sort      | Ω(n log(n))  | θ(n log(n)) |  O(n log(n))
+ Quick Sort     | Ω(n log(n))  | θ(n log(n)) |  O(n^2)
+ Merge Sort     | Ω(n log(n))  | θ(n log(n)) |  O(n log(n))
+ Bucket Sort    | Ω(n+k)       | θ(n+k)      |  O(n^2)
+ Radix Sort     | Ω(nk)        | θ(nk)       |  O(nk)
+
+> `Insertion Sort: as we move in forward direction, if we encounter smaller element than its prev(left) element, we take that element at its correct position in left half.`
+
+> `Selection Sort: We find biggest element in array of size n and we take it to the right most side. And we repeat this step for n-1, n-2, .... so on at each iteration respectively`
 
 
 ## Tree Based Method:

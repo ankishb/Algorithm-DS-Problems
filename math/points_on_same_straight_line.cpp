@@ -1,11 +1,44 @@
-// https://www.interviewbit.com/problems/points-on-the-straight-line/
+
+class Solution {
+public:
+    int maxPoints(vector<vector<int>>& points){
+        int result = 0;
+        for(int i=0; i<points.size(); i++){
+            int samePoint = 0;
+            int overFlowSlope = 0;
+            int curMax = 0;
+            unordered_map<string, int> map;
+            for(int j=i+1; j<points.size(); j++){
+                if(points[i][0] == points[j][0] && points[i][1] == points[j][1])
+                    samePoint++;
+                else if(points[i][0] == points[j][0])
+                    overFlowSlope++;
+                else{
+                    int yDif = points[i][1] - points[j][1];
+                    int xDif = points[i][0] - points[j][0];
+                    int g = std::__gcd(yDif, xDif);
+                    yDif /= g;
+                    xDif /= g;
+                    // if (yDif < 0) {
+                    //     yDif = -yDif;
+                    //     xDif = -xDif;
+                    // }
+                    stringstream str;
+                    str<<yDif<<","<<xDif;
+                    map[str.str()]++;
+                    curMax = std::max(curMax,map[str.str()]);
+                }
+                curMax = std::max(curMax, overFlowSlope);
+            }
+            result = std::max(result, curMax+samePoint+1);
+        }
+        return result;
+    }
+};
+
+
 
 int Solution::maxPoints(vector<int> &A, vector<int> &B) {
-    // Do not write main() function.
-    // Do not read input, instead use the arguments to the function.
-    // Do not print the output, instead return values as specified
-    // Still have a doubt. Checkout www.interviewbit.com/pages/sample_codes/ for more details
-    
     if(A.size() == 0 || B.size() == 0){
         return 0;
     }
