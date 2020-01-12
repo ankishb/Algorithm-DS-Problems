@@ -1,4 +1,33 @@
 
+class Solution {
+public:
+    TreeNode* ans;
+    
+    bool lcs(TreeNode* root, TreeNode* p, TreeNode* q, bool &found){
+        if(root == NULL) return false;
+        // cout << found << " ";
+        if(found) return false;
+        
+        bool lb = lcs(root->left, p, q, found);
+        bool rb = lcs(root->right, p, q, found);
+        
+        if(!found && (root == p && (lb || rb)) 
+           || (root == q && (lb ||rb)) || (lb && rb)){
+            ans = root;
+            found = true;
+        }
+        
+        return (lb || rb || root == p || root == q);
+    }
+    
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        bool flag, found = false;
+        flag = lcs(root, p, q, found);
+        return ans;
+    }
+};
+
+
 // super new try
 /*
 1. If root is matched with either one of them, we get ans

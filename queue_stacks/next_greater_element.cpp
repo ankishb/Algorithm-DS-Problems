@@ -1,5 +1,32 @@
 
-// newest one
+// newest one (leetcode)
+class Solution {
+public:
+    vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
+        unordered_map<int, int> map;
+        stack<int> s;
+        for(auto d : nums2){
+            while(!s.empty() && s.top() < d){
+                map[s.top()] = d;
+                s.pop();
+            }
+            s.push(d);
+        }
+        
+        vector<int> ans;
+        for(auto d : nums1){
+            if(map.find(d) == map.end()){
+                ans.push_back(-1);
+            }
+            else{
+                ans.push_back(map[d]);
+            }
+        }
+        return ans;
+    }
+};
+
+// newest one (interviewBit)
 #define ll long long int 
 void next_greater(vector<ll> A){
     int n = A.size();

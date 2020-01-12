@@ -1,15 +1,28 @@
 
+class Solution {
+public:
+    bool is_leaf(TreeNode* root){
+        return (root->left == NULL && root->right == NULL);
+    }
+    
+    void get_sum(TreeNode* root, int flag, int &sum){
+        if(root == NULL) return ;
+        if(is_leaf(root) && flag == -1){
+            sum += root->val;
+        }
+        get_sum(root->left, -1, sum);
+        get_sum(root->right, +1, sum);
+    }
+    
+    int sumOfLeftLeaves(TreeNode* root) {
+        int sum = 0;
+        get_sum(root, 0, sum);
+        return sum;
+    }
+};
 
 
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
+
 class Solution {
 public:
     bool is_leaf(TreeNode* root){

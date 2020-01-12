@@ -1,7 +1,21 @@
 
+// using inbuilt lower bound function
 class Solution {
 public:
-    vector<int> searchRange1(vector<int>& A, int t) {
+    vector<int> searchRange(vector<int>& nums, int target) {
+        if(nums.size() == 0) return {-1, -1};
+        auto low = lower_bound(nums.begin(), nums.end(), target) - nums.begin();
+        auto high = lower_bound(nums.begin(), nums.end(), target+1) - nums.begin()-1;
+        if(low < 0 || low >= nums.size()) return {-1, -1};
+        if(low >= 0 && low < nums.size() && nums[low] != target) return {-1, -1};
+        return {low, high};
+    }
+};
+
+
+class Solution {
+public:
+    vector<int> naive_sol(vector<int>& A, int t) {
         int l=INT_MAX, r=INT_MIN, n=A.size();
         for(int i=0; i<n; i++){
             if(A[i] == t){ l = i; break; }
@@ -25,13 +39,17 @@ public:
         }
         return l;
     }
-    vector<int> searchRange(vector<int>& A, int t) {
+    vector<int> optimal_sol(vector<int>& A, int t) {
         int n = A.size();
         if(n == 0) return {-1,-1};
         int low  = lowerBound(A, t);
         int high = lowerBound(A, t+1);
         if(low >= n || A[low] != t) return {-1,-1};
         return {low, high-1};
+    }
+    vector<int> searchRange(vector<int>& A, int t) {
+        return naive_sol(A, t);
+        return optimal_sol(A, t);
     }
 };
 

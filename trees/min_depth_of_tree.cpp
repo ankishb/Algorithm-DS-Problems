@@ -1,4 +1,38 @@
 
+/*
+    This is little tricky, only for the case when there is
+    only single path from root to leaf.
+    
+    Best way is to find the length of the path from root to
+    leaf and always keep minimum value.
+*/
+class Solution {
+public:
+    bool is_leaf(TreeNode* root){
+        return (!root->left && !root->right);
+    }
+    
+    void min_depth(TreeNode* root, int &ans, int d){
+        if(root == NULL) return ;
+        if(is_leaf(root)){
+            ans = min(ans, d);
+            return ;
+        }
+        min_depth(root->left, ans, d+1);
+        min_depth(root->right, ans, d+1);
+    }
+    
+    int minDepth(TreeNode* root) {
+        if(root == NULL) return 0;
+        if(is_leaf(root)) return 1;
+        int depth = INT_MAX;
+        min_depth(root, depth, 1);
+        return depth;
+        
+    }
+};
+
+
 // new try
 class Solution {
 public:

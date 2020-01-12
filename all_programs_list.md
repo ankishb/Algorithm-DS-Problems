@@ -126,7 +126,7 @@
 - [x ][ stack,deque ][ simplifying_directory_path](https://www.interviewbit.com/problems/simplify-directory-path/)
 - [x ][ stack,array ][ rain_water_trapping](https://www.interviewbit.com/problems/rain-water-trapped/) (https://leetcode.com/problems/trapping-rain-water/)
 - [kth_smallest_element_in_unsorted_array_in_constant_space](https://www.interviewbit.com/problems/kth-smallest-element-in-the-array/)
-- [x ][ stack ][ next_greater_element](https://www.interviewbit.com/problems/nextgreater/)(https://practice.geeksforgeeks.org/problems/next-larger-element/0)
+- [x ][ stack ][ next_greater_element] [1](https://www.interviewbit.com/problems/nextgreater/) [2](https://practice.geeksforgeeks.org/problems/next-larger-element/0) [3](https://leetcode.com/problems/next-greater-element-i/)
 - [colorful_number](https://www.interviewbit.com/problems/colorful-number/)
 - [2 sum] [sum_of_pairs](https://www.interviewbit.com/problems/2-sum/)
 - [x ][ linked list ][ intersection_of_two_nodes](https://www.interviewbit.com/problems/intersection-of-linked-lists/)
@@ -476,7 +476,7 @@
 ## Contribution on 13-8-19
 - [easy ][ binary-search ][ first_bad_version](https://leetcode.com/problems/first-bad-version/)
 - [imp ][ medium ][ binary-search ][ koko_eating_bananas](https://leetcode.com/problems/koko-eating-bananas)
-- [most-imp ][ medium ][ binary-search ][ find_first_and_last_position_of_element](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
+- [x][most-imp ][ medium ][ binary-search ][ find_first_and_last_position_of_element](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 - [most-imp ][ medium ][ binary-search ][ find_k_closest_point](https://leetcode.com/problems/find-k-closest-elements/)
 - [medium ][ dp,array ][ triangle](https://leetcode.com/problems/triangle/)
 - [medium ][ tree ][ vertical_order_transversal](https://www.interviewbit.com/problems/vertical-order-traversal-of-binary-tree/)
@@ -582,7 +582,7 @@
 - [dp ][ longest_pallindromic_subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/)
 - [  ][ manachers_algorithm_linear_time](https://www.geeksforgeeks.org/manachers-algorithm-linear-time-longest-palindromic-substring-part-2/)
 - [x ][ medium ][ dp,string ][ count_all_pallindromic_substring](https://leetcode.com/problems/palindromic-substrings/)
-- [medium ][ string,dp ][ longest_common_subsequence](https://leetcode.com/problems/longest-common-subsequence/)(https://practice.geeksforgeeks.org/problems/longest-common-subsequence/0)
+- [medium ][ string,dp ][ longest_common_subsequence] [1](https://leetcode.com/problems/longest-common-subsequence/) [2](https://practice.geeksforgeeks.org/problems/longest-common-subsequence/0)
 - [x ][ medium ][ dp ][ maximum_sum_continuous_subarray](https://leetcode.com/problems/maximum-subarray/)
 - [medium ][ dp ][ longest_turbulent_subarray](https://leetcode.com/problems/longest-turbulent-subarray/)
 - [medium ][ dp ][ delete_operation_for_two_strings](https://leetcode.com/problems/delete-operation-for-two-strings/)
@@ -819,6 +819,15 @@
 - [string ][ recursively_remove_all_duplicate](https://practice.geeksforgeeks.org/problems/recursively-remove-all-adjacent-duplicates/0/?ref=self)
 
 - [ ] [allocates books](https://www.interviewbit.com/problems/270/)
+
+## Contribution on Jan, 2020
+- [ tree ][find_bottom_left_tree_value](https://leetcode.com/problems/find-bottom-left-tree-value/)
+- [ array ][sort_an_array](https://leetcode.com/problems/sort-an-array/)
+- [ tree ][sum_of_left_leafs](https://leetcode.com/problems/sum-of-left-leaves/)
+- [ binary-search ][binary_search](https://leetcode.com/problems/binary-search/)
+- [ stack ][evaluate_postfix_expression](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
+- [ array ][single_element_in_sorted_array](https://leetcode.com/problems/single-element-in-a-sorted-array/)
+- [ bit-manipulation ][single_number_3](https://leetcode.com/problems/single-number-iii/)
 
 
 

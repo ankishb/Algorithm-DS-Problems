@@ -1,4 +1,27 @@
 
+struct custom_pq{
+    bool operator()(const int &a, const int &b){
+        return (a > b);
+    }
+};
+
+class Solution {
+public:
+    int findKthLargest(vector<int>& nums, int k) {
+        // priority_queue<int, vector<int>, greater<int>> pq;
+        priority_queue<int, vector<int>, custom_pq> pq;
+        for(auto a : nums){
+            if(pq.size() == k && pq.top() < a){
+                pq.pop();
+                pq.push(a);
+            }
+            if(pq.size() < k) pq.push(a);
+        }
+        return pq.top();
+    }
+};
+
+
 class Solution {
 public:
     int findKthLargest(vector<int>& nums, int k) {

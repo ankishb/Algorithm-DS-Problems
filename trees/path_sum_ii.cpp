@@ -1,4 +1,38 @@
 
+class Solution {
+public:
+    vector<vector<int>> store;
+    vector<int> path;
+    
+    bool is_leaf(TreeNode* root){
+        return (root->left == NULL && root->right == NULL);
+    }
+    
+    void fill_path(TreeNode* root, int sum, int total){
+        if(root == NULL) return ;
+        if(is_leaf(root)){
+            if(sum == total+root->val){
+                path.push_back(root->val);
+                store.push_back(path);
+                path.pop_back();
+            }
+            return ;
+        }
+        path.push_back(root->val);
+        total += root->val;
+        fill_path(root->left, sum, total);
+        fill_path(root->right, sum, total);
+        path.pop_back();
+    }
+    
+    vector<vector<int>> pathSum(TreeNode* root, int sum) {
+        fill_path(root, sum, 0);
+        return store;
+    }
+};
+
+
+
 // new try
 class Solution {
 public:
